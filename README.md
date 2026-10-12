@@ -1,5 +1,7 @@
 # Talking Head Motion · 网感口播剪辑 Skill
 
+[简体中文](README.md) | [English](README.en.md)
+
 让 Agent 理解口播、编排人物与动画，在本地导出完整 MP4。支持自拍原片保留原声剪辑，以及已配置配音／数字人服务的文案路线。画风在网页展示，选择与修改在对话完成。
 
 这是一个 Agent Skill 和本地制作工具集。Agent 负责文意、素材、分镜和审片；脚本负责确定性渲染、缓存与技术检查。

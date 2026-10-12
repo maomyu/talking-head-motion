@@ -1,14 +1,14 @@
 {
-  "release": "v0.1.0",
+  "release": "main (documentation update after v0.1.0)",
   "date": "2026-10-12",
   "source_upstream_commit": "9ff59339f934e08483ba0a5b1db20f4c2c421b35",
   "scope": "Public source package integrity and syntax checks; no full-film rendering, auditory or artistic acceptance claimed by these checks.",
-  "files": 350,
+  "files": 351,
   "checked": {
     "python": 27,
     "javascript": 108,
     "json": 14,
-    "text": 260
+    "text": 261
   },
   "credential_pattern_findings": [],
   "excluded": "Project media, voices, presenter footage, local account configurations and runtime caches",
@@ -29,9 +29,14 @@
       "sha256": "8b690d7abef4d467cee6ca934c0fcc8b110305b3b07a80973b5271d668253277"
     },
     {
+      "path": "README.en.md",
+      "bytes": 9021,
+      "sha256": "dc408f46eee17230ea1b0bc48fac34e1fa846acca94e462acbb4454fc9ee81aa"
+    },
+    {
       "path": "README.md",
-      "bytes": 7176,
-      "sha256": "806e572027b52f13d677f1e65cb98b16cfde2399beddcc566954a3d20beda879"
+      "bytes": 7229,
+      "sha256": "788415ebd0c0440479bbd502ac31654df98677dcce5d4e020af5acf1ac118887"
     },
     {
       "path": "SKILL.md",
@@ -157,6 +162,11 @@
       "path": "assets/huashu-engine/lib/diagram.js",
       "bytes": 20080,
       "sha256": "98b15ba5f883dd95eca2ff52ba1d768c10a5bea7862bd13aee6d84b875e2b8c5"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts.js",
+      "bytes": 4442,
+      "sha256": "8d5ac65f41bd6df79a0f913adf7f425d46c847cc5d8ed831eccdc80b1c29531d"
     },
     {
       "path": "assets/huashu-engine/lib/fonts/AlfaSlabOne-400.woff",
@@ -397,11 +407,6 @@
       "path": "assets/huashu-engine/lib/fonts/index.json",
       "bytes": 1972,
       "sha256": "a0870057845b502a11037acef99b6e9cbc3994fdb5149caf3aac036140dbfbb1"
-    },
-    {
-      "path": "assets/huashu-engine/lib/fonts.js",
-      "bytes": 4442,
-      "sha256": "8d5ac65f41bd6df79a0f913adf7f425d46c847cc5d8ed831eccdc80b1c29531d"
     },
     {
       "path": "assets/huashu-engine/lib/kit.js",
@@ -914,6 +919,11 @@
       "sha256": "98b15ba5f883dd95eca2ff52ba1d768c10a5bea7862bd13aee6d84b875e2b8c5"
     },
     {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts.js",
+      "bytes": 4442,
+      "sha256": "8d5ac65f41bd6df79a0f913adf7f425d46c847cc5d8ed831eccdc80b1c29531d"
+    },
+    {
       "path": "assets/huashu-full/scripts/engine/lib/fonts/AlfaSlabOne-400.woff",
       "bytes": 41728,
       "sha256": "2f8b04d3eada32d7047255260a0e81ab74938fada1aad154f5653850a68aebe8"
@@ -1152,11 +1162,6 @@
       "path": "assets/huashu-full/scripts/engine/lib/fonts/index.json",
       "bytes": 1972,
       "sha256": "a0870057845b502a11037acef99b6e9cbc3994fdb5149caf3aac036140dbfbb1"
-    },
-    {
-      "path": "assets/huashu-full/scripts/engine/lib/fonts.js",
-      "bytes": 4442,
-      "sha256": "8d5ac65f41bd6df79a0f913adf7f425d46c847cc5d8ed831eccdc80b1c29531d"
     },
     {
       "path": "assets/huashu-full/scripts/engine/lib/kit.js",
@@ -1784,6 +1789,16 @@
       "full_video_decode": true,
       "scope": "Rendering smoke test only; no presenter, voice, full-film visual or auditory acceptance. Test media not distributed."
     },
-    "readme_local_links": "10 verified"
+    "readme_local_links": "24 verified across Chinese and English README"
+  },
+  "base_release": "v0.1.0",
+  "documentation_update": {
+    "date": "2026-10-12",
+    "readmes": [
+      "README.md",
+      "README.en.md"
+    ],
+    "matching_install_and_usage_commands": true,
+    "scope": "Documentation only; source code and runtime remain unchanged from v0.1.0. The published v0.1.0 tag and ZIP are retained."
   }
 }
