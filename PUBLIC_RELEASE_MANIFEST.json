@@ -1,17 +1,17 @@
 {
-  "release": "main (documentation update after v0.1.0)",
+  "release": "v0.2.0",
   "date": "2026-10-12",
   "source_upstream_commit": "9ff59339f934e08483ba0a5b1db20f4c2c421b35",
-  "scope": "Public source package integrity and syntax checks; no full-film rendering, auditory or artistic acceptance claimed by these checks.",
-  "files": 351,
+  "scope": "Public source integrity, syntax and credential pattern checks. Media QA is recorded separately in the local research project; no user avatar or full tutorial inverse-effects claim.",
+  "files": 358,
   "checked": {
-    "python": 27,
-    "javascript": 108,
-    "json": 14,
-    "text": 261
+    "python": 28,
+    "javascript": 109,
+    "json": 17,
+    "text": 268
   },
   "credential_pattern_findings": [],
-  "excluded": "Project media, voices, presenter footage, local account configurations and runtime caches",
+  "excluded": "Project media, source videos, transcripts, voice, presenter assets, API responses, local account configurations and runtime caches",
   "manifest": [
     {
       "path": ".gitignore",
@@ -20,8 +20,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 635,
-      "sha256": "579ab28bccd9c4214ad1684cec58314802a7efb807cfd7f3e25322ee921b2490"
+      "bytes": 1289,
+      "sha256": "31148b159eaa7ac51ebee811311cfcf5aff03c4e4f514bd2e0aee230280b252f"
     },
     {
       "path": "LICENSE",
@@ -30,38 +30,38 @@
     },
     {
       "path": "README.en.md",
-      "bytes": 9021,
-      "sha256": "dc408f46eee17230ea1b0bc48fac34e1fa846acca94e462acbb4454fc9ee81aa"
+      "bytes": 9813,
+      "sha256": "10862a0817c603fd2b9e582a28f841054b9e258434a53c5808e0464613de69b9"
     },
     {
       "path": "README.md",
-      "bytes": 7229,
-      "sha256": "788415ebd0c0440479bbd502ac31654df98677dcce5d4e020af5acf1ac118887"
+      "bytes": 7827,
+      "sha256": "11d6d36d1f8e42c8e16037644559e82808bdecd5c274aae771f6f410ed976b14"
     },
     {
       "path": "SKILL.md",
-      "bytes": 11392,
-      "sha256": "b0c64dfb8abccdb3a7667118ec3ec3c7e7e9e66e6337f5ed033b40d5d81c5350"
+      "bytes": 12095,
+      "sha256": "f81b3c46b5b3c3845b06b61e2f7df7a50ad148796f61d06f567248e5e98f4ca3"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 2987,
-      "sha256": "0a897d67fb9c094a964a2162a0872f4f8a468f713858a953d852b2fe61e043d9"
+      "bytes": 3494,
+      "sha256": "c87d2458413b63931ce9563ba9ed33daf026f82aabb70915f068f6aec59ea282"
     },
     {
       "path": "agents/openai.yaml",
-      "bytes": 592,
-      "sha256": "450c774ae31a0b31f92ed7b3fcbe34fc1c0f43de90005fdc9addc2c6621e423b"
+      "bytes": 779,
+      "sha256": "2681b753249f9ff53210e36f38e2f51f7fbe17a610decf3b56bb5eb690dd2dca"
     },
     {
       "path": "assets/components.js",
-      "bytes": 3651,
-      "sha256": "e857ee24fb56a6b02d4ac74ec743d941b2b2736d55b1bf1d9996fdcb4c2821ff"
+      "bytes": 3852,
+      "sha256": "810223a421e516198de59c66cf112b855cc33e2254cff4ffca14f3c63b1e2459"
     },
     {
       "path": "assets/composition.html",
-      "bytes": 3241,
-      "sha256": "ff0a2d125a3ff6239e4f5416e030fdcf325abd1230e5348860944132326cc3fa"
+      "bytes": 3498,
+      "sha256": "5c61ef6a7cdc09a8e4f789bb50eab3e13861f7a46fcdc11658fa4dcb004a831e"
     },
     {
       "path": "assets/examples/paper-explainer/README.md",
@@ -1504,6 +1504,26 @@
       "sha256": "263b4690827138c5ef23eab9d45d795d8768756ab2e984c9faffb0fa1079ba47"
     },
     {
+      "path": "assets/social-grammars/catalog.json",
+      "bytes": 49397,
+      "sha256": "cfb9e44e9b723b057373b332c8b794880be04ed6c9b06b09beab9c6b184f5e08"
+    },
+    {
+      "path": "assets/social-grammars/index.html",
+      "bytes": 465,
+      "sha256": "f791351f0e81f71dd6c6f75c6a5a6be9a8540757395cb74b2e3f03970c9fe421"
+    },
+    {
+      "path": "assets/social-grammars/social.js",
+      "bytes": 24244,
+      "sha256": "b4171321554334770e87adfda649f7cc73700a33d7f4f9e898339c72854a3ad2"
+    },
+    {
+      "path": "assets/social-grammars/validation.json",
+      "bytes": 36076,
+      "sha256": "dd1e820f1114bc6d9029dee60219df65c97a013dce9a9b513d30c9afbfce82af"
+    },
+    {
       "path": "assets/style-batch/camera-integration.js",
       "bytes": 764,
       "sha256": "fa6d96363f717eb1941e113487e8bdcb8712871a5a253a24b5faeae986df5e3f"
@@ -1584,9 +1604,19 @@
       "sha256": "4f4b70e98e90f9d8c14c8fa923b500763556d370ab1b66eeb3a80ea1de3f8de9"
     },
     {
+      "path": "assets/templates/social-shot.json",
+      "bytes": 279,
+      "sha256": "1e5db7746d2b2814c9a34353b636719bbdb080c201ab58b7ea6e0555ec670766"
+    },
+    {
       "path": "assets/templates/style-pack.json",
       "bytes": 353,
       "sha256": "3a87b674931784f638a6dc05199689e3a9c08ca57c6f4c13394ca85f99e6fe77"
+    },
+    {
+      "path": "references/douyin-grammars.md",
+      "bytes": 6245,
+      "sha256": "6ace2908762f7ed46887b62253f0340223ac22c714ce2b7071a23ac97c7b9e85"
     },
     {
       "path": "references/editorial-playbook.md",
@@ -1665,13 +1695,13 @@
     },
     {
       "path": "references/production-workflow.md",
-      "bytes": 4612,
-      "sha256": "12fdb5764ba8e1d5657328ff70a8bc8f621bbb70b8dd88e9114e31e820f0a7c0"
+      "bytes": 4813,
+      "sha256": "4b854e09df2e4cb39cd3399340ee39d039333c7e57637e091266c796c22b7aaa"
     },
     {
       "path": "references/project-contract.md",
-      "bytes": 6095,
-      "sha256": "1b831919b2439abb0ff56e2dc02ff148f40116e96b719591c27b2fb63a161fe0"
+      "bytes": 6563,
+      "sha256": "cd09a2ec4fb42d4d69d954588ae37d77cb5202227422bb107049787bf830db6d"
     },
     {
       "path": "references/provider-handoff.md",
@@ -1725,13 +1755,13 @@
     },
     {
       "path": "scripts/motion.py",
-      "bytes": 31924,
-      "sha256": "6ca9fe4c6144ce15cc32a94f3a55d129f8ce3928d1a6b921fc968ac307f321b5"
+      "bytes": 32507,
+      "sha256": "17346c801f2ac56e9d7c55ac784cb2e6260793741c0afddd425c6ad597157321"
     },
     {
       "path": "scripts/produce.py",
-      "bytes": 6591,
-      "sha256": "b485c67c3dbfa29977b3f401dac6d699cf0b8ad0a32a0bbd813f1eb3664cadc3"
+      "bytes": 7532,
+      "sha256": "8cdb7509ede27406068b0749c9777b458888f30eae4348798d9847db7086d9c2"
     },
     {
       "path": "scripts/render_huashu.py",
@@ -1759,6 +1789,11 @@
       "sha256": "cbf0faa1c65f0fe431690b9e56f9d2ef7269589676bd1d605c01ea5ee1a1a868"
     },
     {
+      "path": "scripts/social_grammar.py",
+      "bytes": 11404,
+      "sha256": "d8e4aa7757bdc3f1f7f8c1bf54eb8ab8987793fcdb1bb9a8c6854b0584a0093a"
+    },
+    {
       "path": "scripts/style_batch.py",
       "bytes": 10685,
       "sha256": "c084a257509832e81ecbeb951f5b3569815be74934af10d6f0c4872772370a15"
@@ -1769,36 +1804,6 @@
       "sha256": "99b4d6db5f82189e9e4e8f346caa93ba5c14f88afb6d111df9ae796a513944ab"
     }
   ],
-  "validation": {
-    "skill_structure": "pass",
-    "runtime_install": "npm ci --ignore-scripts --no-audit --no-fund completed",
-    "doctor": "pass",
-    "catalog": {
-      "art_scenes": 35,
-      "grammar_cards": 9,
-      "parameterized_renderers": 8
-    },
-    "local_scene_smoke": {
-      "scene": "project_intro",
-      "width": 1080,
-      "height": 1920,
-      "fps": "24/1",
-      "frames": 72,
-      "duration_seconds": 3.0,
-      "sha256": "b5e496ecd4bb34faed2a5ea94e11d187f8b2cd26a8023d3b61b68c46199e0e62",
-      "full_video_decode": true,
-      "scope": "Rendering smoke test only; no presenter, voice, full-film visual or auditory acceptance. Test media not distributed."
-    },
-    "readme_local_links": "24 verified across Chinese and English README"
-  },
-  "base_release": "v0.1.0",
-  "documentation_update": {
-    "date": "2026-10-12",
-    "readmes": [
-      "README.md",
-      "README.en.md"
-    ],
-    "matching_install_and_usage_commands": true,
-    "scope": "Documentation only; source code and runtime remain unchanged from v0.1.0. The published v0.1.0 tag and ZIP are retained."
-  }
+  "validation_record": "assets/social-grammars/validation.json",
+  "media_qa_scope": "60 four-second clips decoded and sampled; 30 source full-duration overviews and dense windows; one four-second moving-presenter pipeline integration. User artistic acceptance and moving foreground segmentation are pending."
 }

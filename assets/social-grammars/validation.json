@@ -1,0 +1,1133 @@
+{
+  "version": "v0.2.0",
+  "source_count": 30,
+  "module_count": 28,
+  "layout_only_source_ranks": [
+    16,
+    19,
+    20,
+    26
+  ],
+  "repeated_mechanisms": [
+    [
+      13,
+      29
+    ],
+    [
+      15,
+      25
+    ]
+  ],
+  "engine_sha256": "c163c720f6bcabb323fca57b5c58953e90722d18766c001093066125745dc23f",
+  "clips": [
+    {
+      "rank": 1,
+      "variant": "primary",
+      "grammar": "d01_three_band",
+      "output_sha256": "e785116238643a2f87a35c191c04aad9d323a1ae001482f6f52dc4d2b1cc64d2",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 1,
+      "variant": "reuse",
+      "grammar": "d01_three_band",
+      "output_sha256": "16f884a1f5c1aef8c784ceccf832c15c81a881c089f16419a3a0637a0ff579f7",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 2,
+      "variant": "primary",
+      "grammar": "d02_word_tiles",
+      "output_sha256": "362be909542943d0c313b8d5adb5ceb0510023c4e0073b344192df2f24fdeac2",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 2,
+      "variant": "reuse",
+      "grammar": "d02_word_tiles",
+      "output_sha256": "0b4040d4a4015b2c27961f04bb2bee23d2ece86197a01e7f6608be7c09eec91e",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 3,
+      "variant": "primary",
+      "grammar": "d03_evidence_over_speaker",
+      "output_sha256": "70eb9073859a62b39eabaee72ad27a9c15ad4d5da8aa910cab8185f31893a9ff",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 3,
+      "variant": "reuse",
+      "grammar": "d03_evidence_over_speaker",
+      "output_sha256": "6e0c5e992f7a4638340ffcea6b9dede41af815c31b3c1b8e228293a64f501684",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 4,
+      "variant": "primary",
+      "grammar": "d04_orbit_title",
+      "output_sha256": "ede114cbc17deb6434c402a471515d2f63f24273e90003fbcda8ffb3dc8f1fc2",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 4,
+      "variant": "reuse",
+      "grammar": "d04_orbit_title",
+      "output_sha256": "966afa4522d79bae04043a7e7885b380c08c73923064d17cbca954e03643bfb1",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 5,
+      "variant": "primary",
+      "grammar": "d05_focus_pip",
+      "output_sha256": "e25c5c15153934fcad69453e43d809293374c8819a14639e6660cccfb5104a08",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 5,
+      "variant": "reuse",
+      "grammar": "d05_focus_pip",
+      "output_sha256": "5a6ffac8b380db3d9021a7b390e26216772314ae21a372c09a4f9f66e37cbde8",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 6,
+      "variant": "primary",
+      "grammar": "d06_frosted_chapter",
+      "output_sha256": "419453fb2cc086e40b04afaa9412f4a9ed4d61144263c90e13a0ed2d3347c2d6",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 6,
+      "variant": "reuse",
+      "grammar": "d06_frosted_chapter",
+      "output_sha256": "ad59c80b11b1e357ba33b7cf8a754dd293b9d94f9474349fd94e4543db443188",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 7,
+      "variant": "primary",
+      "grammar": "d07_iris_mask",
+      "output_sha256": "9b17bfc570b2ea816f41dd3adfdce07c5ad1196b71a0900c435c5c07053de9e6",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 7,
+      "variant": "reuse",
+      "grammar": "d07_iris_mask",
+      "output_sha256": "e919dab7670dd4d98db599d4d5c79a9404f37f563f6555d61ea27b06c6e912cb",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 8,
+      "variant": "primary",
+      "grammar": "d08_glass_stack",
+      "output_sha256": "fac63fcf775d5287e6caac1317bdde5add4114e2429628d8fe5be10e91bf24de",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 8,
+      "variant": "reuse",
+      "grammar": "d08_glass_stack",
+      "output_sha256": "c07bea6fd03a7ecdf7ae7f0492dc77aec36704914a7b8153216923150b3a1842",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 9,
+      "variant": "primary",
+      "grammar": "d09_editorial_type",
+      "output_sha256": "0cc9257d371b55020fb9b4a31f191b97749d541f3a5133d94aa2cbbdd0ded038",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 9,
+      "variant": "reuse",
+      "grammar": "d09_editorial_type",
+      "output_sha256": "f0e129b89636b7142945a5537fc51bf831d658e2275437f471213fa03584af57",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 10,
+      "variant": "primary",
+      "grammar": "d10_sticker_label",
+      "output_sha256": "64f0f143d5f40448f9706cf467c47e6e91e113e3442ef274a6f3836ab580c2de",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 10,
+      "variant": "reuse",
+      "grammar": "d10_sticker_label",
+      "output_sha256": "5c01641f2f8948d9efda93690ecc9d71f58cd72737c669d363d63f5b3c6e62a1",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 11,
+      "variant": "primary",
+      "grammar": "d11_punch_caption",
+      "output_sha256": "98d7acb2d76d852c5e00b5bab58bde752f84271645e8f94e6fc852d7ec57c5f7",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 11,
+      "variant": "reuse",
+      "grammar": "d11_punch_caption",
+      "output_sha256": "f059730c280f378bde3a9a605f0d1c3f65b2c699b6e232833464258e271f6dec",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 12,
+      "variant": "primary",
+      "grammar": "d12_type_depth",
+      "output_sha256": "8cb6bbaef6370398269aae8f36dfce084d3a9df8fd2f58c8ea1c446aecf68ba8",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 12,
+      "variant": "reuse",
+      "grammar": "d12_type_depth",
+      "output_sha256": "884e2da124bf166078ec0b0c463d0a285ae5c71363bb7622151d724e60a740aa",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 13,
+      "variant": "primary",
+      "grammar": "d13_cutout_outline",
+      "output_sha256": "47316c924b8855ca5eec6717a306fd6ce32f94a462bccdffe466b6f18612f157",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 13,
+      "variant": "reuse",
+      "grammar": "d13_cutout_outline",
+      "output_sha256": "bbf67fd9f668064f6cfad2596d996c124571a3135cf99bddef45e4f34b42b992",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 14,
+      "variant": "primary",
+      "grammar": "d14_collage_cards",
+      "output_sha256": "fd952edc568dd1feaccfbc51759ba4b549a52698755aff945aec302a32ecc074",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 14,
+      "variant": "reuse",
+      "grammar": "d14_collage_cards",
+      "output_sha256": "8ff183af1aa6a9ef232fc4b7811de40acfdb671f696db6375d8bb558c4f5ca16",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 15,
+      "variant": "primary",
+      "grammar": "d15_behind_type",
+      "output_sha256": "1e317e170b9630b842d5d70f65efd77c36e7baa1afd5c2e4485dbcf737fb0c34",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 15,
+      "variant": "reuse",
+      "grammar": "d15_behind_type",
+      "output_sha256": "473755b8e202b9e4f7020f840516a71d85212ae02314f1e86eeba712b19b924a",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 16,
+      "variant": "primary",
+      "grammar": "d16_floating_frame",
+      "output_sha256": "7b61e662fdac5d4572f446a8106a64e4786fb2bf08071bd703b6b18bfbfade9b",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 16,
+      "variant": "reuse",
+      "grammar": "d16_floating_frame",
+      "output_sha256": "ad1d683c2f11f912927d6afbda810acad152f021cfa71f9cf181501ae2b50b93",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 17,
+      "variant": "primary",
+      "grammar": "d17_mask_reveal",
+      "output_sha256": "ce8a0bf8babe177a175b467eeb230db3f58fcd5633aa2da6baa987baf04bdb6e",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 17,
+      "variant": "reuse",
+      "grammar": "d17_mask_reveal",
+      "output_sha256": "523788c3662dc295d731ca11297f39635033511bcf01f3b8a99bda8880527b0a",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 18,
+      "variant": "primary",
+      "grammar": "d18_radial_orbit",
+      "output_sha256": "bb9a40ad9b9bceadb329c46d8b6241b357a6acf5c9d9ea2c47ad62bb652c7b71",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 18,
+      "variant": "reuse",
+      "grammar": "d18_radial_orbit",
+      "output_sha256": "519c9d6c59ad46a5650a00643f1fe25bfca3fa1a5b0242767fe1d9742b2b01d9",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 19,
+      "variant": "primary",
+      "grammar": "d19_corner_keywords",
+      "output_sha256": "a3c0ccfe3f9592fa610ecae624c94773b842ac4019070e23f0096e93252f4951",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 19,
+      "variant": "reuse",
+      "grammar": "d19_corner_keywords",
+      "output_sha256": "c1f92db3ce406d9f0570b5d74db25ddd940b45855aea6c4d63d8cc5689dbd0af",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 20,
+      "variant": "primary",
+      "grammar": "d20_mosaic_relay",
+      "output_sha256": "7a247fc5af3629588402ab8589a462eed542edf1e86b91023459f7d253e6fe4f",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 20,
+      "variant": "reuse",
+      "grammar": "d20_mosaic_relay",
+      "output_sha256": "19a9e7219d2e7c89b70b957e330073cdc8aeef1610ef5347e09b12f4e0649506",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 21,
+      "variant": "primary",
+      "grammar": "d21_shatter_type",
+      "output_sha256": "abfc0d1eb97ccfc6ca9d4bfd21811bc83b3d6ee208eb7dd3f9668768dfd77e8e",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 21,
+      "variant": "reuse",
+      "grammar": "d21_shatter_type",
+      "output_sha256": "c7dec2bd2c8bf030e7a1e71910bae521da83b1e5fe32f4c33e945a7df842d99e",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 22,
+      "variant": "primary",
+      "grammar": "d22_chart_overlay",
+      "output_sha256": "daa5112603ae67b28682a503f543429c9ae2321a96c298cd39cf4d7e4df46945",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 22,
+      "variant": "reuse",
+      "grammar": "d22_chart_overlay",
+      "output_sha256": "432a371053f5c54400c0bf277a4de1164a87f685f35bdffa6709d70f842bc51f",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 23,
+      "variant": "primary",
+      "grammar": "d23_split_crack",
+      "output_sha256": "429437430b0b2d43f0cc820a5b53f8cf2a091440ffac46677d2dfb02ffcb85a9",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 23,
+      "variant": "reuse",
+      "grammar": "d23_split_crack",
+      "output_sha256": "64cb8572972bea24fbad93b9f3960bf314e40212089154f57e0571fb543e5009",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 24,
+      "variant": "primary",
+      "grammar": "d24_concept_presenter",
+      "output_sha256": "8760ff8b812a031473a93c12d019afdd5b7c9c7da115782f39d1f9e11563fb8c",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 24,
+      "variant": "reuse",
+      "grammar": "d24_concept_presenter",
+      "output_sha256": "3a594c3098b83e5554ca463b29298bb6e4eb7f3f775effdf2c632a9d23b1fb4e",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 25,
+      "variant": "primary",
+      "grammar": "d15_behind_type",
+      "output_sha256": "a1c08e60dbdeab2bdff77847fff7d2af42e3c84d9eac78e766f52d4cb52c3585",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 25,
+      "variant": "reuse",
+      "grammar": "d15_behind_type",
+      "output_sha256": "117ae7c74b2a4e0245e6a2f49cd0cec9e289295293d66126e91e58a6395bfe66",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 26,
+      "variant": "primary",
+      "grammar": "d26_film_frame",
+      "output_sha256": "21cba2d26fec98911a887716945a69b78f0224f918fa8108f44ed7a400894d76",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 26,
+      "variant": "reuse",
+      "grammar": "d26_film_frame",
+      "output_sha256": "e2e0aeb925431e5d0b1e34fa95724ba6faeed805b65481a5d0d78079fb018604",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 27,
+      "variant": "primary",
+      "grammar": "d27_wavy_frame",
+      "output_sha256": "ac1a45b8f0fe634706c5a54042a8378f045133b740d183f23f2487d162882ec8",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 27,
+      "variant": "reuse",
+      "grammar": "d27_wavy_frame",
+      "output_sha256": "27d8962b9b3e40b3cdd0984b83e7a0284d670116e3c77628b84c80d73a369048",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 28,
+      "variant": "primary",
+      "grammar": "d28_marker_sweep",
+      "output_sha256": "92e7a8b34628f73d2e18f9ab93cfdecb5d43d1004c6b7665c41f9415652f2e70",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 28,
+      "variant": "reuse",
+      "grammar": "d28_marker_sweep",
+      "output_sha256": "0876439ba6d15dc85799f4acfba8bb792bafd668b328f478d4f4faebd92da15b",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 29,
+      "variant": "primary",
+      "grammar": "d13_cutout_outline",
+      "output_sha256": "74834c549eab6f0aae25fdde8c949187f16c3be0c9ac81ae03005408cbba3806",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 29,
+      "variant": "reuse",
+      "grammar": "d13_cutout_outline",
+      "output_sha256": "ff3d39606cd6cfe45db66158e57b29513b03450322545b96b499fb8a9de8d476",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 30,
+      "variant": "primary",
+      "grammar": "d30_gallery_focus",
+      "output_sha256": "5411bba515d7d1fe063e43af0aeb664b7bcfbe51c9f6fa1cb7441ddd0fcfe162",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    },
+    {
+      "rank": 30,
+      "variant": "reuse",
+      "grammar": "d30_gallery_focus",
+      "output_sha256": "c1cbe052db19e612309f9978a26e29b11aa1c05c3e2bbe61e757a2c204fd6e46",
+      "frames": 96,
+      "full_decode": "passed",
+      "seek_determinism": "passed",
+      "encoded_frame_review": {
+        "overview_times": [
+          0.375,
+          1.458333,
+          3.625
+        ],
+        "reviewer": "current Codex",
+        "scope": "Actual final encoded frames sampled for composition and readability; not continuous listening or lip-sync review"
+      }
+    }
+  ],
+  "integration": {
+    "grammar": "d11_punch_caption",
+    "duration": 4,
+    "frames": 96,
+    "canvas": "1080x1920",
+    "presenter": "authorized moving stock, no lip-sync claim",
+    "accepted_master_track_preserved": true,
+    "audio_pcm": {
+      "correlation": 0.9999954638221352,
+      "rms_db_delta": -0.0009707780554890633,
+      "source_samples": 192000,
+      "output_samples": 192000,
+      "offset_samples": 0,
+      "method": "Aligned decoded mono PCM comparison, AAC re-encoding; not continuous listening or lip-sync evaluation"
+    },
+    "broll_cache_used": true,
+    "full_render_cache_used": true,
+    "full_decode": "passed",
+    "browser_check_warning": "One pre-existing caption nested-structure lint warning; runtime/layout/motion checks passed; inspected native caption and presenter returns in encoded output"
+  },
+  "negative_input_cases": 14,
+  "limits": [
+    "Selected effects and compositions, not every effect in entire tutorials",
+    "Static image foreground only; moving foreground segmentation not implemented",
+    "Mechanism previews are silent; no user-avatar identity or lip-sync acceptance",
+    "Default personalized Douyin search order, not a viral ranking",
+    "User artistic acceptance is pending"
+  ],
+  "final_validator_cached_positive_cases": 60
+}

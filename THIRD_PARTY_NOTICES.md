@@ -58,3 +58,11 @@ Editorial/reference research consulted Hypit, Talkcraft, xilo-opus-video,
 SeeCut, video-replica-studio and make-awesome-video. Their code, demonstration
 media and credentials are not incorporated into this skill's runtime.
 Attribution does not assert a common license or affiliation.
+
+The Douyin source catalog records public work URLs, authors and selected motion
+observations. Its 28 adaptation modules are independently authored; the 30 source
+videos, original faces, audio, software UI, downloads and API responses are not
+distributed. Source media retain their authors' rights and are not covered by
+this repository's MIT license. Local study previews use separately authorized
+illustrative presenter assets; they do not demonstrate the user's avatar or
+relicense the original footage.

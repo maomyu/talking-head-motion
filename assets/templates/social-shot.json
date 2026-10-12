@@ -1,0 +1,12 @@
+{
+  "grammar": "d02_word_tiles",
+  "duration": 4,
+  "fps": 24,
+  "portrait": "assets/presenter.png",
+  "presenter_video": "accepted-master.mp4",
+  "video_start": 0,
+  "title": "重点观点",
+  "detail": "本句口播的实际内容",
+  "accent": "#18a16b",
+  "ink": "#ffffff"
+}

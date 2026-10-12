@@ -25,6 +25,10 @@
     fit(child.querySelector('.hero-text'), plan.canvas.height * .24);
     fit(child.querySelector('.quote-text'), plan.canvas.height * .28);
     const maximumBottom = plan.canvas.height * .76;
+    if(e.position==='full'){
+      // The video clip owns start/end visibility. Do not wrap its authored motion in a second entry animation.
+      tl.set(child,{y:0,opacity:1},e.start);continue;
+    }
     if (host.offsetTop + host.offsetHeight > maximumBottom) throw new Error(`Graphic enters caption safety region: ${e.id}`);
     tl.fromTo(child, {y: 30 * ratio, opacity: 0}, {y: 0, opacity: 1, duration: enter, ease: 'power3.out'}, e.start);
     const presenter = document.querySelector('.presenter-wrap');

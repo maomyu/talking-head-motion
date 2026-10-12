@@ -26,7 +26,7 @@
 python3 <skill>/scripts/produce.py /absolute/project --model small --expected-script script.txt
 ```
 
-它执行可缺省的转写、列在 `broll-jobs.json` 中的花叔片段、build、浏览器检查、渲染、完整编码检查，并保存阶段日志、B-roll 缓存和渲染历史。它不会凭空写稿、选证据或冒充审片；这些是上表中 Agent 的工作。状态成功停在 `needs_editorial_review`，当前 Codex 接着查看编码帧、内容和本地音频检查，按时间码修复；不要求用户另配 Gemini。ASR 推断仍需文字复核；有已校正词轴/已验证字幕 cue 时复用它们。
+它执行可缺省的转写、列在 `broll-jobs.json` 中的花叔片段或抖音机制模块、build、浏览器检查、渲染、完整编码检查，并保存阶段日志、B-roll 缓存和渲染历史。默认 `renderer:huashu`，新增模块用 `renderer:social`；整屏镜头用 `position:full`，随后回到人物。选择与限制见 [抖音参考学习](douyin-grammars.md)。它不会凭空写稿、选证据或冒充审片；这些是上表中 Agent 的工作。状态成功停在 `needs_editorial_review`，当前 Codex 接着查看编码帧、内容和本地音频检查，按时间码修复；不要求用户另配 Gemini。ASR 推断仍需文字复核；有已校正词轴/已验证字幕 cue 时复用它们。
 
 `production-run.json` 记录失败阶段和日志。错误后修输入、再次执行同命令；相同 spec/词轴的 B-roll 和相同内容的完整输出复用。音频变化时旧转写不能续用。默认 `review_limit:3` 约束这里的成片渲染尝试；特殊新范围可说明理由后修改项目额度。单个 `motion.py render` 是底层调试命令，不代替生产循环的次数管理。
 

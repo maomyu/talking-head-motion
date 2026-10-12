@@ -48,6 +48,8 @@ Events carry explicit `start`,`end` or `anchor` and positive `duration`. `anchor
 
 Initial events occupy one graphics lane and cannot overlap; subtitles use another lane. Simultaneous graphics or more effects can use project-local custom HTML/JS. Text wraps and receives fit checks; run actual runtime/encoded-frame checks for long text.
 
+Video `broll` also accepts `position:"full"`: the authored clip fills the canvas directly with no extra card or entry tween. Other component types reject this position. The accepted narration continues, and captions remain above the clip. `broll-jobs.json` accepts `renderer:"social"` for [social modules](douyin-grammars.md); omitted renderer remains Huashu. Use the same master time as `presenter_video`'s `video_start` when the shot includes the moving presenter.
+
 For accepted presenter footage, an event can use `"presenter":"pip"` to move it into a right-side small window above the caption region for that event, returning to full view afterward. Inspect the actual face crop and caption relationship; the geometry is a preset, not face detection.
 
 Build writes `public/index.html`, staged local assets, `resolved-shotbook.json` and `subtitles.srt`. Render saves command logs and fingerprints; identical verified outputs can be reused. Changed inputs invalidate QA. Because supporting clips are silent, final rendering preserves the accepted master narration and channel layout instead of relying on the renderer's mix. Optional music/SFX mixing requires its own loudness and synchronization review. `check` validates full decode, dimensions, frame count and A/V duration, and extracts encoded samples. Mechanical success sets `rendered_needs_visual_review`, not `complete`.

@@ -1,6 +1,6 @@
 ---
 name: talking-head-motion
-description: 完整网感口播制作流程：自拍原视频保留原声粗剪、参考视频拆解、语义分镜、人物反复出镜、花叔完整场景引擎与35种艺术配方及9张解说语法卡、复杂动画重建、词轴同步、HyperFrames或Canvas本地MP4、逐镜视频审核、Codex审片与经验回流。用于真人或数字人口播、爆款参考学习和动画复刻；交付本地视频及可重跑工程。
+description: 完整网感口播制作流程：自拍原视频保留原声粗剪、抖音参考学习、30条来源对应28个动画与版式模块、语义分镜、人物反复出镜、花叔35艺术配方与8种语法、词轴同步、本地MP4、对话审核与当前Codex审片。用于真人或数字人口播、参考重建与可复用动画制作。
 ---
 
 # 网感口播完整制作
@@ -33,6 +33,8 @@ description: 完整网感口播制作流程：自拍原视频保留原声粗剪�
 Read [project-contract.md](references/project-contract.md) for schemas/commands, [reference-reconstruction.md](references/reference-reconstruction.md) for visual reconstruction, and [quality-review.md](references/quality-review.md) for acceptance. For artistically rendered B-roll, use the learned [Huashu integration](references/huashu-integration.md). When the user asks for 花叔完整风格、丰富场景、艺术动画 or complains about simple text cards, use [完整花叔制作](references/huashu-full-production.md): create content-specific scenes and actual object actions with the complete engine. Keep one art direction throughout each film. When the user requests 35画风口播、每种画风一条完整视频 or full-film style comparisons, read [完整画风对照](references/style-batch.md) and produce the requested number of complete talking-head films with the same accepted content, timing and presenter returns.
 
 用户要求查看不同风格或增加人物出镜时，阅读 [presenter-led-styles.md](references/presenter-led-styles.md)。使用同一段已确认配音做风格对照，并把人物多次回到主画面写进分镜；不要用一次露脸加全片动效代替口播主线。
+
+用户要求搜索抖音口播剪辑、下载前N条、增加语法或提取参考动画时，使用 [抖音参考学习与模块](references/douyin-grammars.md) 和 [28模块目录](assets/social-grammars/catalog.json)。先记录实际搜索顺序，再逐条查看完整时长概览与选定密集窗口，制作实际编码的复刻/复用对照片。教程界面、静态构图、生成式变脸与剪辑运动必须区分；重复案例归并，不能用30来源冒充30新语法。新增模块通过`broll-jobs.json`的`renderer:social`接入完整出片，整屏动画使用`position:full`。动态人物抠像尚未接入时明确限制，不用一张静态人像替代移动真人。用户说“由用户指定”表示保留画风选择权，并未指定具体画风。
 
 ## 最短可执行入口
 

@@ -125,7 +125,8 @@ def resolve_events(events, words, duration, project):
         if not (0 <= event['start'] < event['end'] <= duration + .001):
             raise ValueError(f'Event outside final audio timeline: {event["id"]}')
         if event['end'] - event['start'] < .6: raise ValueError('Readable graphics need at least 0.6 seconds')
-        if event.get('position', 'top') not in ('top', 'center'): raise ValueError('position must be top or center')
+        if event.get('position', 'top') not in ('top', 'center', 'full'): raise ValueError('position must be top, center or full')
+        if event.get('position')=='full' and event['component']!='broll':raise ValueError('Only video B-roll supports a full-frame slot')
         if event.get('presenter', 'full') not in ('full', 'pip'): raise ValueError('presenter must be full or pip')
         if event['component'] == 'steps':
             if not isinstance(event.get('items'), list) or not 1 <= len(event['items']) <= 6:
@@ -315,6 +316,9 @@ def event_markup(event):
     elif kind=='split-compare': inner=f'<h2 class="section-title">{text(event.get("title",""))}</h2><div class="comparison"><div class="alternative">{text(event["left"])}</div><div class="alternative highlighted">{text(event["right"])}</div></div>'
     elif kind=='evidence': inner=f'<h2 class="section-title">{text(event.get("title",""))}</h2><div class="image-mask"><img class="evidence-image" src="{text(event["staged_asset"])}" /></div><p class="evidence-caption">{text(event.get("caption",""))}</p>'
     else:
+        if event.get('position')=='full':
+            inner=f'<video id="{event["id"]}-video" class="clip broll-video" src="{text(event["staged_asset"])}" playsinline muted data-has-audio="false" data-start="{event["start"]}" data-duration="{event["end"]-event["start"]}" data-track-index="2"></video>'
+            return f'<section id="{event["id"]}" class="graphic full"><div class="graphic-inner broll">{inner}</div></section>'
         inner=f'<h2 class="section-title">{text(event.get("title",""))}</h2><div class="image-mask"><video id="{event["id"]}-video" class="clip broll-video" src="{text(event["staged_asset"])}" playsinline muted data-has-audio="false" data-start="{event["start"]}" data-duration="{event["end"]-event["start"]}" data-track-index="2"></video></div>'
         # Media owns its explicit timing; its plain ancestors must be untimed.
         return f'<section id="{event["id"]}" class="graphic {event.get("position","top")}"><div class="graphic-inner broll">{inner}</div></section>'

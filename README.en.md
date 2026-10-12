@@ -12,6 +12,7 @@ The Agent handles meaning, assets, storyboarding and review. Local scripts handl
 - **Bring the presenter back throughout the video**: show the presenter for the opening, key claims, emotional turns, conclusions and closing. Explanatory shots can retain a picture-in-picture window.
 - **35 art styles**: code for materials, brushwork, shapes, palettes, lighting and motifs. Objects and scenes are redesigned for each new topic.
 - **8 parameterized animation grammars**: whiteboard, collage, kinetic typography, charts, geometry, product interfaces, flat illustration and storytelling. A ninth presenter-explainer method card requires project-owned presenter assets.
+- **28 social talking-head motion/layout modules**: reconstructed selected windows from the first 30 observed Douyin search results, including word tiles, presenter windows, curved titles, foreground layers, text shards, charts, masks and mosaics. Duplicate mechanisms are merged. Supports replacement content and frame-by-frame presenter-video seeking. See [sources and usage](references/douyin-grammars.md) and [validation scope](assets/social-grammars/validation.json).
 - **Reference analysis and effect reconstruction**: study motion paths, masks, layers, holds, transitions and their narrative purpose, then build components with replaceable content.
 - **Word-timed animation**: anchor actions and captions to real timestamps from the final master, rather than evenly dividing time or inserting cards at fixed intervals.
 - **Conversational review**: the preview page offers playback, shot navigation, synchronized comparisons and downloads. Style selection, feedback and approval happen in the conversation.
@@ -99,6 +100,7 @@ The local review server binds only to `127.0.0.1`. The page has no feedback form
 - Technical, visual, caption, audio and reference-fidelity checks are reported separately. Inspecting frames or reading transcripts is not a complete real-time audiovisual review. Unchecked areas must be disclosed.
 - The 35 styles are material and drawing mechanisms that require topic-specific staging. Replacing the script alone is not guaranteed to produce a new finished video. The 8 grammars and 35 styles are not 280 verified automatic combinations.
 - Reference effects require observation and reconstruction. This repository does not provide a general inverse-effects algorithm for arbitrary videos or guarantee viral performance.
+- The new modules were locally exercised in 30 four-second reconstruction clips and 30 reuse clips, including static layouts. These are not 30 complete new-person talking-head videos or every effect in the tutorials. Foreground modules currently accept transparent images; moving-person segmentation is not integrated.
 - Avatar providers, authorized likenesses, voices, costs and service capabilities must be checked in the actual project. Remote Gemini review is optional; the current Codex Agent is the default reviewer.
 - The original 35 room scenes are 1920×1080 capability examples. New portrait videos require redesigned compositions. The author's private characters, audio, showcase media and service configuration are excluded.
 
