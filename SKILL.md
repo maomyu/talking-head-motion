@@ -36,6 +36,8 @@ Read [project-contract.md](references/project-contract.md) for schemas/commands,
 
 用户要求搜索抖音口播剪辑、下载前N条、增加语法或提取参考动画时，使用 [抖音参考学习与模块](references/douyin-grammars.md) 和 [28模块目录](assets/social-grammars/catalog.json)。先记录实际搜索顺序，再逐条查看完整时长概览与选定密集窗口，制作实际编码的复刻/复用对照片。教程界面、静态构图、生成式变脸与剪辑运动必须区分；重复案例归并，不能用30来源冒充30新语法。新增模块通过`broll-jobs.json`的`renderer:social`接入完整出片，整屏动画使用`position:full`。动态人物抠像尚未接入时明确限制，不用一张静态人像替代移动真人。用户说“由用户指定”表示保留画风选择权，并未指定具体画风。
 
+用户要求真实拍摄视频复刻、原片完整逐帧分析、原配色/语法精确一致，或指出四秒机制样片不细致时，必须改用 [原生逐帧重建](references/native-frame-reconstruction.md)。保留完整原片并实际遍历每帧原生 PTS；连续审阅所有重要动画帧，测量真实动作而非猜 easing。人物使用动态视频/每帧 alpha，按原生窗口时长重建，分别验证颜色、字形、轨迹、遮罩、层序与转场。网页增加同步原速和前后逐帧对照，审核仍在对话。未经逐项对照不得标“百分百”；素材、字体或被遮挡区域无法恢复时公开具体差异，不能重放原成片冒充逆向重建。
+
 ## 最短可执行入口
 
 先用 `motion.py init PROJECT --video MASTER` 接受现成口播，或 `--audio NARRATION` 创建音频演示。完成参考学习、词轴/字幕复核与分镜后：

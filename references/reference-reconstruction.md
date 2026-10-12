@@ -11,3 +11,5 @@ Rebuild a useful 2–5 second segment first, compare equivalent content, then re
 Candidate references: [video-replica-studio](https://github.com/taotao135791-bit/video-replica-studio), [make-awesome-video](https://github.com/NewTurn2017/make-awesome-video), and [Huashu](https://github.com/alchaincyf/huashu-art-motion). Initial bundled components are independently authored. Retain actual licenses/notices when importing code. Hypit uses a separate runtime and modified Apache license. SeeCut/Talkcraft have noncommercial restrictions and are not vendored as commercial core.
 
 Until a reference has been viewed and matched effects tested, the included preset is a development style, not a learned replica.
+
+For real filmed footage, complete-source frame analysis or exact palette/motion requests, use [native-frame-reconstruction.md](native-frame-reconstruction.md). A 4-second retimed mechanism preview is insufficient. Decode native PTS for every frame, measure continuous transitions, use moving alpha sequences, and report encoded-frame fidelity separately from feature collection. Never claim complete or 100% reconstruction from successful decoding or sampled similarity.

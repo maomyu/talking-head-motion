@@ -1,0 +1,1473 @@
+{
+  "schema_version": 1,
+  "release": "Unreleased native-frame reconstruction",
+  "recorded_at_utc": "2026-10-12T13:31:12.407982+00:00",
+  "status": "machine_checks_passed_reconstruction_review_in_progress",
+  "scope": "Public metadata for reproducible checks and explicitly bounded visual review. Private source media, extracted artwork and local evidence files are not distributed.",
+  "engine_identity": {
+    "composite_sha256": "91328adaa56020a08d383c86198ba2d952ac199d5980d1dff0b9aafa709667b8",
+    "method": "SHA256 of the UTF-8 concatenation of ordered lowercase SHA256 hexadecimal file digests; this is not the JavaScript file hash.",
+    "ordered_files": [
+      {
+        "path": "assets/reference-engine/index.html",
+        "sha256": "88ae50e1e026179228be4b2ad07331b58bbdb25d429a9e01c03587c910cc64ec"
+      },
+      {
+        "path": "assets/reference-engine/reference.js",
+        "sha256": "88f9e76c7f6365645d5e8b0b39e8fff9249fef6b8295d0c603a332199af4b9d8"
+      },
+      {
+        "path": "scripts/reference_render.py",
+        "sha256": "3bafde8f59d15b7f5f686f737605430fedbfd28ed7754d4fcff2d8cef8c94034"
+      },
+      {
+        "path": "assets/huashu-engine/lib/fonts/NotoSansSC-800.woff",
+        "sha256": "b57f9c645b1a4967a3c8914ed41f24d109394a8175e36af08f93e40803e84664"
+      }
+    ],
+    "inventory_script": {
+      "path": "scripts/frame_inventory.py",
+      "sha256": "f7f123d0936f85e1a88e4078a43aed539fba665adf17cf41edb42cb4241e9129"
+    }
+  },
+  "native_frame_inventory": {
+    "status": "passed",
+    "complete_downloaded_sources": 30,
+    "native_frames_decoded_and_measured": 89080,
+    "native_rgb_pixels_measured": 176337273600,
+    "source_bytes": 528339547,
+    "decode_method": "Every frame is decoded in source order at native dimensions with native PTS/time base. Statistics use every native RGB pixel; no frame skipping, fixed-rate resampling or thumbnail-based colour measurements.",
+    "frame_ledger": "Consecutive frame number, rational PTS/time base, dimensions, complete-frame and 4x4-grid RGB means, exact 8x8x8 quantized histogram counts, previous-frame differences and candidate scene changes.",
+    "colour_measurement_limit": "Histogram bin width is 32 RGB code values. Decoded pixel measurements describe the compressed original, not the unavailable authoring-project colour profile, swatches or vector artwork.",
+    "independent_cross_check": {
+      "status": "passed",
+      "ledger_rows_checked": 89080,
+      "native_lossless_pngs_cross_checked": 360,
+      "checks": [
+        "input source hash",
+        "ledger hash",
+        "consecutive frame indices",
+        "all native PTS rational values and monotonicity",
+        "every frame pixel count in exact quantized histogram bins",
+        "all weighted native grid RGB means and MAD",
+        "declared frame count equals full decoded ledger count",
+        "every linked PNG native dimensions and lossless RGB mean"
+      ],
+      "lossless_png_scope": "12 native lossless evidence frames per source, 360 total; this does not mean 360 frames were all visually inspected by an agent."
+    },
+    "statistics_kernel_check": {
+      "status": "passed",
+      "kernel_sha256": "ae8fdb8ec34f41eb7ef683c3e4e8de3f73c38fffedb4a8c58ed57df01efb8fc2",
+      "exact_rgb_sums": true,
+      "exact_previous_frame_absolute_differences": true,
+      "exact_8x8x8_bin_counts": true,
+      "dimensions_tested": [
+        {
+          "width": 43,
+          "height": 71,
+          "grid": 4
+        },
+        {
+          "width": 127,
+          "height": 85,
+          "grid": 4
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "grid": 4
+        },
+        {
+          "width": 63,
+          "height": 75,
+          "grid": 1
+        }
+      ]
+    },
+    "native_timing_exception": {
+      "rank": 3,
+      "actual_variable_frame_rate": true,
+      "unique_frame_intervals_rounded_9dp": 6,
+      "minimum_interval_seconds": 0.03333333333332433,
+      "maximum_interval_seconds": 0.06705729166665719,
+      "handling": "Retained by the inventory; the CFR reconstruction renderer rejects this input rather than manufacturing uniform timestamps."
+    },
+    "agent_review_is_separate": true,
+    "full_source_semantic_review_completed": false,
+    "sources": [
+      {
+        "rank": 1,
+        "native_frames": 1202,
+        "source_sha256": "e9731d5d5749c4393d7072fdfbe5de931840f707b536e491240a55eb755a79c0",
+        "private_frame_ledger_sha256": "37ccfec474ff141849e0cc80bd7e3c861ea38715eaff289843e8907760550563"
+      },
+      {
+        "rank": 2,
+        "native_frames": 5709,
+        "source_sha256": "72eec32b860e3bdb25071c9dcb32310a60a8d0ac950c71a2d31a502712670c08",
+        "private_frame_ledger_sha256": "07329ff88309d1266a99d130ede81b585d253d2d92dee938efc4947e1ec7b32a"
+      },
+      {
+        "rank": 3,
+        "native_frames": 2022,
+        "source_sha256": "946d3db2bbf3cea6515d60015f04aac549bfef93de9726d653377bd96ed79da1",
+        "private_frame_ledger_sha256": "04fcc9d18369fb1ae61f9e258f681c4f45bd95441a3b7b8fee2d8ea1d653cd9d"
+      },
+      {
+        "rank": 4,
+        "native_frames": 4677,
+        "source_sha256": "971954e65c9561d3263ce017e5e068fdbbc6d5f543017fec570e97ab2eecb281",
+        "private_frame_ledger_sha256": "10d64b1d38b2a72b49c6068fbf2354c2521f913b4019dd074111f1f0d68d472f"
+      },
+      {
+        "rank": 5,
+        "native_frames": 3224,
+        "source_sha256": "590f82eb72f2f59b70815b0ade8a1a75ffe2aa3c97e83241c65a6c438b349b25",
+        "private_frame_ledger_sha256": "8db59c6b1b6790457ce3c774ec80a6a303d02ca26cbcc3be30e38ea684090c4a"
+      },
+      {
+        "rank": 6,
+        "native_frames": 1716,
+        "source_sha256": "75a93c340d93519bfd97ac9264a5b92c6da30ed7ab4050b7b39d11d20cb22398",
+        "private_frame_ledger_sha256": "ef828c162fed3b641dca820cfd9ef3c0a2c572e59934988c43ef1fcf8f2b7263"
+      },
+      {
+        "rank": 7,
+        "native_frames": 1065,
+        "source_sha256": "64c846704f6a4c6466f45777c2766675a95dfe090fc5712eaebb097387b0c0aa",
+        "private_frame_ledger_sha256": "d5623eeae1317d0f78939b477b3685e71da35d269b128994a1619c7d947a3261"
+      },
+      {
+        "rank": 8,
+        "native_frames": 1666,
+        "source_sha256": "6971cbed1d589f5a832b44cd0c2c818cd078a42f96f861718aea55b706e95d61",
+        "private_frame_ledger_sha256": "40298fc6db60fe484bf564a6309d1f54402d6e765e62d5ccc0c9a97c51160ccc"
+      },
+      {
+        "rank": 9,
+        "native_frames": 4287,
+        "source_sha256": "48398c429a40132d98b9f7807ad5f63a96a95da63184e52feb1beaa94c6eb500",
+        "private_frame_ledger_sha256": "d526ca58f2f08bee622f12d9ef2515074a5bf11b2820630f33f1f44335fe42a7"
+      },
+      {
+        "rank": 10,
+        "native_frames": 4322,
+        "source_sha256": "5e0c069ec8afa16ba7f7c1b07ffa2b79cf3a9e88468dbf42f3313f1c706334c6",
+        "private_frame_ledger_sha256": "f1ccdc18d31a276becb62b9da85648496b4896a298dad6c56bf152b6016417fb"
+      },
+      {
+        "rank": 11,
+        "native_frames": 1698,
+        "source_sha256": "a56d52aad3be84aff4741c0096183e6096a94190fa2284faa5f4acad37be1086",
+        "private_frame_ledger_sha256": "a6d7cca6144dbf2e873ec67575642e4b002daaf4dd8dcb55bb580848913f4b68"
+      },
+      {
+        "rank": 12,
+        "native_frames": 4695,
+        "source_sha256": "5ebc5af10eacd830e20133aa1dd5f112d2265e5313cfbd5410750512f7403e7e",
+        "private_frame_ledger_sha256": "5538eb7fd0b7dc3530f19bca1b4986423866d85f5252fd02bf75ddb3a72e5d3a"
+      },
+      {
+        "rank": 13,
+        "native_frames": 614,
+        "source_sha256": "525224dac3b9e407cacc8459ca58a6b07e6cc5614400cc05cde7cbd508280715",
+        "private_frame_ledger_sha256": "e0a8519afc8b1a24cab34d44a6593c6829e3682f1bb955fcf8f7b0049b33842d"
+      },
+      {
+        "rank": 14,
+        "native_frames": 4568,
+        "source_sha256": "e1edc6a1271a80817e70849454281b0bebbd96fa562337b2ee2283c498026997",
+        "private_frame_ledger_sha256": "9276bd91e2fad3af3eef3af529e8cccdeede4904672d563ac8b61363ddaee9a6"
+      },
+      {
+        "rank": 15,
+        "native_frames": 3597,
+        "source_sha256": "93165cb9a02173038d3bceb6566aa7a766cbd78e773d5eeefacf795fd89d7f0f",
+        "private_frame_ledger_sha256": "5f773d22253c37fdfa49d42223874f7a0048e8192b18cedc1eea46f26f049ab3"
+      },
+      {
+        "rank": 16,
+        "native_frames": 12433,
+        "source_sha256": "fb370d61b321126ccfa8ff108ae9071fa63a8f114ee6e348f3a5fea4fc985c20",
+        "private_frame_ledger_sha256": "1a2a03f2933b8ec670f1e32bfbcafb901037a1d56bee862f98f002f6657c403e"
+      },
+      {
+        "rank": 17,
+        "native_frames": 10768,
+        "source_sha256": "beeba3c75da8a15d5b244bfefa12b765d4886f309af97c24589f40fc335bfb76",
+        "private_frame_ledger_sha256": "2720c529c86dd698e504d39958a84f477530ecc84b4e40a78d7ca3fa51bbb4ae"
+      },
+      {
+        "rank": 18,
+        "native_frames": 1213,
+        "source_sha256": "0525456a59a597e9e9f100ad12ecf96a5f2db491a2b31f87a34824d3e3e39606",
+        "private_frame_ledger_sha256": "eb3113885bc9d5a8378ed278839db3ed9da04a1d4de6dfa068d9b8da1659d018"
+      },
+      {
+        "rank": 19,
+        "native_frames": 3663,
+        "source_sha256": "de7ee3f0dd6f4cb5ef12061b013c7c68b85e9ebf045051ddcdba58332a5f3ab5",
+        "private_frame_ledger_sha256": "d13227a3247347626dd782842dc2f60f82108206f515f7b4f953b79c4a469321"
+      },
+      {
+        "rank": 20,
+        "native_frames": 707,
+        "source_sha256": "f845aabefaaa1f87cb2942028178554e8c3f72a0c22233caa51af0cc997d49f6",
+        "private_frame_ledger_sha256": "d5f067f438f6bd67a689649b988137487049d33baef291a3fef92504bdb799c9"
+      },
+      {
+        "rank": 21,
+        "native_frames": 2336,
+        "source_sha256": "dbff0b914da9711d212922e027e71da07acab1ea21c02c6ceb0684f6d4b00ce5",
+        "private_frame_ledger_sha256": "cb795b72ac2305e388c0bcfc68566a77482656cdbbf570303531de509d16e18c"
+      },
+      {
+        "rank": 22,
+        "native_frames": 625,
+        "source_sha256": "1baefd74f6f458dfbee36a4c9adb920543e55966daccb0319e12a40e6a082c02",
+        "private_frame_ledger_sha256": "a0cadc8800b9a2e03a30504a071ea4ed6f3f98a72936335a4d989f890d5e5e78"
+      },
+      {
+        "rank": 23,
+        "native_frames": 1138,
+        "source_sha256": "14e534c807c0c48964e46a371dba39c5ada577f188dfe2db5acf352228537bd6",
+        "private_frame_ledger_sha256": "3636ba12dc665a143ca77506f991f37e57d6530c406ce865c84212fcc34caaf1"
+      },
+      {
+        "rank": 24,
+        "native_frames": 1410,
+        "source_sha256": "40381ea090e972b9e0ab5ca975496cc07ceeb6f9b18f7898b0ffd6d274d43e4a",
+        "private_frame_ledger_sha256": "aba20d6cfb8efab32b98ac015f30d9ae619792831743faf9e9be87b4ecdef2f9"
+      },
+      {
+        "rank": 25,
+        "native_frames": 1096,
+        "source_sha256": "828aa490487f57e58bd5bb0f2c4e2361dd9f1cb33d9d03558d5a7bcc58421713",
+        "private_frame_ledger_sha256": "aa9d7e2f8849470c7c92d683a5a38641fa564b99b23f61637150da991367c786"
+      },
+      {
+        "rank": 26,
+        "native_frames": 1521,
+        "source_sha256": "24745eb637c45161d0295d9f62ead7e2d841456a9b6757c52a8af2bcfc726564",
+        "private_frame_ledger_sha256": "bc43010cfcea4dfecc715c8e4cade50535bd018572aafc1a69a3191e0ab8cb17"
+      },
+      {
+        "rank": 27,
+        "native_frames": 1373,
+        "source_sha256": "a777cf293ad610cafe5c6fd4ee230d8b875078e4f4eb56bb5fa708261abd1c2a",
+        "private_frame_ledger_sha256": "479f570f2c7b871ab5366e407723113b2e5d71c36575f9be0f1258df64fdb611"
+      },
+      {
+        "rank": 28,
+        "native_frames": 590,
+        "source_sha256": "2aeb96e4d057381d948d2a185438e0501bd2d4b50ba769b68df678672543967c",
+        "private_frame_ledger_sha256": "c9883655d9b9ec1755c5954dc4ad047464e415f9b7232d1968a87d4b0ec6d7b9"
+      },
+      {
+        "rank": 29,
+        "native_frames": 532,
+        "source_sha256": "31425330c5782d29d21448e809fa20b20faa8db74e387bb424e7ce6278d590a6",
+        "private_frame_ledger_sha256": "a0660a7afc3ab301873392300d38f1b3ed4b50810a9295ffdbf594778b21a3e7"
+      },
+      {
+        "rank": 30,
+        "native_frames": 4613,
+        "source_sha256": "63d5e973e223106f09d6ce811338b614c97736dd770b34cb3ef0411e56a3e0b8",
+        "private_frame_ledger_sha256": "5e16a6e9da2d37059ed31c260e4b8a52673f3807e6d5fc3509bcda3b42146a49"
+      }
+    ]
+  },
+  "renderer_regression": {
+    "status": "passed",
+    "test_count": 9,
+    "renderer_sha256": "3bafde8f59d15b7f5f686f737605430fedbfd28ed7754d4fcff2d8cef8c94034",
+    "javascript_sha256": "88f9e76c7f6365645d5e8b0b39e8fff9249fef6b8295d0c603a332199af4b9d8",
+    "checks": [
+      {
+        "test": "actual_VFR_cannot_be_replaced_by_uniform_spec",
+        "status": "passed",
+        "observed": "rejected"
+      },
+      {
+        "test": "manifest_cannot_overwrite_input_spec",
+        "status": "passed",
+        "observed": "rejected"
+      },
+      {
+        "test": "manifest_symlink_cannot_overwrite_dummy_input_spec",
+        "status": "passed",
+        "observed": "rejected"
+      },
+      {
+        "test": "opaque_source_video_wrong_hash_rejected",
+        "status": "passed",
+        "observed": "rejected"
+      },
+      {
+        "test": "actual_cfr_positive_source01",
+        "status": "passed",
+        "observed": "accepted"
+      },
+      {
+        "test": "actual_cfr_positive_source02",
+        "status": "passed",
+        "observed": "accepted"
+      },
+      {
+        "test": "screen_blend_whitelist_positive",
+        "status": "passed",
+        "observed": "accepted"
+      },
+      {
+        "test": "unsupported_blend_whitelist_negative",
+        "status": "passed",
+        "observed": "rejected"
+      },
+      {
+        "test": "actual_JS_screen_blend_canvas_pixel",
+        "status": "passed",
+        "observed": "Canvas screen blend produced RGBA [255, 0, 255, 255]"
+      }
+    ],
+    "scope": "Read-only input validation and isolated Canvas screen-blend pixel test. Positive native-CFR specs cover case01 F681..821 and case02 F0..59. Guard success does not establish artistic fidelity."
+  },
+  "read_only_gallery_and_http": {
+    "status": "passed",
+    "public_files": [
+      {
+        "path": "scripts/precision_gallery.py",
+        "sha256": "4cde360331f217027d56aa22c69803d19ee10c4f46e14181ea5bdff468b4bc96"
+      },
+      {
+        "path": "scripts/serve_review.py",
+        "sha256": "c486b3e6be03eb66dcf3b7c310dcc588a809e246babad4bdb9610714ab91020d"
+      }
+    ],
+    "user_input_or_recording_elements": [],
+    "storage_or_write_api_matches": [],
+    "playback_checks": {
+      "request_video_frame_callback_final_frame_aligned": true,
+      "fallback_timeupdate_and_ended_final_frame_aligned": true,
+      "last_reference_frame": 821,
+      "last_replica_frame": 140,
+      "fractional_fps_30000_over_1001_serialized_as_number": true
+    },
+    "http_handler_check_count": 12,
+    "http_handler_checks": [
+      {
+        "method": "GET",
+        "range": null,
+        "status": 200,
+        "passed": true,
+        "exact_body_verified": true
+      },
+      {
+        "method": "GET",
+        "range": "bytes=0-1",
+        "status": 206,
+        "passed": true,
+        "exact_body_verified": true
+      },
+      {
+        "method": "GET",
+        "range": "bytes=12-17",
+        "status": 206,
+        "passed": true,
+        "exact_body_verified": true
+      },
+      {
+        "method": "GET",
+        "range": "bytes=252-",
+        "status": 206,
+        "passed": true,
+        "exact_body_verified": true
+      },
+      {
+        "method": "GET",
+        "range": "bytes=-4",
+        "status": 206,
+        "passed": true,
+        "exact_body_verified": true
+      },
+      {
+        "method": "GET",
+        "range": "bytes=255-999",
+        "status": 206,
+        "passed": true,
+        "exact_body_verified": true
+      },
+      {
+        "method": "GET",
+        "range": "bytes=256-",
+        "status": 416,
+        "passed": true,
+        "exact_body_verified": false
+      },
+      {
+        "method": "GET",
+        "range": "bytes=9-2",
+        "status": 416,
+        "passed": true,
+        "exact_body_verified": false
+      },
+      {
+        "method": "GET",
+        "range": "bytes=0-1,4-5",
+        "status": 416,
+        "passed": true,
+        "exact_body_verified": false
+      },
+      {
+        "method": "GET",
+        "range": "bytes=-",
+        "status": 416,
+        "passed": true,
+        "exact_body_verified": false
+      },
+      {
+        "method": "HEAD",
+        "range": null,
+        "status": 200,
+        "passed": true,
+        "exact_body_verified": true
+      },
+      {
+        "method": "HEAD",
+        "range": "bytes=12-17",
+        "status": 206,
+        "passed": true,
+        "exact_body_verified": true
+      }
+    ],
+    "scope": "Actual inline gallery JavaScript executed against deterministic media stubs; actual HTTP handler exercised with temporary dummy bytes and no TCP socket. This is not a real-browser decoded-pixel review.",
+    "actual_browser_v8": {
+      "status": "passed_controls_and_metadata_not_artistic_acceptance",
+      "recorded_at_utc": "2026-10-12T13:30:22.725Z",
+      "surface": "Codex in-app browser, current two-case read-only precision page",
+      "user_input_or_recording_elements": 0,
+      "metadata": [
+        {
+          "clock": "原片 F681 · 22.700s ｜ 重建 F0/140 · 0.000s ｜ 30 fps",
+          "id": "case-01",
+          "media": [
+            {
+              "duration": 40.077007,
+              "height": 1920,
+              "paused": true,
+              "ready": 4,
+              "time": 22.705,
+              "width": 1080
+            },
+            {
+              "duration": 4.7,
+              "height": 1920,
+              "paused": true,
+              "ready": 4,
+              "time": 0.005,
+              "width": 1080
+            }
+          ]
+        },
+        {
+          "clock": "原片 F0 · 0.000s ｜ 重建 F0/59 · 0.000s ｜ 30 fps",
+          "id": "case-02",
+          "media": [
+            {
+              "duration": 190.309002,
+              "height": 1920,
+              "paused": true,
+              "ready": 4,
+              "time": 0.005,
+              "width": 1080
+            },
+            {
+              "duration": 2,
+              "height": 1920,
+              "paused": true,
+              "ready": 4,
+              "time": 0.005,
+              "width": 1080
+            }
+          ]
+        }
+      ],
+      "case01_actual_controls": {
+        "next": {
+          "clock": "原片 F682 · 22.733s ｜ 重建 F1/140 · 0.033s ｜ 30 fps",
+          "times": [
+            22.738333,
+            0.038333
+          ]
+        },
+        "event773": {
+          "clock": "原片 F773 · 25.767s ｜ 重建 F92/140 · 3.067s ｜ 30 fps",
+          "times": [
+            25.771666,
+            3.071666
+          ]
+        },
+        "next774": {
+          "clock": "原片 F774 · 25.800s ｜ 重建 F93/140 · 3.100s ｜ 30 fps",
+          "times": [
+            25.805,
+            3.105
+          ]
+        },
+        "syncEnd": {
+          "clock": "原片 F821 · 27.367s ｜ 重建 F140/140 · 4.667s ｜ 30 fps",
+          "media": [
+            {
+              "paused": true,
+              "time": 27.371666
+            },
+            {
+              "paused": true,
+              "time": 4.671666
+            }
+          ]
+        },
+        "previous820": {
+          "clock": "原片 F820 · 27.333s ｜ 重建 F139/140 · 4.633s ｜ 30 fps",
+          "times": [
+            27.338333,
+            4.638333
+          ]
+        },
+        "display788": {
+          "clock": "原片 F788 · 26.267s ｜ 重建 F107/140 · 3.567s ｜ 30 fps",
+          "times": [
+            26.271666,
+            3.571666
+          ]
+        }
+      },
+      "case02_controls": "Separately exercised earlier: next F1, jump F56, synchronized end F59, previous F58. Current two-case page metadata checked again; no second artistic acceptance implied.",
+      "screenshot_scope": "Actual case01 source F788 / encoded F107 with both paused players and frame controls",
+      "screenshot_sha256": "dcf0de8d3c3a2cab2a6191e5fd9bcaca14926790c117a5aee4f4f70047d6aa85"
+    }
+  },
+  "visual_and_reconstruction_scope": {
+    "reviewer": "Current Codex agents",
+    "case01": {
+      "status": "native_window_encoded_reviewed_with_residuals",
+      "native_reference_frames": 1202,
+      "reference_contact_sheet_review_frames": 1202,
+      "dense_native_reference_window": {
+        "first_frame": 681,
+        "last_frame_inclusive": 821,
+        "frames": 141
+      },
+      "all_native_rgb_frames_visually_enlarged": false,
+      "final_output_visual_review_complete": true,
+      "user_artistic_acceptance": "pending",
+      "version": "v8",
+      "output_sha256": "177f33e201668b75c68b093ad0cc3202e1a418e95d5d12260ed29cd534eaf56b",
+      "spec_sha256": "0a45fd5a484035365f96d32a276b1f7d1542efef09810f7399bc315f051a391f",
+      "engine_composite_sha256": "91328adaa56020a08d383c86198ba2d952ac199d5980d1dff0b9aafa709667b8",
+      "native_reference_duration_seconds": 40.06666666666667,
+      "reconstruction_window": {
+        "first_reference_frame": 681,
+        "last_reference_frame_inclusive": 821,
+        "first_encoded_frame": 0,
+        "last_encoded_frame_inclusive": 140,
+        "frames": 141,
+        "fps": "30",
+        "duration_seconds": 4.7,
+        "canvas": [
+          1080,
+          1920
+        ]
+      },
+      "all_encoded_frames_mechanically_decoded": true,
+      "seek_determinism": [
+        {
+          "frame": 0,
+          "equal": true
+        },
+        {
+          "frame": 47,
+          "equal": true
+        },
+        {
+          "frame": 94,
+          "equal": true
+        },
+        {
+          "frame": 140,
+          "equal": true
+        }
+      ],
+      "browser_errors": [],
+      "final_output_visual_review_scope": "All 141 source/output frame pairs in this 4.7-second v8 window were inspected on paired contact sheets; this does not mean every whole native RGB canvas was enlarged individually.",
+      "actual_encoded_frames_visually_reviewed": {
+        "first_frame": 0,
+        "last_frame_inclusive": 140,
+        "frames": 141
+      },
+      "root_visual_review": {
+        "paired_contact_pages_actually_viewed": 8,
+        "paired_frames": 141,
+        "method": "Root inspected eight contact sheets made from the final encoded v8 MP4, spanning original F681..821 and encoded F0..140; selected critical native frames were enlarged.",
+        "critical_native_png_files_available": 45,
+        "all_45_critical_files_claimed_visually_enlarged": false,
+        "all_141_whole_native_rgb_canvases_individually_enlarged": false
+      },
+      "independent_agent_visual_review": {
+        "paired_contact_pages_actually_viewed": 8,
+        "paired_frames": 141,
+        "generated_contact_frame_size": [
+          300,
+          533
+        ],
+        "tool_display_resize": "All eight 1800x3390 contact pages were displayed as 1087x2048. Every141 pair was inspected; this is not141 whole-native canvases at100 percent zoom.",
+        "native_generated_crop_pairs_actually_viewed": {
+          "caption": [
+            741,
+            742,
+            743,
+            744,
+            745,
+            746,
+            747,
+            748,
+            749,
+            750,
+            751,
+            752,
+            753,
+            754,
+            755
+          ],
+          "main_title": [
+            750,
+            751,
+            752,
+            753,
+            754,
+            755,
+            756,
+            757,
+            758
+          ],
+          "method_exit": [
+            771,
+            772,
+            773,
+            774,
+            775,
+            776
+          ],
+          "method4_fill": [
+            760,
+            773
+          ],
+          "yellow_subtitle_early_big": [
+            773,
+            774,
+            775,
+            776
+          ],
+          "phone_top": [
+            681,
+            700,
+            777,
+            810
+          ],
+          "homebar": [
+            700,
+            760
+          ],
+          "large_heading": [
+            777,
+            778,
+            779,
+            780,
+            781,
+            782,
+            783,
+            784,
+            785,
+            786,
+            787,
+            788,
+            789
+          ]
+        },
+        "whole_native_canvas_pairs_generated_and_actually_viewed": [
+          774,
+          778
+        ],
+        "whole_canvas_tool_display_resize": "2160x1920 source/output pair images were shown as1692x1504. They were not read as each original pixel at100 percent zoom.",
+        "all_141_whole_native_rgb_canvases_individually_enlarged": false
+      },
+      "independent_light_and_heading_review": {
+        "status": "actual_final_v8_requested_windows_reviewed_with_explicit_residuals",
+        "first_reference_frame": 769,
+        "last_reference_frame_inclusive": 789,
+        "frames": 21,
+        "first_encoded_frame": 88,
+        "last_encoded_frame_inclusive": 108,
+        "method": "Independently decode actual final v8 MP4 through FFmpeg; native frame indices88..108 saved as 1080x1920 PNG with passthrough timing. Every source/actual-coded pair viewed in two contact sheets;773..776 source/v6/v8 triplets viewed; full actual native773/775 additionally viewed; native card-top777/788 crops viewed.",
+        "additional_full_frame_views": [
+          773,
+          775
+        ],
+        "native_card_top_crop_views": [
+          777,
+          788
+        ],
+        "additional_exit_and_pose_triplet_views": [
+          773,
+          774,
+          775,
+          776
+        ],
+        "full_141_frame_review_by_this_independent_report": false,
+        "verified": [
+          {
+            "item": "Old rectangular orange column",
+            "result": "removed in the reviewed actual encoded flash frames; broad F774 yellow field spans upper/center rather than a single hard vertical stripe."
+          },
+          {
+            "item": "Original actor/text ghost baked into light",
+            "result": "No recognizable original actress face or readable duplicated heading is visible in reviewed actual coded frames. Intended new stock presenter and authored glyph layers remain visible."
+          },
+          {
+            "item": "Black phone notch on card",
+            "result": "Black phone notch is absent from the card starting777 through789. Legitimate phone-state notch is still present before777."
+          },
+          {
+            "item": "Moving heading",
+            "result": "Actual encoded title enters from left with tilt and blur, then settles; late measured perspective placement is represented."
+          },
+          {
+            "item": "Exit timing at773/774",
+            "result": "Actual773 still contains method block but no caption. Actual774 contains neither. Actual775/776 also have no caption pill or method block."
+          },
+          {
+            "item": "Method fourth-line white strokes",
+            "result": "Actual native773 shows filled white glyph cores in fourth line; previous hollow-stroke extraction defect is no longer visible."
+          },
+          {
+            "item": "Early subtitle pose",
+            "result": "Actual775/776 yellow subtitle uses upcoming large-card placement while phone frame remains, moving out over phone left boundary.774 placement is explicitly a saturated-frame estimate."
+          }
+        ],
+        "unresolved": [
+          {
+            "item": "Notch repair texture",
+            "frames": [
+              777,
+              788
+            ],
+            "result": "A faint rectangular tone/texture seam remains in top-center repaired card artwork; black notch removal is not pixel-identical texture restoration."
+          },
+          {
+            "item": "Early heading/per-glyph reveal",
+            "frames": [
+              777,
+              778,
+              779,
+              780,
+              781,
+              782,
+              783,
+              784,
+              785
+            ],
+            "result": "777..783 transforms/blur remain visual estimates; first 三 is too full/revealed at782..785.777 smear is slightly lower/fainter. Saturated778 does not support exact geometry/opacity judgment."
+          },
+          {
+            "item": "Light and bokeh shape",
+            "frames": [
+              769,
+              770,
+              771,
+              772,
+              773,
+              774,
+              775,
+              776,
+              777,
+              778,
+              779,
+              780,
+              781,
+              782,
+              783,
+              784,
+              785,
+              786,
+              787
+            ],
+            "result": "Full-space diffuse shape improves, but robust spatial sampling smooths bokeh boundaries and hidden areas are estimated; saturated source pixels cannot recover original optics. No100%color or shader fidelity is asserted."
+          },
+          {
+            "item": "Presenter and source content",
+            "result": "Real stock male presenter replaces original woman. Scale/crop, gestures, costume, headset and city dynamics differ; these are content differences, not copied source actor pixels."
+          },
+          {
+            "item": "Main title typography",
+            "result": "Other main-title extrusion/glyph details still differ visibly from reference in the clear/low-burn frame; this report reviews flash/large-heading windows, not a full typography acceptance."
+          },
+          {
+            "item": "Audio/lip sync",
+            "result": "none; real footage animation reconstruction, no fabricated lip-sync"
+          },
+          {
+            "item": "Early subtitle saturation and burn response",
+            "frames": [
+              774,
+              775,
+              776
+            ],
+            "result": "The subtitle timing/pose change is visible in actual output.774 saturation prevents exact recovered opacity, and775/776 subtitle color/brightness remains visibly stronger than some reference pixels; this is not100%pixelcolorrecovery."
+          }
+        ]
+      },
+      "whole_source_fine_reconstruction_completed": false,
+      "improvements_confirmed": [
+        {
+          "id": "native_alignment",
+          "confirmed": "141 decoded frames1080x1920,30fps,4.7s; native681..821 paired exactly; no extra frame."
+        },
+        {
+          "id": "main_readability_model",
+          "confirmed": "Original readable-onset constraint now met approximately: 标753、题754、内755、容758. Old blur-before-stretch late-readability implementation bug is repaired by cropped per-glyph variants. Exact shader remains partial."
+        },
+        {
+          "id": "caption_grammar",
+          "confirmed": "Nine independent glyphs reveal from outer pairs toward centre741..755, rather than left-to-right typewriter. Native crops confirm centre last and near-stable755."
+        },
+        {
+          "id": "method_fill_bug",
+          "confirmed": "第四行实心白填色已恢复；旧pixel-near-black AND caused hollow interiors was a real implementation bug. Native760/773 pairs confirm the fix. Stroke matte at blouse connection remains estimated."
+        },
+        {
+          "id": "independent_exits",
+          "confirmed": "方法标题和四行在native773仍在，774首次消失；手机白字幕条与九字在native773首次消失；外标题773首次消失。v8 native771..776 confirms independent exits."
+        },
+        {
+          "id": "early_big_subtitle",
+          "confirmed": "Native775/776 yellow subtitle moved to large-card pose before other layout cut777. V8 matches the previously obvious pose change. Native774 pose is explicit saturated-frame estimate, not measured."
+        },
+        {
+          "id": "large_layout_cut",
+          "confirmed": "Native777 hard reflow switch matched, with city uniform affine/reframe and presenter repeated in phone and large card."
+        },
+        {
+          "id": "yellow_green_channel",
+          "confirmed": "Old G222 vs source235/233 corrected: actualv8 source760 subtitle outputG235, method outputG235. Remaining R/B, alpha, antialias and geometry are measured below."
+        },
+        {
+          "id": "large_notch_and_home_plate",
+          "confirmed": "Extra black U/notch arc on large top removed. Blue/grey solid rectangular homebar plate removed. Repaired artwork texture seam and thin boundary residue remain."
+        },
+        {
+          "id": "flash_interpolation_artifact",
+          "confirmed": "19-frame light pulse chronology769..787 retained; severe orange vertical columns/rectangle ofv4 substantially reduced by smoothed fields. Native774/778 reviewed. Hidden field cannot be recovered exactly."
+        }
+      ],
+      "residuals": [
+        {
+          "id": "main_shader_and_cell_edges",
+          "severity": "major remaining animation/model residual",
+          "source_frames_inclusive": [
+            750,
+            758
+          ],
+          "observed": "Native750..755 has hard rectangular cropped blur bands and flatter/darker edge/material than source3D movement; legibility timings improved but source has curved/inter-glyph streaks and gradient/shadow not matched. Steady firstglyph lower strokes were obscured by original actor.",
+          "status": "partial fitted model, not100 percent"
+        },
+        {
+          "id": "early_outer_heading",
+          "severity": "remaining animation/model residual",
+          "source_frames_inclusive": [
+            681,
+            687
+          ],
+          "observed": "Opening outer phone title appears later/fainter and with less horizontal smear than source; firstpage141-pair review confirms.",
+          "status": "visually estimated early entry, not exact"
+        },
+        {
+          "id": "large_heading_entry",
+          "severity": "major remaining animation/model residual",
+          "source_frames_inclusive": [
+            777,
+            789
+          ],
+          "observed": "Entry is now moving, but source first三 is compressed/revealed independently and early779..783 body blur/placement differs from whole-plane reconstruction. Native784..789 much closer measured pose; final filled silhouette still has mismatch.",
+          "status": "Measured body transform784..789, earlier H estimated; not complete glyph/shader recovery"
+        },
+        {
+          "id": "subtitle_flash_material",
+          "severity": "remaining opacity/colour residual",
+          "source_frames_inclusive": [
+            774,
+            776
+          ],
+          "observed": "775/776 geometry now large pose, but original yellow word is much more washed/dim under source light than rebuilt word. Native774 saturated and ambiguous; big pose is explicitly estimated.",
+          "status": "Geometry fixed; early-flash alpha/material hidden by composited light not exact"
+        },
+        {
+          "id": "flash_hidden_field",
+          "severity": "remaining unknown hidden-layer residual",
+          "source_frames_inclusive": [
+            769,
+            787
+          ],
+          "observed": "Warm pulses and strong774/778 peaks reconstructed but original per-pixel field over original presenter/text was masked/inferred. Native778 original card is more erased, v8 glyphs/person weakly visible; no original actor ghost is being replayed.",
+          "status": "Low-frequency inference with ~0.273 unoccluded known area; no100 percent screen shader recovery"
+        },
+        {
+          "id": "private_phone_art_seams",
+          "severity": "minor visible art/matte residual",
+          "source_frames_inclusive": [
+            681,
+            821
+          ],
+          "observed": "Native681 pink/light fringe around notch differs from source dark grid. Large top repair black arc gone, but texture repair seam remains native810; home760 above pill has a thin straight boundary absent source diffuse texture.",
+          "status": "Declared extracted/repaired static reference art; partly estimated uncovered texture"
+        },
+        {
+          "id": "city_data_and_panorama",
+          "severity": "known content/animation limit",
+          "source_frames_inclusive": [
+            716,
+            821
+          ],
+          "observed": "Independent city camera affine applied perframe and large scale about1.318 preserved. Original animated data values/icons/parallax and hidden left panorama not fully reconstructed; expanded panorama includes mapped/reﬂected areas.",
+          "status": "Building camera motion measured; source-specific missing content still partial"
+        },
+        {
+          "id": "broll_material_motion",
+          "severity": "measured content/registration residual",
+          "source_frames_inclusive": [
+            701,
+            821
+          ],
+          "observed": "Bottom B-roll source760 ROI MAE RGB17.338/13.306/12.051 codes despite approximate composition. This includes source content motion/registration differences and is not a pure flat-palette score.",
+          "status": "Source-specific reference texture approximated, not full original footage motion recovered"
+        },
+        {
+          "id": "fonts_and_alpha",
+          "severity": "known source-specific fixed-art limit",
+          "source_frames_inclusive": [
+            681,
+            821
+          ],
+          "observed": "Research glyph sprites preserve fixed reference strings; original font/3D presets have not been recovered. Stroke/antialias at clothing-connected glyphs and actor-occluded portions is estimated. No reusable arbitrary-text100 percent original-font claim.",
+          "status": "Partial editable fallback remains distinct from private fixed glyph art"
+        },
+        {
+          "id": "actor_replacement",
+          "severity": "declared content replacement",
+          "source_frames_inclusive": [
+            727,
+            821
+          ],
+          "observed": "Actual filmed new man/cream shirt/headset differs from source woman/white blouse and performance; newactor appears continuously through relevant layouts, not once. Segmentation/outline leaves headset edge residue.",
+          "status": "Identity not scored as animation error; exact original actor pixels are not claimed"
+        }
+      ],
+      "colour_measurement": {
+        "scope": "Actual encoded v8 native RGB, bt709 code-value comparison. New actor not scored. Source-mask comparison combines layer geometry and palette errors; common-fill result isolates only pixels both renders already classify as same fill. No whole-video 100% colour acceptance.",
+        "native_regions_measured": 22,
+        "summary": {
+          "scope": "The following are actual decoded v8 RGB code-values; source and output share bt709 metadata, tv range. Masks are eroded source fill pixels. Source-mask MAE includes geometry/matte error. Common-fill isolates the intersecting same-colour class only and cannot prove shapes agree.",
+          "source760": {
+            "yellow_subtitle_source_median_rgb": [
+              246,
+              235,
+              12
+            ],
+            "yellow_subtitle_output_at_source_fill_median_rgb": [
+              244,
+              235,
+              5
+            ],
+            "yellow_subtitle_mae_rgb_codes": [
+              2.446,
+              1.5,
+              5.443
+            ],
+            "method_header_source_median_rgb": [
+              250,
+              233,
+              8
+            ],
+            "method_header_output_at_source_fill_median_rgb": [
+              246,
+              235,
+              9
+            ],
+            "method4_known_left_common_fill_mae_rgb_codes": [
+              2.438,
+              2.268,
+              2.523
+            ],
+            "caption_white_mae_rgb_codes": [
+              2.249,
+              2.538,
+              2.575
+            ],
+            "caption_black_mae_rgb_codes": [
+              1.024,
+              1.043,
+              1.031
+            ]
+          },
+          "source810": {
+            "big_heading_source_fill_mae_rgb_codes": [
+              26.002,
+              26.15,
+              26.216
+            ],
+            "big_heading_common_fill_mae_rgb_codes": [
+              2.385,
+              2.502,
+              2.562
+            ],
+            "big_heading_source_fill_pixels": 15955,
+            "big_heading_common_fill_pixels": 13351,
+            "big_yellow_subtitle_source_fill_mae_rgb_codes": [
+              32.947,
+              30.894,
+              20.691
+            ],
+            "big_yellow_subtitle_common_fill_mae_rgb_codes": [
+              6.248,
+              4.225,
+              10.786
+            ]
+          },
+          "pure_grid_mae_rgb_codes_range_across_three_safe_rois710760810": [
+            1.404,
+            1.873
+          ],
+          "home700_black_pill_mae_rgb_codes": [
+            0.129,
+            0.129,
+            1.452
+          ],
+          "acceptance": "No zero-error or100 percent colour acceptance. Residual26+codes on original heading fill demonstrates shape/matte discrepancy even though intersecting white fill is close."
+        },
+        "main_gradient_native_pixel_samples": [
+          {
+            "source_frame": 760,
+            "output_frame": 79,
+            "xy": [
+              455,
+              585
+            ],
+            "source_rgb": [
+              217,
+              180,
+              158
+            ],
+            "output_rgb": [
+              214,
+              182,
+              157
+            ],
+            "note": "same native coordinate; glyph reconstruction can shift shape, so this is an exact-pixel discrepancy, not a matched-material acceptance"
+          },
+          {
+            "source_frame": 760,
+            "output_frame": 79,
+            "xy": [
+              450,
+              600
+            ],
+            "source_rgb": [
+              211,
+              188,
+              180
+            ],
+            "output_rgb": [
+              205,
+              189,
+              183
+            ],
+            "note": "same native coordinate; glyph reconstruction can shift shape, so this is an exact-pixel discrepancy, not a matched-material acceptance"
+          },
+          {
+            "source_frame": 760,
+            "output_frame": 79,
+            "xy": [
+              455,
+              630
+            ],
+            "source_rgb": [
+              207,
+              189,
+              179
+            ],
+            "output_rgb": [
+              203,
+              188,
+              174
+            ],
+            "note": "same native coordinate; glyph reconstruction can shift shape, so this is an exact-pixel discrepancy, not a matched-material acceptance"
+          },
+          {
+            "source_frame": 760,
+            "output_frame": 79,
+            "xy": [
+              430,
+              665
+            ],
+            "source_rgb": [
+              197,
+              196,
+              193
+            ],
+            "output_rgb": [
+              194,
+              195,
+              190
+            ],
+            "note": "same native coordinate; glyph reconstruction can shift shape, so this is an exact-pixel discrepancy, not a matched-material acceptance"
+          },
+          {
+            "source_frame": 810,
+            "output_frame": 129,
+            "xy": [
+              269,
+              572
+            ],
+            "source_rgb": [
+              214,
+              179,
+              159
+            ],
+            "output_rgb": [
+              211,
+              179,
+              155
+            ],
+            "note": "same native coordinate; glyph reconstruction can shift shape, so this is an exact-pixel discrepancy, not a matched-material acceptance"
+          },
+          {
+            "source_frame": 810,
+            "output_frame": 129,
+            "xy": [
+              262,
+              591
+            ],
+            "source_rgb": [
+              215,
+              183,
+              168
+            ],
+            "output_rgb": [
+              194,
+              175,
+              171
+            ],
+            "note": "same native coordinate; glyph reconstruction can shift shape, so this is an exact-pixel discrepancy, not a matched-material acceptance"
+          },
+          {
+            "source_frame": 810,
+            "output_frame": 129,
+            "xy": [
+              270,
+              607
+            ],
+            "source_rgb": [
+              210,
+              182,
+              175
+            ],
+            "output_rgb": [
+              200,
+              183,
+              175
+            ],
+            "note": "same native coordinate; glyph reconstruction can shift shape, so this is an exact-pixel discrepancy, not a matched-material acceptance"
+          },
+          {
+            "source_frame": 810,
+            "output_frame": 129,
+            "xy": [
+              239,
+              665
+            ],
+            "source_rgb": [
+              196,
+              197,
+              195
+            ],
+            "output_rgb": [
+              194,
+              195,
+              188
+            ],
+            "note": "same native coordinate; glyph reconstruction can shift shape, so this is an exact-pixel discrepancy, not a matched-material acceptance"
+          }
+        ],
+        "not_a_codec_only_error_claim": true,
+        "geometry_matte_and_hidden_layer_residuals_are_separate": true
+      },
+      "prior_exit_audit_erratum": "v4 heading-exit audit incorrectly combined method and outer-heading exit at773. Native771..776 review corrected it: method first absent774, outer-heading and phone caption first absent773. v6/v7/v8 independently implement these separate boundaries.",
+      "audio": {
+        "track": "none",
+        "continuous_listening_completed": false,
+        "lip_sync_verified": false,
+        "scope": "Silent real-filmed animation reconstruction sample; no fabricated speech synchronization."
+      },
+      "acceptance_scope": "Ready as an audited private4.7-second real-filmed motion reconstruction SAMPLE with declared partials. It materially improves prior coarse clips and fixes confirmed implementation bugs. It does NOT fulfil100 percent colour/animation copy, does NOT reconstruct entire40-second source, and does NOT complete30 reference reconstructions.",
+      "root_contact_sheet_digest_method": "SHA256 of UTF-8 compact sorted-key JSON listing ordered objects {page, sha256}; no private file paths."
+    },
+    "case02": {
+      "status": "native_window_encoded_reviewed_with_residuals",
+      "native_reference_frames": 5709,
+      "native_reference_duration_seconds": 190.3,
+      "dense_native_reference_review": {
+        "first_frame": 0,
+        "last_frame_inclusive": 60,
+        "frames": 61
+      },
+      "reconstruction_window": {
+        "first_reference_frame": 0,
+        "last_reference_frame_inclusive": 59,
+        "frames": 60,
+        "fps": "30",
+        "duration_seconds": 2
+      },
+      "actual_encoded_frames_visually_reviewed": {
+        "first_frame": 0,
+        "last_frame_inclusive": 59,
+        "frames": 60
+      },
+      "actual_encoded_frame_evidence_independently_redecoded_and_hash_matched": 60,
+      "output_sha256": "510e7e2b233f9e35d884309ec458b07453d795c9c5e4fb01a13743b51b8a98ef",
+      "current_engine_broll_output_sha256": "510e7e2b233f9e35d884309ec458b07453d795c9c5e4fb01a13743b51b8a98ef",
+      "current_engine_output_byte_equal_to_reviewed_output": true,
+      "whole_source_fine_reconstruction_completed": false,
+      "layer_events": {
+        "camera_ease_in_start_frame": 1,
+        "camera_principal_pushin_frames": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "camera_close_settle_frame": 11,
+        "camera_medium_return_frame": 42,
+        "four_keyword_enter_frames": [
+          17,
+          18,
+          19,
+          20
+        ],
+        "four_keyword_last_frame": 41,
+        "caption_phrase_switch_frame": 38,
+        "comic_word_start_frame": 47,
+        "comic_decorations_start_frame": 50,
+        "comic_eye_pupil_state_switch_frame": 56,
+        "comic_word_max_scale_frames": [
+          54,
+          55
+        ]
+      },
+      "palette_samples": [
+        {
+          "frame": 27,
+          "material": "teal",
+          "original_median_rgb": [
+            0.0,
+            107.0,
+            100.0
+          ],
+          "encoded_median_rgb_at_same_mask": [
+            0.0,
+            107.0,
+            97.0
+          ],
+          "delta_rgb": [
+            0.0,
+            0.0,
+            -3.0
+          ],
+          "mask_pixels": 90255
+        },
+        {
+          "frame": 59,
+          "material": "yellow",
+          "original_median_rgb": [
+            250.0,
+            197.0,
+            6.0
+          ],
+          "encoded_median_rgb_at_same_mask": [
+            246.0,
+            196.0,
+            5.0
+          ],
+          "delta_rgb": [
+            -4.0,
+            -1.0,
+            -1.0
+          ],
+          "mask_pixels": 3516
+        },
+        {
+          "frame": 59,
+          "material": "caption-blue",
+          "original_median_rgb": [
+            182.0,
+            217.0,
+            243.0
+          ],
+          "encoded_median_rgb_at_same_mask": [
+            180.0,
+            217.0,
+            239.0
+          ],
+          "delta_rgb": [
+            -2.0,
+            0.0,
+            -4.0
+          ],
+          "mask_pixels": 11065
+        }
+      ],
+      "residuals": [
+        "Decoded native H.264 material colours have the recorded RGB deltas; all-pixel colour equality is not established.",
+        "Compression, antialiasing and isolated artwork borders differ by about 1-2 pixels; some overlapped tile planes are manually bounded.",
+        "Original editable font, vector artwork and authoring keyframe project are unavailable. Fixed private glyph sprites do not establish exact arbitrary-text substitution.",
+        "The replacement presenter and room are different moving filmed footage. Gesture, shot content and reference speech lip synchronization are not replicated.",
+        "The 2-second window is reviewed; the complete 190.3-second reference is not finely reconstructed."
+      ],
+      "user_artistic_acceptance": "pending"
+    },
+    "remaining_cases": {
+      "ranks": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "count": 28,
+      "status": "fine_reconstruction_not_completed",
+      "visual_scope": "Earlier full-duration overview and selected windows only; no complete native-frame semantic visual review is claimed.",
+      "existing_samples": "Earlier mechanism demonstrations, not native-frame precise reconstructions."
+    },
+    "one_hundred_percent_fidelity_claimed": false
+  },
+  "four_second_integration": {
+    "status": "mechanical_and_sampled_visual_passed",
+    "duration_seconds": 4,
+    "fps": 30,
+    "canvas": [
+      1080,
+      1920
+    ],
+    "encoded_frames": 120,
+    "all_encoded_frames_mechanically_decoded": true,
+    "output_sha256": "cea124dc4bf1bc83f4faee826332ad3edbdda734fbf2e01a8c932ef85316bfff",
+    "reference_broll_frames": 60,
+    "reference_broll_engine_composite_sha256": "91328adaa56020a08d383c86198ba2d952ac199d5980d1dff0b9aafa709667b8",
+    "visual_review": {
+      "actual_encoded_frame_indices": [
+        0,
+        14,
+        29,
+        35,
+        47,
+        59,
+        65,
+        77,
+        89,
+        95,
+        107,
+        119
+      ],
+      "sample_count": 12,
+      "full_120_frame_visual_review": false,
+      "method": "Contact sheets made from the actual final encoded MP4; only the listed 12 frames were visually inspected."
+    },
+    "audio": {
+      "decoded_sample_correlation": 0.9999954638221352,
+      "master_samples": 192000,
+      "output_samples": 192000,
+      "continuous_listening_completed": false,
+      "lip_sync_verified": false,
+      "scope": "Aligned decoded accepted-master and output audio comparison. The replacement stock presenter is not claimed to speak the guide audio."
+    },
+    "cache_replay": {
+      "status": "passed",
+      "checks": {
+        "broll_step_explicitly_reused": true,
+        "build_render_check_exited_zero": true,
+        "whole_output_sha256_preserved": true,
+        "broll_output_sha256_preserved": true,
+        "render_fingerprint_preserved": true,
+        "render_history_count_preserved": true,
+        "cache_signatures_preserved": true,
+        "current_public_renderer_sha_matches_recorded": true,
+        "current_public_reference_js_sha_matches_recorded": true,
+        "reference_spec_preserved": true,
+        "new_broll_manifest_sha_matches_recorded": true,
+        "sampled_frame_files_match_review_hashes": true
+      },
+      "scope": "Production rerun preserved output and B-roll SHA256, render fingerprint, signatures and render-history count; B-roll reuse was explicitly logged."
+    },
+    "limitations": [
+      "A-roll master is 24 fps converted to the 30 fps project. Native reference B-roll is exactly 60 frames at 30 fps. This does not establish frame-for-frame fidelity for other user footage.",
+      "Visual inspection is sampled 12 of 120 actual encoded frames, while all 120 frames passed mechanical full decoding.",
+      "Accepted guide audio is retained and compared by decoded samples; there was no audio listening or lip-sync verification. The stock presenter is not claimed to speak the guide audio.",
+      "The original source02 reference video is 190.3 seconds; the dense native animation audit covers F0..59 only."
+    ]
+  },
+  "evidence_integrity": {
+    "reports": "Private audit reports are retained locally; only their SHA256 digests and bounded findings are published here.",
+    "private_report_sha256": {
+      "full_native_decode": "a252a51912438ad8c30ad35b98582af28e0e624e84e29a944c837cac84e2c47f",
+      "independent_ledger_and_lossless_png_cross_check": "e9d62cacf0bc0ebf19965077107376c97eeccfb2143ebaae5891a6608fbf9480",
+      "independent_rgb_statistics_kernel_cross_check": "72b79476a7a7fa0c62bdd0fe595b61c5d6babc0ea92ce67bb859631ebee0cda2",
+      "renderer_regression": "3cd3d5a6b52fc0389f1d3c991ff04e22b0d69231db1a3a2bfca9d62cf9c97af8",
+      "read_only_gallery_and_http_regression": "f4b1598a3355e8f0f8d1ecd203ed2b4337a21dde731d70794215eaee3bd54b06",
+      "case02_encoded_frame_visual_review": "96e35d946eb1ac38663fe42015d625dafa85136808cf8d96e660e2d6bd571fc6",
+      "case02_palette_review": "921a33be7f24aa7fb9481fdcf7283428626ce41ace8ffecb8082fd0807a8634b",
+      "case02_evidence_binding": "600a6130ed0adc3403c44c2c441dc1001b56b63c90722ef64a654c940ea81fd0",
+      "current_engine_case02_broll_manifest": "ce71f12b851b66e952ffa7d416b8f1c714b6b9a1f33da78d8759c0ac8fada316",
+      "four_second_integration": "da4ef647f94892f322da7e41c6037789f827863efbe599230a884962c573e465",
+      "integration_cache_replay": "b4d7cdd084b250103d1bb60e2fd1e9419d8a86445958ae12448c16fb24871033",
+      "case01_final_v8_render_manifest": "81a609b422901c61fbe3c8ee1c45f728f7f3d46dcdf0a3d0906e11b2b2835f31",
+      "case01_final_v8_spec": "0a45fd5a484035365f96d32a276b1f7d1542efef09810f7399bc315f051a391f",
+      "case01_final_v8_visual_review": "f4a552b60ef0dd10740b1b4e70a1c3ed84679a045b982c08d701622174222e1a",
+      "case01_final_v8_native_colour_review": "ba79691897ae5e8984176d84528fa66ede4e42a69ad6589c6bf75db6275c4b39",
+      "case01_final_v8_independent_light_and_heading_review": "d8941edd50402dfe6faba1bbd79a889b8c88ec78fe3ec4a7e15889d3eec5cac1",
+      "case01_final_v8_early_subtitle_pose_evidence": "bf8c16488c611d74c2638d6d0982547ab89af55644261ef004a20bbb47e37405",
+      "case01_final_v8_root_contact_page_digest": "4dfb46c2685b68ffe33e3f8d46aeab3bc84ee88869d9191499804f752856f3a6",
+      "actual_browser_ui_v8": "412037d25477bea5d33ee3322add6bfd8ae153f45f8511db71f94b3c383b5114"
+    }
+  }
+}

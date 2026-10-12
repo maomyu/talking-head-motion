@@ -54,11 +54,17 @@ def main():
                 raise ValueError('B-roll output would overwrite an input/master')
             seen.add(out);content=read(spec)
             renderer=job.get('renderer','huashu')
-            if renderer not in ('huashu','social'):raise ValueError('Unknown B-roll renderer')
+            if renderer not in ('huashu','social','reference'):raise ValueError('Unknown B-roll renderer')
             if renderer=='social':
                 paths=[content[k] for k in ('portrait','cutout','presenter_video') if content.get(k)]+content.get('images',[])
                 asset_hashes=[digest(existing(value,spec.parent)) for value in paths]
                 engine_files=[SKILL/'assets/social-grammars/social.js',SKILL/'assets/social-grammars/index.html',SKILL/'scripts/social_grammar.py']+[SKILL/'assets/huashu-engine/lib/fonts'/f for f in ('NotoSansSC-800.woff','NotoSerifSC-sub.woff')]
+                signature=digest(spec)+''.join(digest(p) for p in engine_files)+json.dumps(asset_hashes,sort_keys=True)
+            elif renderer=='reference':
+                from reference_render import read_spec
+                _,_,inputs,_=read_spec(spec)
+                asset_hashes={str(p):digest(p) for p in sorted(inputs)}
+                engine_files=[SKILL/'assets/reference-engine/reference.js',SKILL/'assets/reference-engine/index.html',SKILL/'scripts/reference_render.py',SKILL/'assets/huashu-engine/lib/fonts/NotoSansSC-800.woff']
                 signature=digest(spec)+''.join(digest(p) for p in engine_files)+json.dumps(asset_hashes,sort_keys=True)
             else:
                 _,asset_hashes=resolve_spec_assets(content,spec.parent)
@@ -66,7 +72,10 @@ def main():
             if any('anchor' in c for c in content.get('cues',[])):signature+=digest(existing(project/'words.json'))
             signature=hashlib.sha256(signature.encode()).hexdigest();old=cache.get(str(out),{})
             if old.get('signature')!=signature or not out.exists() or old.get('output_sha256')!=digest(out):
-                command=([sys.executable,SKILL/'scripts/social_grammar.py','--spec',spec,'--output',out,'--overwrite'] if renderer=='social' else [sys.executable,SKILL/'scripts/render_huashu.py',project,'--spec',spec,'--out',out])
+                if renderer in ('social','reference'):
+                    script='social_grammar.py' if renderer=='social' else 'reference_render.py'
+                    command=[sys.executable,SKILL/'scripts'/script,'--spec',spec,'--output',out,'--overwrite']
+                else:command=[sys.executable,SKILL/'scripts/render_huashu.py',project,'--spec',spec,'--out',out]
                 call(project,f'broll-{i+1}',command,record)
                 cache[str(out)]={'signature':signature,'output_sha256':digest(out)};write(project/'broll-cache.json',cache)
             else:record['steps'].append({'stage':f'broll-{i+1}','reused':str(out)})

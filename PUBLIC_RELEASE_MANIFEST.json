@@ -1,14 +1,14 @@
 {
-  "release": "v0.2.0",
+  "release": "Unreleased native-frame reconstruction",
   "date": "2026-10-12",
   "source_upstream_commit": "9ff59339f934e08483ba0a5b1db20f4c2c421b35",
   "scope": "Public source integrity, syntax and credential pattern checks. Media QA is recorded separately in the local research project; no user avatar or full tutorial inverse-effects claim.",
-  "files": 358,
+  "files": 365,
   "checked": {
-    "python": 28,
-    "javascript": 109,
-    "json": 17,
-    "text": 268
+    "python": 31,
+    "javascript": 110,
+    "json": 18,
+    "text": 275
   },
   "credential_pattern_findings": [],
   "excluded": "Project media, source videos, transcripts, voice, presenter assets, API responses, local account configurations and runtime caches",
@@ -20,8 +20,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 1289,
-      "sha256": "31148b159eaa7ac51ebee811311cfcf5aff03c4e4f514bd2e0aee230280b252f"
+      "bytes": 2093,
+      "sha256": "0355921045cec552e3de03b614d6095bd6e484bfa742bce297542e430a656ff8"
     },
     {
       "path": "LICENSE",
@@ -30,28 +30,28 @@
     },
     {
       "path": "README.en.md",
-      "bytes": 9813,
-      "sha256": "10862a0817c603fd2b9e582a28f841054b9e258434a53c5808e0464613de69b9"
+      "bytes": 11189,
+      "sha256": "ad2620fa0de2226edf07850f567d6bf4b990748aa45ad379cc74b71883b1b19a"
     },
     {
       "path": "README.md",
-      "bytes": 7827,
-      "sha256": "11d6d36d1f8e42c8e16037644559e82808bdecd5c274aae771f6f410ed976b14"
+      "bytes": 8942,
+      "sha256": "632c3b03dbf3fa046d139d05680fa32d846d5b8d1db5e5c8369a12186d24f3f4"
     },
     {
       "path": "SKILL.md",
-      "bytes": 12095,
-      "sha256": "f81b3c46b5b3c3845b06b61e2f7df7a50ad148796f61d06f567248e5e98f4ca3"
+      "bytes": 12801,
+      "sha256": "3bceaa53860e718fbe4fa6f3bbdfaa59ac22e024e06b89bd57772aeda5a43900"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 3494,
-      "sha256": "c87d2458413b63931ce9563ba9ed33daf026f82aabb70915f068f6aec59ea282"
+      "bytes": 4044,
+      "sha256": "48dcc0a8eec1bb11d04e43b7ffc492917503ed437ee2373298d272669748de9d"
     },
     {
       "path": "agents/openai.yaml",
-      "bytes": 779,
-      "sha256": "2681b753249f9ff53210e36f38e2f51f7fbe17a610decf3b56bb5eb690dd2dca"
+      "bytes": 1099,
+      "sha256": "4015f4971ff0ab69648daa737c838388cad2fa24c2f8c84beab566cb79ac206b"
     },
     {
       "path": "assets/components.js",
@@ -1494,6 +1494,21 @@
       "sha256": "3082460c323f8ef9da115a1f88e4281579dbe95d6b2e41dcc06e47a0ebc4eb0a"
     },
     {
+      "path": "assets/reference-engine/index.html",
+      "bytes": 377,
+      "sha256": "88ae50e1e026179228be4b2ad07331b58bbdb25d429a9e01c03587c910cc64ec"
+    },
+    {
+      "path": "assets/reference-engine/reference.js",
+      "bytes": 5627,
+      "sha256": "88f9e76c7f6365645d5e8b0b39e8fff9249fef6b8295d0c603a332199af4b9d8"
+    },
+    {
+      "path": "assets/reference-engine/validation.json",
+      "bytes": 56316,
+      "sha256": "8998651dae8f60b033783725058af4ffcc96fbd566fd33b5598b54d64cbf9a77"
+    },
+    {
       "path": "assets/runtime/package-lock.json",
       "bytes": 62304,
       "sha256": "83c2187e999f96b6f4d4f0ab81f35cad8afd778fbfdcc1da794724d9d467529a"
@@ -1689,6 +1704,11 @@
       "sha256": "156f1cbd51d4d4272ed3384cffc06f096f4898f4fe25a8ea0f346d8f4dd50a01"
     },
     {
+      "path": "references/native-frame-reconstruction.md",
+      "bytes": 7677,
+      "sha256": "59a72ad0392d46450637e6e2a5229642a7ead830609f94e5cd0964f4e9c3a0e4"
+    },
+    {
       "path": "references/presenter-led-styles.md",
       "bytes": 3317,
       "sha256": "7eebab1fbc2600a5b278ea595d41460f6d2b80ce886ed75a12bd7a5629b7f937"
@@ -1720,8 +1740,8 @@
     },
     {
       "path": "references/reference-reconstruction.md",
-      "bytes": 1601,
-      "sha256": "367336e942b54164c7dfdf1d7471c1b1c6f49404b2d2390df5c04af8cfcc0619"
+      "bytes": 2073,
+      "sha256": "eb3bc3fcd5682411be7ce8648b1bc94a98d1ad4c449382ac36c3cc34d45470af"
     },
     {
       "path": "references/style-batch.md",
@@ -1730,8 +1750,8 @@
     },
     {
       "path": "requirements.txt",
-      "bytes": 140,
-      "sha256": "91392dc80669722d73d5664f61f96761bd1b630c0c207c95876d6526e3f1fd76"
+      "bytes": 164,
+      "sha256": "3d27c7969f15cba9988eda92c302e418f9708d511ced27b1f9df2ea4a5a52484"
     },
     {
       "path": "scripts/cut_master.py",
@@ -1742,6 +1762,11 @@
       "path": "scripts/fish_api.py",
       "bytes": 10040,
       "sha256": "615a4765d201dc9b9df808c87bee726a68fd371c934cb385b86b2e33b86302f9"
+    },
+    {
+      "path": "scripts/frame_inventory.py",
+      "bytes": 27743,
+      "sha256": "f7f123d0936f85e1a88e4078a43aed539fba665adf17cf41edb42cb4241e9129"
     },
     {
       "path": "scripts/huashu_full.py",
@@ -1759,9 +1784,19 @@
       "sha256": "17346c801f2ac56e9d7c55ac784cb2e6260793741c0afddd425c6ad597157321"
     },
     {
+      "path": "scripts/precision_gallery.py",
+      "bytes": 10698,
+      "sha256": "4cde360331f217027d56aa22c69803d19ee10c4f46e14181ea5bdff468b4bc96"
+    },
+    {
       "path": "scripts/produce.py",
-      "bytes": 7532,
-      "sha256": "8cdb7509ede27406068b0749c9777b458888f30eae4348798d9847db7086d9c2"
+      "bytes": 8234,
+      "sha256": "3418ae03b7eb3ef72f6b9cd007b7417f54dbfcf2501e1052c1376ff9a9e79494"
+    },
+    {
+      "path": "scripts/reference_render.py",
+      "bytes": 15213,
+      "sha256": "3bafde8f59d15b7f5f686f737605430fedbfd28ed7754d4fcff2d8cef8c94034"
     },
     {
       "path": "scripts/render_huashu.py",
@@ -1785,8 +1820,8 @@
     },
     {
       "path": "scripts/serve_review.py",
-      "bytes": 2148,
-      "sha256": "cbf0faa1c65f0fe431690b9e56f9d2ef7269589676bd1d605c01ea5ee1a1a868"
+      "bytes": 2376,
+      "sha256": "c486b3e6be03eb66dcf3b7c310dcc588a809e246babad4bdb9610714ab91020d"
     },
     {
       "path": "scripts/social_grammar.py",
@@ -1804,6 +1839,6 @@
       "sha256": "99b4d6db5f82189e9e4e8f346caa93ba5c14f88afb6d111df9ae796a513944ab"
     }
   ],
-  "validation_record": "assets/social-grammars/validation.json",
-  "media_qa_scope": "60 four-second clips decoded and sampled; 30 source full-duration overviews and dense windows; one four-second moving-presenter pipeline integration. User artistic acceptance and moving foreground segmentation are pending."
+  "validation_record": "assets/reference-engine/validation.json",
+  "media_qa_scope": "All 30 complete originals scanned at native RGB/PTS: 89080 frames; two selected reconstruction windows (141 and 60 encoded frames) visually compared in full on contact pages with selected native crops, residuals and user acceptance pending; other 28 and remaining source01/source02 intervals not finely reconstructed. Current 4-second integration: 120 decoded frames, 12 actually viewed, audio correlation and cache reuse checked. Actual read-only browser controls verified."
 }

@@ -66,3 +66,11 @@ distributed. Source media retain their authors' rights and are not covered by
 this repository's MIT license. Local study previews use separately authorized
 illustrative presenter assets; they do not demonstrate the user's avatar or
 relicense the original footage.
+
+Local dynamic-matte research used the official Robust Video Matting project
+(https://github.com/PeterL1n/RobustVideoMatting) and its MobileNetV3 TorchScript
+weights. That project is GPL-3.0; neither its code nor weights are bundled or
+relicensed under this repository's MIT license. This skill accepts externally
+prepared RGBA sequences with recorded source identity and native timestamps.
+Extracted source glyphs and artwork remain private research assets. Preserving
+those fixed glyphs is not a claim of font identification or unrestricted reuse.
