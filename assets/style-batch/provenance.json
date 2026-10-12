@@ -1,0 +1,43 @@
+{
+  "source": "https://github.com/alchaincyf/huashu-art-motion",
+  "upstream_commit": "9ff59339f934e08483ba0a5b1db20f4c2c421b35",
+  "scope": "35 locally authored style material factories for content-specific talking-head props; stock footage and project audio are excluded",
+  "native_stage": [
+    1080,
+    1920
+  ],
+  "semantic_layers": [
+    "background",
+    "decorative motifs",
+    "topic props and actual presenter photographs and labels",
+    "gentle light",
+    "captions"
+  ],
+  "files": {
+    "world_backplate.js": "cced15a1d64611bb2c06d5d88fca7068ded514083552d8b616378bb884b04a23",
+    "pixel-readable-text.js": "2709fd5beb8a2f14d19a7fa2f9ba0a446036a4ee90d89c3546cd868852091f13",
+    "graphics.js": "611700aa496e8069384b96425a5e05ddbbe2209cc8e79e678b04ecf2146a38ff",
+    "camera-integration.js": "fa6d96363f717eb1941e113487e8bdcb8712871a5a253a24b5faeae986df5e3f",
+    "painterly.js": "4687d6da53ed289f4880f715afe22413ebe43fac3c509f3732bccaeb6fd5c1b1",
+    "shared.js": "b167858b3ac542f443a6daac32c13756e3cd45bb1fcc0cede6ba91728df19789",
+    "heritage.js": "d946f96558641e4d328aa103006a586e12f83348b02c390dbd890c96a3a37604",
+    "egypt_rim_coflow.js": "e55a52789d00771e3fbaeca2d287614074b105c3ba2c35311088168fda2f957d",
+    "shadow_card_occlusion.js": "55e3bf4f7a6be658575a854c23ca803bdb5ca626e609babc7aac6a5626a3e93f"
+  },
+  "limitations": "See catalog.json per recipe. Does not invert arbitrary reference video or generate user identity/lip-sync.",
+  "world_camera": "V4: single overscanned scenic canvas crop; bounded original-CAM parallax; no mirror/repeat/feather; optional vector decorative rim; cached raster materials gain no new source detail",
+  "native_pixel_text": "pixel-readable-text.js preserves transform/opacity and native semantic glyphs after flushing coarse prop layer",
+  "egypt_rim_correction": {
+    "scope": "02_egypt only; original V4 continuous field unchanged, ornament follows existing full relative CAM",
+    "patch_sha256": "e55a52789d00771e3fbaeca2d287614074b105c3ba2c35311088168fda2f957d",
+    "verified": "Full 1810-frame native portrait MP4, unchanged narration AAC, original unmodified film gate green and two independent audits of this exact corrected MP4 completed for all24 shots and recorded continuous/native anchors; no unresolved P1/P2 within those inspected ranges. No full normal-speed viewing or auditory review claim.",
+    "actual_validated_movie_sha256": "59558140e628a66f38b866e5ffae1cbf438ad1f624e320a03a8e368c924b8abc"
+  },
+  "shadow_word_card_correction": {
+    "scope": "34_shadowpuppet only; V4 notes() seed43 centre receives source-over physical paper, with caller alpha inherited; outer cut-leather transmission preserved",
+    "patch_sha256": "55e3bf4f7a6be658575a854c23ca803bdb5ca626e609babc7aac6a5626a3e93f",
+    "verified": "Full 1810-frame native portrait MP4, unchanged narration AAC, original unmodified film gate green and two independent audits of this exact corrected MP4 completed for all24 shots and recorded continuous/native anchors; old card-transparency P2 closed by actual encoded evidence, no unresolved P1/P2 within those inspected ranges. No full normal-speed viewing or auditory review claim.",
+    "limits": "V4 notes seed43 contract only, not arbitrary automatic text-card recognition. Other transparent pieces and the original stamp shadow remain as V4.",
+    "actual_validated_movie_sha256": "c81636120d3769c234c860b8c942ad3903c29a993cadfa75b19499d1bd3d9ada"
+  }
+}

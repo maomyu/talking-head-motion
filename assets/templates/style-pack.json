@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "name": "",
+  "status": "unverified",
+  "sources": [],
+  "palette": {"background": "#191916", "foreground": "#F6F2E7", "accent": "#D1E984"},
+  "editorial_rules": [],
+  "caption_rules": {"region": "bottom-safe", "max_lines": 2, "keywords_only_emphasis": true},
+  "effects": [],
+  "replacement_tests": [],
+  "limitations": []
+}

@@ -1,0 +1,536 @@
+{
+  "duration": 75.376271,
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "shots": [
+    {
+      "id": "record",
+      "start": 0,
+      "end": 2.9,
+      "object": "手机与同一段人物底片",
+      "action": "停止录制，底片从手机槽吐出并落到案卷上",
+      "camera": "快推",
+      "screen_words": "",
+      "presenter": "embedded",
+      "source_start": 0.0
+    },
+    {
+      "id": "night",
+      "start": 2.9,
+      "end": 6.38,
+      "object": "案卷旁的机械时钟和剪辑电脑",
+      "action": "时针转过夜晚，桌上的口播底片堵在剪辑轨道",
+      "camera": "砸入",
+      "screen_words": "一个晚上",
+      "presenter": "none",
+      "source_start": 1.4
+    },
+    {
+      "id": "labor",
+      "start": 6.38,
+      "end": 10.86,
+      "object": "字幕纸带、素材冲印件与关键帧尺",
+      "action": "纸带擦改，照片翻找，尺上的滑块来回拖",
+      "camera": "横移",
+      "screen_words": "",
+      "presenter": "none",
+      "source_start": 2.8
+    },
+    {
+      "id": "exhausted",
+      "start": 10.86,
+      "end": 13.72,
+      "object": "真实人物和桌面上的沉重案卷",
+      "action": "人物回到大画面，前景底片卷耗尽落在桌边",
+      "camera": "切",
+      "screen_words": "",
+      "presenter": "main",
+      "source_start": 4.199999999999999
+    },
+    {
+      "id": "goal",
+      "start": 13.72,
+      "end": 16.0,
+      "object": "文稿与人物冲印件",
+      "action": "较大人物冲印件与文稿同桌，相机由冲印件横移至文稿，不沿用固定大框",
+      "camera": "横移",
+      "screen_words": "",
+      "presenter": "large_print",
+      "source_start": 5.6
+    },
+    {
+      "id": "content",
+      "start": 16.0,
+      "end": 18.84,
+      "object": "同一份文稿与铅笔",
+      "action": "铅笔划掉重复劳动笔记，红笔圈出内容",
+      "camera": "快推",
+      "screen_words": "内容",
+      "presenter": "embedded",
+      "source_start": 0.0
+    },
+    {
+      "id": "assembly",
+      "start": 18.84,
+      "end": 22.18,
+      "object": "文稿、磁带与人物底片",
+      "action": "纸卷接进声音磁带，再把真实人物画面接入同一底片",
+      "camera": "横移",
+      "screen_words": "",
+      "presenter": "embedded",
+      "source_start": 1.4
+    },
+    {
+      "id": "cutting",
+      "start": 22.18,
+      "end": 25.04,
+      "object": "带句界的口播底片与剪刀",
+      "action": "剪刀按句界裁开底片，剪好的片段落进轨道",
+      "camera": "快推",
+      "screen_words": "",
+      "presenter": "embedded",
+      "source_start": 2.8
+    },
+    {
+      "id": "focus",
+      "start": 25.04,
+      "end": 28.28,
+      "object": "真实人物与同一底片",
+      "action": "人物回到大画面，焦点圈只指向一处",
+      "camera": "切",
+      "screen_words": "",
+      "presenter": "main",
+      "source_start": 4.199999999999999
+    },
+    {
+      "id": "problem",
+      "start": 28.28,
+      "end": 31.54,
+      "object": "电脑里的错字纸带",
+      "action": "放大错字，红笔在念到问题时圈出它",
+      "camera": "快推",
+      "screen_words": "问题",
+      "presenter": "none",
+      "source_start": 5.6
+    },
+    {
+      "id": "relation",
+      "start": 31.54,
+      "end": 34.54,
+      "object": "文稿、照片与同一剪辑轨道",
+      "action": "红线从文稿牵到照片，再接到对应底片",
+      "camera": "横移",
+      "screen_words": "",
+      "presenter": "none",
+      "source_start": 0.0
+    },
+    {
+      "id": "comparison",
+      "start": 34.54,
+      "end": 38.5,
+      "object": "同一帧的两条排版底片",
+      "action": "两条底片靠拢对齐，露出繁杂与清晰的表达区别",
+      "camera": "砸入",
+      "screen_words": "对比",
+      "presenter": "embedded",
+      "source_start": 1.4
+    },
+    {
+      "id": "pressure",
+      "start": 38.5,
+      "end": 41.28,
+      "object": "同一案卷、时钟和口播底片",
+      "action": "相机推向压弯的底片，案卷保持前面劳动痕迹",
+      "camera": "快推",
+      "screen_words": "",
+      "presenter": "none",
+      "source_start": 2.8
+    },
+    {
+      "id": "stack",
+      "start": 41.28,
+      "end": 44.84,
+      "object": "字幕纸带、素材冲印件与关键帧尺",
+      "action": "三件实物按名词砸上案卷，再层层叠高压弯底片",
+      "camera": "砸入",
+      "screen_words": "",
+      "presenter": "none",
+      "source_start": 4.199999999999999
+    },
+    {
+      "id": "board",
+      "start": 44.84,
+      "end": 48.62,
+      "object": "同一桌面的白板与四件制作物",
+      "action": "笔尖沿文稿、磁带、人物底片和成片卷逐段画路线",
+      "camera": "横移",
+      "screen_words": "",
+      "presenter": "embedded",
+      "source_start": 5.6
+    },
+    {
+      "id": "route",
+      "start": 48.62,
+      "end": 50.96,
+      "object": "四件制作物和累计路径",
+      "action": "最后一根线闭合，镜头停在完整路径让人读懂",
+      "camera": "快推",
+      "screen_words": "",
+      "presenter": "embedded",
+      "source_start": 0.0
+    },
+    {
+      "id": "conclusion",
+      "start": 50.96,
+      "end": 53.94,
+      "object": "真实人物与前景文稿",
+      "action": "文稿与工具撤回桌面，念到收回来时回到人物满幅",
+      "camera": "横移",
+      "screen_words": "",
+      "presenter": "main",
+      "source_start": 1.4
+    },
+    {
+      "id": "listen",
+      "start": 53.94,
+      "end": 56.02,
+      "object": "真实人物",
+      "action": "人物停留在满幅主画面，让结论被听清楚",
+      "camera": "停",
+      "screen_words": "",
+      "presenter": "main",
+      "source_start": 4.3799999999999955
+    },
+    {
+      "id": "tools",
+      "start": 56.02,
+      "end": 58.9,
+      "object": "案卷里的纸带、剪刀和传动轮",
+      "action": "传动轮接走重复纸带，剪刀处理对应片段",
+      "camera": "切",
+      "screen_words": "",
+      "presenter": "embedded",
+      "source_start": 4.199999999999999
+    },
+    {
+      "id": "judgment",
+      "start": 58.9,
+      "end": 60.96,
+      "object": "文稿和人物冲印件",
+      "action": "人物旁的笔保留一个表达选择，把重复笔记移走",
+      "camera": "快推",
+      "screen_words": "判断",
+      "presenter": "embedded",
+      "source_start": 5.6
+    },
+    {
+      "id": "inspect",
+      "start": 60.96,
+      "end": 63.08,
+      "object": "放大镜、字幕纸带和真实音轨波形",
+      "action": "放大镜追到具体错字，随后沿原音波形移动",
+      "camera": "横移",
+      "screen_words": "",
+      "presenter": "none",
+      "source_start": 0.0
+    },
+    {
+      "id": "repair",
+      "start": 63.08,
+      "end": 67.16,
+      "object": "同一底片的音轨、嘴部画面与裁切框",
+      "action": "沿需检查的部位逐一取景，修正示意错字后回原底片",
+      "camera": "快推",
+      "screen_words": "",
+      "presenter": "embedded",
+      "source_start": 1.4
+    },
+    {
+      "id": "question",
+      "start": 67.16,
+      "end": 71.96,
+      "object": "真实人物和同一份文稿",
+      "action": "人物再次回到大画面，焦点落在文稿的一处表达",
+      "camera": "切",
+      "screen_words": "",
+      "presenter": "main",
+      "source_start": 2.8
+    },
+    {
+      "id": "close",
+      "start": 71.96,
+      "end": 75.376271,
+      "object": "同一底片、成片盒与案卷",
+      "action": "底片卷进成片盒、案卷合拢；先快推到合卷动作，再在74.98秒快拉到桌面全貌",
+      "camera": "快推",
+      "screen_words": "成片",
+      "presenter": "embedded",
+      "source_start": 7.599999999999994
+    }
+  ],
+  "captions": [
+    {
+      "text": "拍完口播，",
+      "start": 0.0,
+      "end": 0.74
+    },
+    {
+      "text": "你是不是也有这种感觉：",
+      "start": 1.02,
+      "end": 2.52
+    },
+    {
+      "text": "视频只有一分钟，",
+      "start": 2.9,
+      "end": 4.16
+    },
+    {
+      "text": "剪辑却能耗掉一个晚上？",
+      "start": 4.38,
+      "end": 5.84
+    },
+    {
+      "text": "字幕一遍一遍改，",
+      "start": 6.38,
+      "end": 7.62
+    },
+    {
+      "text": "素材一个一个找，",
+      "start": 7.86,
+      "end": 9.0
+    },
+    {
+      "text": "动效一帧一帧调。",
+      "start": 9.24,
+      "end": 10.54
+    },
+    {
+      "text": "最后片子剪完了，",
+      "start": 10.86,
+      "end": 12.02
+    },
+    {
+      "text": "人也快剪没了。",
+      "start": 12.34,
+      "end": 13.4
+    },
+    {
+      "text": "我现在给自己定的目标很简单：",
+      "start": 13.72,
+      "end": 15.82
+    },
+    {
+      "text": "以后做口播，",
+      "start": 16.0,
+      "end": 16.92
+    },
+    {
+      "text": "主要精力放在内容上。",
+      "start": 17.14,
+      "end": 18.62
+    },
+    {
+      "text": "文案定下来，",
+      "start": 18.84,
+      "end": 19.88
+    },
+    {
+      "text": "先生成声音和数字人画面，",
+      "start": 20.0,
+      "end": 21.98
+    },
+    {
+      "text": "再让智能体按每句话的意思安排剪辑。",
+      "start": 22.18,
+      "end": 24.76
+    },
+    {
+      "text": "网感的关键，",
+      "start": 25.04,
+      "end": 25.96
+    },
+    {
+      "text": "是让观众每一秒都知道该看哪里。",
+      "start": 26.12,
+      "end": 28.28
+    },
+    {
+      "text": "你说到一个问题，",
+      "start": 28.28,
+      "end": 29.7
+    },
+    {
+      "text": "观众要马上看到它；",
+      "start": 30.02,
+      "end": 31.36
+    },
+    {
+      "text": "你讲到一个步骤，",
+      "start": 31.54,
+      "end": 32.58
+    },
+    {
+      "text": "画面要把关系画清楚；",
+      "start": 32.78,
+      "end": 34.22
+    },
+    {
+      "text": "你拿两个结果做对比，",
+      "start": 34.54,
+      "end": 35.98
+    },
+    {
+      "text": "就把它们放到一起，",
+      "start": 36.1,
+      "end": 37.26
+    },
+    {
+      "text": "让人一眼看懂。",
+      "start": 37.46,
+      "end": 38.46
+    },
+    {
+      "text": "比如讲“剪辑太耗时间”，",
+      "start": 38.5,
+      "end": 40.2
+    },
+    {
+      "text": "画面就出现字幕、素材、动效这几件事，",
+      "start": 40.48,
+      "end": 43.56
+    },
+    {
+      "text": "层层叠起来。",
+      "start": 43.72,
+      "end": 44.64
+    },
+    {
+      "text": "讲“自动化流程”，",
+      "start": 44.84,
+      "end": 45.98
+    },
+    {
+      "text": "就沿着文案、配音、数字人、成片，",
+      "start": 46.18,
+      "end": 49.08
+    },
+    {
+      "text": "把路径一步一步展开。",
+      "start": 49.32,
+      "end": 50.8
+    },
+    {
+      "text": "讲到最重要的结论，",
+      "start": 50.96,
+      "end": 52.26
+    },
+    {
+      "text": "画面反而要收回来：",
+      "start": 52.44,
+      "end": 53.84
+    },
+    {
+      "text": "让人看着你，",
+      "start": 53.94,
+      "end": 54.84
+    },
+    {
+      "text": "把这句话听清楚。",
+      "start": 54.94,
+      "end": 56.02
+    },
+    {
+      "text": "这套流程应该把重复劳动交给工具，",
+      "start": 56.02,
+      "end": 58.88
+    },
+    {
+      "text": "把表达的判断留给自己。",
+      "start": 59.0,
+      "end": 60.56
+    },
+    {
+      "text": "成片之后，",
+      "start": 60.96,
+      "end": 61.82
+    },
+    {
+      "text": "再检查错字、截音、口型和画面。",
+      "start": 61.96,
+      "end": 64.66
+    },
+    {
+      "text": "哪一处影响理解，",
+      "start": 64.88,
+      "end": 66.04
+    },
+    {
+      "text": "就改哪一处。",
+      "start": 66.16,
+      "end": 67.02
+    },
+    {
+      "text": "如果你也做口播，",
+      "start": 67.16,
+      "end": 68.3
+    },
+    {
+      "text": "先问自己一句：",
+      "start": 68.5,
+      "end": 69.54
+    },
+    {
+      "text": "这一秒，",
+      "start": 69.74,
+      "end": 70.28
+    },
+    {
+      "text": "观众应该看懂什么？",
+      "start": 70.38,
+      "end": 71.68
+    },
+    {
+      "text": "这个问题想清楚，",
+      "start": 71.96,
+      "end": 73.16
+    },
+    {
+      "text": "剪辑才真的开始替你省时间。",
+      "start": 73.38,
+      "end": 75.16
+    }
+  ],
+  "palette": [
+    "#EBE3D2",
+    "#282722",
+    "#B8433F",
+    "#78836A",
+    "#C0A16D",
+    "#FBF7EB"
+  ],
+  "style": "花叔口播参考的纸本拼贴、连续桌面、脉冲相机与累计白板；同一口播底片贯穿",
+  "presenter": "stock layout demo, not lip-synced; user master must map source frames to final global time",
+  "safe_area": {
+    "caption_band": [
+      0,
+      1635,
+      1080,
+      1825
+    ],
+    "identity_band": [
+      0,
+      1837,
+      1080,
+      1920
+    ],
+    "critical_props_band": [
+      50,
+      130,
+      1030,
+      1550
+    ],
+    "coordinates": "fixed camera space after world transform; captions drawn last; actual frame validation required"
+  },
+  "example_only": true
+}

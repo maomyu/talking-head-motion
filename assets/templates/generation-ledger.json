@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "jobs": [],
+  "job_fields": [
+    "provider", "model", "authorized_profile_id", "input_sha256",
+    "text_sha256", "task_id", "status", "output_path", "output_sha256",
+    "timeline_mode", "known_cost", "budget_limit", "review_evidence"
+  ],
+  "statuses": ["prepared", "submitted", "running", "received", "accepted", "failed", "unknown_outcome"],
+  "rule": "Save a task ID immediately; query it after interruption. Do not resubmit a job with an unknown outcome."
+}

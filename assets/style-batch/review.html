@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>35种画风 · 完整口播对照</title>
+<style>
+:root{color-scheme:light;--paper:#f2ebdf;--ink:#292820;--red:#934c35;--line:#cabea8}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+header,.seek,.catalog{max-width:1450px;margin:auto;padding:24px 30px 14px}h1{font-size:32px;line-height:1.3;margin:0 0 8px}p{margin:8px 0}a{color:var(--red)}
+button,select,input{font:inherit;border:1px solid var(--line);border-radius:7px;background:#fffaf0;padding:7px 11px;color:var(--ink)}button{cursor:pointer}button:disabled{opacity:.5;cursor:default}
+.intro{color:#696253;max-width:1050px}.badge{display:inline-block;background:#e3d8c4;padding:3px 9px;border-radius:5px;font-size:13px}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.stage{max-width:1200px;margin:auto;padding:10px 30px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}.stage.single{grid-template-columns:minmax(0,540px);justify-content:center}
+.player{background:#e6dece;border:1px solid var(--line);border-radius:12px;overflow:hidden}.player header{padding:12px 14px;font-weight:600;display:flex;justify-content:space-between;gap:10px}.player video{display:block;max-height:650px;width:100%;aspect-ratio:9/16;object-fit:contain;background:#24221f}.player p{margin:9px 13px;font-size:12px;color:#686153}.player details{margin:10px 13px}
+.seek{padding-top:20px;padding-bottom:16px}.seek input[type=range]{flex:1;min-width:180px;accent-color:var(--red);padding:0}.seek select{max-width:100%}
+.catalog{padding-top:0;padding-bottom:45px}.catalog h2{font-size:24px;line-height:1.35;margin:20px 0 10px}.cards{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px}
+.card{border:1px solid var(--line);background:#faf4e7;border-radius:10px;overflow:hidden}.card img{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#d9ceb9}.card .body{padding:10px}.card h3{font-size:16px;margin:0 0 6px}.card small{display:block;color:#77705e;font-size:12px}.card button{padding:4px 8px;font-size:13px}.card .toolbar{gap:5px;margin-top:8px}.selected{outline:3px solid var(--red)}
+details{font-size:12px;color:#655d50;margin-top:8px}summary{cursor:pointer}.instructions{border-top:1px solid var(--line);margin-top:24px;padding-top:12px}.hidden{display:none!important}.concept{max-width:1050px;font-size:14px;margin:12px 0;color:var(--ink)}.concept table{border-collapse:collapse;width:100%;margin-top:10px}.concept th,.concept td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}.concept td:first-child{white-space:nowrap}
+@media(max-width:1200px){.cards{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:750px){header,.stage,.seek,.catalog{padding-left:16px;padding-right:16px}.stage,.stage.single{grid-template-columns:1fr}.cards{grid-template-columns:repeat(3,minmax(0,1fr))}h1{font-size:25px}.player video{max-height:620px}}
+</style>
+</head>
+<body>
+<header>
+<div class="badge" id="badge">35 条完整视频 · 约 75 秒/条 · 竖屏</div>
+<h1>同一篇口播，看 35 种画风怎么剪</h1>
+<p class="intro" id="intro"></p><p class="intro" id="presenter"></p>
+<p class="intro">这里用于播放和比较。喜欢的画风、修改要求或视频中的问题，直接在对话里告诉我。</p>
+<details class="concept"><summary>8种动画语法与35种画风，分别决定什么？</summary>
+<table><thead><tr><th>维度</th><th>决定什么</th><th>例子</th></tr></thead><tbody>
+<tr><td>8种动画语法</td><td>信息怎么组织、动作怎么解释</td><td>白板、资料拼贴、动效文字、图表、数学可视化、产品界面、科普插画、叙事</td></tr>
+<tr><td>35种艺术画风</td><td>物件的笔触、材质、造型、色彩和光影</td><td>水墨、像素、油画、波普、剪纸、皮影等</td></tr>
+</tbody></table>
+<p>比如同一个“剪刀切胶片”动作，可以分别画成水墨、像素或油画。本批35版共用口播与语义动作，便于比较画风；选定后再为你的内容调整讲法与节奏。</p>
+</details>
+<div class="toolbar"><span id="count"></span><button id="compare">开启 A/B 对照</button><a href="/media/captions.srt" download="口播字幕.srt">下载字幕</a><a href="#catalog">查看全部 35 版 ↓</a></div>
+</header>
+<section class="stage single" id="stage">
+<article class="player" id="laneA"><header><span id="titleA">A</span><a id="downloadA" download>下载完整 MP4</a></header><video id="videoA" controls playsinline preload="metadata"></video><p id="descA"></p><details id="mechanismA"></details></article>
+<article class="player hidden" id="laneB"><header><span id="titleB">B</span><a id="downloadB" download>下载完整 MP4</a></header><video id="videoB" controls playsinline preload="metadata" muted></video><p id="descB"></p><details id="mechanismB"></details></article>
+</section>
+<section class="seek"><div class="toolbar">
+<button id="playBoth">同步播放</button><button id="pauseBoth">暂停</button>
+<input id="time" type="range" min="0" max="75.375" value="0" step="0.0416667" aria-label="播放进度">
+<span id="timeLabel">00:00.00</span><select id="shot" aria-label="跳到同一镜头"><option value="">跳到同一镜头</option></select>
+</div><p class="intro">B 默认静音，两版按同一时间比较。每个下载文件都是带完整配音的独立视频。</p></section>
+<section class="catalog" id="catalog"><h2>35 个完整版本</h2><div class="cards" id="cards"></div>
+<div class="instructions"><p>建议先在同一镜头比较画风，再完整播放候选版，检查节奏、读字、人物出镜和声音。</p>
+<p>艺术材料与动作依据 <a href="https://github.com/alchaincyf/huashu-art-motion" target="_blank" rel="noopener">huashu-art-motion</a> 的35张配方重建到口播剪辑题材。原房间3秒预览另作配方参考。</p></div></section>
+<script>
+let films=[],selected={A:null,B:null},comparison=false,targetTime=0,maxTime=75.375;
+const el=id=>document.getElementById(id),videos={A:el('videoA'),B:el('videoB')};
+const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function clock(t){return String(Math.floor(t/60)).padStart(2,'0')+':'+(t%60).toFixed(2).padStart(5,'0')}
+function describe(lane,f){
+ el('mechanism'+lane).innerHTML='<summary>本版材料与动作</summary><p>'+escape(f.metadata.mechanism)+'</p><p>'+escape(f.metadata.topic_adaptation)+'</p><p>'+escape(f.metadata.motifs)+'</p><p>制作边界：'+escape(f.metadata.limitations)+'</p>';
+}
+function choose(lane,f,scroll=true){
+ if(!f?.ready)return;
+ selected[lane]=f;const v=videos[lane];v.pause();v.src=f.video;v.poster=f.poster;
+ v.onloadedmetadata=()=>{v.currentTime=Math.min(targetTime,Math.max(0,v.duration-.01));};v.load();
+ el('title'+lane).textContent=lane+' · '+f.number+'. '+f.name;
+ el('download'+lane).href=f.video;el('download'+lane).download=String(f.number).padStart(2,'0')+'_'+f.name+'_完整口播.mp4';
+ el('desc'+lane).textContent='完整 '+f.duration.toFixed(2)+' 秒 · '+f.width+'×'+f.height+' · '+f.fps+'fps';
+ describe(lane,f);drawCards();if(scroll)el('stage').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function seek(t){
+ if(!Number.isFinite(t))return;targetTime=Math.min(maxTime,Math.max(0,t));
+ for(const lane of ['A','B'])if(videos[lane].readyState>=1)videos[lane].currentTime=Math.min(targetTime,Math.max(0,videos[lane].duration-.01));
+ el('time').value=targetTime;el('timeLabel').textContent=clock(targetTime);
+}
+function drawCards(){
+ el('cards').innerHTML=films.map(f=>'<article class="card '+(selected.A?.id===f.id||selected.B?.id===f.id?'selected':'')+'">'+
+ (f.poster?'<img loading="lazy" src="'+escape(f.poster)+'" alt="'+escape(f.name)+'，完整视频实际编码帧">':'<div style="aspect-ratio:9/16;padding:12px">正在制作完整口播</div>')+
+ '<div class="body"><h3>'+f.number+'. '+escape(f.name)+'</h3><small>'+f.duration.toFixed(2)+' 秒 · 完整配音</small>'+
+ '<div class="toolbar"><button data-lane="A" data-id="'+escape(f.id)+'" '+(f.ready?'':'disabled')+'>放到 A</button><button data-lane="B" data-id="'+escape(f.id)+'" '+(f.ready?'':'disabled')+'>放到 B</button></div>'+
+ '<details><summary>材料与动作</summary><p>'+escape(f.metadata.mechanism)+'</p><p>'+escape(f.metadata.motifs)+'</p><p>'+escape(f.metadata.limitations)+'</p></details></div></article>').join('');
+}
+function setComparison(enabled,fill=true){
+ comparison=enabled;el('laneB').classList.toggle('hidden',!enabled);el('stage').classList.toggle('single',!enabled);
+ el('compare').textContent=enabled?'关闭 A/B 对照':'开启 A/B 对照';
+ if(enabled&&fill&&!selected.B){const f=films.find(x=>x.ready&&x.id!==selected.A?.id);if(f)choose('B',f,false);}
+ if(!enabled)videos.B.pause();
+}
+el('cards').onclick=e=>{const b=e.target.closest('button[data-id]');if(!b)return;if(b.dataset.lane==='B')setComparison(true,false);choose(b.dataset.lane,films.find(f=>f.id===b.dataset.id));};
+el('compare').onclick=()=>setComparison(!comparison);el('time').oninput=()=>seek(+el('time').value);
+el('shot').onchange=()=>{if(el('shot').value!=='')seek(+el('shot').value);};
+el('playBoth').onclick=async()=>{seek(videos.A.currentTime);await Promise.all([videos.A.play().catch(()=>{}),comparison?videos.B.play().catch(()=>{}):Promise.resolve()]);};
+el('pauseBoth').onclick=()=>{videos.A.pause();videos.B.pause();};
+videos.A.ontimeupdate=()=>{targetTime=videos.A.currentTime;el('time').value=targetTime;el('timeLabel').textContent=clock(targetTime);};
+fetch('data.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json();}).then(d=>{
+ films=d.films;maxTime=d.narration_duration??d.shots.at(-1).end;el('time').max=maxTime;
+ el('badge').textContent=films.length+' 条完整视频 · '+maxTime.toFixed(2)+' 秒/条 · 竖屏';
+ el('intro').textContent=d.comparison_note;el('presenter').textContent=d.presenter_note;
+ el('count').textContent='已导出 '+films.filter(f=>f.ready).length+' / '+films.length+' 条完整视频';
+ for(const s of d.shots){const o=document.createElement('option');o.value=s.start;o.textContent=clock(s.start)+' · '+s.object;el('shot').appendChild(o);}
+ drawCards();const first=films.find(f=>f.ready);if(first)choose('A',first,false);
+}).catch(e=>{el('intro').textContent='视频索引加载失败：'+e.message;});
+</script>
+</body>
+</html>

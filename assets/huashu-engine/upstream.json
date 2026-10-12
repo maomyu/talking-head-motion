@@ -1,0 +1,19 @@
+{
+  "repo": "https://github.com/alchaincyf/huashu-art-motion",
+  "commit": "9ff59339f934e08483ba0a5b1db20f4c2c421b35",
+  "included": [
+    "clip.html",
+    "render.py",
+    "spec_assets.py",
+    "lib",
+    "clips",
+    "clip.js"
+  ],
+  "excluded": [
+    "author character artwork",
+    "demo movies",
+    "demos",
+    "reference_films"
+  ],
+  "license": "MIT code; fonts retain their own notices"
+}

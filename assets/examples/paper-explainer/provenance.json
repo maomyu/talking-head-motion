@@ -1,0 +1,9 @@
+{
+  "type": "newly authored concrete example",
+  "libraries": "assets/huashu-full original MIT libraries",
+  "scene_sha256": "398aede93f68019234e0e85c922ad58be569c674cc8d4680a160de748186f7f7",
+  "contains_project_media": false,
+  "font": "requires project-local font with actual glyphs",
+  "scope": "75-second worked example; rewrite shot meaning, word anchors and source frame mapping for new narration; not a universal video template",
+  "revision": "v4: inherited full timeline safe area/inspection label; pressure reel now below subtitle paper after actual encoded audit"
+}

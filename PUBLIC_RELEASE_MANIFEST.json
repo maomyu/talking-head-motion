@@ -1,0 +1,1789 @@
+{
+  "release": "v0.1.0",
+  "date": "2026-10-12",
+  "source_upstream_commit": "9ff59339f934e08483ba0a5b1db20f4c2c421b35",
+  "scope": "Public source package integrity and syntax checks; no full-film rendering, auditory or artistic acceptance claimed by these checks.",
+  "files": 350,
+  "checked": {
+    "python": 27,
+    "javascript": 108,
+    "json": 14,
+    "text": 260
+  },
+  "credential_pattern_findings": [],
+  "excluded": "Project media, voices, presenter footage, local account configurations and runtime caches",
+  "manifest": [
+    {
+      "path": ".gitignore",
+      "bytes": 333,
+      "sha256": "efd9cf3af41e873a7097b10e6b440707d82415eba7daf9810b3e8d31927a2aae"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 635,
+      "sha256": "579ab28bccd9c4214ad1684cec58314802a7efb807cfd7f3e25322ee921b2490"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1063,
+      "sha256": "8b690d7abef4d467cee6ca934c0fcc8b110305b3b07a80973b5271d668253277"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7176,
+      "sha256": "806e572027b52f13d677f1e65cb98b16cfde2399beddcc566954a3d20beda879"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 11392,
+      "sha256": "b0c64dfb8abccdb3a7667118ec3ec3c7e7e9e66e6337f5ed033b40d5d81c5350"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 2987,
+      "sha256": "0a897d67fb9c094a964a2162a0872f4f8a468f713858a953d852b2fe61e043d9"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "bytes": 592,
+      "sha256": "450c774ae31a0b31f92ed7b3fcbe34fc1c0f43de90005fdc9addc2c6621e423b"
+    },
+    {
+      "path": "assets/components.js",
+      "bytes": 3651,
+      "sha256": "e857ee24fb56a6b02d4ac74ec743d941b2b2736d55b1bf1d9996fdcb4c2821ff"
+    },
+    {
+      "path": "assets/composition.html",
+      "bytes": 3241,
+      "sha256": "ff0a2d125a3ff6239e4f5416e030fdcf325abd1230e5348860944132326cc3fa"
+    },
+    {
+      "path": "assets/examples/paper-explainer/README.md",
+      "bytes": 1933,
+      "sha256": "fdac6846cbd11e59bd68f9f52b0afe114c4397c620071225385de753b2f1d740"
+    },
+    {
+      "path": "assets/examples/paper-explainer/provenance.json",
+      "bytes": 577,
+      "sha256": "5c4b8f1cfe30c99667fd1f0445d7a0e0fb0a1524222eec504be73d546883d542"
+    },
+    {
+      "path": "assets/examples/paper-explainer/scene-example.js",
+      "bytes": 20594,
+      "sha256": "398aede93f68019234e0e85c922ad58be569c674cc8d4680a160de748186f7f7"
+    },
+    {
+      "path": "assets/examples/paper-explainer/story-example.json",
+      "bytes": 13197,
+      "sha256": "f06b93488eb371917c02b2648e1d304651ae29ead31f5b4a658693f5fbf0597d"
+    },
+    {
+      "path": "assets/huashu-engine/LICENSE",
+      "bytes": 1086,
+      "sha256": "6d6a2a9caf2e6d2b76974050427053b2892d8aa4c33fd168ce63a537fcee9d96"
+    },
+    {
+      "path": "assets/huashu-engine/clip.html",
+      "bytes": 1261,
+      "sha256": "73db3956310c7798452057e4328e961c899507483ab0bb72e817ce0372893874"
+    },
+    {
+      "path": "assets/huashu-engine/clip.js",
+      "bytes": 10538,
+      "sha256": "e991e5c4edc9f463900cfc42106f5e0eaa2b48a28d3ba30111a3c80a16cf0f44"
+    },
+    {
+      "path": "assets/huashu-engine/clips/t1_3b1b.js",
+      "bytes": 18940,
+      "sha256": "84ed102301a066410aca1b0d06ba0459f7d5da09ae4831edf58a27f2152a6e7a"
+    },
+    {
+      "path": "assets/huashu-engine/clips/t2_keynote_ui.js",
+      "bytes": 35069,
+      "sha256": "9f899ddce7a4a7620a4aa0f9c3f4679e6f1c944fb4ec50fd4a65e8fae12fcc31"
+    },
+    {
+      "path": "assets/huashu-engine/clips/t3_finance_chart.js",
+      "bytes": 21116,
+      "sha256": "f175d45ea92e0a680fea9e08ce9270a59a63a5b4bb3d00db5a894848e2407b36"
+    },
+    {
+      "path": "assets/huashu-engine/clips/y1_kurzgesagt.js",
+      "bytes": 18354,
+      "sha256": "55c87ccb685feba52b21393f36b06d76c1f43b225223d15c56cf55da7c4f9392"
+    },
+    {
+      "path": "assets/huashu-engine/clips/y2_vox.js",
+      "bytes": 14286,
+      "sha256": "d332ef089ce1672d0f711cba231f9bda2748bd38781de540e0a4e08ad8628c85"
+    },
+    {
+      "path": "assets/huashu-engine/clips/y3_whiteboard.js",
+      "bytes": 21759,
+      "sha256": "1536d7a276580edd44fab6199b69671aecbae30b39b5f89921d08e43a738ff2d"
+    },
+    {
+      "path": "assets/huashu-engine/clips/y4_storytime.js",
+      "bytes": 22039,
+      "sha256": "2ba8c7a05296c489b948c1b2f050a479dcef5a7a19bb1550aca07478f97e25d6"
+    },
+    {
+      "path": "assets/huashu-engine/clips/y5_kinetic_type.js",
+      "bytes": 13104,
+      "sha256": "80e6f52ae2a07ce4f7c4d15e87e7eddb3174c7770079805d97feaba1f254bd83"
+    },
+    {
+      "path": "assets/huashu-engine/lib/brush.js",
+      "bytes": 11947,
+      "sha256": "e83db04e5fc9fef83237d984d2ceba3c1ec71c0c2a8f8a798ecc939fc8c3b2d4"
+    },
+    {
+      "path": "assets/huashu-engine/lib/camera.js",
+      "bytes": 8545,
+      "sha256": "0c155120b4ec80ac97b706e812a54e25fb8c795e76e18e4df2247ad8baa19e84"
+    },
+    {
+      "path": "assets/huashu-engine/lib/chart.js",
+      "bytes": 10870,
+      "sha256": "93d3605cba7d7cf0bdda2c2dd8f9797734dd06c1f64fa18ef7a492f8755a8d27"
+    },
+    {
+      "path": "assets/huashu-engine/lib/collage.js",
+      "bytes": 8972,
+      "sha256": "4dcd3d15f8895dc6e3d4f2e4d82766782a4e77876fb863ded9480320b8959d93"
+    },
+    {
+      "path": "assets/huashu-engine/lib/diagram.js",
+      "bytes": 20080,
+      "sha256": "98b15ba5f883dd95eca2ff52ba1d768c10a5bea7862bd13aee6d84b875e2b8c5"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/AlfaSlabOne-400.woff",
+      "bytes": 41728,
+      "sha256": "2f8b04d3eada32d7047255260a0e81ab74938fada1aad154f5653850a68aebe8"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/Anton-400.woff",
+      "bytes": 61460,
+      "sha256": "791375bdbed00de4a3aad4811291220ead0e1405d6f8b5bdbf109798c8359ac5"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/ArchivoBlack-400.woff",
+      "bytes": 38316,
+      "sha256": "c029965cfbc3cbb79431babf56d0fee6bc185f366c4fc2a0957817137d374c95"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/Bangers-400.woff",
+      "bytes": 43808,
+      "sha256": "62f0a30b1d48cc21bb35b084ae5d17ad22135df5dc4c18f3f591fc5443eddf39"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/Caveat-600.woff",
+      "bytes": 132264,
+      "sha256": "7a101c766f28866c5aa36ebbce5cfedcea2601f2439d3b16694b9c8eee75e9dc"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/Cinzel-400.woff",
+      "bytes": 22812,
+      "sha256": "39c4e70ca598e2c0d78d355cd5fbe37017353a5de3008787a03e0d30a2d715ad"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/Cinzel-700.woff",
+      "bytes": 24288,
+      "sha256": "1bb7ec5b84ee97a9eae36528d5bae3bfeddf035c19842fc1740ce44c09fac4ad"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/CormorantGaramond-500.woff",
+      "bytes": 90464,
+      "sha256": "f25b87d41579955733df25af8319b168d704b5333d8ac53e991fac442e7a9844"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/CormorantGaramond-500i.woff",
+      "bytes": 93400,
+      "sha256": "0ab1e72da6037d218386d9a6e148d7f5b0357e1965abf743aef30d641a5e2874"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/CormorantGaramond-700.woff",
+      "bytes": 87248,
+      "sha256": "6417fd78440278f109d84cf00283fbf9b91b6d639fc5afd208a121ae7c636e61"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/EBGaramond-400.woff",
+      "bytes": 162740,
+      "sha256": "61ea4fa656e4ec2c6103483625f0d6a2e1571c2be57015063b73f23392b3ff98"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/EBGaramond-400i.woff",
+      "bytes": 151904,
+      "sha256": "413c5879fa73e5e168dcb59e8e692b24049756c5b961fcd8adee3db2e1624ef4"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/EBGaramond-600.woff",
+      "bytes": 179028,
+      "sha256": "d0ecbbe1d933b68d32ef2629e9a46673ae5eff5ce9c04cd7f4c012504da33a11"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/Exo2-800i.woff",
+      "bytes": 60124,
+      "sha256": "8296afc88a371a81345e07d852a06e45ae401d5793866fd9a7f351daf523740a"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/GochiHand-400.woff",
+      "bytes": 23640,
+      "sha256": "152552ee5c95ec30b75edf3ba42f3406925462ea1a52d4c049d22f550f10167a"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/IMFellEnglish-400.woff",
+      "bytes": 108052,
+      "sha256": "b915ee6c7034491df57eed8153ec2a5c3ee1ba55788a96737465d4c3239bd2a0"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/IMFellEnglish-400i.woff",
+      "bytes": 111628,
+      "sha256": "7c6064b4e7ca80d131a01b9133ddaf11978d43bc954eb0d1c1dd1391371c56d6"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/Inter-var.woff",
+      "bytes": 126688,
+      "sha256": "a54bc9f6ba847df43752bfb35f63aa1599ccc113b58c23bfa07c4dc88976647b"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/JosefinSans-700.woff",
+      "bytes": 26564,
+      "sha256": "1e9f0aab2caa768ead521a88be3ea118d47c29a3ae052f9b5d0c2af0d6a8eb8d"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/Kalam-700.woff",
+      "bytes": 186044,
+      "sha256": "53b9c2a4260ba9a1320d2a92c6dbd532fa509bdeda0897580611a9f16f1a2bda"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/LICENSES.md",
+      "bytes": 4498,
+      "sha256": "00b5f86c4d5162e6fee6d600b527c052933eb2884a61a5fab0f89fa4d4656ecd"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/LXGWWenKai-500.woff",
+      "bytes": 2098296,
+      "sha256": "734bd187392579417ac83effe31d37b9de43c7b290bcb400800456511ed79e8f"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/LibreBaskerville-400.woff",
+      "bytes": 46628,
+      "sha256": "e5134e031d30b4dcc76f3806701cafe92ff4ed5b8b6271d06d63ca3ee7af9bc4"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/LibreBaskerville-700.woff",
+      "bytes": 47524,
+      "sha256": "57b9986d47ab6d7ea1964d5693c56b5e5e97c889e31ba9546815de365d356dab"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/LilitaOne-400.woff",
+      "bytes": 14372,
+      "sha256": "8f4283865fad7cbb92e3b9e8ec6e48ab1225f7fb2eaa9c75741ff46d4f230456"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/Marcellus-400.woff",
+      "bytes": 22320,
+      "sha256": "9893ac05a03ff1e80ecf97f73853bff1378edfdec633b6c3a67ae7c33d7018e7"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/NotoSansSC-500.woff",
+      "bytes": 1416188,
+      "sha256": "928d841b1ec663ebce82593568cbc19749fe652f88b8ec960723b7d87b551512"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/NotoSansSC-700.woff",
+      "bytes": 1425340,
+      "sha256": "dd0d39a9780eb995c499af0c20cca93b1dfdda865da70871a20890b3e406b968"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/NotoSansSC-800.woff",
+      "bytes": 1426988,
+      "sha256": "b57f9c645b1a4967a3c8914ed41f24d109394a8175e36af08f93e40803e84664"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/NotoSansSC-900.woff",
+      "bytes": 1394104,
+      "sha256": "d2d8a42438b18b65b6577434df4e41bb08c6b5051281757849af00ab743bb58f"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/NotoSansSC-sub.woff",
+      "bytes": 331188,
+      "sha256": "f29be895b3e7002432e6d94756a163936e9586843864740b1fc172b1859e462d"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/NotoSerifJP-600.woff",
+      "bytes": 4415000,
+      "sha256": "dce02fcc08d8629226ef017472eef25b5bc152d1c32a742075fcda8f351f87d0"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/NotoSerifSC-sub.woff",
+      "bytes": 435560,
+      "sha256": "be59f4f630f0fac191dbc6e8d6945da681e5613df7602b2cef8ca7049fa19b66"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/OFL.txt",
+      "bytes": 4430,
+      "sha256": "67c5d5206b96f8340b95fabd02ae60701e0b20ce2594d976216f1065e5aa3822"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/PlayfairDisplay-400i.woff",
+      "bytes": 50928,
+      "sha256": "30cbe57e84bc719727dc54814f708eb9fa2d05a06f04d8c196b1466ecacb74d8"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/PlayfairDisplay-700.woff",
+      "bytes": 55652,
+      "sha256": "2644f0e3c7c8f79e9d0c56ad22d246294c7c2b21ea884a7a2b1a10261cb95469"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/PlayfairDisplay-700i.woff",
+      "bytes": 53612,
+      "sha256": "f263323db61a414618d9cafe489d0e18adf6682cd36baa45239ed804fe26fcf1"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/Poppins-600.woff",
+      "bytes": 66232,
+      "sha256": "952d2591178ef0c2dea37fb2c14f01e18433c8d59db10f6365c9e1ca9e8efe2a"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/Poppins-700.woff",
+      "bytes": 65616,
+      "sha256": "282b1ac42689074c38c62378b1412544f5ab11b91ba145ce56c54802496b7d86"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/Poppins-800.woff",
+      "bytes": 65344,
+      "sha256": "4c2bd05974d03c8058b14a452b2d0d869420b1671a22c35d52da4d58864e46a6"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/PressStart2P-400.woff",
+      "bytes": 36184,
+      "sha256": "f831461d0239882019837f2b1cfea598743768f89c0b052102a1fd55050f5ca1"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/Righteous-400.woff",
+      "bytes": 21028,
+      "sha256": "374317573c47429a8d87b5c862abc96572e90eef1a445439cc329d2768022121"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/RobotoCondensed-var.woff",
+      "bytes": 94036,
+      "sha256": "d149ef1478076ad3f201676de2f58d11de18257590d9faeee2318fa3bc4b90e6"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/Rye-400.woff",
+      "bytes": 62848,
+      "sha256": "2b6ae29cb40d75d69b547e7544f4ad540c5a641e7268df578a9bbc062376070e"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/UnifrakturMaguntia-400.woff",
+      "bytes": 39076,
+      "sha256": "af995e1259780861fd6b8bb3dada5cb1272fc2fd24dbb2ba5b7cc4411ffde566"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/cmunrm.woff",
+      "bytes": 123340,
+      "sha256": "32115abbbfb231586813333bfa5a234f4dc7f28b27df7260f42f81146ccd9097"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/cmunti.woff",
+      "bytes": 158668,
+      "sha256": "d9a02b7b67874c62f47f9c9a0914c115972ab77d43e82a163baf0888eb5d4a2d"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts/index.json",
+      "bytes": 1972,
+      "sha256": "a0870057845b502a11037acef99b6e9cbc3994fdb5149caf3aac036140dbfbb1"
+    },
+    {
+      "path": "assets/huashu-engine/lib/fonts.js",
+      "bytes": 4442,
+      "sha256": "8d5ac65f41bd6df79a0f913adf7f425d46c847cc5d8ed831eccdc80b1c29531d"
+    },
+    {
+      "path": "assets/huashu-engine/lib/kit.js",
+      "bytes": 6639,
+      "sha256": "a066c4d0d4dc7189dd9de7776938b4cbc6025a4bf4a38d2e181a6667744f3024"
+    },
+    {
+      "path": "assets/huashu-engine/lib/media.js",
+      "bytes": 8490,
+      "sha256": "a509bf201252636fdd880806f7074c65aaee665d145d54ca6ac3ed39a165ebcf"
+    },
+    {
+      "path": "assets/huashu-engine/lib/motion.js",
+      "bytes": 8947,
+      "sha256": "420482f3a6917c6b0d505b3d2e83be0df3f44f5966e6d38fc9bf7643900af0fa"
+    },
+    {
+      "path": "assets/huashu-engine/lib/paint.js",
+      "bytes": 15436,
+      "sha256": "95ccd1945a4a19b6e2d89a422d7ea7de96174acdbae1801090ca9ee48131f9a3"
+    },
+    {
+      "path": "assets/huashu-engine/lib/palettes.js",
+      "bytes": 4876,
+      "sha256": "934acc426ebdada51f613d6e7b1cb693590d615a01d7a66d5461483bf79ff30a"
+    },
+    {
+      "path": "assets/huashu-engine/lib/post.js",
+      "bytes": 10036,
+      "sha256": "b63ce9e73929083b4e51cb1caa45f606c6556023b3024da45520386a3d5f6129"
+    },
+    {
+      "path": "assets/huashu-engine/lib/render.js",
+      "bytes": 17477,
+      "sha256": "d2855f044ddff579000d9f8b1abadc2b76f84875fc604bea79d10319e3fe92bf"
+    },
+    {
+      "path": "assets/huashu-engine/lib/rig.js",
+      "bytes": 34246,
+      "sha256": "62580706e14438c6b57289ce203d040c91d8a427e356f44084a65dfc53a13bbf"
+    },
+    {
+      "path": "assets/huashu-engine/lib/rig_huashu.js",
+      "bytes": 13708,
+      "sha256": "6419306bb314f89848b0adf842db0c305c2f6bc931df34388eb5389f29c1d392"
+    },
+    {
+      "path": "assets/huashu-engine/lib/toon.js",
+      "bytes": 16043,
+      "sha256": "54778963a97767742257e5b68890e5b292f2b89ce3fd1a1f9711224573988d8b"
+    },
+    {
+      "path": "assets/huashu-engine/lib/typo.js",
+      "bytes": 9998,
+      "sha256": "30db0cc68145dca22532e487da01aeb3ec97155e8b2c3a0747a009ce6638be8f"
+    },
+    {
+      "path": "assets/huashu-engine/lib/ui.js",
+      "bytes": 10548,
+      "sha256": "2608da0a38bfd429a9fe41c1a93a5d080d54c5fcccea80e7fea764e6ca3a97bf"
+    },
+    {
+      "path": "assets/huashu-engine/lib/util.js",
+      "bytes": 7402,
+      "sha256": "a2092233bbca337a29b00ce261d81a5c7b6baa020c9e301916ebe4a997450b9d"
+    },
+    {
+      "path": "assets/huashu-engine/render.py",
+      "bytes": 8675,
+      "sha256": "7ae2eda1b2669c4f3a9f1150ecea4c553fc813023b70c0198412ba9bcf2f43ef"
+    },
+    {
+      "path": "assets/huashu-engine/spec_assets.py",
+      "bytes": 3643,
+      "sha256": "d963a9fa80a7c71ed4ff20f4bf5ff692b17d53aa49e8b9b234c4a1a671f60d41"
+    },
+    {
+      "path": "assets/huashu-engine/upstream.json",
+      "bytes": 398,
+      "sha256": "4c9dc4c30d585eca773679210b9af598b3ff90ad2f16017144efea18e6f97723"
+    },
+    {
+      "path": "assets/huashu-full/LICENSE",
+      "bytes": 1086,
+      "sha256": "6d6a2a9caf2e6d2b76974050427053b2892d8aa4c33fd168ce63a537fcee9d96"
+    },
+    {
+      "path": "assets/huashu-full/references/01-拆解.md",
+      "bytes": 4692,
+      "sha256": "83dd492d5b1f616a6e45302b630a7fbcaa65a16120a8df443185df2ee615cb32"
+    },
+    {
+      "path": "assets/huashu-full/references/02-机制.md",
+      "bytes": 5087,
+      "sha256": "ce0646784363c54e7299b5817aa86953d37b4ae0a245bf1b30aebc5a621ec94b"
+    },
+    {
+      "path": "assets/huashu-full/references/03-一帧先行四条路线.md",
+      "bytes": 4671,
+      "sha256": "cfc167ff5c13ed29f03fa967be4e775494e2f2d0a1879dfb8473cf2ea432c2d7"
+    },
+    {
+      "path": "assets/huashu-full/references/04-纯代码绘制.md",
+      "bytes": 11302,
+      "sha256": "7d234b7fb904626cc99af0cb687d3bb7104263c089b3ee2cda59408dc5dfc0eb"
+    },
+    {
+      "path": "assets/huashu-full/references/05-节奏与配乐.md",
+      "bytes": 1495,
+      "sha256": "1086c15ea216548777d2fa5552cd5c874ff89df2da84f9ffa160737930e3d98f"
+    },
+    {
+      "path": "assets/huashu-full/references/06-口播驱动的艺术短片.md",
+      "bytes": 2786,
+      "sha256": "9275abd6451831515ed9aed24724062bf47dda5e5d2d804baa8313c137236bc8"
+    },
+    {
+      "path": "assets/huashu-full/references/07-正面经验.md",
+      "bytes": 21071,
+      "sha256": "fd5f63474f15e01119e10586a14a456f602cf4f6ee03b4359bcf77c084305f1b"
+    },
+    {
+      "path": "assets/huashu-full/references/08-风格作者规范.md",
+      "bytes": 5296,
+      "sha256": "30312801d2833b478bc80218a704d87971c08f50a7ee0e31f3c08eefe15f9b4e"
+    },
+    {
+      "path": "assets/huashu-full/references/09-视频动画语法.md",
+      "bytes": 54217,
+      "sha256": "e3586436b685b818a12e81421dcceb13faacf74abb546fc1a039ac6cc52988df"
+    },
+    {
+      "path": "assets/huashu-full/references/10-角色.md",
+      "bytes": 3819,
+      "sha256": "d0c90c6c82b9acba9a43b8f0f4231ae4aa2f316a39608af90e06e5462c736605"
+    },
+    {
+      "path": "assets/huashu-full/references/11-长卷穿越片.md",
+      "bytes": 4250,
+      "sha256": "42f2e441687116c8d2dd789b187ada572390e242976996727a209959163a6ad6"
+    },
+    {
+      "path": "assets/huashu-full/references/12-口播整片与经验回流.md",
+      "bytes": 2224,
+      "sha256": "b85f6e8b665c13a5d98ea461c10af340679a6949101ee31dd64eee7e88aed415"
+    },
+    {
+      "path": "assets/huashu-full/references/compatibility.md",
+      "bytes": 3011,
+      "sha256": "c5665580fab722a3ed784a71f5cca725fc56cebf8c8c3ad66219b24b6b97bb0e"
+    },
+    {
+      "path": "assets/huashu-full/references/动画语法/t1_3b1b.md",
+      "bytes": 14033,
+      "sha256": "d0f375ca054def2bd7cefd2c17d076d2a83b3a2ee452a0c81836623ded4ae785"
+    },
+    {
+      "path": "assets/huashu-full/references/动画语法/t2_keynote_ui.md",
+      "bytes": 14506,
+      "sha256": "f47fa0ec256f2c78cdcfbe9b708e42c217b2ae01229da332c2e699814ddf7d43"
+    },
+    {
+      "path": "assets/huashu-full/references/动画语法/t3_finance_chart.md",
+      "bytes": 13446,
+      "sha256": "e0fe398c8ce28072d696c3b584857052e8154e64e94b9f331a7461b6b99af7b2"
+    },
+    {
+      "path": "assets/huashu-full/references/动画语法/y1_kurzgesagt.md",
+      "bytes": 17413,
+      "sha256": "ad7b18459f1948b7120812919a628816a589a2d0afe1447519378991f8a52661"
+    },
+    {
+      "path": "assets/huashu-full/references/动画语法/y2_vox.md",
+      "bytes": 16406,
+      "sha256": "f697f34612b8de23720d78768505cd79333b07afd4226f2976b6b01cc099b986"
+    },
+    {
+      "path": "assets/huashu-full/references/动画语法/y3_whiteboard.md",
+      "bytes": 15286,
+      "sha256": "f2fda7768034d94928982193965f225a3c85a850eaf28f3f28459e85dbe0773d"
+    },
+    {
+      "path": "assets/huashu-full/references/动画语法/y4_storytime.md",
+      "bytes": 18332,
+      "sha256": "b561ba51276a9c98bf217aeeeed812b0ecc666d2bd4c2c4d063ea98ff55ad71f"
+    },
+    {
+      "path": "assets/huashu-full/references/动画语法/y5_kinetic_type.md",
+      "bytes": 17165,
+      "sha256": "97b200e68231d71cd10cf3f1027b4db36e99ce9a06004891d644994883bb15e2"
+    },
+    {
+      "path": "assets/huashu-full/references/动画语法/y6_presenter_explainer.md",
+      "bytes": 1899,
+      "sha256": "405318fc5aac9ce03cbc374af9633ec7d652dc8206ad3810919abdb174eff273"
+    },
+    {
+      "path": "assets/huashu-full/references/色板.md",
+      "bytes": 3422,
+      "sha256": "3a1588ded19aba078131423b22f97fb8835f1656c1c5643afbba505ff8f6f8ae"
+    },
+    {
+      "path": "assets/huashu-full/references/角色精细度.md",
+      "bytes": 4600,
+      "sha256": "7255ec6d9106843359ef5ab4b696a93a9a573aafdebbd26baf235597949b0f35"
+    },
+    {
+      "path": "assets/huashu-full/references/镜头表模板.md",
+      "bytes": 8691,
+      "sha256": "cfd1187fe4d00e44170640788408568c2d05fde28d9cb6ace7cdc70878628bc1"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/01_cave.md",
+      "bytes": 7125,
+      "sha256": "ebdb5fc8f9a57d947ef3a325bfdaf275cbd906e36010945e05c7d2e7ef1f4d2c"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/02_egypt.md",
+      "bytes": 8952,
+      "sha256": "a3097d1936d0e482a56a9745e31f3ba9a508aa2db50fbbefba4d97cc4d481ebb"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/03_greek.md",
+      "bytes": 8933,
+      "sha256": "0caa761151cd76d1a31390f602dc6bc131dba745c6244a2b12ba037697077b50"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/04_roman.md",
+      "bytes": 12334,
+      "sha256": "4066fc1b3edfaa7ad4494646df5c6bef0a79d77cb0326d7487b2f833fbb2a81d"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/05_gothic.md",
+      "bytes": 4211,
+      "sha256": "2c33750ee754673f87828f1755c14d4c893cd0483e96ceb02fe8f0f33c3a440b"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/06_renaissance.md",
+      "bytes": 4144,
+      "sha256": "2fd2589f538747b7c2a178def2441e432a3ecc7bc5aee8e3a1f82c7a79792cc6"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/08_impressionism.md",
+      "bytes": 4210,
+      "sha256": "dd353d6e2ff550c3601a20bd529c8908118b4453d12b009e1e82761aa1822b65"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/09_postimp.md",
+      "bytes": 1507,
+      "sha256": "20aebeaf193cb1ac960c73e70a289e52f6a939949ce558ec06f7d816311fdd0a"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/10_nouveau.md",
+      "bytes": 5103,
+      "sha256": "ed5a38a201c7d4c69473a662d2e17b8a7081d09cdd2fcbeb57575da7bef3cc64"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/11_cubism.md",
+      "bytes": 5405,
+      "sha256": "0ab951ff470aa6bf6a001fe4bdd51d02367f03754a94f0dc443d27351a9aa6ba"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/12_bauhaus.md",
+      "bytes": 4435,
+      "sha256": "729623cbc414f11d1c1629dcae0d1e64452acd7fdfc5c07bd41f44149f13c59d"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/13_pop.md",
+      "bytes": 4293,
+      "sha256": "01e334a4b76ebfd0c71fa6997acafc6d02929498998f99e4544689bd5fb43913"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/14_8bit.md",
+      "bytes": 2831,
+      "sha256": "fa237f81d76cea3dae16929093814b92399829e33175aae3d26bd4cec39b6569"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/15_raytrace.md",
+      "bytes": 3206,
+      "sha256": "44498145e8b99156b2ee36446444424322f0ed6ee2e0384f34ff242fe89f68b1"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/16_2026.md",
+      "bytes": 5808,
+      "sha256": "4dfc199bdb1ed0b1fdc3ed9108bd5eb2e8078fdbb4de0e0bb5d00c6ba73f31f1"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/17_ink.md",
+      "bytes": 4442,
+      "sha256": "67f396530a9032b523151f649d0d8398562ff9f6acede3ef4aab85c831d2c032"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/18_klimt.md",
+      "bytes": 2845,
+      "sha256": "c4e96a0f531b8157e05592379a152a85a41acf2718f77883ce872e04865dfef9"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/19_munch.md",
+      "bytes": 2838,
+      "sha256": "8c629e8bd02fb82c3355c37fe040c863f067827fde269d91ac7ab97bc118939e"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/20_dunhuang.md",
+      "bytes": 3072,
+      "sha256": "3a5911346899c0f19cc5bee74bc4e8b4b1ffc9ae1c603a8a48b8277596057568"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/21_kusama.md",
+      "bytes": 2268,
+      "sha256": "f39173eb8e80dba26fcdf822a60bb5cd0da2678d8efa4a8b2d19cbb2e1468a4a"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/22_constructivism.md",
+      "bytes": 3959,
+      "sha256": "ff4adc806f0bf39d86136d805ef8e2cc48026fbcec3731fae22477fdafac846d"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/23_dali.md",
+      "bytes": 3479,
+      "sha256": "facf3f033d5dbe42ab663860490a32920423fc5950ddcabf5f44bf81b49b3f2f"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/24_hopper.md",
+      "bytes": 2865,
+      "sha256": "fd19a530f9e0544d74e7eee40a88c01fa7f675ae94d9cacf2e5af4e214c64c63"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/25_ghibli.md",
+      "bytes": 3655,
+      "sha256": "55522029929a296979180e6fac3556c7d85ea92de1369a4f11e94fbb64f48348"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/26_vaporwave.md",
+      "bytes": 3140,
+      "sha256": "30cf8e825125ff74f02bff93b975a74c96ceae9df09fae06fd7ef887fb64ec44"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/27_kirby.md",
+      "bytes": 3396,
+      "sha256": "e64b8a69ce706311b1e81aa7d0756c7d7390b2b3f84a17f18b67c3193bce2408"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/28_monet.md",
+      "bytes": 2837,
+      "sha256": "61b2bf9da6044e44ea0fa4758b3c380be8e60cfb72e2907e5afbbaa0c00d3513"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/29_seurat.md",
+      "bytes": 2963,
+      "sha256": "2c50cfb11d3bcb83b50b946126e1c0ba76f9fc3b94eab055023eea2880440f84"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/30_matisse.md",
+      "bytes": 2509,
+      "sha256": "4da4fb6d6828fa529e2827d20bf0c4e45822427348db42b7016ca4bdc336c60b"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/31_haring.md",
+      "bytes": 1994,
+      "sha256": "adcf02ce8c7dd9446e79e3393f61c411335c6f1734d584f3389f64283c5ab30b"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/32_rembrandt.md",
+      "bytes": 2900,
+      "sha256": "383f5953f5b61249c5735fef4e31f0ed05148a7ec038f580bf39ddf7dc6ba7f7"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/33_rubberhose.md",
+      "bytes": 2483,
+      "sha256": "c99886da03aa74351d78695641b403c92f5f9ab4b242feb2be45d8b8a7da9617"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/34_shadowpuppet.md",
+      "bytes": 3133,
+      "sha256": "6cd4f9a090bff6d325695e8e4656ad041871f2ff0418b4eab1a46d51bd7d7609"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/35_shinkai.md",
+      "bytes": 3345,
+      "sha256": "b327bf36ef2edc246576cbfb8f1f1857c52600691adbd651efbb1eeb75e7a554"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/36_picasso_blue.md",
+      "bytes": 2739,
+      "sha256": "7578a99b0dc416414eb2cfd5c6aa9055ded387531bfde65fd5c1f17f22e4404a"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/INDEX.md",
+      "bytes": 9538,
+      "sha256": "077be3f350cf6022db3ba89fe7933323617381b315e8f6b86c07da28927f80fd"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/_转场_迁移测试.md",
+      "bytes": 7063,
+      "sha256": "16e901fb8c6bb2b9ff6596bec30209471227b74440dc9d5f3ba7931c99238677"
+    },
+    {
+      "path": "assets/huashu-full/references/风格配方/_音轨_艺术史速通.md",
+      "bytes": 11844,
+      "sha256": "f9c360503ec366bf0833687fd00eb2a276f1c8dc5e02ab93651e676195d10d60"
+    },
+    {
+      "path": "assets/huashu-full/scripts/analyze/breakdown.py",
+      "bytes": 6457,
+      "sha256": "5badcd4e3f5694f5b8c5a6d7d353f830e972ae5c8a6f24ed75af634411eb75f3"
+    },
+    {
+      "path": "assets/huashu-full/scripts/deliver.py",
+      "bytes": 12426,
+      "sha256": "0ce5bdea49243e458a7a7bd0a8b17dac248fd73b0dbb2d99164b22f9ffca693d"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/clip.html",
+      "bytes": 1261,
+      "sha256": "73db3956310c7798452057e4328e961c899507483ab0bb72e817ce0372893874"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/clip.js",
+      "bytes": 10538,
+      "sha256": "e991e5c4edc9f463900cfc42106f5e0eaa2b48a28d3ba30111a3c80a16cf0f44"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/clips/t1_3b1b.js",
+      "bytes": 18940,
+      "sha256": "84ed102301a066410aca1b0d06ba0459f7d5da09ae4831edf58a27f2152a6e7a"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/clips/t2_keynote_ui.js",
+      "bytes": 35069,
+      "sha256": "9f899ddce7a4a7620a4aa0f9c3f4679e6f1c944fb4ec50fd4a65e8fae12fcc31"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/clips/t3_finance_chart.js",
+      "bytes": 21116,
+      "sha256": "f175d45ea92e0a680fea9e08ce9270a59a63a5b4bb3d00db5a894848e2407b36"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/clips/y1_kurzgesagt.js",
+      "bytes": 18354,
+      "sha256": "55c87ccb685feba52b21393f36b06d76c1f43b225223d15c56cf55da7c4f9392"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/clips/y2_vox.js",
+      "bytes": 14286,
+      "sha256": "d332ef089ce1672d0f711cba231f9bda2748bd38781de540e0a4e08ad8628c85"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/clips/y3_whiteboard.js",
+      "bytes": 21759,
+      "sha256": "1536d7a276580edd44fab6199b69671aecbae30b39b5f89921d08e43a738ff2d"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/clips/y4_storytime.js",
+      "bytes": 22039,
+      "sha256": "2ba8c7a05296c489b948c1b2f050a479dcef5a7a19bb1550aca07478f97e25d6"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/clips/y5_kinetic_type.js",
+      "bytes": 13104,
+      "sha256": "80e6f52ae2a07ce4f7c4d15e87e7eddb3174c7770079805d97feaba1f254bd83"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/compare.py",
+      "bytes": 1304,
+      "sha256": "7bf1d5ae2926de09f69431435e93ffa4c5357532b543217cd66bdc57e00256aa"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/engine.js",
+      "bytes": 17491,
+      "sha256": "04b64953037ced7016ffb211cb12891dc4f1c840378a366e35572db8098fd3cd"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/eras.js",
+      "bytes": 6119,
+      "sha256": "2ccc90bed5e9ef337f8cf3444058705dc720743a78c9315a0e5ee814cd130fc9"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/eras_gallery.js",
+      "bytes": 14906,
+      "sha256": "6e97dfe281b8360d400a657098a68dd224a1a081299b28b3137a1b1db1a8222a"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/index.html",
+      "bytes": 1959,
+      "sha256": "eb1a47ae303fd7fe1a86f308c8694552758bf3a6e2f1f39eea4a8c508b2d48a5"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/brush.js",
+      "bytes": 11947,
+      "sha256": "e83db04e5fc9fef83237d984d2ceba3c1ec71c0c2a8f8a798ecc939fc8c3b2d4"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/camera.js",
+      "bytes": 8545,
+      "sha256": "0c155120b4ec80ac97b706e812a54e25fb8c795e76e18e4df2247ad8baa19e84"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/chart.js",
+      "bytes": 10870,
+      "sha256": "93d3605cba7d7cf0bdda2c2dd8f9797734dd06c1f64fa18ef7a492f8755a8d27"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/collage.js",
+      "bytes": 8972,
+      "sha256": "4dcd3d15f8895dc6e3d4f2e4d82766782a4e77876fb863ded9480320b8959d93"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/diagram.js",
+      "bytes": 20080,
+      "sha256": "98b15ba5f883dd95eca2ff52ba1d768c10a5bea7862bd13aee6d84b875e2b8c5"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/AlfaSlabOne-400.woff",
+      "bytes": 41728,
+      "sha256": "2f8b04d3eada32d7047255260a0e81ab74938fada1aad154f5653850a68aebe8"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/Anton-400.woff",
+      "bytes": 61460,
+      "sha256": "791375bdbed00de4a3aad4811291220ead0e1405d6f8b5bdbf109798c8359ac5"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/ArchivoBlack-400.woff",
+      "bytes": 38316,
+      "sha256": "c029965cfbc3cbb79431babf56d0fee6bc185f366c4fc2a0957817137d374c95"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/Bangers-400.woff",
+      "bytes": 43808,
+      "sha256": "62f0a30b1d48cc21bb35b084ae5d17ad22135df5dc4c18f3f591fc5443eddf39"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/Caveat-600.woff",
+      "bytes": 132264,
+      "sha256": "7a101c766f28866c5aa36ebbce5cfedcea2601f2439d3b16694b9c8eee75e9dc"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/Cinzel-400.woff",
+      "bytes": 22812,
+      "sha256": "39c4e70ca598e2c0d78d355cd5fbe37017353a5de3008787a03e0d30a2d715ad"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/Cinzel-700.woff",
+      "bytes": 24288,
+      "sha256": "1bb7ec5b84ee97a9eae36528d5bae3bfeddf035c19842fc1740ce44c09fac4ad"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/CormorantGaramond-500.woff",
+      "bytes": 90464,
+      "sha256": "f25b87d41579955733df25af8319b168d704b5333d8ac53e991fac442e7a9844"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/CormorantGaramond-500i.woff",
+      "bytes": 93400,
+      "sha256": "0ab1e72da6037d218386d9a6e148d7f5b0357e1965abf743aef30d641a5e2874"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/CormorantGaramond-700.woff",
+      "bytes": 87248,
+      "sha256": "6417fd78440278f109d84cf00283fbf9b91b6d639fc5afd208a121ae7c636e61"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/EBGaramond-400.woff",
+      "bytes": 162740,
+      "sha256": "61ea4fa656e4ec2c6103483625f0d6a2e1571c2be57015063b73f23392b3ff98"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/EBGaramond-400i.woff",
+      "bytes": 151904,
+      "sha256": "413c5879fa73e5e168dcb59e8e692b24049756c5b961fcd8adee3db2e1624ef4"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/EBGaramond-600.woff",
+      "bytes": 179028,
+      "sha256": "d0ecbbe1d933b68d32ef2629e9a46673ae5eff5ce9c04cd7f4c012504da33a11"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/Exo2-800i.woff",
+      "bytes": 60124,
+      "sha256": "8296afc88a371a81345e07d852a06e45ae401d5793866fd9a7f351daf523740a"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/GochiHand-400.woff",
+      "bytes": 23640,
+      "sha256": "152552ee5c95ec30b75edf3ba42f3406925462ea1a52d4c049d22f550f10167a"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/IMFellEnglish-400.woff",
+      "bytes": 108052,
+      "sha256": "b915ee6c7034491df57eed8153ec2a5c3ee1ba55788a96737465d4c3239bd2a0"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/IMFellEnglish-400i.woff",
+      "bytes": 111628,
+      "sha256": "7c6064b4e7ca80d131a01b9133ddaf11978d43bc954eb0d1c1dd1391371c56d6"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/Inter-var.woff",
+      "bytes": 126688,
+      "sha256": "a54bc9f6ba847df43752bfb35f63aa1599ccc113b58c23bfa07c4dc88976647b"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/JosefinSans-700.woff",
+      "bytes": 26564,
+      "sha256": "1e9f0aab2caa768ead521a88be3ea118d47c29a3ae052f9b5d0c2af0d6a8eb8d"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/Kalam-700.woff",
+      "bytes": 186044,
+      "sha256": "53b9c2a4260ba9a1320d2a92c6dbd532fa509bdeda0897580611a9f16f1a2bda"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/LICENSES.md",
+      "bytes": 4498,
+      "sha256": "00b5f86c4d5162e6fee6d600b527c052933eb2884a61a5fab0f89fa4d4656ecd"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/LXGWWenKai-500.woff",
+      "bytes": 2098296,
+      "sha256": "734bd187392579417ac83effe31d37b9de43c7b290bcb400800456511ed79e8f"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/LibreBaskerville-400.woff",
+      "bytes": 46628,
+      "sha256": "e5134e031d30b4dcc76f3806701cafe92ff4ed5b8b6271d06d63ca3ee7af9bc4"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/LibreBaskerville-700.woff",
+      "bytes": 47524,
+      "sha256": "57b9986d47ab6d7ea1964d5693c56b5e5e97c889e31ba9546815de365d356dab"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/LilitaOne-400.woff",
+      "bytes": 14372,
+      "sha256": "8f4283865fad7cbb92e3b9e8ec6e48ab1225f7fb2eaa9c75741ff46d4f230456"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/Marcellus-400.woff",
+      "bytes": 22320,
+      "sha256": "9893ac05a03ff1e80ecf97f73853bff1378edfdec633b6c3a67ae7c33d7018e7"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/NotoSansSC-500.woff",
+      "bytes": 1416188,
+      "sha256": "928d841b1ec663ebce82593568cbc19749fe652f88b8ec960723b7d87b551512"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/NotoSansSC-700.woff",
+      "bytes": 1425340,
+      "sha256": "dd0d39a9780eb995c499af0c20cca93b1dfdda865da70871a20890b3e406b968"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/NotoSansSC-800.woff",
+      "bytes": 1426988,
+      "sha256": "b57f9c645b1a4967a3c8914ed41f24d109394a8175e36af08f93e40803e84664"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/NotoSansSC-900.woff",
+      "bytes": 1394104,
+      "sha256": "d2d8a42438b18b65b6577434df4e41bb08c6b5051281757849af00ab743bb58f"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/NotoSansSC-sub.woff",
+      "bytes": 331188,
+      "sha256": "f29be895b3e7002432e6d94756a163936e9586843864740b1fc172b1859e462d"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/NotoSerifJP-600.woff",
+      "bytes": 4415000,
+      "sha256": "dce02fcc08d8629226ef017472eef25b5bc152d1c32a742075fcda8f351f87d0"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/NotoSerifSC-sub.woff",
+      "bytes": 435560,
+      "sha256": "be59f4f630f0fac191dbc6e8d6945da681e5613df7602b2cef8ca7049fa19b66"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/OFL.txt",
+      "bytes": 4430,
+      "sha256": "67c5d5206b96f8340b95fabd02ae60701e0b20ce2594d976216f1065e5aa3822"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/PlayfairDisplay-400i.woff",
+      "bytes": 50928,
+      "sha256": "30cbe57e84bc719727dc54814f708eb9fa2d05a06f04d8c196b1466ecacb74d8"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/PlayfairDisplay-700.woff",
+      "bytes": 55652,
+      "sha256": "2644f0e3c7c8f79e9d0c56ad22d246294c7c2b21ea884a7a2b1a10261cb95469"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/PlayfairDisplay-700i.woff",
+      "bytes": 53612,
+      "sha256": "f263323db61a414618d9cafe489d0e18adf6682cd36baa45239ed804fe26fcf1"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/Poppins-600.woff",
+      "bytes": 66232,
+      "sha256": "952d2591178ef0c2dea37fb2c14f01e18433c8d59db10f6365c9e1ca9e8efe2a"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/Poppins-700.woff",
+      "bytes": 65616,
+      "sha256": "282b1ac42689074c38c62378b1412544f5ab11b91ba145ce56c54802496b7d86"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/Poppins-800.woff",
+      "bytes": 65344,
+      "sha256": "4c2bd05974d03c8058b14a452b2d0d869420b1671a22c35d52da4d58864e46a6"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/PressStart2P-400.woff",
+      "bytes": 36184,
+      "sha256": "f831461d0239882019837f2b1cfea598743768f89c0b052102a1fd55050f5ca1"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/Righteous-400.woff",
+      "bytes": 21028,
+      "sha256": "374317573c47429a8d87b5c862abc96572e90eef1a445439cc329d2768022121"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/RobotoCondensed-var.woff",
+      "bytes": 94036,
+      "sha256": "d149ef1478076ad3f201676de2f58d11de18257590d9faeee2318fa3bc4b90e6"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/Rye-400.woff",
+      "bytes": 62848,
+      "sha256": "2b6ae29cb40d75d69b547e7544f4ad540c5a641e7268df578a9bbc062376070e"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/UnifrakturMaguntia-400.woff",
+      "bytes": 39076,
+      "sha256": "af995e1259780861fd6b8bb3dada5cb1272fc2fd24dbb2ba5b7cc4411ffde566"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/cmunrm.woff",
+      "bytes": 123340,
+      "sha256": "32115abbbfb231586813333bfa5a234f4dc7f28b27df7260f42f81146ccd9097"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/cmunti.woff",
+      "bytes": 158668,
+      "sha256": "d9a02b7b67874c62f47f9c9a0914c115972ab77d43e82a163baf0888eb5d4a2d"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts/index.json",
+      "bytes": 1972,
+      "sha256": "a0870057845b502a11037acef99b6e9cbc3994fdb5149caf3aac036140dbfbb1"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/fonts.js",
+      "bytes": 4442,
+      "sha256": "8d5ac65f41bd6df79a0f913adf7f425d46c847cc5d8ed831eccdc80b1c29531d"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/kit.js",
+      "bytes": 6639,
+      "sha256": "a066c4d0d4dc7189dd9de7776938b4cbc6025a4bf4a38d2e181a6667744f3024"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/media.js",
+      "bytes": 8490,
+      "sha256": "a509bf201252636fdd880806f7074c65aaee665d145d54ca6ac3ed39a165ebcf"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/motion.js",
+      "bytes": 8947,
+      "sha256": "420482f3a6917c6b0d505b3d2e83be0df3f44f5966e6d38fc9bf7643900af0fa"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/paint.js",
+      "bytes": 15436,
+      "sha256": "95ccd1945a4a19b6e2d89a422d7ea7de96174acdbae1801090ca9ee48131f9a3"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/palettes.js",
+      "bytes": 4876,
+      "sha256": "934acc426ebdada51f613d6e7b1cb693590d615a01d7a66d5461483bf79ff30a"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/post.js",
+      "bytes": 10036,
+      "sha256": "b63ce9e73929083b4e51cb1caa45f606c6556023b3024da45520386a3d5f6129"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/render.js",
+      "bytes": 17477,
+      "sha256": "d2855f044ddff579000d9f8b1abadc2b76f84875fc604bea79d10319e3fe92bf"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/rig.js",
+      "bytes": 34246,
+      "sha256": "62580706e14438c6b57289ce203d040c91d8a427e356f44084a65dfc53a13bbf"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/toon.js",
+      "bytes": 16043,
+      "sha256": "54778963a97767742257e5b68890e5b292f2b89ce3fd1a1f9711224573988d8b"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/typo.js",
+      "bytes": 9998,
+      "sha256": "30db0cc68145dca22532e487da01aeb3ec97155e8b2c3a0747a009ce6638be8f"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/ui.js",
+      "bytes": 10548,
+      "sha256": "2608da0a38bfd429a9fe41c1a93a5d080d54c5fcccea80e7fea764e6ca3a97bf"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/lib/util.js",
+      "bytes": 7402,
+      "sha256": "a2092233bbca337a29b00ce261d81a5c7b6baa020c9e301916ebe4a997450b9d"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/render.py",
+      "bytes": 8675,
+      "sha256": "7ae2eda1b2669c4f3a9f1150ecea4c553fc813023b70c0198412ba9bcf2f43ef"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/01_cave.js",
+      "bytes": 31417,
+      "sha256": "06ff3360279ecf778d78ef5e56fa6d5cd6354a18033079eed32cba6af48dd781"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/02_egypt.js",
+      "bytes": 50018,
+      "sha256": "ce4acdce7f65f41686f7e5f04336fdf150bfd53a560a20f2a83a3db495a86353"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/03_greek.js",
+      "bytes": 40744,
+      "sha256": "58e259062257ebf15d2fb141e10441119df0691e0cc2bd212922a8cffb3be184"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/04_roman.js",
+      "bytes": 47611,
+      "sha256": "a5678635c8199b61700785915de9308fcb20abbff34f98a143b50ef740faeaf8"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/05_gothic.js",
+      "bytes": 40426,
+      "sha256": "a5b24f49d1dc01cc5d5eebba9404f6c6ebd6d6de1a61ef6c2eae36c1f591b327"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/06_renaissance.js",
+      "bytes": 31437,
+      "sha256": "ab7dca1e5f6f5911a55cb132eeea405ab3d0001f2f6ceed01cc624bacbf9279e"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/08_impressionism.js",
+      "bytes": 20908,
+      "sha256": "6d5e4ee5f4329d7551ef84edc7f15d4396effd7b80e7091074c20920dabc7d24"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/09_postimp.js",
+      "bytes": 16299,
+      "sha256": "a1806dd4dfbfe32ed9a18e70174750c0e932a2a2beca832be8dc25708c76277e"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/10_nouveau.js",
+      "bytes": 30381,
+      "sha256": "4a390aa2d70b4a6afe0b35862e502ef78f42c36ff960f3ef49482be67320ca39"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/11_cubism.js",
+      "bytes": 27428,
+      "sha256": "dbdd5cba2eb07ecd75445c534d04b40d6206bbb252c28e31ecefeb08a83ee249"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/12_bauhaus.js",
+      "bytes": 17535,
+      "sha256": "647e3d52272eda0630150d04ed3f299da095c4e8e564e3fa7c84330c2993efad"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/13_pop.js",
+      "bytes": 24647,
+      "sha256": "80a893a23dc2d0a6350323b0b63a0cf4929e48908391f796422c402aa272935c"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/14_8bit.js",
+      "bytes": 17139,
+      "sha256": "3351f505bd0f272a623061a8f49993b877339c619dceb2f5e08c05933397b71e"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/15_raytrace.js",
+      "bytes": 25794,
+      "sha256": "b77169305a158c5161c6a4f30ed8f00adf0128cbfe837b0c4f37ebbc120213b4"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/16_2026.js",
+      "bytes": 50054,
+      "sha256": "915ab9a19ee937027ec1f449b8c3d358422df29d21986d237ac7c73169a5e710"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/17_ink.js",
+      "bytes": 22782,
+      "sha256": "0d3360a701f23f6b5978686645b80d4ce69c15bec2be09f017c14e4646f05760"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/18_klimt.js",
+      "bytes": 20835,
+      "sha256": "dc03848dc98d567f15561f6af4fb709050bac729e61269297c910fc312604244"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/19_munch.js",
+      "bytes": 13393,
+      "sha256": "b415408930826beea0cd512bc5d1002f70478314b3f0357e7f88a40c01bcf0c0"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/20_dunhuang.js",
+      "bytes": 21588,
+      "sha256": "33ec1c2c6a062feac415893ba232d227c715107746fd16653a573ad63c7f8780"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/21_kusama.js",
+      "bytes": 11935,
+      "sha256": "1ae771a76fd4b8c128a667f3c87227c243a43c0673d1bf68b1f7a3eba7d6e56d"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/22_constructivism.js",
+      "bytes": 16305,
+      "sha256": "79e64e9e664886b4c6e70094d161b48e8346be318ab9c84c4859beff98a83ab5"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/23_dali.js",
+      "bytes": 20846,
+      "sha256": "5ff7dd1631b654aa0adc2d7bd27e8efffcbbd4d6f330e6002c60eb89e747fdfa"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/24_hopper.js",
+      "bytes": 13619,
+      "sha256": "672605310edebdc93c35e819bd1a2e97dba874e64b025952d24e9b81809000ed"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/25_ghibli.js",
+      "bytes": 22700,
+      "sha256": "bd0f6b22b6c8cd1ff4e18f207587f4995bc2ea949196b9a85296030c7dc5efd8"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/26_vaporwave.js",
+      "bytes": 17070,
+      "sha256": "f34aa1cc5ceb0b7cf60ac03adcf804ea7e39c7641446b88db9fb89b179daf02e"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/27_kirby.js",
+      "bytes": 21894,
+      "sha256": "d82e039d7d4ba45ca01114f9330b1dcad3ddd516efa8bda7d190e85606487028"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/28_monet.js",
+      "bytes": 17322,
+      "sha256": "1ea1f0a1c77f7ea14c153b46a62daaf5fe84d3c02e73b5cb2a4a7838c7e14930"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/29_seurat.js",
+      "bytes": 11060,
+      "sha256": "a026713b9205c6a00c805dece5068722b15071f9bbb691203697c9cd0a33be23"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/30_matisse.js",
+      "bytes": 13787,
+      "sha256": "09d97003c451d9dbe723a942ea3146213943b75cac3a92ab1648e58279358aa8"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/31_haring.js",
+      "bytes": 10315,
+      "sha256": "5113c0318ed36db84acc7eac6855ec0f0a44511f6cedd3f326b78ba4e921f1ca"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/32_rembrandt.js",
+      "bytes": 20786,
+      "sha256": "47883474a7ed9aa7c5bfe39b953748da5003c601c3dcf48e3a2e6e18fd03bf4a"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/33_rubberhose.js",
+      "bytes": 18226,
+      "sha256": "08a1340dd35de98830b81abd7026be6e2361f325215793e55369f5cd1fb50ad8"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/34_shadowpuppet.js",
+      "bytes": 18052,
+      "sha256": "08186a1764be2bdc2c27806850dea2fd86761936aeba1299e8ece9bf31f381a8"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/35_shinkai.js",
+      "bytes": 22142,
+      "sha256": "8e7f5753a0ce49291ae35bc4f471b5ca62448eb9532403459395d88bc524a736"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/36_picasso_blue.js",
+      "bytes": 11565,
+      "sha256": "10023147e1e31afc162e1cfe51356867ef83595b41bbd5cc824d55532297ce09"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/scenes/index.js",
+      "bytes": 2439,
+      "sha256": "22da1210908a8083658eb53289656eeb578026b6deabc666928014d01ddae23e"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/spec_assets.py",
+      "bytes": 3643,
+      "sha256": "d963a9fa80a7c71ed4ff20f4bf5ff692b17d53aa49e8b9b234c4a1a671f60d41"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/transitions.js",
+      "bytes": 69549,
+      "sha256": "c4bd441cf765db346933e5d18270f532d4c9782c9303b0bcda1ba59a2124b618"
+    },
+    {
+      "path": "assets/huashu-full/scripts/engine/时代作者规范.md",
+      "bytes": 4719,
+      "sha256": "4e7661571b60fa0ed776fb5631462aff3a30235c5e6343aa06f9cd23973391fc"
+    },
+    {
+      "path": "assets/huashu-full/scripts/film_gate.py",
+      "bytes": 41731,
+      "sha256": "d7ec575c05abbaa454f2ca9319d0a5c1bd6d1aded23cc0fdcbdf117fcc3210fe"
+    },
+    {
+      "path": "assets/huashu-full/scripts/font_subset.py",
+      "bytes": 7542,
+      "sha256": "ed826dffb4b370741602aa79caefd69157fcf6d7f9abd90a9078d4f7208896e0"
+    },
+    {
+      "path": "assets/huashu-full/scripts/key_green.py",
+      "bytes": 1930,
+      "sha256": "11ac28bb2508d6b4a240eb37a55b342a0f556943fe29a17962bbc0f93f90d303"
+    },
+    {
+      "path": "assets/huashu-full/scripts/key_split.py",
+      "bytes": 1632,
+      "sha256": "889759cd6b5353b4d48d34faf3878682890e06ca79887c9ade9be401b7359f86"
+    },
+    {
+      "path": "assets/huashu-full/scripts/qa.py",
+      "bytes": 26568,
+      "sha256": "a1457de52ee311659039207ef3304b6ade1531f538843a15bb509698e4b37da9"
+    },
+    {
+      "path": "assets/huashu-full/scripts/storyboard_lint.py",
+      "bytes": 29782,
+      "sha256": "dc94f349ba94cb519cb362a24ba54b527524db85e2979d359b0e99d4ac9ffbf9"
+    },
+    {
+      "path": "assets/huashu-full/scripts/subzone_gate.py",
+      "bytes": 1811,
+      "sha256": "8641a3b1b38ac28c1562e454a0e370f36a73d1a0c79cddf36175c7444a9c1598"
+    },
+    {
+      "path": "assets/huashu-full/source-SKILL.md",
+      "bytes": 16134,
+      "sha256": "de53b14f85d3bf8b170e61f6032e880bcd24c90da61b4a1344e86326646067ad"
+    },
+    {
+      "path": "assets/huashu-full/third_party/hanzi-strokes/ARPHICPL.TXT",
+      "bytes": 6900,
+      "sha256": "5590533436c70f10f2f524ee61456238c290175c6662fbe1c700b5f038a6d328"
+    },
+    {
+      "path": "assets/huashu-full/third_party/hanzi-strokes/strokes.js",
+      "bytes": 56562,
+      "sha256": "7fd46e149eedf2c1e42becaa19e3279192d2889ea223c8dcbb696653b351a17c"
+    },
+    {
+      "path": "assets/huashu-full/upstream.json",
+      "bytes": 64739,
+      "sha256": "250cfc63101078dd183b2f69c0bc513812f503bcaff598304e35956fd011fe07"
+    },
+    {
+      "path": "assets/recipes/warm-editorial/README.md",
+      "bytes": 939,
+      "sha256": "b8dda0b91f23af8d1573e2922ad83a98a5e23ad90c5086f49c8238f318810219"
+    },
+    {
+      "path": "assets/recipes/warm-editorial/components.js",
+      "bytes": 4521,
+      "sha256": "509aa2f10a11b3841df6cf81d993cec60900e6507503d8bfb8305bca259316a7"
+    },
+    {
+      "path": "assets/recipes/warm-editorial/composition.html",
+      "bytes": 6201,
+      "sha256": "3082460c323f8ef9da115a1f88e4281579dbe95d6b2e41dcc06e47a0ebc4eb0a"
+    },
+    {
+      "path": "assets/runtime/package-lock.json",
+      "bytes": 62304,
+      "sha256": "83c2187e999f96b6f4d4f0ab81f35cad8afd778fbfdcc1da794724d9d467529a"
+    },
+    {
+      "path": "assets/runtime/package.json",
+      "bytes": 147,
+      "sha256": "263b4690827138c5ef23eab9d45d795d8768756ab2e984c9faffb0fa1079ba47"
+    },
+    {
+      "path": "assets/style-batch/camera-integration.js",
+      "bytes": 764,
+      "sha256": "fa6d96363f717eb1941e113487e8bdcb8712871a5a253a24b5faeae986df5e3f"
+    },
+    {
+      "path": "assets/style-batch/catalog.json",
+      "bytes": 33667,
+      "sha256": "4b78a09c6dd8d78281fd7134cdaee65fb46103c016ad8e508f42fb4109ac248a"
+    },
+    {
+      "path": "assets/style-batch/egypt_rim_coflow.js",
+      "bytes": 4496,
+      "sha256": "e55a52789d00771e3fbaeca2d287614074b105c3ba2c35311088168fda2f957d"
+    },
+    {
+      "path": "assets/style-batch/graphics.js",
+      "bytes": 20494,
+      "sha256": "611700aa496e8069384b96425a5e05ddbbe2209cc8e79e678b04ecf2146a38ff"
+    },
+    {
+      "path": "assets/style-batch/heritage.js",
+      "bytes": 54619,
+      "sha256": "d946f96558641e4d328aa103006a586e12f83348b02c390dbd890c96a3a37604"
+    },
+    {
+      "path": "assets/style-batch/interface.md",
+      "bytes": 3642,
+      "sha256": "08c8ad5c484b25363de1b338f74036da10ea84b9959d389f6e61a0edc076412e"
+    },
+    {
+      "path": "assets/style-batch/painterly.js",
+      "bytes": 42409,
+      "sha256": "4687d6da53ed289f4880f715afe22413ebe43fac3c509f3732bccaeb6fd5c1b1"
+    },
+    {
+      "path": "assets/style-batch/pixel-readable-text.js",
+      "bytes": 852,
+      "sha256": "2709fd5beb8a2f14d19a7fa2f9ba0a446036a4ee90d89c3546cd868852091f13"
+    },
+    {
+      "path": "assets/style-batch/provenance.json",
+      "bytes": 3458,
+      "sha256": "0876d2234f7c2e4780bef0a0137c82b7481568e9122c525e6d67d0e327ef0216"
+    },
+    {
+      "path": "assets/style-batch/review.html",
+      "bytes": 10634,
+      "sha256": "cbc3a62628d0f830823c940e0e1c8d0c979a28e2a4f298deb0f1829dd6c35168"
+    },
+    {
+      "path": "assets/style-batch/shadow_card_occlusion.js",
+      "bytes": 2680,
+      "sha256": "55e3bf4f7a6be658575a854c23ca803bdb5ca626e609babc7aac6a5626a3e93f"
+    },
+    {
+      "path": "assets/style-batch/shared.js",
+      "bytes": 1944,
+      "sha256": "b167858b3ac542f443a6daac32c13756e3cd45bb1fcc0cede6ba91728df19789"
+    },
+    {
+      "path": "assets/style-batch/world_backplate.js",
+      "bytes": 6600,
+      "sha256": "cced15a1d64611bb2c06d5d88fca7068ded514083552d8b616378bb884b04a23"
+    },
+    {
+      "path": "assets/templates/brief.json",
+      "bytes": 755,
+      "sha256": "c5ea6c2e37f792bea73fd05bf9f8a6eb220e5b135caf19c43f60e6d6f20e1425"
+    },
+    {
+      "path": "assets/templates/broll-jobs.json",
+      "bytes": 71,
+      "sha256": "43c8e25bb9054a39c39f379a199f5f9f853f811055299912297ee6c9dfa3e0be"
+    },
+    {
+      "path": "assets/templates/generation-ledger.json",
+      "bytes": 492,
+      "sha256": "4f4b70e98e90f9d8c14c8fa923b500763556d370ab1b66eeb3a80ea1de3f8de9"
+    },
+    {
+      "path": "assets/templates/style-pack.json",
+      "bytes": 353,
+      "sha256": "3a87b674931784f638a6dc05199689e3a9c08ca57c6f4c13394ca85f99e6fe77"
+    },
+    {
+      "path": "references/editorial-playbook.md",
+      "bytes": 6264,
+      "sha256": "27888c160d2ce3b0fba4196f06ff4bff5d7bc161aaa6b798f97120de9c91b8fc"
+    },
+    {
+      "path": "references/fish-mcp-setup.md",
+      "bytes": 3462,
+      "sha256": "ff3b6c0a4e3b524a0f6904bb8f40d194588f98d991490b29bce73f10c3060e0a"
+    },
+    {
+      "path": "references/huashu-full-production.md",
+      "bytes": 10790,
+      "sha256": "1a6abb6eb0adfe742efe7e454a6269e2e0663daf416fc9c6762cdfb58cbdbcee"
+    },
+    {
+      "path": "references/huashu-grammar-cards/index.md",
+      "bytes": 54217,
+      "sha256": "e3586436b685b818a12e81421dcceb13faacf74abb546fc1a039ac6cc52988df"
+    },
+    {
+      "path": "references/huashu-grammar-cards/t1_3b1b.md",
+      "bytes": 14033,
+      "sha256": "d0f375ca054def2bd7cefd2c17d076d2a83b3a2ee452a0c81836623ded4ae785"
+    },
+    {
+      "path": "references/huashu-grammar-cards/t2_keynote_ui.md",
+      "bytes": 14506,
+      "sha256": "f47fa0ec256f2c78cdcfbe9b708e42c217b2ae01229da332c2e699814ddf7d43"
+    },
+    {
+      "path": "references/huashu-grammar-cards/t3_finance_chart.md",
+      "bytes": 13446,
+      "sha256": "e0fe398c8ce28072d696c3b584857052e8154e64e94b9f331a7461b6b99af7b2"
+    },
+    {
+      "path": "references/huashu-grammar-cards/y1_kurzgesagt.md",
+      "bytes": 17413,
+      "sha256": "ad7b18459f1948b7120812919a628816a589a2d0afe1447519378991f8a52661"
+    },
+    {
+      "path": "references/huashu-grammar-cards/y2_vox.md",
+      "bytes": 16406,
+      "sha256": "f697f34612b8de23720d78768505cd79333b07afd4226f2976b6b01cc099b986"
+    },
+    {
+      "path": "references/huashu-grammar-cards/y3_whiteboard.md",
+      "bytes": 15286,
+      "sha256": "f2fda7768034d94928982193965f225a3c85a850eaf28f3f28459e85dbe0773d"
+    },
+    {
+      "path": "references/huashu-grammar-cards/y4_storytime.md",
+      "bytes": 18332,
+      "sha256": "b561ba51276a9c98bf217aeeeed812b0ecc666d2bd4c2c4d063ea98ff55ad71f"
+    },
+    {
+      "path": "references/huashu-grammar-cards/y5_kinetic_type.md",
+      "bytes": 17165,
+      "sha256": "97b200e68231d71cd10cf3f1027b4db36e99ce9a06004891d644994883bb15e2"
+    },
+    {
+      "path": "references/huashu-integration.md",
+      "bytes": 3128,
+      "sha256": "c9231ba1e908331043c5007f81367fc02d3def9316912a329bcc3db4c11869b9"
+    },
+    {
+      "path": "references/native-api-setup.md",
+      "bytes": 6882,
+      "sha256": "156f1cbd51d4d4272ed3384cffc06f096f4898f4fe25a8ea0f346d8f4dd50a01"
+    },
+    {
+      "path": "references/presenter-led-styles.md",
+      "bytes": 3317,
+      "sha256": "7eebab1fbc2600a5b278ea595d41460f6d2b80ce886ed75a12bd7a5629b7f937"
+    },
+    {
+      "path": "references/production-workflow.md",
+      "bytes": 4612,
+      "sha256": "12fdb5764ba8e1d5657328ff70a8bc8f621bbb70b8dd88e9114e31e820f0a7c0"
+    },
+    {
+      "path": "references/project-contract.md",
+      "bytes": 6095,
+      "sha256": "1b831919b2439abb0ff56e2dc02ff148f40116e96b719591c27b2fb63a161fe0"
+    },
+    {
+      "path": "references/provider-handoff.md",
+      "bytes": 2093,
+      "sha256": "b6857eae72408166f496ca390698f2bf11962fab9d92614e2a4f4772994507f7"
+    },
+    {
+      "path": "references/quality-review.md",
+      "bytes": 4435,
+      "sha256": "f34a674088217758f574fbdc37900c7ce465981a774a6f1cfb8e0e83d86ac12f"
+    },
+    {
+      "path": "references/raw-talking-head.md",
+      "bytes": 3545,
+      "sha256": "f3ce601940e2ab0508809f78ac08ce49fb7cab487f1850eb982bdf06c2ca9ed8"
+    },
+    {
+      "path": "references/reference-reconstruction.md",
+      "bytes": 1601,
+      "sha256": "367336e942b54164c7dfdf1d7471c1b1c6f49404b2d2390df5c04af8cfcc0619"
+    },
+    {
+      "path": "references/style-batch.md",
+      "bytes": 9063,
+      "sha256": "bda7768b7b282369426432f4a4d3f833b4911616c017a65cdd2ec7c3dc553d0b"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 140,
+      "sha256": "91392dc80669722d73d5664f61f96761bd1b630c0c207c95876d6526e3f1fd76"
+    },
+    {
+      "path": "scripts/cut_master.py",
+      "bytes": 3927,
+      "sha256": "130acfe9cec4711b4d038f9c5e2a936147a67f50e574627302a2dad6e07b8663"
+    },
+    {
+      "path": "scripts/fish_api.py",
+      "bytes": 10040,
+      "sha256": "615a4765d201dc9b9df808c87bee726a68fd371c934cb385b86b2e33b86302f9"
+    },
+    {
+      "path": "scripts/huashu_full.py",
+      "bytes": 8635,
+      "sha256": "b2e376bfdd9dcb0fca7af6cd290494ef494be6e9176851154e7a4dc24f521d69"
+    },
+    {
+      "path": "scripts/make_local_demo.py",
+      "bytes": 1764,
+      "sha256": "bcd3dffc6be2f54ef2b93c61efe4141834a2a131d0ee6c988e567a5f50b36888"
+    },
+    {
+      "path": "scripts/motion.py",
+      "bytes": 31924,
+      "sha256": "6ca9fe4c6144ce15cc32a94f3a55d129f8ce3928d1a6b921fc968ac307f321b5"
+    },
+    {
+      "path": "scripts/produce.py",
+      "bytes": 6591,
+      "sha256": "b485c67c3dbfa29977b3f401dac6d699cf0b8ad0a32a0bbd813f1eb3664cadc3"
+    },
+    {
+      "path": "scripts/render_huashu.py",
+      "bytes": 4415,
+      "sha256": "68b5a3ba993c3f3460745d6cad112b7ce3ae2616e6d26b46c2a5ca60269f1a71"
+    },
+    {
+      "path": "scripts/review_gallery.py",
+      "bytes": 12132,
+      "sha256": "606b6e21c75566993ca5dca995dfebfb6c98950fb819df828a7b804c73bbc221"
+    },
+    {
+      "path": "scripts/review_gemini.py",
+      "bytes": 4246,
+      "sha256": "a0681c02b12ffc9f8565625ebc4d345bb06f1c2089c55f5048f19c29268acfa4"
+    },
+    {
+      "path": "scripts/secret_store.py",
+      "bytes": 4299,
+      "sha256": "7caba399b8cc6af720675667728a6859031e90d66bf4393c3b4b441681cdcfa7"
+    },
+    {
+      "path": "scripts/serve_review.py",
+      "bytes": 2148,
+      "sha256": "cbf0faa1c65f0fe431690b9e56f9d2ef7269589676bd1d605c01ea5ee1a1a868"
+    },
+    {
+      "path": "scripts/style_batch.py",
+      "bytes": 10685,
+      "sha256": "c084a257509832e81ecbeb951f5b3569815be74934af10d6f0c4872772370a15"
+    },
+    {
+      "path": "scripts/style_review.py",
+      "bytes": 2859,
+      "sha256": "99b4d6db5f82189e9e4e8f346caa93ba5c14f88afb6d111df9ae796a513944ab"
+    }
+  ],
+  "validation": {
+    "skill_structure": "pass",
+    "runtime_install": "npm ci --ignore-scripts --no-audit --no-fund completed",
+    "doctor": "pass",
+    "catalog": {
+      "art_scenes": 35,
+      "grammar_cards": 9,
+      "parameterized_renderers": 8
+    },
+    "local_scene_smoke": {
+      "scene": "project_intro",
+      "width": 1080,
+      "height": 1920,
+      "fps": "24/1",
+      "frames": 72,
+      "duration_seconds": 3.0,
+      "sha256": "b5e496ecd4bb34faed2a5ea94e11d187f8b2cd26a8023d3b61b68c46199e0e62",
+      "full_video_decode": true,
+      "scope": "Rendering smoke test only; no presenter, voice, full-film visual or auditory acceptance. Test media not distributed."
+    },
+    "readme_local_links": "10 verified"
+  }
+}

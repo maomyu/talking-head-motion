@@ -1,0 +1,4 @@
+# Versions used in the local validation; install in an isolated Python environment.
+faster-whisper==1.2.1
+Pillow==12.1.0
+playwright==1.57.0

@@ -1,0 +1,30 @@
+# Local runtime and caches
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.py[cod]
+.DS_Store
+*.log
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.codex/
+
+# Project media and production records belong outside the skill repository
+projects/
+output/
+renders/
+review/
+*.mp4
+*.mov
+*.m4a
+*.mp3
+*.wav
+*.aiff
+*.zip
+

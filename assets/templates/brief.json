@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "subject": "",
+  "audience": "",
+  "purpose": "",
+  "ownership": "unknown",
+  "route": "existing-video",
+  "presenter_profile": null,
+  "presenter_presence": {"mode":"recurrent","returns":["opening","key_assertion","emotional_turn","closing"],"pip":"when_helpful","main_fraction_hint":[0.45,0.65],"visible_fraction_hint":[0.60,0.80],"hints_are_benchmarks":false},
+  "voice_profile": null,
+  "canvas": {"width": 1080, "height": 1920, "fps": null},
+  "delivery": "local-mp4",
+  "references": [],
+  "art_direction": {"name": null, "recipe_id": null, "selection_source": null},
+  "priority_effects": [],
+  "bgm": "off",
+  "remote_services": [],
+  "budget_limit": null,
+  "review_limit": 3,
+  "assumptions": [],
+  "unresolved": []
+}
