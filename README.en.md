@@ -58,7 +58,7 @@ Scripts cache, compile, render and run technical checks. The current Agent then 
 
 ## Optional branches
 
-- **Script to a talking-head master:** recorded footage needs no new voice or avatar. A script-only project can use configured speech and authorized HeyGen, then join the same workflow. [Provider handoff](references/provider-handoff.md).
+- **Create a talking-head master:** edit existing footage directly. A photo plus accepted audio goes to configured HeyGen without regenerating speech; script-only projects first need speech and an authorized portrait. The public package includes the Fish speech adapter; a HeyGen submission adapter and account still require configuration and testing before joining the same workflow. [Provider handoff](references/provider-handoff.md).
 - **Learn a new style:** retain the complete reference, inspect native RGB/PTS, measure important motion, rebuild separate layers and review the encoded output. Publish a recipe version after validation; ordinary reuse does not repeat this research. [Native reconstruction](references/native-frame-reconstruction.md).
 - **Artistic inserts:** 35 art palettes/material recipes and eight general animation grammars are available for special explanatory or artistic shots. They are separate optional assets, not additional mandatory style decisions for every talking-head edit. [Optional art capability](references/huashu-integration.md).
 

@@ -30,7 +30,7 @@ Plan without credentials or network:
 python3 scripts/fish_api.py plan --profile PROJECT/config/fish-api-profile.json --text PROJECT/script.txt --output PROJECT/review/api-plan
 ```
 
-After service access is authorized, synthesize the formal opening for delivery checks, then the full accepted text. A short opening is part of the formal script; do not rewrite the user's publication into a test announcement.
+Reuse accepted audio. For a configured voice, synthesize the full accepted text directly. An unfamiliar voice, pronunciation or untested account may justify checking the formal opening first; this is a bounded delivery check, not a mandatory extra sample for every video. Do not rewrite the user's publication into a test announcement.
 
 ```bash
 python3 scripts/fish_api.py generate --profile PROJECT/config/fish-api-profile.json --text PROJECT/script.txt --output PROJECT/audio/full-v1 --submit
@@ -42,7 +42,9 @@ On macOS, `secret_store.py set --service ... --account ...` reads a hidden termi
 
 ## Digital-human API handoff
 
-Choose the provider from actual account access, quality needs, cost and supported duration. Do not assume Fish's website avatar menu is a documented Fish REST endpoint. Record the documented API and quote separately from narration.
+HeyGen is the selected default for this workflow. A photo plus accepted audio needs only the avatar step; a script without audio first needs speech. Keep the selected provider unless the user changes it. The public package currently contains no verified HeyGen submission adapter: check its official API, account access, supported input and quote, then configure and test the concrete integration before submitting production. Do not claim this connection is complete from documentation alone.
+
+The MiniMax and Alibaba details below are legacy alternatives used only when the user selects them. Do not switch providers to avoid a missing HeyGen configuration. Fish's website avatar menu is not evidence of a documented Fish REST endpoint. Record the documented API and quote separately from narration.
 
 When MiniMax is selected, use its documented H3 V2 API rather than assuming a ComfyUI workflow is mandatory. `POST https://api.minimax.io/v2/video_generation` uses a `content` array and returns a persistent task ID. For a preset portrait plus narration, use the reference route: `text` + `image_url` with `role=reference_image` + `audio_url` with `role=reference_audio`. The official API forbids mixing any reference role with `first_frame`/`last_frame`. Each reference audio is 2–15 seconds, total reference audio ≤15 seconds; H3 output is integer 4–15 seconds, at 768P or 2K. Check region/account access and current pricing first. As checked on 2026-10-11, H3 output is $0.08/sec at 768P or $0.13/sec at 2K; reference video adds input-duration charges. H3 Max is a different fast variant and must not be substituted silently.
 

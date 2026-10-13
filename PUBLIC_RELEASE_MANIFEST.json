@@ -1,8 +1,8 @@
 {
-  "release": "Unreleased native-frame reconstruction",
+  "release": "30-style talking-head workflow 0.1.0",
   "date": "2026-10-13",
   "source_upstream_commit": "9ff59339f934e08483ba0a5b1db20f4c2c421b35",
-  "scope": "Public source integrity, syntax and credential pattern checks. Media QA is recorded separately in the local research project; no user avatar or full tutorial inverse-effects claim.",
+  "scope": "Public source integrity, syntax and credential pattern checks. Fixed style identities are published; fine media QA scopes are recorded separately. HeyGen submission adapter/account remain to be configured and tested; no full-source inverse-effects or user avatar claim.",
   "files": 400,
   "checked": {
     "python": 34,
@@ -30,18 +30,18 @@
     },
     {
       "path": "README.en.md",
-      "bytes": 8728,
-      "sha256": "ed161b148b6a445ae3ab7eefb986456934641063a11cbfedd1ce30db0701bee1"
+      "bytes": 8927,
+      "sha256": "abf51cb5092ddf85a5741f565fa06339cc7ad8718bbb347ead83455e79c0069a"
     },
     {
       "path": "README.md",
-      "bytes": 7502,
-      "sha256": "c9e2a613bb8ea2e8eb5b009f8bb852ae22072c73bb5f384a3aff4c73930a37a3"
+      "bytes": 7629,
+      "sha256": "3cf4dac23bad1d4a6b04c18c347d947592d68f425a8a8bace74e468dba540d74"
     },
     {
       "path": "SKILL.md",
-      "bytes": 7692,
-      "sha256": "55438cbae2b033495ee0bdb878e0925e39b40a621b682dda0b1a05073bd8da34"
+      "bytes": 7843,
+      "sha256": "940d44e0b41e9b436574dccd021ae03af2d664603a9b49580d52244384826b70"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -1860,8 +1860,8 @@
     },
     {
       "path": "references/native-api-setup.md",
-      "bytes": 6882,
-      "sha256": "156f1cbd51d4d4272ed3384cffc06f096f4898f4fe25a8ea0f346d8f4dd50a01"
+      "bytes": 7562,
+      "sha256": "96524a93cf32160ad3413623694c0f69e82a0cbc9e4f188d3696d97fffe91195"
     },
     {
       "path": "references/native-frame-reconstruction.md",
@@ -1875,8 +1875,8 @@
     },
     {
       "path": "references/production-workflow.md",
-      "bytes": 4196,
-      "sha256": "3b40aa45d3174b00c1f9ff6f2a38e5f30ac1b9b4f9d74be634c890c2ef90f64a"
+      "bytes": 4340,
+      "sha256": "970c2a0c147e026d202621f1aa643944a6502ec1710cced2be303b80ce833fc7"
     },
     {
       "path": "references/project-contract.md",
@@ -1885,8 +1885,8 @@
     },
     {
       "path": "references/provider-handoff.md",
-      "bytes": 2093,
-      "sha256": "b6857eae72408166f496ca390698f2bf11962fab9d92614e2a4f4772994507f7"
+      "bytes": 2149,
+      "sha256": "918f5a6e5ecb6176fce12180be06b9961ecaa0fe985b0ae21f5dbf1175684d63"
     },
     {
       "path": "references/quality-review.md",

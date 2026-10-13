@@ -58,7 +58,7 @@ python3 scripts/produce.py /absolute/project --model small --expected-script scr
 
 ## 按需要增加的能力
 
-- **文案变口播母片**：已有自拍无需配音和数字人；只有文案时可接已配置配音与授权HeyGen，再进入同一主线。[服务衔接](references/provider-handoff.md)。
+- **形成口播母片**：已有自拍直接剪；照片＋音频按已配置的HeyGen衔接，不重复配音；只有文案时才补配音与授权形象。公开包包含Fish配音适配器，HeyGen提交适配器和账户仍需配置、实测，再进入同一主线。[服务衔接](references/provider-handoff.md)。
 - **学习新风格**：完整下载参考、遍历原生RGB/PTS，密集测量关键动作，重建独立图层并检查最终编码。通过后增加版本配方；日常套用不重复这项研究。[原生重建](references/native-frame-reconstruction.md)。
 - **艺术插镜**：需要特殊科普、概念或艺术画面时，可选35艺术画风与8通用语法。它们是插镜能力，与30个固定口播风格入口分开管理，不是每条口播都要经历的选择步骤。[可选艺术能力](references/huashu-integration.md)。
 

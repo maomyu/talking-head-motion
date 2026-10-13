@@ -1,15 +1,20 @@
-# Voice and avatar handoff
+# 口播母片与服务衔接
 
-The local editor begins with accepted media. It does not bundle a paid credential or assume a user avatar.
+已有自拍或已接受的口播母片直接本地剪辑。缺母片时才启用服务，数字人沿用用户选定的 HeyGen；不因配置缺失自动换成 MiniMax、Fish 或其他数字人。
 
-When the user requests API integration, use [native API setup](native-api-setup.md). The included `fish_api.py` supplies developer-API narration with an explicit free/paid model, credential-free planning, original audio preservation and resumable local state. Digital-human APIs are a separate provider handoff and must have verified access and a budget before submission.
+| 输入 | 必要工作 |
+|---|---|
+| 自拍原视频／已接受的数字人母片 | 保留原画原声，直接进入五步剪辑主线 |
+| 授权照片＋已有音频 | 对接已配置的 HeyGen，复用音频，不重复配音 |
+| 文案＋授权照片 | 先生成并接受配音，再对接 HeyGen |
+| 只有文案 | 补齐授权或原创形象与配音，再形成母片 |
 
-For a generic portrait-and-script trial with no service setup, read [Fish Audio MCP setup](fish-mcp-setup.md). Fish offers an OAuth connection and a photo/audio avatar entry point; verify account tools, model availability, credits and the concrete quote. Curated official voices can avoid collecting a user voice sample. Registration, OAuth, usable tools and accepted generated media are separate states; do not claim all are complete after editing client configuration.
+API任务读 [配置指南](native-api-setup.md)。公开包的 `fish_api.py` 已提供配音请求、计划、缓存和可续跑状态；**HeyGen提交适配器和账户连接尚未在此包中实测**。执行前核实可用的官方接口、账号、输入要求与费用，再配置实际适配器。提供方偏好、配置文件、可调用接口、真实生成成功和接受的母片是不同状态，分别记录。
 
-Route company/personal IP production to the corresponding available media-studio skills and project rules. Useful capabilities include `create-fish-audio-voice`, `create-minimax-h3-talking-video`, and `edit-talking-head-social-clips`. Locate the active version in the session catalog. Unknown ownership uses a generic project, not a client archive.
+用户明确要求API时走API；仅在用户选择MCP/OAuth配音路线时读 [Fish连接](fish-mcp-setup.md)。已接受的声音和母片直接复用，改剪辑画面不重做。所属客户明确时遵守相应媒体工作室规则；归属不明使用通用工程。
 
-Record provider/model, authorized profile, exact text, hashes, remote task ID, output, status and timeline mode. Save task IDs immediately and poll existing tasks rather than duplicate submissions. Verify a representative raw segment for a new presenter and preserve original generated media.
+Agent记录提供方、模型、授权形象、文案与媒体哈希、远端任务ID、输出、状态和音轨时序。提交后立即保存任务ID，查询已有任务，避免重复提交。首次未知形象或存在具体生成风险时，检查实际代表片段后继续；不要求每条已知配置都额外生成测试片。
 
-For H3, determine whether guide audio passes through or is retimed. Preserve accepted native A/V pairs in the latter case. Assemble/tighten before final transcription. Play the original pair to distinguish generation faults from assembly faults.
+接受母片前检查真实输出的文案、声音、时长、身份和嘴部连续帧；确认服务是否改动音轨或时长。保留最终画音这一对，粗剪完成后重新校对字幕，不用旧配音覆盖已经改时序的音轨。服务故障和剪辑故障分别处理。
 
-If access, presenter or voice is missing, continue independent editing/animation work, record the pending stage and ask for the concrete missing choice. An unrelated online presenter is not the user's likeness or voice.
+配置或授权缺失时继续整理文案、风格和其他独立工作，明确需要补齐的项。无声图库人物用于动画与取景展示，不能当作本人已完成的口播或口型生成证明。
