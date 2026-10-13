@@ -1925,8 +1925,8 @@
     },
     {
       "path": "scripts/fixed_style_gallery.py",
-      "bytes": 9414,
-      "sha256": "2635701b6173968786b528aedbfb6f40b5692e0244ef1d1318a814a86e93e003"
+      "bytes": 9976,
+      "sha256": "9f3d6732acfc0976b27f4b588d3520fbebc5d2e3b4f3dcb50d9e1c529895a9e7"
     },
     {
       "path": "scripts/fixed_styles.py",

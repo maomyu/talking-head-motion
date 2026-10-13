@@ -18,6 +18,10 @@ def colours(value,label=''):
     if isinstance(value,str) and value.startswith('#') and len(value) in (4,7):return [(label,value)]
     return []
 
+def chinese(value,fallback):
+    value=str(value)
+    return value if any('\u4e00'<=x<='\u9fff' for x in value) else fallback
+
 def make(cases_path,out,catalog=CATALOG):
     cases=json.loads(Path(cases_path).read_text());data=library(catalog);out=Path(out).resolve();out.mkdir(parents=True,exist_ok=True)
     media_path=out/'media-map.json';media=json.loads(media_path.read_text()) if media_path.exists() else {};group={};payload={};sections=[];nav=[];e=html.escape
@@ -32,8 +36,12 @@ def make(cases_path,out,catalog=CATALOG):
         payload[c['id']]={'src':'media/'+key,'name':c['name'],'description':c['description'],'status':c['status'],'frames':c['frames'],'duration':proof['duration'],'width':proof['width'],'height':proof['height'],'roi':roi,'compare':'precision.html#'+c['id'],'sha':proof['output_sha256'],'unresolved':c.get('unresolved',[])}
     for row in data['styles']:
         sid=row['id'];rank=row['source_rank'];items=group.get(sid,[]);recipe=json.loads((Path(catalog).resolve().parent/row['recipe']).read_text()) if row.get('recipe') else {}
+        for c in items:
+            d=payload[c['id']]
+            d['description']=chinese(d['description'],f'{row["name"]}的原生动画窗口。实拍移动人物与独立图层对应进入、停留和退出；具体差异见对照页。')
+            d['status']=chinese(d['status'],'当前窗口已对照 · 具体差异与未完成范围见下方')
         swatches=''.join(f'<span class="swatch"><i style="background:{e(hex)}"></i>{hex}</span>' for label,hex in colours(recipe.get('palette',{}))[:6])
-        variants=''.join(f'<button data-variant="{e(c["id"])}">{e(c.get("variant",c["name"]))}</button>' for c in items)
+        variants=''.join(f'<button data-variant="{e(c["id"])}">{e(chinese(c.get("variant",c["name"]),"人物资料卡开场" if c.get("variant")=="intro" else "主窗口"))}</button>' for c in items)
         notes=''.join(f'<li>{e(str(v))}</li>' for v in recipe.get('uses',[])[:4] if any('\u4e00'<=x<='\u9fff' for x in str(v)))
         state=row['readiness']['scope'];first=items[0]['id'] if items else None
         video=f'<div class="empty">本款的精细动画正在重建；完成编码对照后展示实际视频。<p><a href="mechanisms-legacy.html#case-{rank:02d}">观看已有机制演示</a>（动作有简化，不作为精细复刻验收）</p></div>' if not first else f'<div class="stage"><video controls playsinline muted preload="none" data-first="{e(first)}"></video></div><p class="window"></p><p class="description"></p><p class="status"></p><div class="actions"><a class="compare" href="precision.html#{e(first)}">原片与重建逐帧对照</a><a class="download" download>下载本动画 MP4</a></div><details><summary>本视频的具体差异</summary><ul class="differences"></ul></details>'
