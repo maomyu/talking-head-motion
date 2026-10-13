@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-03",
+  "name": "上方证据下方人物",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "mechanism_preview_only",
+    "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+  },
+  "source": {
+    "rank": 3,
+    "url": "https://www.douyin.com/video/7588918785366760107",
+    "author": "剪辑师大桔",
+    "title": "网感剪辑🔥分享6种口播素材穿插方式",
+    "canonical_source_rank": 3
+  },
+  "semantic_use": [
+    "用画面解释观点，同时保留说话人的连续性。"
+  ],
+  "observed_motion": "人物背景虚化变暗，大型证据画面位于上方，底部中央有较小的清晰人物窗。",
+  "basic_implementation": {
+    "grammar": "d03_evidence_over_speaker",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "presenter_video",
+      "video_start",
+      "images",
+      "evidence_labels"
+    ],
+    "design_variables": [
+      "证据区高度",
+      "证据列表",
+      "素材切换点",
+      "人物裁切锚点"
+    ],
+    "scope": "嵌套构图和素材接力，不复制原片旅游素材。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "presenter_video",
+    "video_start",
+    "images",
+    "evidence_labels"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  }
+}

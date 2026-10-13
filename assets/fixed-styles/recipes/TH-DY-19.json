@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-19",
+  "name": "新青年金字·四角重点词",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "partial_native_windows_reviewed",
+    "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+  },
+  "source": {
+    "rank": 19,
+    "url": "https://www.douyin.com/video/7585124034087046410",
+    "author": "易小只",
+    "title": "5组口播重点词搭配 口播重点词不会剪? 我不允许!",
+    "canonical_source_rank": 19
+  },
+  "semantic_use": [
+    "多个关联词同时补充观点。"
+  ],
+  "observed_motion": "教程把四个字排到人物四角后调整金色与阴影；本窗口属于版式示范。",
+  "basic_implementation": {
+    "grammar": "d19_corner_keywords",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "presenter_video",
+      "video_start",
+      "items"
+    ],
+    "design_variables": [
+      "四角文字",
+      "位置",
+      "金色",
+      "阴影"
+    ],
+    "scope": "复刻画面中的布局及剪辑机制，以替换人物和内容重建；教程界面、原片人物和生成模型变脸不属于此实现。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "presenter_video",
+    "video_start",
+    "items"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [
+      {
+        "variant": "主窗口",
+        "first_frame": 3355,
+        "frames": 34,
+        "duration": 1.1333333333333333,
+        "output_sha256": "8dc90f9393c5e36a9dc6cd68d1e8df79f07e3fd85507a057e6e10d796622ba67",
+        "frame_review_scope": "partial; user review pending",
+        "residuals": [
+          "This is a static keyword layout demonstrated in authoring UI, not a discovered entrance animation.",
+          "Effective preview native469x795; software controls, handles and surrounding timeline are excluded; enlarged review cannot add original detail.",
+          "UI visibly names 新青年体 and shadow opacity60%, blur3%, distance2%; the original font file/vector stroke is not available, and percentages are normalized to observed glyph scale.",
+          "Private fixed source glyphs do not establish arbitrary editable text fidelity; Noto editable fallback is explicitly approximate.",
+          "Replacement is moving real stock footage, original person/room/gestures differ; silent style demonstration has no lip-sync claim.",
+          "SourceF3355 is white and F3356 turns pale gold via colour picker; output fixes the selected final gold look across the34frame style sample. This is an explicit authoring-state difference."
+        ]
+      }
+    ],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  },
+  "palette": {
+    "keywords": [
+      [
+        251.0,
+        230.0,
+        136.0
+      ],
+      [
+        251.0,
+        230.0,
+        136.0
+      ],
+      [
+        252.0,
+        230.0,
+        134.0
+      ],
+      [
+        251.0,
+        230.0,
+        136.0
+      ]
+    ],
+    "background": [
+      0,
+      0,
+      0
+    ],
+    "shadow": [
+      0,
+      0,
+      0,
+      153
+    ],
+    "grid": null
+  },
+  "font": {
+    "shown_authoring_font_name": "新青年体",
+    "fixed_private_reference_glyphs": true,
+    "editable_fallback": "NotoSansSC-800 approximate"
+  },
+  "layout": {
+    "canvas": [
+      1080,
+      1920
+    ],
+    "source_crop_xywh": [
+      543,
+      580,
+      469,
+      795
+    ],
+    "replica_crop_xywh": [
+      543,
+      580,
+      469,
+      795
+    ],
+    "native_effective_size": [
+      469,
+      795
+    ],
+    "normalized_layout": {
+      "portrait": [
+        0.10021321961620469,
+        0.08176100628930817,
+        0.8123667377398721,
+        0.8440251572327044
+      ],
+      "keywords": {
+        "upper-left": [
+          0.021321961620469083,
+          0.012578616352201259,
+          0.2601279317697228,
+          0.18490566037735848
+        ],
+        "upper-right": [
+          0.7078891257995735,
+          0.012578616352201259,
+          0.27505330490405117,
+          0.18490566037735848
+        ],
+        "lower-left": [
+          0.021321961620469083,
+          0.8125786163522013,
+          0.2601279317697228,
+          0.16855345911949685
+        ],
+        "lower-right": [
+          0.7078891257995735,
+          0.8125786163522013,
+          0.27505330490405117,
+          0.16855345911949685
+        ]
+      }
+    }
+  },
+  "motion_rules": {
+    "native_window": [
+      3355,
+      3389
+    ],
+    "frames": 34,
+    "fps": 30,
+    "duration": 1.1333333333333333,
+    "observed": "four stable keywords; no fabricated flight",
+    "shadow_opacity": 0.6,
+    "shadow_blur_normalized_to_glyph": 0.03,
+    "shadow_distance_normalized_to_glyph": 0.02
+  },
+  "source_structure": [
+    {
+      "seconds": [
+        0,
+        2.6
+      ],
+      "effects": [
+        "opening inset frame",
+        "large pink outlined heading"
+      ],
+      "covered": false
+    },
+    {
+      "seconds": [
+        2.6,
+        13.5
+      ],
+      "effects": [
+        "full A-roll",
+        "camcorder metadata",
+        "paired emphasis words"
+      ],
+      "covered": false
+    },
+    {
+      "seconds": [
+        13.5,
+        20
+      ],
+      "effects": [
+        "dual-phone comparison",
+        "stacked picture duplicates with text and music labels"
+      ],
+      "covered": false
+    },
+    {
+      "seconds": [
+        25,
+        98
+      ],
+      "kind": "authoring steps for blur/duplicates/labels",
+      "copy_UI": false
+    },
+    {
+      "seconds": [
+        98,
+        116
+      ],
+      "effects": [
+        "four-corner keywords",
+        "gold fill and shadow"
+      ],
+      "covered": true,
+      "variant": "stable gold-corner preview3355..3388"
+    },
+    {
+      "seconds": [
+        116,
+        122.1
+      ],
+      "kind": "conclusion or UI remainder",
+      "covered": false
+    }
+  ],
+  "calibration_scope": "Native details are working calibrations. Only the windows listed below are accepted for actual-frame review; pending geometry/branches remain work in progress."
+}

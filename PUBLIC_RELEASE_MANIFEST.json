@@ -1,14 +1,14 @@
 {
   "release": "Unreleased native-frame reconstruction",
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "source_upstream_commit": "9ff59339f934e08483ba0a5b1db20f4c2c421b35",
   "scope": "Public source integrity, syntax and credential pattern checks. Media QA is recorded separately in the local research project; no user avatar or full tutorial inverse-effects claim.",
-  "files": 365,
+  "files": 400,
   "checked": {
-    "python": 31,
+    "python": 34,
     "javascript": 110,
-    "json": 18,
-    "text": 275
+    "json": 49,
+    "text": 310
   },
   "credential_pattern_findings": [],
   "excluded": "Project media, source videos, transcripts, voice, presenter assets, API responses, local account configurations and runtime caches",
@@ -30,18 +30,18 @@
     },
     {
       "path": "README.en.md",
-      "bytes": 11189,
-      "sha256": "ad2620fa0de2226edf07850f567d6bf4b990748aa45ad379cc74b71883b1b19a"
+      "bytes": 8728,
+      "sha256": "ed161b148b6a445ae3ab7eefb986456934641063a11cbfedd1ce30db0701bee1"
     },
     {
       "path": "README.md",
-      "bytes": 8942,
-      "sha256": "632c3b03dbf3fa046d139d05680fa32d846d5b8d1db5e5c8369a12186d24f3f4"
+      "bytes": 7502,
+      "sha256": "c9e2a613bb8ea2e8eb5b009f8bb852ae22072c73bb5f384a3aff4c73930a37a3"
     },
     {
       "path": "SKILL.md",
-      "bytes": 12801,
-      "sha256": "3bceaa53860e718fbe4fa6f3bbdfaa59ac22e024e06b89bd57772aeda5a43900"
+      "bytes": 7692,
+      "sha256": "55438cbae2b033495ee0bdb878e0925e39b40a621b682dda0b1a05073bd8da34"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -50,8 +50,8 @@
     },
     {
       "path": "agents/openai.yaml",
-      "bytes": 1099,
-      "sha256": "4015f4971ff0ab69648daa737c838388cad2fa24c2f8c84beab566cb79ac206b"
+      "bytes": 892,
+      "sha256": "9119700383df3caec42ed56f7d0b0140462a8b4fca987332c51341991106fc20"
     },
     {
       "path": "assets/components.js",
@@ -82,6 +82,161 @@
       "path": "assets/examples/paper-explainer/story-example.json",
       "bytes": 13197,
       "sha256": "f06b93488eb371917c02b2648e1d304651ae29ead31f5b4a658693f5fbf0597d"
+    },
+    {
+      "path": "assets/fixed-styles/catalog.json",
+      "bytes": 24774,
+      "sha256": "c4c1608ea9bc06946d39ad2323c9e27e0110fa418c10461309c39d55d7fd1923"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-01.json",
+      "bytes": 4524,
+      "sha256": "1d1274b4b827c8d38fe0bb5adc697eb395cda6b0c260de3b9c3ef67f89ce2bc8"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-02.json",
+      "bytes": 3951,
+      "sha256": "0a1b9f295a70f57c962f67590b7cca987d5dbcc62bba8545c55596a6043bdc84"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-03.json",
+      "bytes": 3245,
+      "sha256": "5f4715d0f962008cf1082155b733784550e395e9a427e37f55db54ba4bd83620"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-04.json",
+      "bytes": 13872,
+      "sha256": "5ae66d7aaa6ca4d518c189f78d2975e1c3563405b72fcfcdaa6ab1a7d44144fd"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-05.json",
+      "bytes": 9609,
+      "sha256": "a75df2c9bd1258199db4492c87656e1a10dd71cf0b3c5ab2d232882b55d88000"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-06.json",
+      "bytes": 8114,
+      "sha256": "90a9f007e58b8cd2ceeeb3e57191018a6ad02ea92072aecb22364ee3ab1dd2f4"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-07.json",
+      "bytes": 9257,
+      "sha256": "66140ed47396cd318003493a31f58c9c0199c8880e78935f2aa7a206bfc8f199"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-08.json",
+      "bytes": 11800,
+      "sha256": "bef851231033f60e6e2999c48349758f8db51a87d19d28a299bc56ab73ea6df1"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-09.json",
+      "bytes": 8037,
+      "sha256": "00611fee59019ced959767992751b76c383f6c3f3cabe7aadb6c7aa9bc7fb37f"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-10.json",
+      "bytes": 3249,
+      "sha256": "30f56d9b0f73009672c06175370d35ab81a62f9349cac6b7aca4ee1dc1781824"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-11.json",
+      "bytes": 3205,
+      "sha256": "feb3aa7420bb6f0348746d22f410541f3ffad9c2c5d7c3bf2819acaa6238b48c"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-12.json",
+      "bytes": 3203,
+      "sha256": "655fd7a6c485250c71fe2b7d7e70ae5499c69554e1d601d8b978fab762116ff7"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-13.json",
+      "bytes": 7604,
+      "sha256": "712d0a5fcaab10286538c29811e7429e18b071078db8480afea0aa306b3277c5"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-14.json",
+      "bytes": 6473,
+      "sha256": "bc0f52803c2a714af799b64db955170f85295a879b814b1fe10f234b3868e7eb"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-15.json",
+      "bytes": 6368,
+      "sha256": "39aa6fe748867ab6b9f083ac8207ddb49691caf08a65c466ecd62e835998a3eb"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-16.json",
+      "bytes": 6883,
+      "sha256": "bb9c446b0acfc89e1cf1ab2766f75fea9046f5a2a9dd00e094e657a089346c25"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-17.json",
+      "bytes": 6019,
+      "sha256": "2229f618998da09ff94db8c4d7c692f6ff2a16fdaa358a780778a55dae4d6bb4"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-18.json",
+      "bytes": 5827,
+      "sha256": "e67459163283cb6da4716c4a8965be789f1c3b7c32645a06b6ccc6d7c85a7344"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-19.json",
+      "bytes": 7883,
+      "sha256": "e3b3aba78c2c6aa38455c3b4312aacf0b1a5327080b79e772a2c3aeeac180cbe"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-20.json",
+      "bytes": 7083,
+      "sha256": "4778e5d49bb67f7fc737604646e855a4f1f7f92e0d6410d5090075aa9541d75d"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-21.json",
+      "bytes": 5710,
+      "sha256": "c915641f7652532c8f0dab48832ae8701f6983d699aed3eca896f5153aead1d8"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-22.json",
+      "bytes": 8019,
+      "sha256": "18efd07ac3dd827b38091a67d04467422b575ce2dd69325f478f5518054a0c5a"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-23.json",
+      "bytes": 7971,
+      "sha256": "c1aa16b8569c113e5cca7d17707a2ed0c651d599963a735ed144354eb240f3ba"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-24.json",
+      "bytes": 5796,
+      "sha256": "6e80d0cf0a441cfdc683e193a40f9948c7c95394aeaade781c30a4775b278b20"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-25.json",
+      "bytes": 7548,
+      "sha256": "c819ee77a7f99d2fd2d62962b4e398944a08b449814167b95d825bfce76d6c94"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-26.json",
+      "bytes": 6088,
+      "sha256": "6d7a41a129f595488fbb84b5d0168b17c1b69624fd820f599324e6d90a3660ce"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-27.json",
+      "bytes": 3256,
+      "sha256": "c26ebce67f20767ba5b5ceb9b05b8a62ee7e57838234c9f7cf5b086b337832cb"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-28.json",
+      "bytes": 3121,
+      "sha256": "79af417069204010c8df493be17987217c61c3fe3d4d53dc358ba74c3cf3c169"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-29.json",
+      "bytes": 3177,
+      "sha256": "c8bfa9a2b77c9d718f3ef2278c65fcf3bf6997d35f4e99a29ca5bc8b24b40c90"
+    },
+    {
+      "path": "assets/fixed-styles/recipes/TH-DY-30.json",
+      "bytes": 3298,
+      "sha256": "7153550281f90b2f54df63fba8f8dc5014e58c0e0db21f936c3d60848404ab43"
     },
     {
       "path": "assets/huashu-engine/LICENSE",
@@ -1505,8 +1660,8 @@
     },
     {
       "path": "assets/reference-engine/validation.json",
-      "bytes": 56316,
-      "sha256": "8998651dae8f60b033783725058af4ffcc96fbd566fd33b5598b54d64cbf9a77"
+      "bytes": 78899,
+      "sha256": "a506b9f2542d843fb30a1df6ab95bda0ee861d740c328d7964878aec0ae68bc2"
     },
     {
       "path": "assets/runtime/package-lock.json",
@@ -1635,13 +1790,18 @@
     },
     {
       "path": "references/editorial-playbook.md",
-      "bytes": 6264,
-      "sha256": "27888c160d2ce3b0fba4196f06ff4bff5d7bc161aaa6b798f97120de9c91b8fc"
+      "bytes": 6260,
+      "sha256": "9f3c5738c03f0a07eee7e72109cf573eb0102b46dc3fd005500341738c6d1afb"
     },
     {
       "path": "references/fish-mcp-setup.md",
       "bytes": 3462,
       "sha256": "ff3b6c0a4e3b524a0f6904bb8f40d194588f98d991490b29bce73f10c3060e0a"
+    },
+    {
+      "path": "references/fixed-talking-head-styles.md",
+      "bytes": 5232,
+      "sha256": "d801c8b88d582afa6d8efad5ab0dcb69ec533e1b392788757d5887f2e7048e19"
     },
     {
       "path": "references/huashu-full-production.md",
@@ -1705,23 +1865,23 @@
     },
     {
       "path": "references/native-frame-reconstruction.md",
-      "bytes": 7677,
-      "sha256": "59a72ad0392d46450637e6e2a5229642a7ead830609f94e5cd0964f4e9c3a0e4"
+      "bytes": 8797,
+      "sha256": "9b4a51fdbc190b9f6844391e1c5d2db5848b4c46d29999e1ea4f92375021bc16"
     },
     {
       "path": "references/presenter-led-styles.md",
-      "bytes": 3317,
-      "sha256": "7eebab1fbc2600a5b278ea595d41460f6d2b80ce886ed75a12bd7a5629b7f937"
+      "bytes": 2950,
+      "sha256": "9bc892f3556794e7b247ca31e62cbc8c5eec1971f0daabd2150d4b1e554c6709"
     },
     {
       "path": "references/production-workflow.md",
-      "bytes": 4813,
-      "sha256": "4b854e09df2e4cb39cd3399340ee39d039333c7e57637e091266c796c22b7aaa"
+      "bytes": 4196,
+      "sha256": "3b40aa45d3174b00c1f9ff6f2a38e5f30ac1b9b4f9d74be634c890c2ef90f64a"
     },
     {
       "path": "references/project-contract.md",
-      "bytes": 6563,
-      "sha256": "cd09a2ec4fb42d4d69d954588ae37d77cb5202227422bb107049787bf830db6d"
+      "bytes": 8125,
+      "sha256": "ecd4b7cb3be1e6dd057f42494e5ed9bdfaea008c518988670a8c863138036046"
     },
     {
       "path": "references/provider-handoff.md",
@@ -1730,13 +1890,13 @@
     },
     {
       "path": "references/quality-review.md",
-      "bytes": 4435,
-      "sha256": "f34a674088217758f574fbdc37900c7ce465981a774a6f1cfb8e0e83d86ac12f"
+      "bytes": 4657,
+      "sha256": "ad374d7e74bdce55e17b71954106d990d34bade4930625032fce9150c7a7eca2"
     },
     {
       "path": "references/raw-talking-head.md",
-      "bytes": 3545,
-      "sha256": "f3ce601940e2ab0508809f78ac08ce49fb7cab487f1850eb982bdf06c2ca9ed8"
+      "bytes": 3563,
+      "sha256": "fe37bc19221a9f3749f8d5f4e930509a1a620217a639400882157ea0a4caa430"
     },
     {
       "path": "references/reference-reconstruction.md",
@@ -1764,6 +1924,16 @@
       "sha256": "615a4765d201dc9b9df808c87bee726a68fd371c934cb385b86b2e33b86302f9"
     },
     {
+      "path": "scripts/fixed_style_gallery.py",
+      "bytes": 9414,
+      "sha256": "2635701b6173968786b528aedbfb6f40b5692e0244ef1d1318a814a86e93e003"
+    },
+    {
+      "path": "scripts/fixed_styles.py",
+      "bytes": 5834,
+      "sha256": "0acb590df502f684ce600b85aff293b4fc47aebcd2ae4b304fe28860cf941e8c"
+    },
+    {
       "path": "scripts/frame_inventory.py",
       "bytes": 27743,
       "sha256": "f7f123d0936f85e1a88e4078a43aed539fba665adf17cf41edb42cb4241e9129"
@@ -1780,23 +1950,28 @@
     },
     {
       "path": "scripts/motion.py",
-      "bytes": 32507,
-      "sha256": "17346c801f2ac56e9d7c55ac784cb2e6260793741c0afddd425c6ad597157321"
+      "bytes": 32815,
+      "sha256": "d0296206f0b2244c43d04af13c2b9ca4575308a9e21b19dd962b4773d376a9b3"
     },
     {
       "path": "scripts/precision_gallery.py",
-      "bytes": 10698,
-      "sha256": "4cde360331f217027d56aa22c69803d19ee10c4f46e14181ea5bdff468b4bc96"
+      "bytes": 14191,
+      "sha256": "349192889421434446f1f7b748b35fd63dda0d665c2de20a6672c7932d645fd6"
     },
     {
       "path": "scripts/produce.py",
-      "bytes": 8234,
-      "sha256": "3418ae03b7eb3ef72f6b9cd007b7417f54dbfcf2501e1052c1376ff9a9e79494"
+      "bytes": 9313,
+      "sha256": "53c6c26eb486fc45d678d15a97ed48944277b709ecbc7d90489b00980b8de3ba"
     },
     {
       "path": "scripts/reference_render.py",
       "bytes": 15213,
       "sha256": "3bafde8f59d15b7f5f686f737605430fedbfd28ed7754d4fcff2d8cef8c94034"
+    },
+    {
+      "path": "scripts/reference_window_render.py",
+      "bytes": 17858,
+      "sha256": "0ffcbc266cb2758513fdbf5111972fe8d94a0be3e8b0d5aa315334f6d4b0aa59"
     },
     {
       "path": "scripts/render_huashu.py",
@@ -1840,5 +2015,5 @@
     }
   ],
   "validation_record": "assets/reference-engine/validation.json",
-  "media_qa_scope": "All 30 complete originals scanned at native RGB/PTS: 89080 frames; two selected reconstruction windows (141 and 60 encoded frames) visually compared in full on contact pages with selected native crops, residuals and user acceptance pending; other 28 and remaining source01/source02 intervals not finely reconstructed. Current 4-second integration: 120 decoded frames, 12 actually viewed, audio correlation and cache reuse checked. Actual read-only browser controls verified."
+  "media_qa_scope": "0.1.0 publishes30 versioned basic style profiles and10 explicitly bounded actual native-window reviews, with full30-source89080-frame machine inventory. New native-PTS fixtures and4-second production/cache/audio integration passed; no claim of all-source subvariants, arbitrary-selfie production, full listening or unknown-font recovery."
 }

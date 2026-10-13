@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-20",
+  "name": "六格接力·分屏副本与情绪字幕",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "mechanism_preview_only",
+    "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+  },
+  "source": {
+    "rank": 20,
+    "url": "https://www.douyin.com/video/7665271243322959990",
+    "author": "小悠接剪辑",
+    "title": "跟着秦思学剪辑 6组有趣的剪辑小技巧",
+    "canonical_source_rank": 20
+  },
+  "semantic_use": [
+    "给同一主题多个例子快速概览。"
+  ],
+  "observed_motion": "六个画面按三列两行组合，各格内容分别变化，标题位于两行之间。",
+  "basic_implementation": {
+    "grammar": "d20_mosaic_relay",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "presenter_video",
+      "video_start",
+      "images",
+      "evidence_labels",
+      "accent"
+    ],
+    "design_variables": [
+      "六格素材",
+      "切换节拍",
+      "间距",
+      "高亮"
+    ],
+    "scope": "复刻画面中的布局及剪辑机制，以替换人物和内容重建；教程界面、原片人物和生成模型变脸不属于此实现。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "presenter_video",
+    "video_start",
+    "images",
+    "evidence_labels",
+    "accent"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  },
+  "palette": {
+    "large_yellow": [
+      253.0,
+      219.0,
+      0.0
+    ],
+    "white_caption": [
+      249,
+      249,
+      245
+    ],
+    "outline": [
+      0,
+      0,
+      0
+    ],
+    "green_edge_native": [
+      171,
+      179,
+      164
+    ]
+  },
+  "font": {
+    "source": "multiple original fonts unknown",
+    "private_native_caption_atlas": true,
+    "editable_fallback": "NotoSansSC-800 Chinese; system Korean sans for Korean; word-fit and stroke recheck required"
+  },
+  "layout": {
+    "canvas": [
+      1080,
+      1920
+    ],
+    "normalized_layout": {
+      "six_cells": [
+        [
+          0.05185185185185185,
+          0.09635416666666667,
+          0.2935185185185185,
+          0.3020833333333333
+        ],
+        [
+          0.3453703703703704,
+          0.09635416666666667,
+          0.3,
+          0.3020833333333333
+        ],
+        [
+          0.6453703703703704,
+          0.09427083333333333,
+          0.31666666666666665,
+          0.30416666666666664
+        ],
+        [
+          0.024074074074074074,
+          0.5005208333333333,
+          0.32407407407407407,
+          0.325
+        ],
+        [
+          0.3490740740740741,
+          0.49895833333333334,
+          0.3101851851851852,
+          0.3265625
+        ],
+        [
+          0.6620370370370371,
+          0.4984375,
+          0.31574074074074077,
+          0.32760416666666664
+        ]
+      ],
+      "number": [
+        0.07685185185185185,
+        0.4046875,
+        0.26851851851851855,
+        0.090625
+      ],
+      "headline": [
+        0.3611111111111111,
+        0.409375,
+        0.5592592592592592,
+        0.08333333333333333
+      ],
+      "nested_video": [
+        0.09074074074074075,
+        0.5432291666666667,
+        0.23703703703703705,
+        0.2375
+      ],
+      "foreground_clone": [
+        0.20185185185185187,
+        0.7,
+        0.12962962962962962,
+        0.1296875
+      ]
+    }
+  },
+  "motion_rules": {
+    "native_window": [
+      0,
+      66
+    ],
+    "frames": 66,
+    "fps": 30,
+    "grid": "fixed stable six-cell geometry",
+    "cell_motion": "actual independent source clocks; duplicate foreground + nested video",
+    "captions": "native per-frame isolated caption/bubble timing; entire66nativeframes"
+  },
+  "source_structure": [
+    {
+      "seconds": [
+        0,
+        2.2
+      ],
+      "effects": [
+        "six live cells",
+        "nested video+cutout",
+        "duplicate performer",
+        "caption styles",
+        "title"
+      ],
+      "covered": true
+    },
+    {
+      "seconds": [
+        2.2,
+        6.2
+      ],
+      "effects": [
+        "photographic cutout copy",
+        "caption choreography"
+      ],
+      "covered": false
+    },
+    {
+      "seconds": [
+        6.2,
+        9.4
+      ],
+      "effects": [
+        "arch window",
+        "foreground/background split"
+      ],
+      "covered": false
+    },
+    {
+      "seconds": [
+        9.4,
+        12.8
+      ],
+      "effects": [
+        "yellow bubble",
+        "food presenter"
+      ],
+      "covered": false
+    },
+    {
+      "seconds": [
+        13,
+        16
+      ],
+      "effects": [
+        "cry label",
+        "reaction caption"
+      ],
+      "covered": false
+    },
+    {
+      "seconds": [
+        16.8,
+        20.8
+      ],
+      "kind": "generative male face/identity filter",
+      "recovery_branch": "generation, not overlay editing"
+    },
+    {
+      "seconds": [
+        21,
+        23.5667
+      ],
+      "effects": [
+        "karaoke phrase",
+        "banded caption"
+      ],
+      "covered": false
+    }
+  ],
+  "calibration_scope": "Native details are working calibrations. Only the windows listed below are accepted for actual-frame review; pending geometry/branches remain work in progress."
+}

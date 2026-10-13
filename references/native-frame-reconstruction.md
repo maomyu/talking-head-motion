@@ -38,7 +38,11 @@ python3 scripts/precision_gallery.py --cases /absolute/cases.json --dir /absolut
 python3 scripts/serve_review.py --dir /absolute/review --port 58536
 ```
 
-以脚本的 `--help` 为实际参数来源。`reference_render.py` 当前支持 CFR 原生帧窗口；VFR 会拒绝，不能静默改帧率。必填 `width/height/fps/frames/times/reference/assets/layers`；`reference` 包含完整原片路径、SHA、原生 `first_frame`。每层声明原生帧范围，`x/y/width/height/opacity/blur` 可为逐帧数组或有明确插值方式的 keys；`matrix` 是每帧六值 Canvas 变换。动态序列使用每帧 `paths/times`，需要抠像时 `role:dynamic_foreground`，记录 `source_video/source_sha256/method`，提供真正有 alpha 的动态帧。
+以脚本的 `--help` 为实际参数来源。`reference_render.py` 支持 CFR 原生窗口，继续拒绝 VFR；对于原生 VFR 使用 `reference_window_render.py`，不能静默改帧率。必填 `width/height/fps/frames/times/reference/assets/layers`；`reference` 包含完整原片路径、SHA、原生 `first_frame`。每层声明原生帧范围，`x/y/width/height/opacity/blur` 可为逐帧数组或有明确插值方式的 keys；`matrix` 是每帧六值 Canvas 变换。动态序列使用每帧 `paths/times`，需要抠像时 `role:dynamic_foreground`，记录 `source_video/source_sha256/method`，提供真正有 alpha 的动态帧。
+
+原生 PTS 入口另声明 `timestamp_mode:"native_window"`、`frame_durations`，以及 `reference.frame_times`（绝对源时间）、`reference.native_pts`（每帧整数PTS）、`reference.time_base`。脚本先与完整源片的实际PTS核对，再逐帧渲染无损PNG，以PyAV赋予原生时间基编码，并逐一核验最终MP4所有PTS和帧停留时长。名义30fps的视频也可能有不等长帧，不能仅看平均值。命令为 `reference_window_render.py --spec /absolute/measured.json --output /absolute/rebuilt.mp4`，制作任务使用 `renderer:"reference-native"`；它保留原生时间轴，不自动推断图层。[PyAV 时间基说明](https://pyav.org/docs/stable/api/time.html)。
+
+只读对照页支持 `source_crop_xywh` / `replica_crop_xywh`，坐标是原生整数像素；用于放大教程里真正的动画区域。输出画幅不改、完整原片仍可播放、区域放大不增加原细节。逐帧跳转使用实际PTS，不能为VFR按 `frame/fps` 猜时间。媒体按可见窗口加载，避免同时解码30条视频。
 
 判断 CFR 时检查完整原片的实际 PTS，而非只信平均帧率。所有声明 `source_video` 的素材都核对原视频 SHA，并参与输入保护及缓存身份。输出与 manifest 先解析软链接，避免覆盖源片、spec 或引擎。编码前后重复核对全部素材与引擎；中途修改输入时拒绝接受输出。
 

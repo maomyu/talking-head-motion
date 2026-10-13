@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-05",
+  "name": "黑底虚焦双层人物小窗",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "partial_native_windows_reviewed",
+    "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+  },
+  "source": {
+    "rank": 5,
+    "url": "https://www.douyin.com/video/7641860172691885318",
+    "author": "剪辑师小船",
+    "title": "为什么低价剪辑做不出网感？看完这组前后对比你就全明白了",
+    "canonical_source_rank": 5
+  },
+  "semantic_use": [
+    "腾出空间给概念，同时继续保留人物。"
+  ],
+  "observed_motion": "全幅人物虚化后，先出现上方人物窗，再出现下方人物窗，各自有说明字幕。",
+  "basic_implementation": {
+    "grammar": "d05_focus_pip",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "presenter_video",
+      "video_start",
+      "items",
+      "accent"
+    ],
+    "design_variables": [
+      "小窗位置",
+      "大小",
+      "模糊半径",
+      "重点文本",
+      "收缩时点"
+    ],
+    "scope": "只复刻精剪栏的内部机制，不复制价格和优劣宣传。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "presenter_video",
+    "video_start",
+    "items",
+    "accent"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [
+      {
+        "variant": "主窗口",
+        "first_frame": 480,
+        "frames": 181,
+        "duration": 6.033333333333333,
+        "output_sha256": "32c4de72dc585d94ba5c9f51aae29766bc00cffcc73000f86693e19940389943",
+        "frame_review_scope": "partial_fidelity_reviewed",
+        "residuals": [
+          "Different genuine stock presenter, face/gestures/room; no original actor replay. Silent technical animation reconstruction, no voice/lip-sync claim.",
+          "Original font/project unknown. Private original fixed glyph art cannot be advertised as arbitrary editable original font.",
+          "Source native H264 compression and new H264 codec colors/antialiasing differ; no100% pixel claim.",
+          "Reference effective right panel ROI434×777 is normalized to1080×1920; original frame still used for timing/measurement, tutorial UI and promotional prices are omitted.",
+          "Blur sigma≈32native ROIpx and rear dim alpha≈.38 are estimates, background belongs to different real stock shot.",
+          "Moving face crops calibrated to PIP aspect; original clothing/lamp/face and specific speech cannot match.",
+          "Label glyphs retain only private fixed phrases; replacement wording requires separately reviewed editable font.",
+          "原效果区域434×777被映射为1080×1920，有0.7%长宽非均匀映射；原宣传双栏与价格/时间轴不复刻。",
+          "背景黑衣/灯房换为白衣/植物，虚焦亮度空间分布不同；模糊32原ROI像素和后排透明度0.38为估计，不能保证原材质一致。",
+          "固定标签白色笔画与源字体形状接近，阈值和黑边导致约1–2原ROI像素边缘差异；新文案不能继续复用原字形。"
+        ]
+      }
+    ],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  },
+  "palette": {
+    "border": [
+      251,
+      250,
+      244
+    ],
+    "label": [
+      250,
+      250,
+      250
+    ],
+    "depth_black": [
+      0,
+      0,
+      0
+    ],
+    "rear_opacity": 0.38
+  },
+  "font": {
+    "source_family": "unknown from compressed reference; fixed isolated glyph study only",
+    "editable_fallback": "NotoSansSC/available system font, approximate shape must be separately reviewed"
+  },
+  "layout": {
+    "original_effect_roi": [
+      566,
+      294,
+      1000,
+      1071
+    ],
+    "normalization": [
+      2.488479262672811,
+      2.471042471042471
+    ],
+    "pip_native_xywh": {
+      "upper": [
+        703,
+        364,
+        150,
+        195
+      ],
+      "lower": [
+        710,
+        740,
+        149,
+        195
+      ],
+      "front": [
+        681,
+        502,
+        214,
+        281
+      ]
+    },
+    "border_native_width_px": 2.5,
+    "subject_face_to_window_ratio": {
+      "source_estimate": 0.78,
+      "target": 0.78,
+      "current_stock_estimate": 0.82,
+      "measurement_limit": "manual native hair-to-chin within upper PIP; actor-specific residual"
+    },
+    "upper_body_visible": "PIP crops show head and upper chest; camera source has no visible hands"
+  },
+  "grammar": {
+    "time_unit": "original native frame numbers,30fps",
+    "enter_hold_exit": {
+      "top_pip_and_bg_blur_hard_cut": 510,
+      "lower_pip_hard_cut": 543,
+      "foreground_larger_card_and_rear_dim": 593,
+      "all_pips_hard_cut_exit_full_presenter": 645,
+      "old_labels_exit_rear_pictures_remain": 593
+    },
+    "event_policy": "real measured source events; cut/pulse/path ordering preserved, new narration must align to accepted word clock",
+    "layer_order": [
+      "real-presenter",
+      "dark-focus-backdrop",
+      "upper-border",
+      "upper-moving-picture",
+      "upper-fixed-caption",
+      "lower-border",
+      "lower-moving-picture",
+      "lower-fixed-caption",
+      "front-border",
+      "front-moving-picture",
+      "front-fixed-caption",
+      "sentence-a",
+      "sentence-b"
+    ]
+  },
+  "replacement_limits": {
+    "fixed_source_glyphs": "not editable; new phrase requires approximate font or separately identified licensed original font",
+    "timing": "reuse native enter/hold/exit proportions, map to new word/semantic clock with no claim of exact same phrase animation",
+    "subject": "different footage must be reframed and reviewed rather than copied old face coordinates"
+  },
+  "unresolved": [
+    "Different genuine stock presenter, face/gestures/room; no original actor replay. Silent technical animation reconstruction, no voice/lip-sync claim.",
+    "Original font/project unknown. Private original fixed glyph art cannot be advertised as arbitrary editable original font.",
+    "Source native H264 compression and new H264 codec colors/antialiasing differ; no100% pixel claim.",
+    "Reference effective right panel ROI434×777 is normalized to1080×1920; original frame still used for timing/measurement, tutorial UI and promotional prices are omitted.",
+    "Blur sigma≈32native ROIpx and rear dim alpha≈.38 are estimates, background belongs to different real stock shot.",
+    "Moving face crops calibrated to PIP aspect; original clothing/lamp/face and specific speech cannot match.",
+    "Label glyphs retain only private fixed phrases; replacement wording requires separately reviewed editable font.",
+    "原效果区域434×777被映射为1080×1920，有0.7%长宽非均匀映射；原宣传双栏与价格/时间轴不复刻。",
+    "背景黑衣/灯房换为白衣/植物，虚焦亮度空间分布不同；模糊32原ROI像素和后排透明度0.38为估计，不能保证原材质一致。",
+    "固定标签白色笔画与源字体形状接近，阈值和黑边导致约1–2原ROI像素边缘差异；新文案不能继续复用原字形。"
+  ],
+  "other_source_segments": {
+    "status": "second-pass actual animated subvariants in progress; UI tutorials omitted as instructional material",
+    "full_span_overview": "Private measurement/artwork retained in the local study; use the stated portable parameters and licensed replacement assets.",
+    "native_ledger": "Private measurement/artwork retained in the local study; use the stated portable parameters and licensed replacement assets.",
+    "no_claim": "Selected window is not full tutorial reconstruction"
+  },
+  "calibration_scope": "Native details are working calibrations. Only the windows listed below are accepted for actual-frame review; pending geometry/branches remain work in progress."
+}

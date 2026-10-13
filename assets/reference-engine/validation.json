@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "release": "Unreleased native-frame reconstruction",
-  "recorded_at_utc": "2026-10-12T13:31:12.407982+00:00",
+  "release": "0.1.0 fixed talking-head workflow",
+  "recorded_at_utc": "2026-10-13T09:48:52.798073+00:00",
   "status": "machine_checks_passed_reconstruction_review_in_progress",
   "scope": "Public metadata for reproducible checks and explicitly bounded visual review. Private source media, extracted artwork and local evidence files are not distributed.",
   "engine_identity": {
@@ -90,7 +90,7 @@
       "unique_frame_intervals_rounded_9dp": 6,
       "minimum_interval_seconds": 0.03333333333332433,
       "maximum_interval_seconds": 0.06705729166665719,
-      "handling": "Retained by the inventory; the CFR reconstruction renderer rejects this input rather than manufacturing uniform timestamps."
+      "handling": "The original CFR renderer still rejects variable timing; the new reference_window_render.py native_window mode validates actual integerPTS/timebase, renders each frame with its own hold, and verifies every encoded output PTS/duration. Only the actual fixtures/windows below establish tested scope."
     },
     "agent_review_is_separate": true,
     "full_source_semantic_review_completed": false,
@@ -1469,5 +1469,321 @@
       "case01_final_v8_root_contact_page_digest": "4dfb46c2685b68ffe33e3f8d46aeab3bc84ee88869d9191499804f752856f3a6",
       "actual_browser_ui_v8": "412037d25477bea5d33ee3322add6bfd8ae153f45f8511db71f94b3c383b5114"
     }
+  },
+  "native_window_renderer": {
+    "engine_sha256": "d2d501648299b720ab5b4da91918f4ac65e2635a5e867921338a719a2e9d4061",
+    "ordered_files": [
+      {
+        "path": "assets/reference-engine/index.html",
+        "sha256": "88ae50e1e026179228be4b2ad07331b58bbdb25d429a9e01c03587c910cc64ec"
+      },
+      {
+        "path": "assets/reference-engine/reference.js",
+        "sha256": "88f9e76c7f6365645d5e8b0b39e8fff9249fef6b8295d0c603a332199af4b9d8"
+      },
+      {
+        "path": "scripts/reference_window_render.py",
+        "sha256": "0ffcbc266cb2758513fdbf5111972fe8d94a0be3e8b0d5aa315334f6d4b0aa59"
+      },
+      {
+        "path": "assets/huashu-engine/lib/fonts/NotoSansSC-800.woff",
+        "sha256": "b57f9c645b1a4967a3c8914ed41f24d109394a8175e36af08f93e40803e84664"
+      }
+    ],
+    "timing_fixture": {
+      "source_rank": 3,
+      "native_window": [
+        342,
+        358
+      ],
+      "frames": 16,
+      "duration": 0.55625,
+      "variable_interval_ticks": 864,
+      "time_base": "1/15360",
+      "output_sha256": "9135ff9b44134aed4d482b982c1fc0be1d9a19c17faa3a704cea8b35f11d1502",
+      "all_output_PTS_and_holds": "passed",
+      "reverse_seek_determinism": "passed",
+      "incorrect_uniform_clock": "rejected"
+    },
+    "production_integration": {
+      "output_sha256": "1c8749be913d5e9a9d507d990da98fa4ce6b5ffc5eda07023166caa1dfe4d5c3",
+      "final_project_frames": 120,
+      "final_project_seconds": 4,
+      "clip_native_window": [
+        342,
+        366
+      ],
+      "clip_native_frames": 24,
+      "clip_duration": 0.8229166666666667,
+      "output_full_decode": "passed",
+      "cache_replay_same_hash": true,
+      "actual_encoded_samples_viewed": [
+        0,
+        0.8,
+        1.05,
+        1.7,
+        2.1,
+        3.8
+      ],
+      "decoded_audio_correlation": 0.9999959269987843,
+      "audio_scope": "Accepted fixture master waveform, not listening or mouth/lip-sync verification",
+      "visual_scope": "Synthetic tile clip inserted between recurrent stock presenter. Pipeline/lock proof, not proof of30 style fidelity or a real user production."
+    }
+  },
+  "fixed_style_publication": {
+    "version": "0.1.0",
+    "stable_entries": 30,
+    "mechanisms": 28,
+    "entry_to_recipe_sha256": {
+      "TH-DY-01": "1d1274b4b827c8d38fe0bb5adc697eb395cda6b0c260de3b9c3ef67f89ce2bc8",
+      "TH-DY-02": "0a1b9f295a70f57c962f67590b7cca987d5dbcc62bba8545c55596a6043bdc84",
+      "TH-DY-03": "5f4715d0f962008cf1082155b733784550e395e9a427e37f55db54ba4bd83620",
+      "TH-DY-04": "5ae66d7aaa6ca4d518c189f78d2975e1c3563405b72fcfcdaa6ab1a7d44144fd",
+      "TH-DY-05": "a75df2c9bd1258199db4492c87656e1a10dd71cf0b3c5ab2d232882b55d88000",
+      "TH-DY-06": "90a9f007e58b8cd2ceeeb3e57191018a6ad02ea92072aecb22364ee3ab1dd2f4",
+      "TH-DY-07": "66140ed47396cd318003493a31f58c9c0199c8880e78935f2aa7a206bfc8f199",
+      "TH-DY-08": "bef851231033f60e6e2999c48349758f8db51a87d19d28a299bc56ab73ea6df1",
+      "TH-DY-09": "00611fee59019ced959767992751b76c383f6c3f3cabe7aadb6c7aa9bc7fb37f",
+      "TH-DY-10": "30f56d9b0f73009672c06175370d35ab81a62f9349cac6b7aca4ee1dc1781824",
+      "TH-DY-11": "feb3aa7420bb6f0348746d22f410541f3ffad9c2c5d7c3bf2819acaa6238b48c",
+      "TH-DY-12": "655fd7a6c485250c71fe2b7d7e70ae5499c69554e1d601d8b978fab762116ff7",
+      "TH-DY-13": "712d0a5fcaab10286538c29811e7429e18b071078db8480afea0aa306b3277c5",
+      "TH-DY-14": "bc0f52803c2a714af799b64db955170f85295a879b814b1fe10f234b3868e7eb",
+      "TH-DY-15": "39aa6fe748867ab6b9f083ac8207ddb49691caf08a65c466ecd62e835998a3eb",
+      "TH-DY-16": "bb9c446b0acfc89e1cf1ab2766f75fea9046f5a2a9dd00e094e657a089346c25",
+      "TH-DY-17": "2229f618998da09ff94db8c4d7c692f6ff2a16fdaa358a780778a55dae4d6bb4",
+      "TH-DY-18": "e67459163283cb6da4716c4a8965be789f1c3b7c32645a06b6ccc6d7c85a7344",
+      "TH-DY-19": "e3b3aba78c2c6aa38455c3b4312aacf0b1a5327080b79e772a2c3aeeac180cbe",
+      "TH-DY-20": "4778e5d49bb67f7fc737604646e855a4f1f7f92e0d6410d5090075aa9541d75d",
+      "TH-DY-21": "c915641f7652532c8f0dab48832ae8701f6983d699aed3eca896f5153aead1d8",
+      "TH-DY-22": "18efd07ac3dd827b38091a67d04467422b575ce2dd69325f478f5518054a0c5a",
+      "TH-DY-23": "c1aa16b8569c113e5cca7d17707a2ed0c651d599963a735ed144354eb240f3ba",
+      "TH-DY-24": "6e80d0cf0a441cfdc683e193a40f9948c7c95394aeaade781c30a4775b278b20",
+      "TH-DY-25": "c819ee77a7f99d2fd2d62962b4e398944a08b449814167b95d825bfce76d6c94",
+      "TH-DY-26": "6d7a41a129f595488fbb84b5d0168b17c1b69624fd820f599324e6d90a3660ce",
+      "TH-DY-27": "c26ebce67f20767ba5b5ceb9b05b8a62ee7e57838234c9f7cf5b086b337832cb",
+      "TH-DY-28": "79af417069204010c8df493be17987217c61c3fe3d4d53dc358ba74c3cf3c169",
+      "TH-DY-29": "c8bfa9a2b77c9d718f3ef2278c65fcf3bf6997d35f4e99a29ca5bc8b24b40c90",
+      "TH-DY-30": "7153550281f90b2f54df63fba8f8dc5014e58c0e0db21f936c3d60848404ab43"
+    },
+    "native_reviewed_windows": [
+      {
+        "style_id": "TH-DY-01",
+        "variant": "01 · 真人三段式、逐字字幕与闪光扩框",
+        "first_frame": 681,
+        "frames": 141,
+        "duration": 4.7,
+        "output_sha256": "177f33e201668b75c68b093ad0cc3202e1a418e95d5d12260ed29cd534eaf56b",
+        "frame_review_scope": "原生141帧逐帧复审 · 真人动态抠像 · 仍有残差",
+        "residuals": [
+          "早期外标题入场仍有差异；主标题750–755的平面模糊与原片三维渐变尚不一致，大标题首字三的独立横向压缩未恢复。",
+          "闪光中的被遮挡区域采用估计，光斑轮廓较平滑；775–776副标题位置误差约2–4像素，亮度仍不同。",
+          "大卡顶部修补纹理仍有接缝；手机底部细边与原纹理不同，第4行说明右侧白衣边界和描边有估计。",
+          "原字体与作者工程未知，研究片用固定原字形；任意换字仍需单独核验。",
+          "城市图在原人物遮挡/视野外的部分及隐藏网格有估计，数据叠层动画未完全恢复。",
+          "人物长相、表演、耳机轮廓和拍摄光线不同；此片证明动画迁移，不证明口型同步。",
+          "H.264导出存在颜色/边缘残差，具体见实测报告，当前不能称百分百一致。"
+        ]
+      },
+      {
+        "style_id": "TH-DY-02",
+        "variant": "02 · 真人连续推近、绿字错峰与漫画回弹",
+        "first_frame": 0,
+        "frames": 60,
+        "duration": 2.0,
+        "output_sha256": "510e7e2b233f9e35d884309ec458b07453d795c9c5e4fb01a13743b51b8a98ef",
+        "frame_review_scope": "原生60帧逐帧复审 · 真人实拍",
+        "residuals": [
+          "原字体未知，当前采用固定原字形，任意换字需要单独核验。",
+          "部分重叠字边与漫画轮廓仍有约3–7px残差。",
+          "导出后绿、黄、蓝部分RGB通道差0–4，未达到像素一致。",
+          "人物表演与拍摄背景不同，原片190.3秒其余动画尚未全部精细重建。"
+        ]
+      },
+      {
+        "style_id": "TH-DY-04",
+        "variant": "主窗口",
+        "first_frame": 219,
+        "frames": 145,
+        "duration": 4.833333333333333,
+        "output_sha256": "0b0d478d360732ab975e666143c71516836075ff652b7eb799191af8e99c26ee",
+        "frame_review_scope": "partial_fidelity_reviewed",
+        "residuals": [
+          "Reference face, gestures and photographic room are replaced by licensed real moving stock; silence is technical animation study, no lip-sync claim.",
+          "Source font family and vector extrusion unavailable. Private isolated glyphs preserve only fixed phrases; new wording uses approximate editable font and measured arc geometry.",
+          "Upper type particle entrance is retained as isolated per-native-frame colored/black foreground; no editable original project or arbitrary phrase equivalence.",
+          "Motion-blurred circle entry F230–232 manually bounded; white-ring fit F233..302 measures compressed edges with 1–3px uncertainty.",
+          "Background sampled from clear lower strip and tiled; native grid colors/textural role retained but original hidden texture not recovered.",
+          "Different stock aspect/crop may show headset instead of source microphone; subject content remains independent.",
+          "Initial arrow chart uses green/black foreground only; compressed edge transparency and shadows approximate.",
+          "White ring entry fade/blur F230–234 is visually bounded; exact motion-direction blur unavailable.",
+          "Original creator identification is deliberately replaced by generic demo text in same native region; different branding content/approximate font.",
+          "Caption per-character gray forecast trail under190RGB is not recovered from photographic background; private white foreground preserves actual revealed characters.",
+          "Background actor/type-covered regions estimated from clear periodic grid; known reference background retained, edge seams may remain.",
+          "Subject hair-to-chin scale calibrated to measured native original height ratio0.634, using dynamic RVM matte and separate widened plant background. Original microphone/hands and stock headphones differ.",
+          "Plant background is enlarged/rebuilt clean source strip; not recovered original room. Subject chest is visible but no stock hand gesture is invented.",
+          "RVM headphone edge can be partly transparent; glyphs and border are separate, accessory alpha residual remains.",
+          "Original stock frame cuts off shoulders at image sides; per-frame torso-only alpha taper softens visible crop seam. Missing hands/uncaptured body cannot be recovered; no invented gesture.",
+          "Next-caption gray forecast uses final private phrase stencil at estimated20%opacity dark-gray fill; original per-character gray opacity under raw body is not recoverable. White revealed characters retain native positions/timing with1–2px contour uncertainty.",
+          "Last native F363 begins next enlarged caption; fixed glyph restored, subsequent full semantic phrase is a separate unrebuilt source variant, not represented by selected circle window.",
+          "F230–232原片明显带方向性冲刷，新片使用估计Gaussian模糊和手测圆窗边界，方向核和初始中心轨迹仍有差异。",
+          "可见网格取源清晰区域；隐藏人物/字后网格用周期平铺估计，局部纹理相位/拼接色缝仍可能不同。",
+          "原男生双手/麦克风与真实stock耳麦、嘴型不同；新素材胸口可见、双手未拍到；重建背景为放大植物清晰条，不是原房间。",
+          "逐字灰色预告以最终固定字形20%opacity估计，F321–348源照片下灰字强度无法精确分离；白字边缘1–2px、源压缩阴影和字体材质有差异。",
+          "个人履历标签改成研究示例品牌信息，文字内容和字体不同；F363后下一语义段未由此主窗口重建。"
+        ]
+      },
+      {
+        "style_id": "TH-DY-05",
+        "variant": "主窗口",
+        "first_frame": 480,
+        "frames": 181,
+        "duration": 6.033333333333333,
+        "output_sha256": "32c4de72dc585d94ba5c9f51aae29766bc00cffcc73000f86693e19940389943",
+        "frame_review_scope": "partial_fidelity_reviewed",
+        "residuals": [
+          "Different genuine stock presenter, face/gestures/room; no original actor replay. Silent technical animation reconstruction, no voice/lip-sync claim.",
+          "Original font/project unknown. Private original fixed glyph art cannot be advertised as arbitrary editable original font.",
+          "Source native H264 compression and new H264 codec colors/antialiasing differ; no100% pixel claim.",
+          "Reference effective right panel ROI434×777 is normalized to1080×1920; original frame still used for timing/measurement, tutorial UI and promotional prices are omitted.",
+          "Blur sigma≈32native ROIpx and rear dim alpha≈.38 are estimates, background belongs to different real stock shot.",
+          "Moving face crops calibrated to PIP aspect; original clothing/lamp/face and specific speech cannot match.",
+          "Label glyphs retain only private fixed phrases; replacement wording requires separately reviewed editable font.",
+          "原效果区域434×777被映射为1080×1920，有0.7%长宽非均匀映射；原宣传双栏与价格/时间轴不复刻。",
+          "背景黑衣/灯房换为白衣/植物，虚焦亮度空间分布不同；模糊32原ROI像素和后排透明度0.38为估计，不能保证原材质一致。",
+          "固定标签白色笔画与源字体形状接近，阈值和黑边导致约1–2原ROI像素边缘差异；新文案不能继续复用原字形。"
+        ]
+      },
+      {
+        "style_id": "TH-DY-13",
+        "variant": "intro",
+        "first_frame": 0,
+        "frames": 50,
+        "duration": 1.6666666666666667,
+        "output_sha256": "ae869f8c7e2f876eb8b76ec2077ea2f44ff53e70579f0969e20fa4281ee61219",
+        "frame_review_scope": "完整开头50原生帧已实看·保留具体残差·用户待审",
+        "residuals": [
+          "Whole blue word travels correctly in general direction, but some early clipped characters use manual anchors; phase/rotations differ visibly from source on first17frames.",
+          "181 of250 glyph-frames have clean native template fits. Remaining69 are clipped/ambiguous estimates;5-degree rotation quantization and antialias/shadow differ. Neighbour punctuation/background speckle extraction defects were repaired.",
+          "Original white dashed path around source woman differs from new stock man/headset anatomy. The repaired outer-alpha contour is visible; irregular alpha/headset edges and dash joins remain.",
+          "Private fixed profile card has reconstructed occluded regions; avatar/bio and bottom/footer inpainting remain visibly different. It is a static replaceable reference illustration, not recovered original vectors.",
+          "Whole-line right-to-left clipped entry is verified,36frames fitted. Shadow softening and early/faded crop positions are estimated; repaired narrow black edge is still harder than original soft shadow.",
+          "Real moving stock man/room/gesture and extended paper replace source woman, blurred comparison footage and editing timeline. Stock native25fps is held at source30fps; no speech/lip-sync claim."
+        ]
+      },
+      {
+        "style_id": "TH-DY-16",
+        "variant": "主窗口",
+        "first_frame": 5106,
+        "frames": 126,
+        "duration": 4.2,
+        "output_sha256": "b5ee03ed25209c7f38fca16967e5e58046841b9f5b406dad800071727ff57c55",
+        "frame_review_scope": "partial; user review pending",
+        "residuals": [
+          "Original preview is a paused authoring-layout demonstration; no native continuous entrance/exit is recoverable from this window. The recipe is intentionally labelled static layout.",
+          "Only effective native preview ROI 187x332 is reconstructed; software timeline, controls and selection handles are excluded. UI magnification does not add detail.",
+          "Native original grid spacing and group icon/subtitle geometry measured; thin border/material antialias has compression uncertainty.",
+          "Different real photographed presenter and source room, naturally moving at25fps held on30fps output; original paused actress is not copied.",
+          "Fixed private reference sentence/icon is not a recovered arbitrary editable original font/vector asset."
+        ]
+      },
+      {
+        "style_id": "TH-DY-19",
+        "variant": "主窗口",
+        "first_frame": 3355,
+        "frames": 34,
+        "duration": 1.1333333333333333,
+        "output_sha256": "8dc90f9393c5e36a9dc6cd68d1e8df79f07e3fd85507a057e6e10d796622ba67",
+        "frame_review_scope": "partial; user review pending",
+        "residuals": [
+          "This is a static keyword layout demonstrated in authoring UI, not a discovered entrance animation.",
+          "Effective preview native469x795; software controls, handles and surrounding timeline are excluded; enlarged review cannot add original detail.",
+          "UI visibly names 新青年体 and shadow opacity60%, blur3%, distance2%; the original font file/vector stroke is not available, and percentages are normalized to observed glyph scale.",
+          "Private fixed source glyphs do not establish arbitrary editable text fidelity; Noto editable fallback is explicitly approximate.",
+          "Replacement is moving real stock footage, original person/room/gestures differ; silent style demonstration has no lip-sync claim.",
+          "SourceF3355 is white and F3356 turns pale gold via colour picker; output fixes the selected final gold look across the34frame style sample. This is an explicit authoring-state difference."
+        ]
+      },
+      {
+        "style_id": "TH-DY-22",
+        "variant": "主窗口",
+        "first_frame": 105,
+        "frames": 62,
+        "duration": 2.066666666666667,
+        "output_sha256": "41e198496aca62328f569e4ed72ceb4e3ab4d650ce1a814c3ad66c47dcc72bce",
+        "frame_review_scope": "该原生效果窗口已审；其他实际子变体制作中",
+        "residuals": [
+          "Different filmed actor/set-matte inpainted concealed areas",
+          "Songti SC inferred font; caption reveal and text matte approximate",
+          "Exact red glow/particle shader not uniquely recovered; line contaminated nodes estimated",
+          "Tutorial timeline area974..1440 deliberately replaced by read-only demonstration note",
+          "This chart variant only covers native105..166; other actual effects require their own variants",
+          "Reason prefix and emphasized last word now separate; exact dissolve/material still partial",
+          "Arrow direction/position now measured pernative rather than permanently down; extrapolated alphaedge remains approximate",
+          "v5 captions now source SIFT per-frame affine; early first-caption115 low-confidence, opacity first-caption ramp remains estimated from native appearance",
+          "Caption glyphs editable Songti approximate; source native alpha outline unknown; reason per-frame fade inferred by transformed glyph RGB",
+          "v7 triangle actual3-Canny-edge fits pernative; failed fits bounded estimated declared in arrow-measurements-v7; colour fill/glow antialias remain approximate",
+          "Initial new population glyph faintly visible112..114 before robust SIFT starts115: first visible112 preserved,3 small affine/opacity poses estimated explicitly. Earlier threshold-based start115 incorrectly hid faint glyph; corrected."
+        ]
+      },
+      {
+        "style_id": "TH-DY-23",
+        "variant": "主窗口",
+        "first_frame": 826,
+        "frames": 40,
+        "duration": 1.3333333333333333,
+        "output_sha256": "75ac0cd7db48ad3a12e3529dbff63039075fb3da8b6c78ca9192bb1477eb01f6",
+        "frame_review_scope": "该原生效果窗口已审；其他实际子变体制作中",
+        "residuals": [
+          "Actual new filmed man differs from source woman and facial/arm performance; no lip-sync",
+          "Room behind source presenter estimated by static inpainting",
+          "Native832..862 clean13-edge crack geometry measured; early828..831 interior offsets inferred from top-width, antialias/rotation residual remains",
+          "Source uses Songti-like captions and blue ordinal; original font/shadow unknown",
+          "All source visual-filter branches not yet rendered, face-generating/deformation branch is distinct from editing grammar",
+          "Native855 is first absent for BOTH info captions and ordinal, corrected by source pixel/visual evidence; prior856 caption measurement was wrong",
+          "Generated captions fit source white-fill bbox; exact BlackSongti font outline still not original",
+          "Ordinal v3 generated rounded gradient and sans glyph now follow measured static card, exact bevel/shadow remains approximate"
+        ]
+      },
+      {
+        "style_id": "TH-DY-25",
+        "variant": "主窗口",
+        "first_frame": 615,
+        "frames": 54,
+        "duration": 1.8,
+        "output_sha256": "3e928ccd3fa10cdd2e68f8699c4e3aaa30d43e9d2f1171125879827af4bc67fe",
+        "frame_review_scope": "该原生效果窗口已审；其他实际子变体制作中",
+        "residuals": [
+          "Source live actor is young man black shirt, replacement real filming man cream shirt/headset; different physical performance, no lip-sync",
+          "Original plain wall concealed by source actor is inferred",
+          "Static original orange glyph art extracted privately, header lower-middle strokes hidden by old head cannot uniquely recover; new dynamic head may expose differences",
+          "Original black/bevel shadow and anti-alias exact alpha not fully isolated; generated matte white grain independent and approximate",
+          "Original source font unknown; unchanged private-source glyph preview is fixed, arbitrary new words use inferred font/style",
+          "This window615..668 reconstructs actual effect entry/fade/foreground phrase/hard exit666; remaining real source effects require own variants",
+          "v2 fixes replacement head canvas placement: dynamic alpha top aligned to original white-outline top+inset; post666 real camera cut head top independently measured from dark head component. Original exact actor width/gesture remains different."
+        ]
+      }
+    ],
+    "all_source_subvariants_complete": false,
+    "arbitrary_selfie_or_new_words_passed": false,
+    "styles_require_agent_authored_semantic_adaptation": true,
+    "private_source_artworks_fonts_and_models_distributed": false
+  },
+  "workflow_refactor": {
+    "default_steps": [
+      "receive_material",
+      "edit_native_AV_and_captions",
+      "choose_fixed_style_in_conversation",
+      "semantic_arrangement",
+      "render_and_review"
+    ],
+    "independent_document_review": "No repeated source study, art-style selection, whole-library comparison or compulsory representative clip for an ordinary already-chosen style. Required AV/captions/evidence/output review retained.",
+    "optional_branches": [
+      "script_to_master_via_configured_providers",
+      "new_reference_learning",
+      "art_insert"
+    ],
+    "gallery_inputs": 0,
+    "gallery_internal_recipe_JSON_blocks": 0
   }
 }

@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-22",
+  "name": "前景趋势图卡与证据人物",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "partial_native_windows_reviewed",
+    "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+  },
+  "source": {
+    "rank": 22,
+    "url": "https://www.douyin.com/video/7584120670599056675",
+    "author": "夏木南生",
+    "title": "第22期：自学口播剪辑，从0基础成为资深网感剪辑师，跟着@剪辑师晨晨 拉片30期",
+    "canonical_source_rank": 22
+  },
+  "semantic_use": [
+    "用简短证据支撑数字或变化。"
+  ],
+  "observed_motion": "精剪栏中的人物胸前出现小图表与红色趋势线。",
+  "basic_implementation": {
+    "grammar": "d22_chart_overlay",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "presenter_video",
+      "video_start",
+      "values",
+      "accent"
+    ],
+    "design_variables": [
+      "数据点",
+      "卡片位置",
+      "绘线时间",
+      "说明"
+    ],
+    "scope": "复刻画面中的布局及剪辑机制，以替换人物和内容重建；教程界面、原片人物和生成模型变脸不属于此实现。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "presenter_video",
+    "video_start",
+    "values",
+    "accent"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [
+      {
+        "variant": "主窗口",
+        "first_frame": 105,
+        "frames": 62,
+        "duration": 2.066666666666667,
+        "output_sha256": "41e198496aca62328f569e4ed72ceb4e3ab4d650ce1a814c3ad66c47dcc72bce",
+        "frame_review_scope": "该原生效果窗口已审；其他实际子变体制作中",
+        "residuals": [
+          "Different filmed actor/set-matte inpainted concealed areas",
+          "Songti SC inferred font; caption reveal and text matte approximate",
+          "Exact red glow/particle shader not uniquely recovered; line contaminated nodes estimated",
+          "Tutorial timeline area974..1440 deliberately replaced by read-only demonstration note",
+          "This chart variant only covers native105..166; other actual effects require their own variants",
+          "Reason prefix and emphasized last word now separate; exact dissolve/material still partial",
+          "Arrow direction/position now measured pernative rather than permanently down; extrapolated alphaedge remains approximate",
+          "v5 captions now source SIFT per-frame affine; early first-caption115 low-confidence, opacity first-caption ramp remains estimated from native appearance",
+          "Caption glyphs editable Songti approximate; source native alpha outline unknown; reason per-frame fade inferred by transformed glyph RGB",
+          "v7 triangle actual3-Canny-edge fits pernative; failed fits bounded estimated declared in arrow-measurements-v7; colour fill/glow antialias remain approximate",
+          "Initial new population glyph faintly visible112..114 before robust SIFT starts115: first visible112 preserved,3 small affine/opacity poses estimated explicitly. Earlier threshold-based start115 incorrectly hid faint glyph; corrected."
+        ]
+      }
+    ],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  },
+  "palette": {
+    "card_background": "#080002",
+    "graph_core": "#ffc2b6",
+    "glow": "#ff0007",
+    "header": "#fdf88c",
+    "colour_status": "sampled native RGB plus declared shader approximation"
+  },
+  "font": {
+    "family": "Songti SC/STSong",
+    "status": "inferred serif family; exact source font unverified",
+    "fallback": "NotoSansSC800 for engine annotations, different from source"
+  },
+  "layout": {
+    "native_canvas": [
+      1080,
+      1440
+    ],
+    "two_columns": [
+      0,
+      540
+    ],
+    "presenter_region": [
+      0,
+      210,
+      538,
+      792
+    ],
+    "chart_xywh": "per-frame measurements",
+    "tutorial_region_excluded": [
+      0,
+      974,
+      1080,
+      1440
+    ],
+    "native_window": [
+      105,
+      167
+    ],
+    "active_effect_canvas_ratio": {
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 0.6763888888888889
+    },
+    "chart_xywh_ratio": [
+      0.11388888888888889,
+      0.37083333333333335,
+      0.30092592592592593,
+      0.13472222222222222
+    ]
+  },
+  "motion_rules": [
+    {
+      "native_frame": 112,
+      "event": "趋势卡硬显；人口字幕微弱首显后淡入/下落"
+    },
+    {
+      "native_frame": 141,
+      "event": "第二句从上落入并移至第一句下方；第一句向上缩小"
+    },
+    {
+      "native_frame": 162,
+      "event": "图表硬撤，只保留双句文字"
+    },
+    {
+      "native_frame": 164,
+      "event": "两句文字硬撤，真实人物持续"
+    }
+  ],
+  "source_structure": [
+    {
+      "id": "talking-base",
+      "seconds": [
+        0,
+        20.833333
+      ],
+      "status": "base layer studied; full-source gesture not copied"
+    },
+    {
+      "id": "city-insert",
+      "seconds": [
+        1,
+        2.4
+      ],
+      "status": "variant required; not yet rendered"
+    },
+    {
+      "id": "chart",
+      "native_frames": [
+        112,
+        162
+      ],
+      "seconds": [
+        3.7333333333333334,
+        5.4
+      ],
+      "status": "native complete enter/hold/exit reconstructed in this variant"
+    },
+    {
+      "id": "circular-presenter-evidence",
+      "seconds": [
+        6.5,
+        11.5
+      ],
+      "status": "variant required; not yet rendered"
+    },
+    {
+      "id": "rounded-presenter-uptrend",
+      "seconds": [
+        13.4,
+        16.7
+      ],
+      "status": "variant required; not yet rendered"
+    },
+    {
+      "id": "map-evidence",
+      "seconds": [
+        17.166667,
+        18.9
+      ],
+      "status": "variant required; not yet rendered"
+    },
+    {
+      "id": "tutorial-timeline",
+      "seconds": [
+        0,
+        20.833333
+      ],
+      "status": "tutorial UI deliberately excluded, not a motion grammar"
+    }
+  ],
+  "calibration_scope": "Native details are working calibrations. Only the windows listed below are accepted for actual-frame review; pending geometry/branches remain work in progress."
+}

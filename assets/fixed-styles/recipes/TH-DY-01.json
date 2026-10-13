@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-01",
+  "name": "三段式重组",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "partial_native_windows_reviewed",
+    "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+  },
+  "source": {
+    "rank": 1,
+    "url": "https://www.douyin.com/video/7660514489481850107",
+    "author": "阿哲不收手",
+    "title": "7种口播板式设计",
+    "canonical_source_rank": 1
+  },
+  "semantic_use": [
+    "同一句口播需要同时交代人、主题和案例。"
+  ],
+  "observed_motion": "上方主题画面、中段人物与重点、下方证据画面依次组成三段。人物是中轴，不被整屏素材替掉。",
+  "basic_implementation": {
+    "grammar": "d01_three_band",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "cutout",
+      "images",
+      "evidence_labels",
+      "accent"
+    ],
+    "design_variables": [
+      "三个区域比例",
+      "人物区域",
+      "上下素材",
+      "区域进场时间"
+    ],
+    "scope": "布局与进场机制；不用原片人物和画面。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "cutout",
+    "images",
+    "evidence_labels",
+    "accent"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [
+      {
+        "variant": "01 · 真人三段式、逐字字幕与闪光扩框",
+        "first_frame": 681,
+        "frames": 141,
+        "duration": 4.7,
+        "output_sha256": "177f33e201668b75c68b093ad0cc3202e1a418e95d5d12260ed29cd534eaf56b",
+        "frame_review_scope": "原生141帧逐帧复审 · 真人动态抠像 · 仍有残差",
+        "residuals": [
+          "早期外标题入场仍有差异；主标题750–755的平面模糊与原片三维渐变尚不一致，大标题首字三的独立横向压缩未恢复。",
+          "闪光中的被遮挡区域采用估计，光斑轮廓较平滑；775–776副标题位置误差约2–4像素，亮度仍不同。",
+          "大卡顶部修补纹理仍有接缝；手机底部细边与原纹理不同，第4行说明右侧白衣边界和描边有估计。",
+          "原字体与作者工程未知，研究片用固定原字形；任意换字仍需单独核验。",
+          "城市图在原人物遮挡/视野外的部分及隐藏网格有估计，数据叠层动画未完全恢复。",
+          "人物长相、表演、耳机轮廓和拍摄光线不同；此片证明动画迁移，不证明口型同步。",
+          "H.264导出存在颜色/边缘残差，具体见实测报告，当前不能称百分百一致。"
+        ]
+      }
+    ],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-21",
+  "name": "江湖描边·字幕副本碎片爆开",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "mechanism_preview_only",
+    "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+  },
+  "source": {
+    "rank": 21,
+    "url": "https://www.douyin.com/video/7440671641195056422",
+    "author": "小王的剪辑片塲",
+    "title": "IP口播如何用剪映剪出网感和综艺感？",
+    "canonical_source_rank": 21
+  },
+  "semantic_use": [
+    "否定、推翻或情绪爆发。"
+  ],
+  "observed_motion": "完整文字副本保留在上层，另一份字碎片爆开并向外离散。",
+  "basic_implementation": {
+    "grammar": "d21_shatter_type",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "presenter_video",
+      "video_start",
+      "accent"
+    ],
+    "design_variables": [
+      "关键词",
+      "碎片方向",
+      "爆开时间",
+      "离散距离"
+    ],
+    "scope": "复刻画面中的布局及剪辑机制，以替换人物和内容重建；教程界面、原片人物和生成模型变脸不属于此实现。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "presenter_video",
+    "video_start",
+    "accent"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  },
+  "palette": {
+    "white_fill": [
+      255.0,
+      251.0,
+      243.0
+    ],
+    "outline_maroon": [
+      128,
+      64,
+      55
+    ],
+    "background": "live footage"
+  },
+  "font": {
+    "source_identified": "江湖体+白描边 AA437 label visible",
+    "private_fixed_glyph": true,
+    "editable_fallback": "NotoSansSC-800, approx shape; keep maroon inner outline/white outer shell"
+  },
+  "layout": {
+    "canvas": [
+      1080,
+      1440
+    ],
+    "source_crop_xywh": [
+      0,
+      0,
+      552,
+      923
+    ],
+    "replica_crop_xywh": [
+      0,
+      0,
+      552,
+      923
+    ],
+    "native_effective_size": [
+      552,
+      923
+    ],
+    "normalized_layout": {
+      "person": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "main_caption": [
+        0.20833333333333334,
+        0.6045503791982665,
+        0.6340579710144928,
+        0.10400866738894908
+      ],
+      "lower_caption": [
+        0.30978260869565216,
+        0.7215601300108342,
+        0.3786231884057971,
+        0.07150595882990249
+      ]
+    }
+  },
+  "motion_rules": {
+    "native_window": [
+      351,
+      373
+    ],
+    "frames": 22,
+    "fps": 30,
+    "duplicate_blur": "burst begins aboutsource359, blur resolves while a copy remains intact",
+    "fragments": 42,
+    "per_frame_tracks": "native connected components in every22frame, independent sprites"
+  },
+  "source_structure": [
+    {
+      "seconds": [
+        0,
+        11.8
+      ],
+      "effects": [
+        "outline captions",
+        "blur/scale/slide emphasis"
+      ],
+      "covered": false
+    },
+    {
+      "seconds": [
+        11.7,
+        12.5
+      ],
+      "effects": [
+        "subtitle duplicate shatter",
+        "intact copy",
+        "glow"
+      ],
+      "covered": true,
+      "native_window": [
+        351,
+        373
+      ]
+    },
+    {
+      "seconds": [
+        12.5,
+        13.5
+      ],
+      "kind": "software preset instruction, no UI copy"
+    },
+    {
+      "seconds": [
+        13.5,
+        60
+      ],
+      "effects": [
+        "caption slide",
+        "text scaling",
+        "blur enter/exit"
+      ],
+      "covered": false
+    },
+    {
+      "seconds": [
+        64,
+        77.86
+      ],
+      "kind": "sound effect library instruction",
+      "copy_UI": false
+    }
+  ],
+  "calibration_scope": "Native details are working calibrations. Only the windows listed below are accepted for actual-frame review; pending geometry/branches remain work in progress."
+}

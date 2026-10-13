@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-25",
+  "name": "橙金大字置于人物背后与动态白描边",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "partial_native_windows_reviewed",
+    "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+  },
+  "source": {
+    "rank": 25,
+    "url": "https://www.douyin.com/video/7491963688690175292",
+    "author": "无情",
+    "title": "口播如何剪出网感⁉️详细教程‼️看完这条视频就够了😎",
+    "canonical_source_rank": 15
+  },
+  "semantic_use": [
+    "与第15条同一层级机制，保留描边变体。"
+  ],
+  "observed_motion": "教程示范重点字幕放于人物后方，人物有白色描边。",
+  "basic_implementation": {
+    "grammar": "d15_behind_type",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "cutout",
+      "outline",
+      "accent"
+    ],
+    "design_variables": [
+      "背景词",
+      "人物描边",
+      "层级",
+      "字号"
+    ],
+    "scope": "复刻画面中的布局及剪辑机制，以替换人物和内容重建；教程界面、原片人物和生成模型变脸不属于此实现。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "cutout",
+    "outline",
+    "accent"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [
+      {
+        "variant": "主窗口",
+        "first_frame": 615,
+        "frames": 54,
+        "duration": 1.8,
+        "output_sha256": "3e928ccd3fa10cdd2e68f8699c4e3aaa30d43e9d2f1171125879827af4bc67fe",
+        "frame_review_scope": "该原生效果窗口已审；其他实际子变体制作中",
+        "residuals": [
+          "Source live actor is young man black shirt, replacement real filming man cream shirt/headset; different physical performance, no lip-sync",
+          "Original plain wall concealed by source actor is inferred",
+          "Static original orange glyph art extracted privately, header lower-middle strokes hidden by old head cannot uniquely recover; new dynamic head may expose differences",
+          "Original black/bevel shadow and anti-alias exact alpha not fully isolated; generated matte white grain independent and approximate",
+          "Original source font unknown; unchanged private-source glyph preview is fixed, arbitrary new words use inferred font/style",
+          "This window615..668 reconstructs actual effect entry/fade/foreground phrase/hard exit666; remaining real source effects require own variants",
+          "v2 fixes replacement head canvas placement: dynamic alpha top aligned to original white-outline top+inset; post666 real camera cut head top independently measured from dark head component. Original exact actor width/gesture remains different."
+        ]
+      }
+    ],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  },
+  "palette": {
+    "gold_header_median_native": [
+      243.0,
+      171.0,
+      10.0
+    ],
+    "gold_foreground_median_native": [
+      244.0,
+      169.0,
+      8.0
+    ],
+    "outline": [
+      255,
+      255,
+      255
+    ],
+    "wall": "private visible static reference/inferred hidden field"
+  },
+  "font": {
+    "family": "Songti SC inferred for original-serif; NotoSansSC800 engine fallback",
+    "exact_author_font": "unknown",
+    "private_original_glyphs": "only if specifically measured; not arbitrary editable font recovery"
+  },
+  "layout": {
+    "native_canvas": [
+      1080,
+      1920
+    ]
+  },
+  "motion_rules": [
+    {
+      "native_frame": 615,
+      "event": "hard cut from tutorial to filmed actor + white outline; header absent"
+    },
+    {
+      "native_frames_half_open": [
+        616,
+        621
+      ],
+      "event": "original static large golden header fades in behind presenter; measured upper glyph ROI LSalpha"
+    },
+    {
+      "native_frame": 635,
+      "event": "foreground golden second phrase appears"
+    },
+    {
+      "native_frame": 666,
+      "event": "hard remove back/front golden texts and white outline; ordinary A-roll with next section caption"
+    }
+  ],
+  "source_structure": [
+    {
+      "id": "open-gold-camera",
+      "seconds": [
+        0,
+        1.2
+      ],
+      "status": "variant_required"
+    },
+    {
+      "id": "circle",
+      "seconds": [
+        1.3,
+        2.3
+      ],
+      "status": "variant_required"
+    },
+    {
+      "id": "rolling-caption",
+      "seconds": [
+        3,
+        4.6
+      ],
+      "status": "variant_required"
+    },
+    {
+      "id": "gold-emphasis",
+      "seconds": [
+        7.5,
+        8.8
+      ],
+      "status": "variant_required"
+    },
+    {
+      "id": "comic-impact",
+      "seconds": [
+        11,
+        12.2
+      ],
+      "status": "variant_required"
+    },
+    {
+      "id": "behind-person",
+      "native_frames_half_open": [
+        615,
+        666
+      ],
+      "status": "complete recoverable entry/fade/layering/exit in current window, concealed letters partial",
+      "shared_source_rank": 15
+    },
+    {
+      "id": "post-effects",
+      "seconds": [
+        22.2,
+        36.5
+      ],
+      "branch": "rolling subtitle+plain A-roll/teachingUI",
+      "status": "source paragraph captions require analysis; UI excluded"
+    },
+    {
+      "id": "tutorial-ui",
+      "seconds": [
+        5,
+        20.5
+      ],
+      "status": "exclude editor UI; only actual effect windows are recreated"
+    }
+  ],
+  "shared_mechanism": {
+    "rank": 15,
+    "relation": "same original video family/mechanism, source25 own time window and entry retained"
+  },
+  "calibration_scope": "Native details are working calibrations. Only the windows listed below are accepted for actual-frame review; pending geometry/branches remain work in progress."
+}

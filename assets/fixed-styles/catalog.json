@@ -1,0 +1,690 @@
+{
+  "schema_version": 1,
+  "family": "douyin-talking-head",
+  "selection": "用户在对话指定稳定ID或完整名称；网页只展示。未指定时提醒，已有选择直接沿用。",
+  "identity_policy": "稳定ID不随网页排序改变；固定配方按语义版本冻结。重复机制保留各自入口并声明共享。",
+  "separate_art_library": "35艺术插镜配方单独管理；本库稳定口播入口30个，共享机制明确关联。",
+  "styles": [
+    {
+      "id": "TH-DY-01",
+      "name": "三段式重组",
+      "version": "0.1.0",
+      "aliases": [
+        "三段式重组"
+      ],
+      "source_rank": 1,
+      "source_url": "https://www.douyin.com/video/7660514489481850107",
+      "shared_motion_family": "d01_three_band",
+      "canonical_source_rank": 1,
+      "recipe": "recipes/TH-DY-01.json",
+      "recipe_sha256": "1d1274b4b827c8d38fe0bb5adc697eb395cda6b0c260de3b9c3ef67f89ce2bc8",
+      "readiness": {
+        "status": "partial_native_windows_reviewed",
+        "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+      },
+      "variants": [
+        {
+          "name": "01 · 真人三段式、逐字字幕与闪光扩框",
+          "native_frames": [
+            681,
+            822
+          ],
+          "reviewed": true
+        }
+      ]
+    },
+    {
+      "id": "TH-DY-02",
+      "name": "逐字方块落位",
+      "version": "0.1.0",
+      "aliases": [
+        "逐字方块落位"
+      ],
+      "source_rank": 2,
+      "source_url": "https://www.douyin.com/video/7475239247209876773",
+      "shared_motion_family": "d02_word_tiles",
+      "canonical_source_rank": 2,
+      "recipe": "recipes/TH-DY-02.json",
+      "recipe_sha256": "0a1b9f295a70f57c962f67590b7cca987d5dbcc62bba8545c55596a6043bdc84",
+      "readiness": {
+        "status": "partial_native_windows_reviewed",
+        "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+      },
+      "variants": [
+        {
+          "name": "02 · 真人连续推近、绿字错峰与漫画回弹",
+          "native_frames": [
+            0,
+            60
+          ],
+          "reviewed": true
+        }
+      ]
+    },
+    {
+      "id": "TH-DY-03",
+      "name": "上方证据下方人物",
+      "version": "0.1.0",
+      "aliases": [
+        "上方证据下方人物"
+      ],
+      "source_rank": 3,
+      "source_url": "https://www.douyin.com/video/7588918785366760107",
+      "shared_motion_family": "d03_evidence_over_speaker",
+      "canonical_source_rank": 3,
+      "recipe": "recipes/TH-DY-03.json",
+      "recipe_sha256": "5f4715d0f962008cf1082155b733784550e395e9a427e37f55db54ba4bd83620",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-04",
+      "name": "青绿网格弧字圆窗",
+      "version": "0.1.0",
+      "aliases": [
+        "环形人物弧形标题",
+        "青绿网格弧字圆窗"
+      ],
+      "source_rank": 4,
+      "source_url": "https://www.douyin.com/video/7521310927061290282",
+      "shared_motion_family": "d04_orbit_title",
+      "canonical_source_rank": 4,
+      "recipe": "recipes/TH-DY-04.json",
+      "recipe_sha256": "5ae66d7aaa6ca4d518c189f78d2975e1c3563405b72fcfcdaa6ab1a7d44144fd",
+      "readiness": {
+        "status": "partial_native_windows_reviewed",
+        "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+      },
+      "variants": [
+        {
+          "name": "主窗口",
+          "native_frames": [
+            219,
+            364
+          ],
+          "reviewed": true
+        }
+      ]
+    },
+    {
+      "id": "TH-DY-05",
+      "name": "黑底虚焦双层人物小窗",
+      "version": "0.1.0",
+      "aliases": [
+        "虚化背景与人物小窗",
+        "黑底虚焦双层人物小窗"
+      ],
+      "source_rank": 5,
+      "source_url": "https://www.douyin.com/video/7641860172691885318",
+      "shared_motion_family": "d05_focus_pip",
+      "canonical_source_rank": 5,
+      "recipe": "recipes/TH-DY-05.json",
+      "recipe_sha256": "a75df2c9bd1258199db4492c87656e1a10dd71cf0b3c5ab2d232882b55d88000",
+      "readiness": {
+        "status": "partial_native_windows_reviewed",
+        "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+      },
+      "variants": [
+        {
+          "name": "主窗口",
+          "native_frames": [
+            480,
+            661
+          ],
+          "reviewed": true
+        }
+      ]
+    },
+    {
+      "id": "TH-DY-06",
+      "name": "白色毛玻璃章节卡",
+      "version": "0.1.0",
+      "aliases": [
+        "毛玻璃章节卡",
+        "白色毛玻璃章节卡"
+      ],
+      "source_rank": 6,
+      "source_url": "https://www.douyin.com/video/7566494989913935130",
+      "shared_motion_family": "d06_frosted_chapter",
+      "canonical_source_rank": 6,
+      "recipe": "recipes/TH-DY-06.json",
+      "recipe_sha256": "90a9f007e58b8cd2ceeeb3e57191018a6ad02ea92072aecb22364ee3ab1dd2f4",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-07",
+      "name": "黑底缩圈与采访漫画",
+      "version": "0.1.0",
+      "aliases": [
+        "圆形蒙版缩圈",
+        "黑底缩圈与采访漫画"
+      ],
+      "source_rank": 7,
+      "source_url": "https://www.douyin.com/video/7671151180642290985",
+      "shared_motion_family": "d07_iris_mask",
+      "canonical_source_rank": 7,
+      "recipe": "recipes/TH-DY-07.json",
+      "recipe_sha256": "66140ed47396cd318003493a31f58c9c0199c8880e78935f2aa7a206bfc8f199",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-08",
+      "name": "暗玻璃三卡递进与暖闪",
+      "version": "0.1.0",
+      "aliases": [
+        "玻璃面板逐层堆叠",
+        "暗玻璃三卡递进与暖闪"
+      ],
+      "source_rank": 8,
+      "source_url": "https://www.douyin.com/video/7604100096472469878",
+      "shared_motion_family": "d08_glass_stack",
+      "canonical_source_rank": 8,
+      "recipe": "recipes/TH-DY-08.json",
+      "recipe_sha256": "bef851231033f60e6e2999c48349758f8db51a87d19d28a299bc56ab73ea6df1",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-09",
+      "name": "衬线层级大字与聚光开场",
+      "version": "0.1.0",
+      "aliases": [
+        "衬线杂志字层",
+        "衬线层级大字与聚光开场"
+      ],
+      "source_rank": 9,
+      "source_url": "https://www.douyin.com/video/7470050394790481190",
+      "shared_motion_family": "d09_editorial_type",
+      "canonical_source_rank": 9,
+      "recipe": "recipes/TH-DY-09.json",
+      "recipe_sha256": "00611fee59019ced959767992751b76c383f6c3f3cabe7aadb6c7aa9bc7fb37f",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-10",
+      "name": "错位双色贴纸标签",
+      "version": "0.1.0",
+      "aliases": [
+        "错位双色贴纸标签"
+      ],
+      "source_rank": 10,
+      "source_url": "https://www.douyin.com/video/7390307408200912162",
+      "shared_motion_family": "d10_sticker_label",
+      "canonical_source_rank": 10,
+      "recipe": "recipes/TH-DY-10.json",
+      "recipe_sha256": "30f56d9b0f73009672c06175370d35ab81a62f9349cac6b7aca4ee1dc1781824",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-11",
+      "name": "推近与关键词重击",
+      "version": "0.1.0",
+      "aliases": [
+        "推近与关键词重击"
+      ],
+      "source_rank": 11,
+      "source_url": "https://www.douyin.com/video/7539161631563451683",
+      "shared_motion_family": "d11_punch_caption",
+      "canonical_source_rank": 11,
+      "recipe": "recipes/TH-DY-11.json",
+      "recipe_sha256": "feb3aa7420bb6f0348746d22f410541f3ffad9c2c5d7c3bf2819acaa6238b48c",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-12",
+      "name": "文字墙步骤卡",
+      "version": "0.1.0",
+      "aliases": [
+        "文字墙步骤卡"
+      ],
+      "source_rank": 12,
+      "source_url": "https://www.douyin.com/video/7509319668529630514",
+      "shared_motion_family": "d12_type_depth",
+      "canonical_source_rank": 12,
+      "recipe": "recipes/TH-DY-12.json",
+      "recipe_sha256": "655fd7a6c485250c71fe2b7d7e70ae5499c69554e1d601d8b978fab762116ff7",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-13",
+      "name": "虚线抠像·资料卡与弧形问句",
+      "version": "0.1.0",
+      "aliases": [
+        "描边人物入场",
+        "虚线抠像·资料卡与弧形问句"
+      ],
+      "source_rank": 13,
+      "source_url": "https://www.douyin.com/video/7655178073935007003",
+      "shared_motion_family": "d13_cutout_outline",
+      "canonical_source_rank": 13,
+      "recipe": "recipes/TH-DY-13.json",
+      "recipe_sha256": "712d0a5fcaab10286538c29811e7429e18b071078db8480afea0aa306b3277c5",
+      "readiness": {
+        "status": "partial_native_windows_reviewed",
+        "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+      },
+      "variants": [
+        {
+          "name": "intro",
+          "native_frames": [
+            0,
+            50
+          ],
+          "reviewed": true
+        }
+      ]
+    },
+    {
+      "id": "TH-DY-14",
+      "name": "薄荷绿·手写三联卡",
+      "version": "0.1.0",
+      "aliases": [
+        "多卡片拼贴进场",
+        "薄荷绿·手写三联卡"
+      ],
+      "source_rank": 14,
+      "source_url": "https://www.douyin.com/video/7632204826218138921",
+      "shared_motion_family": "d14_collage_cards",
+      "canonical_source_rank": 14,
+      "recipe": "recipes/TH-DY-14.json",
+      "recipe_sha256": "bc0f52803c2a714af799b64db955170f85295a879b814b1fe10f234b3868e7eb",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-15",
+      "name": "人物前景·衬线大字与口播字幕组",
+      "version": "0.1.0",
+      "aliases": [
+        "人物遮挡背景大字",
+        "人物前景·衬线大字与口播字幕组"
+      ],
+      "source_rank": 15,
+      "source_url": "https://www.douyin.com/video/7529114087033490746",
+      "shared_motion_family": "d15_behind_type",
+      "canonical_source_rank": 15,
+      "recipe": "recipes/TH-DY-15.json",
+      "recipe_sha256": "39aa6fe748867ab6b9f083ac8207ddb49691caf08a65c466ecd62e835998a3eb",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-16",
+      "name": "黑网格·人物窗与群体图标",
+      "version": "0.1.0",
+      "aliases": [
+        "人物窗与群体图标",
+        "黑网格·人物窗与群体图标"
+      ],
+      "source_rank": 16,
+      "source_url": "https://www.douyin.com/video/7601879583864861797",
+      "shared_motion_family": "d16_floating_frame",
+      "canonical_source_rank": 16,
+      "recipe": "recipes/TH-DY-16.json",
+      "recipe_sha256": "bb9c446b0acfc89e1cf1ab2766f75fea9046f5a2a9dd00e094e657a089346c25",
+      "readiness": {
+        "status": "partial_native_windows_reviewed",
+        "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+      },
+      "variants": [
+        {
+          "name": "主窗口",
+          "native_frames": [
+            5106,
+            5232
+          ],
+          "reviewed": true
+        }
+      ]
+    },
+    {
+      "id": "TH-DY-17",
+      "name": "矩形遮罩·素材开合与镜头关键帧",
+      "version": "0.1.0",
+      "aliases": [
+        "矩形蒙版展开",
+        "矩形遮罩·素材开合与镜头关键帧"
+      ],
+      "source_rank": 17,
+      "source_url": "https://www.douyin.com/video/7598134526300537573",
+      "shared_motion_family": "d17_mask_reveal",
+      "canonical_source_rank": 17,
+      "recipe": "recipes/TH-DY-17.json",
+      "recipe_sha256": "2229f618998da09ff94db8c4d7c692f6ff2a16fdaa358a780778a55dae4d6bb4",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-18",
+      "name": "放射轨道入场·弧形花字与关键词",
+      "version": "0.1.0",
+      "aliases": [
+        "放射线与环轨人物",
+        "放射轨道入场·弧形花字与关键词"
+      ],
+      "source_rank": 18,
+      "source_url": "https://www.douyin.com/video/7661548850997398819",
+      "shared_motion_family": "d18_radial_orbit",
+      "canonical_source_rank": 18,
+      "recipe": "recipes/TH-DY-18.json",
+      "recipe_sha256": "e67459163283cb6da4716c4a8965be789f1c3b7c32645a06b6ccc6d7c85a7344",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-19",
+      "name": "新青年金字·四角重点词",
+      "version": "0.1.0",
+      "aliases": [
+        "四角金色字",
+        "新青年金字·四角重点词"
+      ],
+      "source_rank": 19,
+      "source_url": "https://www.douyin.com/video/7585124034087046410",
+      "shared_motion_family": "d19_corner_keywords",
+      "canonical_source_rank": 19,
+      "recipe": "recipes/TH-DY-19.json",
+      "recipe_sha256": "e3b3aba78c2c6aa38455c3b4312aacf0b1a5327080b79e772a2c3aeeac180cbe",
+      "readiness": {
+        "status": "partial_native_windows_reviewed",
+        "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+      },
+      "variants": [
+        {
+          "name": "主窗口",
+          "native_frames": [
+            3355,
+            3389
+          ],
+          "reviewed": true
+        }
+      ]
+    },
+    {
+      "id": "TH-DY-20",
+      "name": "六格接力·分屏副本与情绪字幕",
+      "version": "0.1.0",
+      "aliases": [
+        "三列两行素材接力",
+        "六格接力·分屏副本与情绪字幕"
+      ],
+      "source_rank": 20,
+      "source_url": "https://www.douyin.com/video/7665271243322959990",
+      "shared_motion_family": "d20_mosaic_relay",
+      "canonical_source_rank": 20,
+      "recipe": "recipes/TH-DY-20.json",
+      "recipe_sha256": "4778e5d49bb67f7fc737604646e855a4f1f7f92e0d6410d5090075aa9541d75d",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-21",
+      "name": "江湖描边·字幕副本碎片爆开",
+      "version": "0.1.0",
+      "aliases": [
+        "字幕副本碎片爆开",
+        "江湖描边·字幕副本碎片爆开"
+      ],
+      "source_rank": 21,
+      "source_url": "https://www.douyin.com/video/7440671641195056422",
+      "shared_motion_family": "d21_shatter_type",
+      "canonical_source_rank": 21,
+      "recipe": "recipes/TH-DY-21.json",
+      "recipe_sha256": "c915641f7652532c8f0dab48832ae8701f6983d699aed3eca896f5153aead1d8",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-22",
+      "name": "前景趋势图卡与证据人物",
+      "version": "0.1.0",
+      "aliases": [
+        "人物前图表卡",
+        "前景趋势图卡与证据人物"
+      ],
+      "source_rank": 22,
+      "source_url": "https://www.douyin.com/video/7584120670599056675",
+      "shared_motion_family": "d22_chart_overlay",
+      "canonical_source_rank": 22,
+      "recipe": "recipes/TH-DY-22.json",
+      "recipe_sha256": "18efd07ac3dd827b38091a67d04467422b575ce2dd69325f478f5518054a0c5a",
+      "readiness": {
+        "status": "partial_native_windows_reviewed",
+        "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+      },
+      "variants": [
+        {
+          "name": "主窗口",
+          "native_frames": [
+            105,
+            167
+          ],
+          "reviewed": true
+        }
+      ]
+    },
+    {
+      "id": "TH-DY-23",
+      "name": "裂缝转折与口播滤镜配套",
+      "version": "0.1.0",
+      "aliases": [
+        "锯齿裂缝转场",
+        "裂缝转折与口播滤镜配套"
+      ],
+      "source_rank": 23,
+      "source_url": "https://www.douyin.com/video/7583997836481498406",
+      "shared_motion_family": "d23_split_crack",
+      "canonical_source_rank": 23,
+      "recipe": "recipes/TH-DY-23.json",
+      "recipe_sha256": "c1aa16b8569c113e5cca7d17707a2ed0c651d599963a735ed144354eb240f3ba",
+      "readiness": {
+        "status": "partial_native_windows_reviewed",
+        "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+      },
+      "variants": [
+        {
+          "name": "主窗口",
+          "native_frames": [
+            826,
+            866
+          ],
+          "reviewed": true
+        }
+      ]
+    },
+    {
+      "id": "TH-DY-24",
+      "name": "人物描边缩放与概念剪影",
+      "version": "0.1.0",
+      "aliases": [
+        "人物与概念剪影",
+        "人物描边缩放与概念剪影"
+      ],
+      "source_rank": 24,
+      "source_url": "https://www.douyin.com/video/7611615508815343722",
+      "shared_motion_family": "d24_concept_presenter",
+      "canonical_source_rank": 24,
+      "recipe": "recipes/TH-DY-24.json",
+      "recipe_sha256": "6e80d0cf0a441cfdc683e193a40f9948c7c95394aeaade781c30a4775b278b20",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-25",
+      "name": "橙金大字置于人物背后与动态白描边",
+      "version": "0.1.0",
+      "aliases": [
+        "人物遮挡背景大字·变体",
+        "橙金大字置于人物背后与动态白描边"
+      ],
+      "source_rank": 25,
+      "source_url": "https://www.douyin.com/video/7491963688690175292",
+      "shared_motion_family": "d15_behind_type",
+      "canonical_source_rank": 15,
+      "recipe": "recipes/TH-DY-25.json",
+      "recipe_sha256": "c819ee77a7f99d2fd2d62962b4e398944a08b449814167b95d825bfce76d6c94",
+      "readiness": {
+        "status": "partial_native_windows_reviewed",
+        "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+      },
+      "variants": [
+        {
+          "name": "主窗口",
+          "native_frames": [
+            615,
+            669
+          ],
+          "reviewed": true
+        }
+      ]
+    },
+    {
+      "id": "TH-DY-26",
+      "name": "五种关键帧：胶片强调与人物布局",
+      "version": "0.1.0",
+      "aliases": [
+        "胶片边框与字幕",
+        "五种关键帧：胶片强调与人物布局"
+      ],
+      "source_rank": 26,
+      "source_url": "https://www.douyin.com/video/7652702890909263528",
+      "shared_motion_family": "d26_film_frame",
+      "canonical_source_rank": 26,
+      "recipe": "recipes/TH-DY-26.json",
+      "recipe_sha256": "6d7a41a129f595488fbb84b5d0168b17c1b69624fd820f599324e6d90a3660ce",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-27",
+      "name": "波浪相框与前景人物",
+      "version": "0.1.0",
+      "aliases": [
+        "波浪相框与前景人物"
+      ],
+      "source_rank": 27,
+      "source_url": "https://www.douyin.com/video/7669381863558876431",
+      "shared_motion_family": "d27_wavy_frame",
+      "canonical_source_rank": 27,
+      "recipe": "recipes/TH-DY-27.json",
+      "recipe_sha256": "c26ebce67f20767ba5b5ceb9b05b8a62ee7e57838234c9f7cf5b086b337832cb",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-28",
+      "name": "重点词色带划过",
+      "version": "0.1.0",
+      "aliases": [
+        "重点词色带划过"
+      ],
+      "source_rank": 28,
+      "source_url": "https://www.douyin.com/video/7647822845520083304",
+      "shared_motion_family": "d28_marker_sweep",
+      "canonical_source_rank": 28,
+      "recipe": "recipes/TH-DY-28.json",
+      "recipe_sha256": "79af417069204010c8df493be17987217c61c3fe3d4d53dc358ba74c3cf3c169",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-29",
+      "name": "描边人物入场·变体",
+      "version": "0.1.0",
+      "aliases": [
+        "描边人物入场·变体"
+      ],
+      "source_rank": 29,
+      "source_url": "https://www.douyin.com/video/7657853415699041570",
+      "shared_motion_family": "d13_cutout_outline",
+      "canonical_source_rank": 13,
+      "recipe": "recipes/TH-DY-29.json",
+      "recipe_sha256": "c8bfa9a2b77c9d718f3ef2278c65fcf3bf6997d35f4e99a29ca5bc8b24b40c90",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    },
+    {
+      "id": "TH-DY-30",
+      "name": "缩略图聚光追踪",
+      "version": "0.1.0",
+      "aliases": [
+        "缩略图聚光追踪"
+      ],
+      "source_rank": 30,
+      "source_url": "https://www.douyin.com/video/7652578603384786230",
+      "shared_motion_family": "d30_gallery_focus",
+      "canonical_source_rank": 30,
+      "recipe": "recipes/TH-DY-30.json",
+      "recipe_sha256": "7153550281f90b2f54df63fba8f8dc5014e58c0e0db21f936c3d60848404ab43",
+      "readiness": {
+        "status": "mechanism_preview_only",
+        "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+      },
+      "variants": []
+    }
+  ],
+  "publication_scope": "Version0.1.0 freezes the current basic style identity and explicitly bounded native calibrations; it is not a claim that every original effect, font or arbitrary replacement has been recovered."
+}

@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-23",
+  "name": "裂缝转折与口播滤镜配套",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "partial_native_windows_reviewed",
+    "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+  },
+  "source": {
+    "rank": 23,
+    "url": "https://www.douyin.com/video/7583997836481498406",
+    "author": "小甜.",
+    "title": "网感音效合集来啦～喜欢的宝子评论区告诉我，呼声高咱立马安排下一期！",
+    "canonical_source_rank": 23
+  },
+  "semantic_use": [
+    "转折与反差点。"
+  ],
+  "observed_motion": "裂开提示与锯齿黑色裂缝配合，把画面分开。",
+  "basic_implementation": {
+    "grammar": "d23_split_crack",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "presenter_video",
+      "video_start",
+      "accent"
+    ],
+    "design_variables": [
+      "裂缝路径",
+      "开裂距离",
+      "时间",
+      "文字"
+    ],
+    "scope": "复刻画面中的布局及剪辑机制，以替换人物和内容重建；教程界面、原片人物和生成模型变脸不属于此实现。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "presenter_video",
+    "video_start",
+    "accent"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [
+      {
+        "variant": "主窗口",
+        "first_frame": 826,
+        "frames": 40,
+        "duration": 1.3333333333333333,
+        "output_sha256": "75ac0cd7db48ad3a12e3529dbff63039075fb3da8b6c78ca9192bb1477eb01f6",
+        "frame_review_scope": "该原生效果窗口已审；其他实际子变体制作中",
+        "residuals": [
+          "Actual new filmed man differs from source woman and facial/arm performance; no lip-sync",
+          "Room behind source presenter estimated by static inpainting",
+          "Native832..862 clean13-edge crack geometry measured; early828..831 interior offsets inferred from top-width, antialias/rotation residual remains",
+          "Source uses Songti-like captions and blue ordinal; original font/shadow unknown",
+          "All source visual-filter branches not yet rendered, face-generating/deformation branch is distinct from editing grammar",
+          "Native855 is first absent for BOTH info captions and ordinal, corrected by source pixel/visual evidence; prior856 caption measurement was wrong",
+          "Generated captions fit source white-fill bbox; exact BlackSongti font outline still not original",
+          "Ordinal v3 generated rounded gradient and sans glyph now follow measured static card, exact bevel/shadow remains approximate"
+        ]
+      }
+    ],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  },
+  "palette": {
+    "black_crack_rgb": [
+      0,
+      0,
+      0
+    ],
+    "ordinal_blue": "#84aec4 inferred from native label",
+    "caption_white": "#fff",
+    "reference_native_measurement": "crack-measurements-v2.json"
+  },
+  "font": {
+    "family": "Songti SC inferred for original-serif; NotoSansSC800 engine fallback",
+    "exact_author_font": "unknown",
+    "private_original_glyphs": "only if specifically measured; not arbitrary editable font recovery"
+  },
+  "layout": {
+    "native_canvas": [
+      720,
+      1280
+    ]
+  },
+  "motion_rules": [
+    {
+      "native_frame": 828,
+      "event": "thin crack first appears"
+    },
+    {
+      "native_frames": [
+        828,
+        832
+      ],
+      "event": "grow width measured from top edge, clean vertices independent of source face"
+    },
+    {
+      "native_frames": [
+        832,
+        863
+      ],
+      "event": "held zigzag; live performer behind it"
+    },
+    {
+      "native_frame": 863,
+      "event": "hard remove crack/ordinal; return face"
+    },
+    {
+      "native_frame": 855,
+      "event": "Both effect/sound captions AND ordinal first absent; earlier measurement corrected by original RGB and crop"
+    }
+  ],
+  "source_structure": [
+    {
+      "id": "caption-hook",
+      "seconds": [
+        0,
+        3.6
+      ],
+      "branch": "text arrangement",
+      "status": "variant_required"
+    },
+    {
+      "id": "circular-crop",
+      "seconds": [
+        3.6,
+        6.3333
+      ],
+      "branch": "editing mask",
+      "status": "variant_required"
+    },
+    {
+      "id": "shockwave",
+      "seconds": [
+        6.3333,
+        9.0
+      ],
+      "branch": "light/filter",
+      "status": "variant_required"
+    },
+    {
+      "id": "hearts",
+      "seconds": [
+        9.0,
+        11.3
+      ],
+      "branch": "particle/filter",
+      "status": "variant_required"
+    },
+    {
+      "id": "blush-wink",
+      "seconds": [
+        11.3,
+        13.8
+      ],
+      "branch": "face/filter",
+      "status": "variant_required"
+    },
+    {
+      "id": "bright-light",
+      "seconds": [
+        13.8,
+        16.8
+      ],
+      "branch": "light/filter",
+      "status": "variant_required"
+    },
+    {
+      "id": "spotlight",
+      "seconds": [
+        17.5,
+        20.8
+      ],
+      "branch": "vignette + camera scale",
+      "status": "variant_required"
+    },
+    {
+      "id": "face-exaggeration",
+      "seconds": [
+        21,
+        25.7
+      ],
+      "branch": "facial deformation/generation, not an editing inverse",
+      "status": "original face rig not recoverable; separate generation branch"
+    },
+    {
+      "id": "speed-lines",
+      "seconds": [
+        26,
+        27.5333
+      ],
+      "branch": "radial overlay",
+      "status": "variant_required"
+    },
+    {
+      "id": "crack",
+      "native_frames": [
+        828,
+        863
+      ],
+      "branch": "polygon reveal",
+      "status": "complete native entry/hold/hard exit rebuilt"
+    },
+    {
+      "id": "outro",
+      "seconds": [
+        28.7667,
+        37.9333
+      ],
+      "branch": "ordinary talking-head + subtitle",
+      "status": "no unique new animation; preserve future supplied A/V"
+    }
+  ],
+  "shared_mechanism": null,
+  "calibration_scope": "Native details are working calibrations. Only the windows listed below are accepted for actual-frame review; pending geometry/branches remain work in progress."
+}

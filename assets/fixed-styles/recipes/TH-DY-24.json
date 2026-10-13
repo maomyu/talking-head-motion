@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-24",
+  "name": "人物描边缩放与概念剪影",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "mechanism_preview_only",
+    "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+  },
+  "source": {
+    "rank": 24,
+    "url": "https://www.douyin.com/video/7611615508815343722",
+    "author": "剪辑师Yc（接剪辑）",
+    "title": "80一分钟的口播剪辑竟然是这样的 素材来源：五年剪辑师乐乐",
+    "canonical_source_rank": 24
+  },
+  "semantic_use": [
+    "解释抽象对象和主讲人的关系。"
+  ],
+  "observed_motion": "底部人物与上方黑色人形概念、竖排说明组合。",
+  "basic_implementation": {
+    "grammar": "d24_concept_presenter",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "cutout"
+    ],
+    "design_variables": [
+      "抠像",
+      "概念图",
+      "文字",
+      "区域比例"
+    ],
+    "scope": "复刻画面中的布局及剪辑机制，以替换人物和内容重建；教程界面、原片人物和生成模型变脸不属于此实现。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "cutout"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  },
+  "palette": {
+    "black_icon": [
+      0,
+      0,
+      0
+    ],
+    "white_outline": [
+      255,
+      255,
+      255
+    ],
+    "gold_native_approx": [
+      189,
+      134,
+      46
+    ],
+    "source_font": "Songti-like light serif"
+  },
+  "font": {
+    "family": "Songti SC inferred for original-serif; NotoSansSC800 engine fallback",
+    "exact_author_font": "unknown",
+    "private_original_glyphs": "only if specifically measured; not arbitrary editable font recovery"
+  },
+  "layout": {
+    "native_canvas": [
+      1080,
+      1920
+    ]
+  },
+  "motion_rules": [
+    {
+      "native_frame": 361,
+      "event": "Background darken/cut, outlined presenter shrinks and descends"
+    },
+    {
+      "native_frames": [
+        363,
+        368
+      ],
+      "event": "walking silhouette drops from upper clipped area"
+    },
+    {
+      "native_frame": 392,
+      "event": "second hat silhouette enters"
+    },
+    {
+      "native_frame": 434,
+      "event": "hat first absent"
+    },
+    {
+      "native_frame": 441,
+      "event": "vertical white sentence reveal"
+    },
+    {
+      "native_frame": 462,
+      "event": "first orange annotation"
+    },
+    {
+      "native_frame": 485,
+      "event": "second orange annotation"
+    },
+    {
+      "native_frame": 505,
+      "event": "hard remove concept layers, return full-size filmed person"
+    }
+  ],
+  "source_structure": [
+    {
+      "id": "intro",
+      "seconds": [
+        0,
+        1.5
+      ],
+      "status": "variant_required",
+      "branch": "grid/meme/number/question motion"
+    },
+    {
+      "id": "circle",
+      "seconds": [
+        5.5,
+        6.8
+      ],
+      "status": "variant_required"
+    },
+    {
+      "id": "rolling-keywords",
+      "seconds": [
+        9,
+        12.03
+      ],
+      "status": "variant_required"
+    },
+    {
+      "id": "concept",
+      "native_frames_half_open": [
+        361,
+        505
+      ],
+      "status": "complete recoverable concept structure in current window, exact hidden alpha partial"
+    },
+    {
+      "id": "framed-head",
+      "seconds": [
+        23.5,
+        26
+      ],
+      "status": "variant_required"
+    },
+    {
+      "id": "stacked-icons",
+      "seconds": [
+        38,
+        41
+      ],
+      "status": "variant_required"
+    },
+    {
+      "id": "tutorial-ui",
+      "branch": "editor time-lines/settings",
+      "status": "excluded; not talking-head effect"
+    }
+  ],
+  "shared_mechanism": null,
+  "calibration_scope": "Native details are working calibrations. Only the windows listed below are accepted for actual-frame review; pending geometry/branches remain work in progress."
+}

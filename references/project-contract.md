@@ -2,7 +2,7 @@
 
 The script resolves the skill location itself; use absolute project/media paths. Project-relative asset paths resolve against the project.
 
-`brief.json.art_direction` records the user's artistic style selection as `name`, `recipe_id` and `selection_source` (the relevant conversation instruction). It is Agent-managed production metadata, separate from the core `project.json.style` colour palette. Resolve a spoken gallery number using that page's actual `data.json` before saving the recipe ID; missing selection triggers the reminder in SKILL.md.
+`brief.json.art_direction` records the conversational style choice. The main talking-head family uses `family:douyin-talking-head` and the versioned TH-DY snapshot described below. The optional art branch retains `name`, `recipe_id` and `selection_source`. These are Agent-managed metadata, separate from the core `project.json.style` colour palette. Resolve a spoken gallery number within the displayed library; missing selection triggers the reminder in SKILL.md.
 
 `<skill>` 表示此技能的安装目录，执行时替换为绝对路径。
 
@@ -48,10 +48,18 @@ Events carry explicit `start`,`end` or `anchor` and positive `duration`. `anchor
 
 Initial events occupy one graphics lane and cannot overlap; subtitles use another lane. Simultaneous graphics or more effects can use project-local custom HTML/JS. Text wraps and receives fit checks; run actual runtime/encoded-frame checks for long text.
 
-Video `broll` also accepts `position:"full"`: the authored clip fills the canvas directly with no extra card or entry tween. Other component types reject this position. The accepted narration continues, and captions remain above the clip. `broll-jobs.json` accepts `renderer:"social"` for [social modules](douyin-grammars.md); omitted renderer remains Huashu. Use the same master time as `presenter_video`'s `video_start` when the shot includes the moving presenter.
+Video `broll` also accepts `position:"full"`: the authored clip fills the canvas directly with no extra card or entry tween. Other component types reject this position. The accepted narration continues, and captions remain above the clip. New `broll-jobs.json` entries explicitly choose their renderer; `renderer:"social"` uses [social modules](douyin-grammars.md). Omitted renderer remains compatible only for older unlocked art projects. Use the same master time as `presenter_video`'s `video_start` when the shot includes the moving presenter.
 
 For accepted presenter footage, an event can use `"presenter":"pip"` to move it into a right-side small window above the caption region for that event, returning to full view afterward. Inspect the actual face crop and caption relationship; the geometry is a preset, not face detection.
 
 Build writes `public/index.html`, staged local assets, `resolved-shotbook.json` and `subtitles.srt`. Render saves command logs and fingerprints; identical verified outputs can be reused. Changed inputs invalidate QA. Because supporting clips are silent, final rendering preserves the accepted master narration and channel layout instead of relying on the renderer's mix. Optional music/SFX mixing requires its own loudness and synchronization review. `check` validates full decode, dimensions, frame count and A/V duration, and extracts encoded samples. Mechanical success sets `rendered_needs_visual_review`, not `complete`.
 
 Only after inspecting the delivered video, run `accept PROJECT --note "What was checked"`. It requires current passing mechanical checks and records the actual review.
+
+## Fixed talking-head recipes
+
+For a selected TH-DY entry, Agent-managed `brief.json.art_direction` contains `family:douyin-talking-head`, stable `style_id/style_name`, `version`, `recipe_sha256`, `choice_source` and `recipe_snapshot:style-lock.json`. The lock stores the full recipe plus a canonical snapshot hash. See [fixed styles](fixed-talking-head-styles.md). It is validated independently of later catalogue updates and participates in input/output fingerprints; existing project fields remain intact.
+
+New fixed-style B-roll jobs declare their renderer explicitly: `social`, `reference`, `reference-native` or optional `huashu`. Reference jobs identify the selected recipe in `spec.fixed_style`. `reference-native` preserves each actual source PTS and hold with `timestamp_mode:native_window`, absolute reference frame times/integerPTS/timebase and output frame durations. Missing/mismatched identities fail before rendering. Older projects without a style lock keep their prior omitted-renderer compatibility; this does not define the new talking-head product route.
+
+Text-bearing components, B-roll with a title, and B-roll declared `readable_text:true` require a reading interval of at least0.6s. A nonreading visual transition can be shorter; the Agent must inspect actual text and timing, because a video asset can contain text without a `title` field. The duration guard is not a general readability guarantee.

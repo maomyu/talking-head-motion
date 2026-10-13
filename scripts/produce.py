@@ -9,6 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from motion import SKILL, digest, existing, fingerprint, read, renderer_signature, state, write
 from render_huashu import resolve_spec_assets
+from fixed_styles import validate_lock
 
 
 def call(project, stage, arguments, record):
@@ -29,6 +30,8 @@ def main():
     config=read(project/'project.json');record={'started_at':datetime.now(timezone.utc).isoformat(),'steps':[]}
     helper=SKILL/'scripts/motion.py'
     try:
+        lock=validate_lock(project)
+        if lock:record['fixed_style']={k:lock[k] for k in ('id','name','version','recipe_sha256','recipe_snapshot_sha256')}
         if not read(project/'shotbook.json').get('events'):
             raise ValueError('Author a semantic shotbook before producing; an empty plan is not a complete film')
         source=config['source'].get('video') or config['source'].get('audio')
@@ -53,18 +56,28 @@ def main():
             if out==spec or out==project/'output.mp4' or (source and out==existing(source,project)):
                 raise ValueError('B-roll output would overwrite an input/master')
             seen.add(out);content=read(spec)
-            renderer=job.get('renderer','huashu')
-            if renderer not in ('huashu','social','reference'):raise ValueError('Unknown B-roll renderer')
+            renderer=job.get('renderer')
+            if renderer is None:
+                if lock:raise ValueError('A new fixed-style motion job must declare its renderer explicitly')
+                renderer='huashu'  # Compatibility for existing art-only projects.
+            if renderer not in ('huashu','social','reference','reference-native'):raise ValueError('Unknown B-roll renderer')
+            if lock and renderer in ('social','reference','reference-native'):
+                declared=content.get('fixed_style',{})
+                if any(declared.get(k)!=lock[k] for k in ('id','version','recipe_sha256')):
+                    raise ValueError('The authored motion job must identify its selected fixed style version')
             if renderer=='social':
                 paths=[content[k] for k in ('portrait','cutout','presenter_video') if content.get(k)]+content.get('images',[])
                 asset_hashes=[digest(existing(value,spec.parent)) for value in paths]
                 engine_files=[SKILL/'assets/social-grammars/social.js',SKILL/'assets/social-grammars/index.html',SKILL/'scripts/social_grammar.py']+[SKILL/'assets/huashu-engine/lib/fonts'/f for f in ('NotoSansSC-800.woff','NotoSerifSC-sub.woff')]
                 signature=digest(spec)+''.join(digest(p) for p in engine_files)+json.dumps(asset_hashes,sort_keys=True)
-            elif renderer=='reference':
-                from reference_render import read_spec
+            elif renderer in ('reference','reference-native'):
+                if renderer=='reference-native':
+                    from reference_window_render import read_spec
+                else:
+                    from reference_render import read_spec
                 _,_,inputs,_=read_spec(spec)
                 asset_hashes={str(p):digest(p) for p in sorted(inputs)}
-                engine_files=[SKILL/'assets/reference-engine/reference.js',SKILL/'assets/reference-engine/index.html',SKILL/'scripts/reference_render.py',SKILL/'assets/huashu-engine/lib/fonts/NotoSansSC-800.woff']
+                engine_files=[SKILL/'assets/reference-engine/reference.js',SKILL/'assets/reference-engine/index.html',SKILL/'scripts'/('reference_window_render.py' if renderer=='reference-native' else 'reference_render.py'),SKILL/'assets/huashu-engine/lib/fonts/NotoSansSC-800.woff']
                 signature=digest(spec)+''.join(digest(p) for p in engine_files)+json.dumps(asset_hashes,sort_keys=True)
             else:
                 _,asset_hashes=resolve_spec_assets(content,spec.parent)
@@ -72,8 +85,8 @@ def main():
             if any('anchor' in c for c in content.get('cues',[])):signature+=digest(existing(project/'words.json'))
             signature=hashlib.sha256(signature.encode()).hexdigest();old=cache.get(str(out),{})
             if old.get('signature')!=signature or not out.exists() or old.get('output_sha256')!=digest(out):
-                if renderer in ('social','reference'):
-                    script='social_grammar.py' if renderer=='social' else 'reference_render.py'
+                if renderer in ('social','reference','reference-native'):
+                    script={'social':'social_grammar.py','reference':'reference_render.py','reference-native':'reference_window_render.py'}[renderer]
                     command=[sys.executable,SKILL/'scripts'/script,'--spec',spec,'--output',out,'--overwrite']
                 else:command=[sys.executable,SKILL/'scripts/render_huashu.py',project,'--spec',spec,'--out',out]
                 call(project,f'broll-{i+1}',command,record)

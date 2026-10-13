@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-07",
+  "name": "黑底缩圈与采访漫画",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "mechanism_preview_only",
+    "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+  },
+  "source": {
+    "rank": 7,
+    "url": "https://www.douyin.com/video/7671151180642290985",
+    "author": "兔兔不熬夜（剪辑师版）",
+    "title": "口播网感开场如何设计最好？",
+    "canonical_source_rank": 7
+  },
+  "semantic_use": [
+    "从全画面收缩到脸部，引导注意力。"
+  ],
+  "observed_motion": "人物被圆形蒙版保留，外侧黑底与虚线圈突出边界，上弧标题标出蒙版缩圈。",
+  "basic_implementation": {
+    "grammar": "d07_iris_mask",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "presenter_video",
+      "video_start",
+      "accent"
+    ],
+    "design_variables": [
+      "圆心",
+      "起止半径",
+      "时长",
+      "虚线长度",
+      "弧形标题"
+    ],
+    "scope": "蒙版与裁切动画，圆心必须跟随人物脸部。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "presenter_video",
+    "video_start",
+    "accent"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  },
+  "palette": {
+    "dash_width": 5.3,
+    "dash_arc_length": 15,
+    "period": 40,
+    "phase_rad_estimate": 0.23,
+    "source_rgb_median": [
+      255,
+      209,
+      226
+    ]
+  },
+  "font": {
+    "source_family": "unknown from compressed reference; fixed isolated glyph study only",
+    "editable_fallback": "NotoSansSC/available system font, approximate shape must be separately reviewed"
+  },
+  "layout": {
+    "circle": {
+      "native_frame": 532,
+      "cx": 358.5209478432216,
+      "cy": 551.6626849425439,
+      "r": 215.80348609016167,
+      "measurement": "native pink annulus least squares"
+    },
+    "native_photo_horizontal_clip": [
+      122,
+      598
+    ],
+    "subject_face_to_window_ratio": 0.7183098591549296,
+    "upper_body_visible": true,
+    "foreground_above_ring": true
+  },
+  "grammar": {
+    "time_unit": "original native frame numbers,30fps",
+    "enter_hold_exit": {
+      "old_rectangle_exit": 497,
+      "chapter3_label_enter": 498,
+      "circle_from_right": 500,
+      "circle_settle": 505,
+      "black_scene_circle_shrink_enter": 526,
+      "top_heading_enter": 527,
+      "circle_shrink_settle": 532,
+      "interview_art_first_character": 548,
+      "art_flash_and_rise": 550,
+      "four_word_art_settle": 554,
+      "black_scene_exit_chapter4_transition": 578,
+      "chapter4_label_enter": 579,
+      "chapter4_label_exit": 596,
+      "next_semantic_scene_cut_outside_primary": 599,
+      "top_heading_visible_dim_first": 527
+    },
+    "event_policy": "real measured source events; cut/pulse/path ordering preserved, new narration must align to accepted word clock",
+    "layer_order": [
+      "moving-blurred-background",
+      "backdrop-shade",
+      "prior-rectangle-real-video",
+      "chapter-three-real-window",
+      "chapter-four-real-window",
+      "chapter-measured-white-rim",
+      "main-shaped-scenery",
+      "measured-ring",
+      "live-head-over-ring",
+      "curved-fixed-heading",
+      "private-interview-sticker",
+      "chapter-fixed-labels"
+    ]
+  },
+  "replacement_limits": {
+    "fixed_source_glyphs": "not editable; new phrase requires approximate font or separately identified licensed original font",
+    "timing": "reuse native enter/hold/exit proportions, map to new word/semantic clock with no claim of exact same phrase animation",
+    "subject": "different footage must be reframed and reviewed rather than copied old face coordinates",
+    "ring": "private measured visible capsules follow source head occlusion. Editable full ring parameters: native8px roundcaps,15pxstraight,41pxperiod; hidden phase approximate."
+  },
+  "unresolved": [
+    "Different genuine stock presenter, face/gestures/room; no original actor replay. Silent technical animation reconstruction, no voice/lip-sync claim.",
+    "Original font/project unknown. Private original fixed glyph art cannot be advertised as arbitrary editable original font.",
+    "Source native H264 compression and new H264 codec colors/antialiasing differ; no100% pixel claim.",
+    "Original keyboard/finger B-roll is replaced with genuine blurred stock; rebuilt plant-only circle scenery is independent and not recovered original room.",
+    "Partially clipped circle entrance F500/501 and border hidden behind source hair are measured/estimated; dashed phase and hidden arcs are reconstructed, not100% recovered.",
+    "Foreground head is deliberately separate RVM to overlap pink ring, hair/torso contour differs; stock provides chest, no original hand-number gesture is invented.",
+    "Interview art and original curved font are private fixed sprite study only. Sticker region y>=780 excludes actor, source anti-aliasing on black is private fixed artwork; editable illustrator variant would need new artwork.",
+    "Chapter digits inside source photo are omitted content difference; labels remain, new real actor is not asked to fake3/4 gestures.",
+    "Actual source hair-to-chin height306px corrected stock head scale0.334 versus previous0.423. Source long hair tips are not counted as face; visible chest preserved.",
+    "Visible pink rounded capsules are isolated per native frame; source hair-obscured upper arcs are unavailable, not fabricated; arbitrary new face shapes can expose a gap requiring independently redrawn approximate full ring.",
+    "Dim heading527..529 restores actual gray alpha rather than dropping faint entry; native black background makes foreground isolation possible.",
+    "F526/527 initial large iris: source camera crops torso, so chest below stockY1200 is vertically fitted to native inner circle floor; head/hair unchanged and original RGB kept, no hands invented.",
+    "原真实女士、手势数字3/4、键盘桌面与新真人/植物不同；画面中的真实数字手牌与头饰未合成到新演员身上。",
+    "526/527大圈入场下胸口纵向fit用于适配原生可见胸口范围，不恢复原人物不可拍到的姿势。",
+    "源长发遮掉的部分粉色虚线不可见，替换短发后上弧可能有少量缺口；完整可编辑虚线参数为8px圆头/15px直段/41px周期，隐藏相位仍需另审。",
+    "578原片为旋转动感模糊，新片用近似Gaussian10px并按原时间返小圆，运动方向残差明确。",
+    "固定漫画贴纸与原中文弧标题为私有原生字形，源字体工程未知，任意改字不继承同等精度。"
+  ],
+  "other_source_segments": {
+    "status": "second-pass actual animated subvariants in progress; UI tutorials omitted as instructional material",
+    "full_span_overview": "Private measurement/artwork retained in the local study; use the stated portable parameters and licensed replacement assets.",
+    "native_ledger": "Private measurement/artwork retained in the local study; use the stated portable parameters and licensed replacement assets.",
+    "no_claim": "Selected window is not full tutorial reconstruction"
+  },
+  "calibration_scope": "Native details are working calibrations. Only the windows listed below are accepted for actual-frame review; pending geometry/branches remain work in progress."
+}

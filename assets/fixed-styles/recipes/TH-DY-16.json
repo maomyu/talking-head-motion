@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-16",
+  "name": "黑网格·人物窗与群体图标",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "partial_native_windows_reviewed",
+    "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+  },
+  "source": {
+    "rank": 16,
+    "url": "https://www.douyin.com/video/7601879583864861797",
+    "author": "五年剪辑师乐乐",
+    "title": "装修口播怎么见？一条视频教会你 从片头设计到爆点设计，正文处理，完整思路解说",
+    "canonical_source_rank": 16
+  },
+  "semantic_use": [
+    "保留人，同时给文字和证据腾出空间。"
+  ],
+  "observed_motion": "教程中人物小框、外侧字幕和群体图标的静态构图；未观察到持续的镜头运动。",
+  "basic_implementation": {
+    "grammar": "d16_floating_frame",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "presenter_video",
+      "video_start",
+      "accent"
+    ],
+    "design_variables": [
+      "框大小",
+      "位置",
+      "边框",
+      "外侧字幕"
+    ],
+    "scope": "复刻画面中的布局及剪辑机制，以替换人物和内容重建；教程界面、原片人物和生成模型变脸不属于此实现。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "presenter_video",
+    "video_start",
+    "accent"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [
+      {
+        "variant": "主窗口",
+        "first_frame": 5106,
+        "frames": 126,
+        "duration": 4.2,
+        "output_sha256": "b5ee03ed25209c7f38fca16967e5e58046841b9f5b406dad800071727ff57c55",
+        "frame_review_scope": "partial; user review pending",
+        "residuals": [
+          "Original preview is a paused authoring-layout demonstration; no native continuous entrance/exit is recoverable from this window. The recipe is intentionally labelled static layout.",
+          "Only effective native preview ROI 187x332 is reconstructed; software timeline, controls and selection handles are excluded. UI magnification does not add detail.",
+          "Native original grid spacing and group icon/subtitle geometry measured; thin border/material antialias has compression uncertainty.",
+          "Different real photographed presenter and source room, naturally moving at25fps held on30fps output; original paused actress is not copied.",
+          "Fixed private reference sentence/icon is not a recovered arbitrary editable original font/vector asset."
+        ]
+      }
+    ],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  },
+  "palette": {
+    "background": [
+      0,
+      0,
+      0
+    ],
+    "grid": [
+      18,
+      18,
+      19
+    ],
+    "white_glyphs": [
+      207.0,
+      207.0,
+      207.0
+    ]
+  },
+  "font": {
+    "original": "unknown serif-like Chinese reference",
+    "fixed_private_subtitle": true,
+    "editable_fallback": "NotoSansSC-800 approximate"
+  },
+  "layout": {
+    "canvas": [
+      1920,
+      1080
+    ],
+    "source_crop_xywh": [
+      862,
+      142,
+      187,
+      332
+    ],
+    "replica_crop_xywh": [
+      862,
+      142,
+      187,
+      332
+    ],
+    "native_effective_size": [
+      187,
+      332
+    ],
+    "normalized_layout": {
+      "person": [
+        0.28342245989304815,
+        0.14457831325301204,
+        0.39572192513368987,
+        0.3433734939759036
+      ],
+      "caption": [
+        0.17647058823529413,
+        0.5783132530120482,
+        0.6631016042780749,
+        0.06626506024096386
+      ],
+      "group_icons": [
+        0.13903743315508021,
+        0.7379518072289156,
+        0.7112299465240641,
+        0.20481927710843373
+      ],
+      "grid_spacing": [
+        0.053475935828877004,
+        0.030120481927710843
+      ]
+    }
+  },
+  "motion_rules": {
+    "native_window": [
+      5106,
+      5232
+    ],
+    "frames": 126,
+    "fps": 30,
+    "duration": 4.2,
+    "observed_motion": "static arrangement; no invented fly-in",
+    "moving_presenter": "replacement source motion only"
+  },
+  "source_structure": [
+    {
+      "seconds": [
+        0,
+        13
+      ],
+      "kind": "black chapter text",
+      "covered": false
+    },
+    {
+      "seconds": [
+        13,
+        138
+      ],
+      "kind": "software operating steps",
+      "copy_UI": false
+    },
+    {
+      "seconds": [
+        138,
+        202
+      ],
+      "kind": "picture window / group / mask layout",
+      "covered": true,
+      "variant": "static group layout native170.2..174.4; further actual motion variants separate"
+    },
+    {
+      "seconds": [
+        202,
+        339
+      ],
+      "kind": "material and typography demonstrations",
+      "covered": false
+    },
+    {
+      "seconds": [
+        339,
+        414.433
+      ],
+      "kind": "right-side outlined presenter over evidence",
+      "covered": false
+    }
+  ],
+  "calibration_scope": "Native details are working calibrations. Only the windows listed below are accepted for actual-frame review; pending geometry/branches remain work in progress."
+}

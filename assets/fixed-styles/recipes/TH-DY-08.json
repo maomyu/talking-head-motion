@@ -1,0 +1,326 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-08",
+  "name": "暗玻璃三卡递进与暖闪",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "mechanism_preview_only",
+    "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+  },
+  "source": {
+    "rank": 8,
+    "url": "https://www.douyin.com/video/7604100096472469878",
+    "author": "阿棋的剪辑指南",
+    "title": "1分钟学会✌️百万博主同款高级动效。",
+    "canonical_source_rank": 8
+  },
+  "semantic_use": [
+    "步骤列表与清晰的信息层级。"
+  ],
+  "observed_motion": "黑色圆角玻璃面板上，紫灰色小卡片按层叠顺序展开。",
+  "basic_implementation": {
+    "grammar": "d08_glass_stack",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "items"
+    ],
+    "design_variables": [
+      "卡片列表",
+      "层间距",
+      "顺序",
+      "反光强度"
+    ],
+    "scope": "复刻画面中的布局及剪辑机制，以替换人物和内容重建；教程界面、原片人物和生成模型变脸不属于此实现。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "items"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  },
+  "palette": {
+    "rim": [
+      237,
+      242,
+      185
+    ],
+    "purple_gradient": [
+      [
+        36,
+        36,
+        71
+      ],
+      [
+        25,
+        26,
+        55
+      ]
+    ],
+    "black_panel_alpha": 0.9,
+    "native_flash": [
+      {
+        "frame": 91,
+        "sample_rgb": [
+          100.0,
+          51.0,
+          49.0
+        ],
+        "estimated_alpha": 0.2,
+        "independent_flash_rgb": [
+          255,
+          58,
+          48
+        ]
+      },
+      {
+        "frame": 92,
+        "sample_rgb": [
+          165.0,
+          77.0,
+          51.0
+        ],
+        "estimated_alpha": 0.4,
+        "independent_flash_rgb": [
+          255,
+          119,
+          54
+        ]
+      },
+      {
+        "frame": 93,
+        "sample_rgb": [
+          233.0,
+          164.0,
+          69.0
+        ],
+        "estimated_alpha": 0.66,
+        "independent_flash_rgb": [
+          255,
+          223,
+          79
+        ]
+      },
+      {
+        "frame": 94,
+        "sample_rgb": [
+          252.0,
+          222.0,
+          167.0
+        ],
+        "estimated_alpha": 0.96,
+        "independent_flash_rgb": [
+          255,
+          229,
+          171
+        ]
+      },
+      {
+        "frame": 95,
+        "sample_rgb": [
+          251.0,
+          186.0,
+          100.0
+        ],
+        "estimated_alpha": 0.9,
+        "independent_flash_rgb": [
+          255,
+          201,
+          105
+        ]
+      },
+      {
+        "frame": 96,
+        "sample_rgb": [
+          173.0,
+          83.0,
+          51.0
+        ],
+        "estimated_alpha": 0.7,
+        "independent_flash_rgb": [
+          224,
+          97,
+          51
+        ]
+      },
+      {
+        "frame": 97,
+        "sample_rgb": [
+          195.0,
+          107.0,
+          73.0
+        ],
+        "estimated_alpha": 0.38,
+        "independent_flash_rgb": [
+          255,
+          201,
+          112
+        ]
+      },
+      {
+        "frame": 98,
+        "sample_rgb": [
+          123.0,
+          53.0,
+          51.0
+        ],
+        "estimated_alpha": 0.26,
+        "independent_flash_rgb": [
+          255,
+          64,
+          56
+        ]
+      }
+    ]
+  },
+  "font": {
+    "source_family": "unknown from compressed reference; fixed isolated glyph study only",
+    "editable_fallback": "NotoSansSC/available system font, approximate shape must be separately reviewed"
+  },
+  "layout": {
+    "panel_native": [
+      177,
+      376,
+      699,
+      1060
+    ],
+    "cards": {
+      "brand": [
+        310,
+        678,
+        434,
+        192
+      ],
+      "warehouse": [
+        310,
+        893,
+        434,
+        190
+      ],
+      "logistics": [
+        310,
+        1108,
+        434,
+        190
+      ]
+    },
+    "subject_face_to_window_ratio": "new talking-head opening fit to card, face height0.47imageheight; evidence panel semantic B-roll may fill"
+  },
+  "grammar": {
+    "time_unit": "original native frame numbers,30fps",
+    "enter_hold_exit": {
+      "example_panel_cut": 46,
+      "warehouse_glow_enter": 60,
+      "warehouse_settle": 67,
+      "logistics_glow_enter": 82,
+      "logistics_settle": 90,
+      "warm_flash_enter": 91,
+      "whiteyellow_peak": 94,
+      "example_exit_software_ui_substituted_live_return": 95,
+      "flash_exit": 99,
+      "right_connector_first": 50,
+      "left_connector_first": 72
+    },
+    "event_policy": "real measured source events; cut/pulse/path ordering preserved, new narration must align to accepted word clock",
+    "layer_order": [
+      "rebuilt-textile",
+      "intro-white",
+      "intro-blue",
+      "case-header",
+      "opening-private-mask-real",
+      "moving-real-evidence-panel",
+      "growing-dark-glass",
+      "outer-gray-rim",
+      "brand-soft-glow",
+      "brand-gradient",
+      "brand-material-pulse",
+      "brand-gold-rim",
+      "brand-inner-rim",
+      "brand-native-glyphs",
+      "warehouse-soft-glow",
+      "warehouse-gradient",
+      "warehouse-material-pulse",
+      "warehouse-gold-rim",
+      "warehouse-inner-rim",
+      "warehouse-native-glyphs",
+      "logistics-soft-glow",
+      "logistics-gradient",
+      "logistics-material-pulse",
+      "logistics-gold-rim",
+      "logistics-inner-rim",
+      "logistics-native-glyphs",
+      "panel-heading",
+      "ornament-upper",
+      "connections",
+      "return-live-presenter-after-demo",
+      "source-bottom-caption",
+      "screen-light-91",
+      "screen-light-92",
+      "screen-light-93",
+      "screen-light-94",
+      "screen-light-95",
+      "screen-light-96",
+      "screen-light-97",
+      "screen-light-98"
+    ]
+  },
+  "replacement_limits": {
+    "fixed_source_glyphs": "not editable; new phrase requires approximate font or separately identified licensed original font",
+    "timing": "reuse native enter/hold/exit proportions, map to new word/semantic clock with no claim of exact same phrase animation",
+    "subject": "different footage must be reframed and reviewed rather than copied old face coordinates"
+  },
+  "unresolved": [
+    "Different genuine stock presenter, face/gestures/room; no original actor replay. Silent technical animation reconstruction, no voice/lip-sync claim.",
+    "Original font/project unknown. Private original fixed glyph art cannot be advertised as arbitrary editable original font.",
+    "Source native H264 compression and new H264 codec colors/antialiasing differ; no100% pixel claim.",
+    "Native card glow alpha/blur radius and translucent gradient under photographed warehouse are bounded estimates; original source vector shader unknown.",
+    "Per-card fixed native words are isolated privately; replacing all labels uses editable approximate font and independent gradients, not arbitrary exact native glyphs.",
+    "Panel lower-border contrast is affected by photographic inset and flash; clipped/covered extents estimated, mild vertical growth residual possible.",
+    "Connectors are independently drawn at measured centers, dash3/7deg and arrow shapes are approximate; ornamental source fixed strokes are private.",
+    "Instructional UI is intentionally substituted with live presenter after95; not a full tutorial reproduction.",
+    "Native source paper silhouette recovered, white fiber microtexture unavailable; independent5px white rim has smoother fiber edge.",
+    "Screen flash91..94 derived from clear90 and heavily smoothed, source warehouse motion leaks low-frequency estimate;95..98 entire center concealed byUI therefore spatialfield estimated from clear outer textile, never replay software UI.",
+    "Glow pulse/English label anatomy are improved by stable native glyph with measuredblur; source unknownshader canleave halo/opacityresidual.",
+    "Known exterior textile retained; graphic/warehouse-covered regions texture-inpainted and explicitly masked estimated. 64px repetition grid seam corrected. Glow outer stroke widened after actual comparison; exact native shader still unknown.",
+    "Connector full static simultaneous appearance corrected to native visible per-frame growth. Neutral source line alpha estimated from compressed gray edges; private graphic geometry is fixed and editable redraw requires new audit.",
+    "源仓库实拍被真实人物视频替换，图片内容/房间和服装变化会改变玻璃下的颜色分布；教程UI95以后替换为人物回归，不复现软件操作。",
+    "源牌面glow shader未知：采用估计脉冲与宽24pxGaussian9 halo，实际对比仍比原源部分帧光晕更浅。",
+    "牌面底缘由中心灰边跃迁估计，照片边缘和flash遮挡部分可能有小范围高度残差。",
+    "纸纤维微纹理没有可编辑原材质，独立5px白边较平滑；私有中文字/英文固定字形不能任意替换并承诺同字体。",
+    "91–94光效从clear90差分/48px平滑估计；95–98原中心被UI遮住，用外灰纹理通道推估，全中心标estimated，实际暖闪空间色仍有偏差。"
+  ],
+  "other_source_segments": {
+    "status": "second-pass actual animated subvariants in progress; UI tutorials omitted as instructional material",
+    "full_span_overview": "Private measurement/artwork retained in the local study; use the stated portable parameters and licensed replacement assets.",
+    "native_ledger": "Private measurement/artwork retained in the local study; use the stated portable parameters and licensed replacement assets.",
+    "no_claim": "Selected window is not full tutorial reconstruction"
+  },
+  "calibration_scope": "Native details are working calibrations. Only the windows listed below are accepted for actual-frame review; pending geometry/branches remain work in progress."
+}

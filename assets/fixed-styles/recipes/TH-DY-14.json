@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-14",
+  "name": "薄荷绿·手写三联卡",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "mechanism_preview_only",
+    "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+  },
+  "source": {
+    "rank": 14,
+    "url": "https://www.douyin.com/video/7632204826218138921",
+    "author": "剪辑师彭于晏🙉（实操派单课）",
+    "title": "美妆口播思路教学！网感 美感双在线~",
+    "canonical_source_rank": 14
+  },
+  "semantic_use": [
+    "多个例子同时展现。"
+  ],
+  "observed_motion": "带浅色边框的美妆画面组成叠放卡片，配手写标题。",
+  "basic_implementation": {
+    "grammar": "d14_collage_cards",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "presenter_video",
+      "video_start",
+      "images",
+      "evidence_labels"
+    ],
+    "design_variables": [
+      "证据图片",
+      "卡片数量",
+      "倾角",
+      "层次"
+    ],
+    "scope": "复刻画面中的布局及剪辑机制，以替换人物和内容重建；教程界面、原片人物和生成模型变脸不属于此实现。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "presenter_video",
+    "video_start",
+    "images",
+    "evidence_labels"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  },
+  "palette": {
+    "background_samples": [
+      [
+        82.0,
+        82.0,
+        82.0
+      ],
+      [
+        153.0,
+        160.0,
+        154.0
+      ],
+      [
+        133.0,
+        171.0,
+        146.0
+      ],
+      [
+        109.0,
+        172.0,
+        130.0
+      ],
+      [
+        87.0,
+        172.0,
+        113.0
+      ],
+      [
+        111.0,
+        172.0,
+        131.0
+      ],
+      [
+        137.0,
+        171.0,
+        150.0
+      ],
+      [
+        160.0,
+        171.0,
+        164.0
+      ],
+      [
+        83.0,
+        86.0,
+        81.0
+      ]
+    ],
+    "gold_border": [
+      238,
+      222,
+      154
+    ],
+    "pink_calligraphy": [
+      251.0,
+      39.0,
+      126.0
+    ],
+    "border_white": [
+      244,
+      247,
+      237
+    ]
+  },
+  "font": {
+    "original": "hand-written reference unknown",
+    "private_fixed_glyphs": true,
+    "editable_fallback": "NotoSansSC approximate"
+  },
+  "layout": {
+    "canvas": [
+      1920,
+      1080
+    ],
+    "normalized_cards": [
+      [
+        0.09322916666666667,
+        0.1287037037037037,
+        0.2140625,
+        0.6601851851851852
+      ],
+      [
+        0.4010416666666667,
+        0.12962962962962962,
+        0.21302083333333333,
+        0.6638888888888889
+      ],
+      [
+        0.6875,
+        0.1425925925925926,
+        0.21145833333333333,
+        0.6564814814814814
+      ]
+    ],
+    "normalized_title": [
+      0.313,
+      0.662,
+      0.36,
+      0.143
+    ]
+  },
+  "motion_rules": {
+    "frames": [
+      0,
+      84
+    ],
+    "fps": 30,
+    "duration": 2.8,
+    "cards": "native gold-border measured movement and clipped entry",
+    "title": "fixed handwritten caption with native timed lower-question reveal",
+    "exit": "Native white/green/blue mirrored-plane optical wipe; field phase and next-page onset retained, original exact projective shader partial."
+  },
+  "source_structure": [
+    {
+      "seconds": [
+        0,
+        2.8
+      ],
+      "effects": [
+        "three-card assembly",
+        "handwritten title",
+        "question appearance",
+        "first wipe"
+      ],
+      "covered": true
+    },
+    {
+      "seconds": [
+        2.8,
+        17
+      ],
+      "effects": [
+        "blurred product collage",
+        "large heading",
+        "three topic labels",
+        "speech stickers"
+      ],
+      "covered": false
+    },
+    {
+      "seconds": [
+        17,
+        83
+      ],
+      "effects": [
+        "academic three-card examples",
+        "two question columns",
+        "keyword calligraphy"
+      ],
+      "covered": false
+    },
+    {
+      "seconds": [
+        83,
+        107
+      ],
+      "effects": [
+        "sound explanation card",
+        "BGM topic emphasis"
+      ],
+      "kind": "teaching contents and text",
+      "covered": false
+    },
+    {
+      "seconds": [
+        107,
+        152.27
+      ],
+      "effects": [
+        "product three-card packaging",
+        "speech bubbles",
+        "tag overlays"
+      ],
+      "covered": false
+    }
+  ],
+  "calibration_scope": "Native details are working calibrations. Only the windows listed below are accepted for actual-frame review; pending geometry/branches remain work in progress."
+}

@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-15",
+  "name": "人物前景·衬线大字与口播字幕组",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "mechanism_preview_only",
+    "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+  },
+  "source": {
+    "rank": 15,
+    "url": "https://www.douyin.com/video/7529114087033490746",
+    "author": "自由碗子",
+    "title": "新手必看❗️流量蹭蹭⬆️4种网感字幕设计㊙️",
+    "canonical_source_rank": 15
+  },
+  "semantic_use": [
+    "把关键词与人结合，避免挡脸。"
+  ],
+  "observed_motion": "重点字放到人物后方，由前景人物遮挡字的部分区域。",
+  "basic_implementation": {
+    "grammar": "d15_behind_type",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "cutout",
+      "outline",
+      "accent"
+    ],
+    "design_variables": [
+      "抠像",
+      "大字",
+      "字号",
+      "人物位置"
+    ],
+    "scope": "复刻画面中的布局及剪辑机制，以替换人物和内容重建；教程界面、原片人物和生成模型变脸不属于此实现。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "cutout",
+    "outline",
+    "accent"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  },
+  "palette": {
+    "behind_word_white": [
+      252,
+      252,
+      251
+    ],
+    "behind_word_gold": [
+      235,
+      200,
+      100
+    ],
+    "keyword_yellow": "source-specific sampled in subtitle variant",
+    "main_caption_white": "source-specific sampled in subtitle variant"
+  },
+  "font": {
+    "original_serif": "unknown; actor-occluded shapes unavailable",
+    "editable_serif_fallback": "Times New Roman Italic",
+    "Chinese_fallback": "NotoSansSC-800 approximate"
+  },
+  "layout": {
+    "canvas": [
+      1080,
+      1920
+    ],
+    "normalized_examples": [
+      [
+        0.0,
+        0.2635416666666667,
+        0.5879629629629629,
+        0.17083333333333334
+      ],
+      [
+        0.15185185185185185,
+        0.44895833333333335,
+        0.5074074074074074,
+        0.1796875
+      ],
+      [
+        0.2972222222222222,
+        0.6395833333333333,
+        0.5148148148148148,
+        0.17083333333333334
+      ]
+    ],
+    "layer_order": [
+      "Aroll",
+      "example_clean_room",
+      "serif_word",
+      "same-clock_dynamic_foreground"
+    ]
+  },
+  "motion_rules": {
+    "native_window": [
+      2595,
+      2643
+    ],
+    "frames": 48,
+    "fps": 30,
+    "duration": 1.6,
+    "example_local_first_frames": [
+      3,
+      20,
+      36
+    ],
+    "occlusion": "Word sits between background and correctly moving per-frame alpha person; independently replaceable glyph asset"
+  },
+  "source_structure": [
+    {
+      "seconds": [
+        0,
+        3
+      ],
+      "effects": [
+        "opening cry caption",
+        "reference feed behind cutout"
+      ],
+      "covered": false
+    },
+    {
+      "seconds": [
+        3,
+        19
+      ],
+      "effects": [
+        "main subtitles",
+        "left white complaint phrases",
+        "dark vignette emphasis"
+      ],
+      "covered": false
+    },
+    {
+      "seconds": [
+        19,
+        29
+      ],
+      "effects": [
+        "normal monochrome subtitles",
+        "font teaching"
+      ],
+      "covered": false
+    },
+    {
+      "seconds": [
+        29,
+        75
+      ],
+      "effects": [
+        "yellow keyword emphasis",
+        "beat colour/size",
+        "independent floating word"
+      ],
+      "covered": false,
+      "UI_steps_not_animation": true
+    },
+    {
+      "seconds": [
+        81,
+        84.7
+      ],
+      "effects": [
+        "third-person bubble over duplicate moving video"
+      ],
+      "covered": false
+    },
+    {
+      "seconds": [
+        86.5,
+        88.1
+      ],
+      "effects": [
+        "serif words behind moving person in example cards"
+      ],
+      "covered": true,
+      "variant": "all3actual behind-word card examples; native2595..2642"
+    },
+    {
+      "seconds": [
+        88.1,
+        102.6
+      ],
+      "kind": "phone authoring/safe-area interface",
+      "copy_UI": false
+    },
+    {
+      "seconds": [
+        102.6,
+        119.9
+      ],
+      "kind": "safe-area explanation and close",
+      "covered": false
+    }
+  ],
+  "calibration_scope": "Native details are working calibrations. Only the windows listed below are accepted for actual-frame review; pending geometry/branches remain work in progress."
+}

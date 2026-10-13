@@ -1,62 +1,75 @@
-# Talking Head Motion · 网感口播剪辑 Skill
+# Talking Head Motion · 30 Social Talking-Head Editing Styles
 
 [简体中文](README.md) | [English](README.en.md)
 
-An Agent Skill for understanding narration, arranging presenter footage and animation, and exporting a complete MP4 locally. It supports editing recorded talking-head footage with its original audio, or producing a video from a script with configured voice and avatar services. Styles are shown on a preview page; selections and revisions happen in the conversation.
+**Choose an editing style and turn your recorded talking-head footage into a complete video.**
 
-The Agent handles meaning, assets, storyboarding and review. Local scripts handle deterministic rendering, caching and technical checks.
+This Agent Skill centers on a fixed talking-head style library. It preserves the presenter and original voice, arranges emphasis captions, presenter windows, evidence and transitions by meaning, and exports MP4 locally. Preview styles on a read-only page; choose and revise them in the conversation.
 
-## Features
+## The core: styles you can name
 
-- **Edit original footage**: keep the original picture and voice together when cutting mistakes, repeated sentences and retakes. Preserve pauses that serve the delivery.
-- **Bring the presenter back throughout the video**: show the presenter for the opening, key claims, emotional turns, conclusions and closing. Explanatory shots can retain a picture-in-picture window.
-- **35 art styles**: code for materials, brushwork, shapes, palettes, lighting and motifs. Objects and scenes are redesigned for each new topic.
-- **8 parameterized animation grammars**: whiteboard, collage, kinetic typography, charts, geometry, product interfaces, flat illustration and storytelling. A ninth presenter-explainer method card requires project-owned presenter assets.
-- **28 social talking-head motion/layout modules**: reconstructed selected windows from the first 30 observed Douyin search results, including word tiles, presenter windows, curved titles, foreground layers, text shards, charts, masks and mosaics. Duplicate mechanisms are merged. Supports replacement content and frame-by-frame presenter-video seeking. See [sources and usage](references/douyin-grammars.md) and [validation scope](assets/social-grammars/validation.json).
-- **Reference analysis and effect reconstruction**: study motion paths, masks, layers, holds, transitions and their narrative purpose, then build components with replaceable content.
-- **Measured native-frame reconstruction**: decode complete originals into RGB/PTS ledgers, author measured frame tracks and moving filmed RGB/RGBA layers, render the original window duration, and compare encoded output with previous/next-frame controls. This is a measurement-driven tool, not an arbitrary-video inverse-effects algorithm. [Execution protocol](references/native-frame-reconstruction.md), [actual validation scope](assets/reference-engine/validation.json).
-- **Word-timed animation**: anchor actions and captions to real timestamps from the final master, rather than evenly dividing time or inserting cards at fixed intervals.
-- **Conversational review**: the preview page offers playback, shot navigation, synchronized comparisons and downloads. Style selection, feedback and approval happen in the conversation.
-- **Local delivery**: MP4, SRT, project files, asset sources and review records tied to the actual output version.
+Thirty reference sources have stable entries **TH-DY-01 through TH-DY-30**, each with a name and version. Multiple layouts from one source become named variants. Shared mechanisms are identified; thirty sources are not advertised as thirty unrelated original animation grammars.
 
-## Complete workflow
+A recipe fixes its palette, typography system, layout, presenter proportions, entrances, exits and transitions. Replace the script, presenter and evidence, then retime the actions to the new narration. Examples include green word tiles and comic emphasis, curved circular presenter windows, dashed cutouts and profile cards, mint three-card layouts, type behind the presenter, six-panel sequences, evidence charts and crack transitions.
+
+[Catalogue](assets/fixed-styles/catalog.json) · [Selection and reuse](references/fixed-talking-head-styles.md) · [Native-frame protocol](references/native-frame-reconstruction.md). Reconstruction, replacement and review readiness is recorded per style; unfinished work is labeled. Original reference media and local project previews are not distributed with the repository.
+
+The current recipe version is **0.1.0**: all thirty basic style identities are fixed. Detailed native windows and variants are added according to their actual completed scope. Basic mechanism previews and precise native-frame acceptance are recorded separately.
+
+## Five production steps
 
 ```mermaid
-flowchart TD
-    A[Receive footage or script] --> B[Show styles and select in conversation]
-    B --> C[Organize content and optionally analyze references]
-    C --> D{Input route}
-    D -->|Recorded footage| E[Cut picture and original audio together]
-    D -->|Script only| F[Configured voice and authorized avatar services]
-    E --> G[Accept the final audiovisual master]
-    F --> G
-    G --> H[Correct transcription and align captions]
-    H --> I[Plan presenter and animation shots by meaning]
-    I --> J[Build topic-specific scenes and animation]
-    J --> K[Render the complete MP4 locally]
-    K --> L[Technical checks and Agent review of encoded output]
-    L -->|Issues found| J
-    L -->|Checks complete| M[Preview page and conversational review]
-    M --> N[Deliver and retain reusable lessons]
+flowchart LR
+    A[Receive footage] --> B[Edit content and correct captions]
+    B --> C[Choose a fixed editing style in chat]
+    C --> D[Arrange presenter·captions·evidence·transitions]
+    D --> E[Render locally and review in chat]
+    E -->|Specific revisions| D
 ```
 
-Reuse the style already selected for the current project; new instructions override previous choices. If a style has not been selected for a finished single-style video, show existing previews and ask the user to choose in the conversation. Continue organizing footage, the script and assets while waiting. If the user explicitly delegates the choice, the Agent may select a suitable style and explain it. Produce multiple complete comparison videos only when requested.
+1. **Receive footage:** inspect the real framing, voice and content of a recording or accepted avatar master.
+2. **Edit content:** cut mistakes, repeats and retakes with picture and original audio together; preserve useful pauses and correct the final master's captions.
+3. **Choose a style:** reuse a confirmed choice or specify a name/ID in chat; freeze the recipe and version.
+4. **Arrange the video:** use the chosen style according to meaning, keeping the presenter as the main thread and returning to them for key claims and the closing.
+5. **Render and review:** deliver the complete MP4, SRT and project, inspect encoded output and synchronization, and handle feedback in chat.
 
-Detailed references: [production workflow](references/production-workflow.md), [original footage editing](references/raw-talking-head.md), [presenter-led editing](references/editorial-playbook.md) and [full Huashu production](references/huashu-full-production.md). The detailed skill references are currently in Chinese.
+Known recipes are reused directly. Each video does not require a new reference study, a full-library comparison or an art-scene pipeline. A style can be selected when footage is supplied; these are production dependencies, not a questionnaire. [Production workflow](references/production-workflow.md) · [Recorded footage](references/raw-talking-head.md) · [Editorial rules](references/editorial-playbook.md). Detailed references are currently in Chinese.
 
-## Install in Codex
+## Usage
 
-You need Git, Python, Node.js, FFmpeg/ffprobe and Chromium. The basic Python entry points use the standard library; transcription, visual checks and scene rendering require additional dependencies as needed.
+> Use talking-head-motion to edit `/absolute/path/raw.mp4` in TH-DY-13. Preserve my original voice, return to the presenter for key claims, and export a complete 9:16 MP4.
+
+Reuse an existing style choice. If none was supplied for a finished single-style video, the Agent shows existing previews and asks in chat while continuing independent footage/caption work. The web page offers playback, switching, frame comparison and downloads; it has no selection forms, feedback fields or ratings.
+
+The Agent manages recipe locking internally:
+
+```bash
+python3 scripts/fixed_styles.py list
+python3 scripts/fixed_styles.py bind /absolute/project --style TH-DY-13 --choice-source 'User selected TH-DY-13 in chat'
+```
+
+Once the master, final word times and shot plan are ready:
+
+```bash
+python3 scripts/produce.py /absolute/project --model small --expected-script script.txt
+```
+
+Scripts cache, compile, render and run technical checks. The current Agent then inspects the actual video. Command success does not replace semantic or visual judgment. [Project contract](references/project-contract.md).
+
+## Optional branches
+
+- **Script to a talking-head master:** recorded footage needs no new voice or avatar. A script-only project can use configured speech and authorized HeyGen, then join the same workflow. [Provider handoff](references/provider-handoff.md).
+- **Learn a new style:** retain the complete reference, inspect native RGB/PTS, measure important motion, rebuild separate layers and review the encoded output. Publish a recipe version after validation; ordinary reuse does not repeat this research. [Native reconstruction](references/native-frame-reconstruction.md).
+- **Artistic inserts:** 35 art palettes/material recipes and eight general animation grammars are available for special explanatory or artistic shots. They are separate optional assets, not additional mandatory style decisions for every talking-head edit. [Optional art capability](references/huashu-integration.md).
+
+The current Codex reviews output by default; Gemini is optional. Voice generation, avatar generation and art rendering are not mandatory for editing your recording.
+
+## Install
+
+You need Git, Python, Node.js, FFmpeg/ffprobe and Chromium. Preserve existing local changes before updating an installed skill or using a different destination.
 
 ```bash
 git clone https://github.com/maomyu/talking-head-motion.git "$HOME/.codex/skills/talking-head-motion"
-```
-
-If the destination already exists, preserve any local changes before updating it or choosing another directory. Reload your Skill-compatible client, then invoke `talking-head-motion`. Other compatible clients can use their own skill directory; browser tools and review capabilities depend on the client.
-
-Set up local dependencies:
-
-```bash
 cd "$HOME/.codex/skills/talking-head-motion"
 python3 -m venv .venv
 source .venv/bin/activate
@@ -68,50 +81,20 @@ cd ../..
 python3 scripts/motion.py doctor
 ```
 
-Node dependencies are pinned in `assets/runtime/package-lock.json`; no global HyperFrames installation is required. Install FFmpeg/ffprobe separately. The full-resolution frame ledger uses a small locally compiled C kernel; a working C compiler is required. You may reuse an existing working environment. The first transcription model download requires network access.
+Reuse working dependencies instead of downloading them again. Node dependencies are pinned; no global HyperFrames installation is needed. Install FFmpeg/ffprobe separately. The full-resolution ledger requires a C compiler; first-time ASR model downloads need network access. Other compatible clients can use their skill directories, with review capabilities supplied by the client.
 
-## Usage
+## Validation
 
-Give the Agent the path to your original footage and the desired art style. For example:
+- Stable identity, encoded windows, native timing, colour/geometry measurements and remaining differences are reported separately. See [native validation](assets/reference-engine/validation.json) and [earlier mechanism checks](assets/social-grammars/validation.json). The earlier four-second demos are not fine native reconstructions.
+- All thirty originals were fully decoded: 89,080 frames. Machine traversal does not prove complete visual understanding or successful arbitrary replacement in every style. Unknown original fonts, occluded artwork and missing source projects remain explicit limitations.
+- Silent stock-presenter studies establish only their tested animation/framing. Personal footage, avatar lip-sync and a user's first recording require their own review.
+- Synchronization, captions, visuals, evidence and technical checks have separate scopes. Enlargement cannot restore detail; sampled frames and transcripts do not establish complete real-time listening.
+- This is not an arbitrary-video inverse-effects algorithm or a guarantee of viral performance. Keep meaningful output review without turning internal production detail into user approval forms.
 
-> Use talking-head-motion to edit my recorded talking-head video at `/absolute/path/raw.mp4`. Use the ink-painting style, preserve my original voice, bring the presenter back throughout the video, and export a complete portrait video. Handle all revision feedback in this conversation.
+## Attribution and licenses
 
-You can also provide a script and references. A script-only route requires configured voice and avatar master providers. Editing original footage does not require Fish, MiniMax or Gemini accounts.
+This project's maintained talking-head workflow, adaptation implementation and documentation use [MIT](LICENSE). The thirty fixed entries are built through reference study and local reconstruction; source links, shared mechanisms and validation scopes are preserved. Reference media belongs to its original creators and stays in private production projects.
 
-Run `produce.py` after preparing the accepted master, final word timestamps and semantic storyboard:
+The optional art engine/recipes come from [alchaincyf/huashu-art-motion](https://github.com/alchaincyf/huashu-art-motion). Original copyright, MIT license and source commit `9ff59339f934e08483ba0a5b1db20f4c2c421b35` are preserved. Fonts retain their SIL OFL 1.1 licenses and the stroke subset uses the Arphic Public License. Segmentation weights, original videos, extracted glyph artwork, credentials and generated project media are not bundled. See [third-party notices](THIRD_PARTY_NOTICES.md).
 
-```bash
-python3 scripts/produce.py /absolute/project --model small --expected-script script.txt
-```
-
-It runs transcription when needed, cached B-roll production, composition building, browser checks, rendering and full decoding. A successful command still requires Agent review; it does not replace understanding the script, choosing evidence or judging the visuals. See the [project contract](references/project-contract.md) for commands and file conventions.
-
-List the available art-style capabilities:
-
-```bash
-python3 scripts/huashu_full.py catalog
-```
-
-The local review server binds only to `127.0.0.1`. The page has no feedback forms, ratings, or controls for saving or exporting review notes. Videos, assets and review records stay in their production projects and are not distributed with this repository.
-
-## Validation and limitations
-
-- Local production completed 35 same-content style comparisons, each approximately 75 seconds at 1080×1920 and 24fps, with full decoding and sampled encoded-frame reviews. Those project videos use clearly labeled stock-presenter footage and are not distributed here. This validation does not establish personal-avatar lip-sync quality or successful editing of a user's first real recording.
-- Technical, visual, caption, audio and reference-fidelity checks are reported separately. Inspecting frames or reading transcripts is not a complete real-time audiovisual review. Unchecked areas must be disclosed.
-- The 35 styles are material and drawing mechanisms that require topic-specific staging. Replacing the script alone is not guaranteed to produce a new finished video. The 8 grammars and 35 styles are not 280 verified automatic combinations.
-- Reference effects require observation and reconstruction. This repository does not provide a general inverse-effects algorithm for arbitrary videos or guarantee viral performance.
-- The earlier modules were locally exercised in 30 four-second mechanism clips and 30 reuse clips, including static layouts. These are not 30 complete new-person talking-head videos or every effect in the tutorials. The separate native reconstruction route now accepts moving RGB/RGBA sequences; that does not establish precision acceptance for all 28 earlier modules.
-- The new route decoded all 30 complete originals (89,080 native frames). Detailed reconstruction and encoded-frame review cover two selected windows (141 and 60 frames), with glyph, occlusion, colour and motion residuals. The other 28 sources and the remaining parts of both selected sources are not fully reconstructed. See the [native-route validation record](assets/reference-engine/validation.json).
-- The moving-matte experiment used 303 real stock-video frames at native 25 fps. All foreground RGB bytes matched the original decode. Hair, face and clothing were visually checked; headset accessories still have partially transparent segmentation errors. Model weights are not distributed, and the research clips do not establish the user's avatar or lip-sync quality.
-- Avatar providers, authorized likenesses, voices, costs and service capabilities must be checked in the actual project. Remote Gemini review is optional; the current Codex Agent is the default reviewer.
-- The original 35 room scenes are 1920×1080 capability examples. New portrait videos require redesigned compositions. The author's private characters, audio, showcase media and service configuration are excluded.
-
-See the [review rules](references/quality-review.md), [full-film style comparisons](references/style-batch.md) and [per-style implementation limits](assets/style-batch/catalog.json).
-
-## Sources and licenses
-
-This project's original workflow, adaptation code and documentation use the [MIT license](LICENSE). Huashu's engine, art recipes and methods come from [alchaincyf/huashu-art-motion](https://github.com/alchaincyf/huashu-art-motion). The original author's copyright and MIT license are retained, with the source pinned to commit `9ff59339f934e08483ba0a5b1db20f4c2c421b35`.
-
-Fonts retain their respective SIL OFL 1.1 terms. The Hanzi stroke subset uses the Arphic Public License. These assets are not relicensed by the root MIT license. Installed runtime dependencies also retain their own licenses. See [third-party notices](THIRD_PARTY_NOTICES.md) for scope, attribution and exclusions.
-
-Research into Hypit, Talkcraft and other sources informed the workflow; their code and media are not bundled as this project's runtime. This project is not an official product of those authors or services.
+Research into Hypit, Talkcraft and other sources informed methods; their code/media is not bundled, and this project is not an official product of those authors or services.

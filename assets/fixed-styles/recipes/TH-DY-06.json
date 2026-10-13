@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-06",
+  "name": "白色毛玻璃章节卡",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "mechanism_preview_only",
+    "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+  },
+  "source": {
+    "rank": 6,
+    "url": "https://www.douyin.com/video/7566494989913935130",
+    "author": "剪辑师｜大如",
+    "title": "惊呆！2个方法✅口播网感剪辑！！",
+    "canonical_source_rank": 6
+  },
+  "semantic_use": [
+    "口播章节切换，给观众一次阅读停顿。"
+  ],
+  "observed_motion": "人物背景虚化，半透明竖向卡片浮在中央，Part1和章节标题分层显示，然后回到人物。",
+  "basic_implementation": {
+    "grammar": "d06_frosted_chapter",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "presenter_video",
+      "video_start",
+      "label"
+    ],
+    "design_variables": [
+      "章号",
+      "标题",
+      "副标题",
+      "卡片透明度",
+      "背景模糊",
+      "停留时长"
+    ],
+    "scope": "章节卡的层次和收放；不复刻变声本身。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "presenter_video",
+    "video_start",
+    "label"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  },
+  "palette": {
+    "glass_white": [
+      255,
+      255,
+      255
+    ],
+    "alpha": 0.516,
+    "title_white": [
+      250,
+      250,
+      246
+    ],
+    "shadow_gray": [
+      80,
+      76,
+      69
+    ]
+  },
+  "font": {
+    "source_family": "unknown from compressed reference; fixed isolated glyph study only",
+    "editable_fallback": "NotoSansSC/available system font, approximate shape must be separately reviewed"
+  },
+  "layout": {
+    "glass_xywh_ratio": [
+      0.0763888888888889,
+      0.16796875,
+      0.8388888888888889,
+      0.6953125
+    ],
+    "subject_face_to_window_ratio": 0.6625874125874126,
+    "upper_body_visible": true
+  },
+  "grammar": {
+    "time_unit": "original native frame numbers,30fps",
+    "enter_hold_exit": {
+      "full_presenter_cut": 101,
+      "global_blur_first": 104,
+      "glass_slide_first": 106,
+      "glass_settled": 110,
+      "title_first": 117,
+      "title_settled": 119,
+      "card_and_blur_hard_cut_exit": 142
+    },
+    "event_policy": "real measured source events; cut/pulse/path ordering preserved, new narration must align to accepted word clock",
+    "layer_order": [
+      "real-presenter",
+      "intro-black-fill",
+      "calibrated-intro-real-matte",
+      "two-methods-upper-arc",
+      "local-frosted-moving-real",
+      "sliding-white-frost",
+      "chapter-tag",
+      "chapter-title-and-detail",
+      "final-small-caption-pill"
+    ]
+  },
+  "replacement_limits": {
+    "fixed_source_glyphs": "not editable; new phrase requires approximate font or separately identified licensed original font",
+    "timing": "reuse native enter/hold/exit proportions, map to new word/semantic clock with no claim of exact same phrase animation",
+    "subject": "different footage must be reframed and reviewed rather than copied old face coordinates"
+  },
+  "unresolved": [
+    "Different genuine stock presenter, face/gestures/room; no original actor replay. Silent technical animation reconstruction, no voice/lip-sync claim.",
+    "Original font/project unknown. Private original fixed glyph art cannot be advertised as arbitrary editable original font.",
+    "Source native H264 compression and new H264 codec colors/antialiasing differ; no100% pixel claim.",
+    "Source character uses a cartoon face filter; authentic stock is not transformed into original generated face.",
+    "Glass alpha≈.516 from wall RGB, rendered .516; source vector material/refraction and exact blur kernel unavailable.",
+    "Global blur and local glass blur are bounded estimates from frequency appearance; unknown raw prefilter footage.",
+    "Original title animation private white glyph threshold/independent stroke; compressed gray antialiasing is not exact.",
+    "Main glyphs use solid white core plus tightly bounded2px antialias support; no source skin RGB. F117–118 entry is contrast-derived white alpha with independent outline, original blur/opacity remains approximate.",
+    "Opening real matte subject is calibrated to original head/circle ratio0.663 and upper-body visibility, with rebuilt plant scenery. Stock cannot supply original cartoon long hair or uncaptured lower torso.",
+    "Final enlarged review corrected hollow white subtitle strokes: warm compressed white source pixels use chroma-aware solid core. Entry117/118 alpha from native white-minus-background, residual opacity/contour cannot be100%.",
+    "Entry117/118 now uses clear116 white/black difference alpha to retain soft blur. Photo motion under glass means low-frequency subtraction alpha approximate, core-neighborhood limits remove facial ghosts.",
+    "原人物卡通脸滤镜、长头发、墙面/衣服与真实stock演员不同；开场胸口纵向fit1.22是素材构图适配，不是原人物动作恢复。",
+    "玻璃原底素材与散焦核不可见，alpha从墙区域估计；白衬衫和植物底片使卡片下方颜色分布、白字对比度与原不同。",
+    "F117/118动态字形的边缘alpha从局部对比估计，原动感模糊/扭曲素材未知；稳定字形边缘存在约1px差异。",
+    "Part1使用TimesNewRomanBold近似字体，原细字相对更浅；原中文字为私有固定字形，任意改字需重新审核。"
+  ],
+  "other_source_segments": {
+    "status": "second-pass actual animated subvariants in progress; UI tutorials omitted as instructional material",
+    "full_span_overview": "Private measurement/artwork retained in the local study; use the stated portable parameters and licensed replacement assets.",
+    "native_ledger": "Private measurement/artwork retained in the local study; use the stated portable parameters and licensed replacement assets.",
+    "no_claim": "Selected window is not full tutorial reconstruction"
+  },
+  "calibration_scope": "Native details are working calibrations. Only the windows listed below are accepted for actual-frame review; pending geometry/branches remain work in progress."
+}

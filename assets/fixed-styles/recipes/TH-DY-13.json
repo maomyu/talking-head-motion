@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-13",
+  "name": "虚线抠像·资料卡与弧形问句",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "partial_native_windows_reviewed",
+    "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+  },
+  "source": {
+    "rank": 13,
+    "url": "https://www.douyin.com/video/7655178073935007003",
+    "author": "剪辑师_春",
+    "title": "百万博主的精剪vs粗剪！",
+    "canonical_source_rank": 13
+  },
+  "semantic_use": [
+    "让主讲人从背景中跳出来。"
+  ],
+  "observed_motion": "独立人物抠像从侧面进入，白色边缘与虚化背景区分。",
+  "basic_implementation": {
+    "grammar": "d13_cutout_outline",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "cutout",
+      "question",
+      "accent"
+    ],
+    "design_variables": [
+      "抠像",
+      "侧向距离",
+      "描边",
+      "标题"
+    ],
+    "scope": "复刻画面中的布局及剪辑机制，以替换人物和内容重建；教程界面、原片人物和生成模型变脸不属于此实现。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "cutout",
+    "question",
+    "accent"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [
+      {
+        "variant": "intro",
+        "first_frame": 0,
+        "frames": 50,
+        "duration": 1.6666666666666667,
+        "output_sha256": "ae869f8c7e2f876eb8b76ec2077ea2f44ff53e70579f0969e20fa4281ee61219",
+        "frame_review_scope": "完整开头50原生帧已实看·保留具体残差·用户待审",
+        "residuals": [
+          "Whole blue word travels correctly in general direction, but some early clipped characters use manual anchors; phase/rotations differ visibly from source on first17frames.",
+          "181 of250 glyph-frames have clean native template fits. Remaining69 are clipped/ambiguous estimates;5-degree rotation quantization and antialias/shadow differ. Neighbour punctuation/background speckle extraction defects were repaired.",
+          "Original white dashed path around source woman differs from new stock man/headset anatomy. The repaired outer-alpha contour is visible; irregular alpha/headset edges and dash joins remain.",
+          "Private fixed profile card has reconstructed occluded regions; avatar/bio and bottom/footer inpainting remain visibly different. It is a static replaceable reference illustration, not recovered original vectors.",
+          "Whole-line right-to-left clipped entry is verified,36frames fitted. Shadow softening and early/faded crop positions are estimated; repaired narrow black edge is still harder than original soft shadow.",
+          "Real moving stock man/room/gesture and extended paper replace source woman, blurred comparison footage and editing timeline. Stock native25fps is held at source30fps; no speech/lip-sync claim."
+        ]
+      }
+    ],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  },
+  "palette": {
+    "title_yellow": [
+      253.0,
+      244.0,
+      138.0
+    ],
+    "question_blue": [
+      182.0,
+      218.0,
+      244.0
+    ],
+    "outline_white": [
+      255,
+      255,
+      253
+    ],
+    "background": "native gray crumpled texture/soft blurred video"
+  },
+  "font": {
+    "fixed_native_reference_glyphs": true,
+    "original_font": "unknown rounded Chinese",
+    "editable_fallback": "NotoSansSC-800; approximate, requires separate word-fit review"
+  },
+  "layout": {
+    "canvas": [
+      1080,
+      1920
+    ],
+    "profile_card": [
+      0.37777777777777777,
+      0.1625,
+      0.525,
+      0.2708333333333333
+    ],
+    "presenter": [
+      0,
+      0.4125,
+      0.6666666666666666,
+      0.6666666666666666
+    ],
+    "title_band": [
+      0.08,
+      0.11,
+      0.85,
+      0.08
+    ]
+  },
+  "grammar": "d13_cutout_outline",
+  "motion_rules": {
+    "native_window": [
+      0,
+      50
+    ],
+    "fps": 30,
+    "duration": 1.6666666666666667,
+    "title": "Whole title travels in from right; native first-glyph fit applied to each separate source glyph; subsequent screen clipping causes apparent progressive reveal. F41..49 moves down and fades.",
+    "profile": "native print-template registered vertical fall then lower exit",
+    "person": "left in / right out with dynamic separate dashed alpha contour",
+    "question": "independent blue glyphs follow curved positions; native silhouette extrema manually anchored"
+  },
+  "source_structure": [
+    {
+      "frames": [
+        0,
+        50
+      ],
+      "kind": "compound animation",
+      "covered": true,
+      "effects": [
+        "yellow sequential title",
+        "profile drop/exit",
+        "moving alpha presenter",
+        "dashed contour",
+        "arched question"
+      ]
+    },
+    {
+      "seconds": [
+        1.6667,
+        7.8
+      ],
+      "kind": "tutorial comparison layout",
+      "covered": false,
+      "effects": [
+        "edited emphasis subtitles beside raw presenter",
+        "software timeline is contextual interface"
+      ]
+    },
+    {
+      "seconds": [
+        7.8,
+        12.8
+      ],
+      "kind": "native black presenter pocket",
+      "covered": false,
+      "effects": [
+        "nested frame zoom",
+        "white outline",
+        "yellow phrase emphasis"
+      ]
+    },
+    {
+      "seconds": [
+        12.8,
+        20.4667
+      ],
+      "kind": "comparison and emphasis subtitles",
+      "covered": false,
+      "effects": [
+        "caption placement and individual phrase emphasis"
+      ]
+    }
+  ],
+  "shared_grammar_with": [
+    "TH-DY-29"
+  ],
+  "calibration_scope": "Native details are working calibrations. Only the windows listed below are accepted for actual-frame review; pending geometry/branches remain work in progress."
+}

@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-09",
+  "name": "衬线层级大字与聚光开场",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "mechanism_preview_only",
+    "scope": "当前可查看并复用基础机制；精细版仍在制作，不能作为逐帧或原配色完整验收。"
+  },
+  "source": {
+    "rank": 9,
+    "url": "https://www.douyin.com/video/7470050394790481190",
+    "author": "Vikki 内容营销",
+    "title": "『字幕大法』高级感IP口播剪辑，我也就看了27遍～",
+    "canonical_source_rank": 9
+  },
+  "semantic_use": [
+    "重点词具有主次，人物持续可见。"
+  ],
+  "observed_motion": "横版口播周围以衬线主字、不同颜色强调字和小英文形成层次。",
+  "basic_implementation": {
+    "grammar": "d09_editorial_type",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "presenter_video",
+      "video_start",
+      "items",
+      "accent"
+    ],
+    "design_variables": [
+      "字组",
+      "位置",
+      "衬线",
+      "强调色"
+    ],
+    "scope": "复刻画面中的布局及剪辑机制，以替换人物和内容重建；教程界面、原片人物和生成模型变脸不属于此实现。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "presenter_video",
+    "video_start",
+    "items",
+    "accent"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  },
+  "palette": {
+    "cream_source": [
+      245,
+      248,
+      202
+    ],
+    "white": [
+      255,
+      255,
+      255
+    ],
+    "yellow": [
+      255,
+      234,
+      89
+    ],
+    "black": [
+      0,
+      0,
+      0
+    ]
+  },
+  "font": {
+    "source_family": "unknown from compressed reference; fixed isolated glyph study only",
+    "editable_fallback": "NotoSansSC/available system font, approximate shape must be separately reviewed"
+  },
+  "layout": {
+    "native_canvas": [
+      1920,
+      1080
+    ],
+    "actor_uniform_scale": 0.87,
+    "actor_offset": [
+      466,
+      -310
+    ],
+    "subject_face_to_window_ratio": 0.39875,
+    "upper_body_visible": true,
+    "hands_visible": true,
+    "word_planes": "giant serif behind subject; emphasized phrase and selection boxes in front"
+  },
+  "grammar": {
+    "time_unit": "original native frame numbers,30fps",
+    "enter_hold_exit": {
+      "prior_labels_exit": 306,
+      "large_serif_title_first": 312,
+      "advanced_phrase_first": 317,
+      "curved_yellow_tag": 318,
+      "comic_rays_burst_first": 320,
+      "yellow_support_enter": 332,
+      "sentence_group_cut": 361,
+      "aperture_start": 369,
+      "ready_blur_enter": 385,
+      "ready_settle": 389,
+      "bulb_enter": 395,
+      "software_instructional_cut_outside_primary": 407
+    },
+    "event_policy": "real measured source events; cut/pulse/path ordering preserved, new narration must align to accepted word clock",
+    "layer_order": [
+      "rebuilt-empty-wall",
+      "left-serif-words",
+      "right-serif-words",
+      "real-native-moving-presenter",
+      "prior-left-label",
+      "prior-right-label",
+      "yellow-curved-tag",
+      "advanced-blue-marker",
+      "advanced-white-words",
+      "yellow-support-words",
+      "native-subline-words",
+      "next-subtitles-words",
+      "next-small-english",
+      "next-method-words",
+      "word-box-0",
+      "word-box-1",
+      "word-box-2",
+      "comic-rays",
+      "native-soft-aperture",
+      "ready-outline-words",
+      "head-bulb"
+    ]
+  },
+  "replacement_limits": {
+    "fixed_source_glyphs": "not editable; new phrase requires approximate font or separately identified licensed original font",
+    "timing": "reuse native enter/hold/exit proportions, map to new word/semantic clock with no claim of exact same phrase animation",
+    "subject": "different footage must be reframed and reviewed rather than copied old face coordinates"
+  },
+  "unresolved": [
+    "Different genuine stock presenter, face/gestures/room; no original actor replay. Silent technical animation reconstruction, no voice/lip-sync claim.",
+    "Original font/project unknown. Private original fixed glyph art cannot be advertised as arbitrary editable original font.",
+    "Source native H264 compression and new H264 codec colors/antialiasing differ; no100% pixel claim.",
+    "Original cream serif words partly hidden behind actual source hands; isolated private visible glyph fragments do not recover obscured font sections. New actor hand positions differ, so newly exposed missing glyph segments need known font/clear source pose for perfect recovery.",
+    "White keyword/English templates isolated by tight native ROI/color. Old warm skin excluded; occasional compressed pale clothing/edge fragments possible and must be inspected in actual output.",
+    "Native selection boxes and blue marker are independent, but original marker texture, arbitrary font family, and exact hand-to-type depth unavailable.",
+    "Comic ray angular drift/alpha estimated independently, exact source burst texture unknown.",
+    "Aperture native axis sampled from clearwall; radial softedge60px and obscured background region are estimates, source true radial kernel not recovered.",
+    "Actual stock25fps real hands/face visible over rebuilt clean graybrick background, not original source room; source gesture timing and identity differ.",
+    "Lightbulb is independent simplified sticker with measured enter timing, original bulb art unknown; editable approximate variant flagged."
+  ],
+  "other_source_segments": {
+    "status": "second-pass actual animated subvariants in progress; UI tutorials omitted as instructional material",
+    "full_span_overview": "Private measurement/artwork retained in the local study; use the stated portable parameters and licensed replacement assets.",
+    "native_ledger": "Private measurement/artwork retained in the local study; use the stated portable parameters and licensed replacement assets.",
+    "no_claim": "Selected window is not full tutorial reconstruction"
+  },
+  "calibration_scope": "Native details are working calibrations. Only the windows listed below are accepted for actual-frame review; pending geometry/branches remain work in progress."
+}

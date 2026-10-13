@@ -124,7 +124,8 @@ def resolve_events(events, words, duration, project):
             event['start'], event['end'] = float(event['start']), float(event['end'])
         if not (0 <= event['start'] < event['end'] <= duration + .001):
             raise ValueError(f'Event outside final audio timeline: {event["id"]}')
-        if event['end'] - event['start'] < .6: raise ValueError('Readable graphics need at least 0.6 seconds')
+        readable = event['component'] != 'broll' or bool(event.get('title')) or event.get('readable_text') is True
+        if readable and event['end'] - event['start'] < .6: raise ValueError('Readable graphics need at least 0.6 seconds')
         if event.get('position', 'top') not in ('top', 'center', 'full'): raise ValueError('position must be top, center or full')
         if event.get('position')=='full' and event['component']!='broll':raise ValueError('Only video B-roll supports a full-frame slot')
         if event.get('presenter', 'full') not in ('full', 'pip'): raise ValueError('presenter must be full or pip')
@@ -186,6 +187,9 @@ def fingerprint(project):
         if p.is_file() and not any(s.startswith('.') or s == 'snapshots' for s in p.relative_to(project/'public').parts):
             h.update(str(p.relative_to(project/'public')).encode()); h.update(digest(p).encode())
     canvas = read(project/'project.json')['canvas']; h.update(json.dumps(canvas, sort_keys=True).encode())
+    for name in ('brief.json','style-lock.json'):
+        p=project/name
+        if p.is_file():h.update(name.encode());h.update(digest(p).encode())
     return h.hexdigest()
 
 
@@ -194,7 +198,7 @@ def input_fingerprint(project):
     config = read(project/'project.json')
     contract = {k: config.get(k) for k in ('source','canvas','duration','style','label','composition_template','component_code')}
     h = hashlib.sha256(json.dumps(contract,sort_keys=True,ensure_ascii=False).encode())
-    for name in ('shotbook.json','words.json','caption-cues.json'):
+    for name in ('shotbook.json','words.json','caption-cues.json','brief.json','style-lock.json'):
         p=project/name;h.update(name.encode());h.update(digest(p).encode() if p.exists() else b'missing')
     for name in ('composition.html','components.js'):
         h.update(digest(SKILL/'assets'/name).encode())

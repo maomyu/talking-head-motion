@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-02",
+  "name": "逐字方块落位",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "partial_native_windows_reviewed",
+    "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+  },
+  "source": {
+    "rank": 2,
+    "url": "https://www.douyin.com/video/7475239247209876773",
+    "author": "南门录像厅",
+    "title": "口播如何用Ai快速剪出“网感”？",
+    "canonical_source_rank": 2
+  },
+  "semantic_use": [
+    "钩子中一个短关键词逐拍强调。"
+  ],
+  "observed_motion": "绿色字块在脸附近从小变大，移到胸前排成完整词；并非从顶部自由落下。",
+  "basic_implementation": {
+    "grammar": "d02_word_tiles",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "presenter_video",
+      "video_start",
+      "ink",
+      "subtitle",
+      "accent"
+    ],
+    "design_variables": [
+      "词语",
+      "逐字延迟",
+      "字块尺寸",
+      "落位距离",
+      "强调色"
+    ],
+    "scope": "短关键词逐拍与落位；不套用教程软件。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "presenter_video",
+    "video_start",
+    "ink",
+    "subtitle",
+    "accent"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [
+      {
+        "variant": "02 · 真人连续推近、绿字错峰与漫画回弹",
+        "first_frame": 0,
+        "frames": 60,
+        "duration": 2.0,
+        "output_sha256": "510e7e2b233f9e35d884309ec458b07453d795c9c5e4fb01a13743b51b8a98ef",
+        "frame_review_scope": "原生60帧逐帧复审 · 真人实拍",
+        "residuals": [
+          "原字体未知，当前采用固定原字形，任意换字需要单独核验。",
+          "部分重叠字边与漫画轮廓仍有约3–7px残差。",
+          "导出后绿、黄、蓝部分RGB通道差0–4，未达到像素一致。",
+          "人物表演与拍摄背景不同，原片190.3秒其余动画尚未全部精细重建。"
+        ]
+      }
+    ],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  }
+}

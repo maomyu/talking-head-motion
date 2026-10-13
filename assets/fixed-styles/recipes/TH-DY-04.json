@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "id": "TH-DY-04",
+  "name": "青绿网格弧字圆窗",
+  "version": "0.1.0",
+  "readiness": {
+    "status": "partial_native_windows_reviewed",
+    "scope": "已有机制演示通过；精细版仅所列原生窗口经过实际编码审核，其他真实编排仍待完成。"
+  },
+  "source": {
+    "rank": 4,
+    "url": "https://www.douyin.com/video/7521310927061290282",
+    "author": "小丁带你剪爆款",
+    "title": "新手0基础也想快速做网感视频？你需要这个 剪辑软件是开拍",
+    "canonical_source_rank": 4
+  },
+  "semantic_use": [
+    "从口播进入编号或步骤说明。"
+  ],
+  "observed_motion": "人物退进圆形窗口，标题沿上弧排列，下方短句沿下弧出现，背景变成青绿网格。",
+  "basic_implementation": {
+    "grammar": "d04_orbit_title",
+    "parameters": [
+      "title",
+      "detail",
+      "duration",
+      "fps",
+      "portrait",
+      "presenter_video",
+      "video_start",
+      "background",
+      "accent"
+    ],
+    "design_variables": [
+      "标题",
+      "副句",
+      "圆半径",
+      "字距",
+      "弧度",
+      "背景色"
+    ],
+    "scope": "圆窗与弧形文字版式、进场顺序。",
+    "parameter_scope": "Listed parameters are runtime spec fields. Design variables such as band ratios, path coordinates and entry timing remain authored engine defaults and require a project-specific code adaptation; not an arbitrary automatic inverse-effects system.",
+    "preview_limit": "Early four-second mechanism and alternate-content samples are simplified; they do not establish native fidelity or arbitrary filmed-foreground reuse."
+  },
+  "presenter_rules": {
+    "keep_native_audio": true,
+    "opening": "本人画面承担开头与立场",
+    "returns": "按重要观点、情绪转折和收尾回到人物，不机械每N秒，不只出现一次。",
+    "fit": "匹配本人的取景、脸部占窗和真实上半身，不能扩展不存在的人体像素。",
+    "alpha": "需前景人物效果时用与实际母片时间一致的动态alpha，不能用静态抠像替代移动人物。"
+  },
+  "replaceable_fields": [
+    "title",
+    "detail",
+    "duration",
+    "fps",
+    "portrait",
+    "presenter_video",
+    "video_start",
+    "background",
+    "accent"
+  ],
+  "adaptation": {
+    "source_recipe_is_reference_not_footage": true,
+    "new_clip_reference": "New reference/reference-native specs bind the accepted user master and its native window/SHA/PTS. Learned tutorial provenance stays in this recipe. Reusing an existing recipe does not require redownloading/restudying its tutorial.",
+    "trigger": "根据当前口播真实词轴触发，保持选定配色/文字体系/层次/动作顺序。",
+    "missing_measurement": "原字体、原工程和未覆盖分支如实标记；授权替代字体重排后检查当前文案。"
+  },
+  "validation": {
+    "basic_mechanism_preview": "Original 30 source entries and28 modules each have actual primary/replacement-content preview records in assets/social-grammars/validation.json.",
+    "native_reviewed_windows": [
+      {
+        "variant": "主窗口",
+        "first_frame": 219,
+        "frames": 145,
+        "duration": 4.833333333333333,
+        "output_sha256": "0b0d478d360732ab975e666143c71516836075ff652b7eb799191af8e99c26ee",
+        "frame_review_scope": "partial_fidelity_reviewed",
+        "residuals": [
+          "Reference face, gestures and photographic room are replaced by licensed real moving stock; silence is technical animation study, no lip-sync claim.",
+          "Source font family and vector extrusion unavailable. Private isolated glyphs preserve only fixed phrases; new wording uses approximate editable font and measured arc geometry.",
+          "Upper type particle entrance is retained as isolated per-native-frame colored/black foreground; no editable original project or arbitrary phrase equivalence.",
+          "Motion-blurred circle entry F230–232 manually bounded; white-ring fit F233..302 measures compressed edges with 1–3px uncertainty.",
+          "Background sampled from clear lower strip and tiled; native grid colors/textural role retained but original hidden texture not recovered.",
+          "Different stock aspect/crop may show headset instead of source microphone; subject content remains independent.",
+          "Initial arrow chart uses green/black foreground only; compressed edge transparency and shadows approximate.",
+          "White ring entry fade/blur F230–234 is visually bounded; exact motion-direction blur unavailable.",
+          "Original creator identification is deliberately replaced by generic demo text in same native region; different branding content/approximate font.",
+          "Caption per-character gray forecast trail under190RGB is not recovered from photographic background; private white foreground preserves actual revealed characters.",
+          "Background actor/type-covered regions estimated from clear periodic grid; known reference background retained, edge seams may remain.",
+          "Subject hair-to-chin scale calibrated to measured native original height ratio0.634, using dynamic RVM matte and separate widened plant background. Original microphone/hands and stock headphones differ.",
+          "Plant background is enlarged/rebuilt clean source strip; not recovered original room. Subject chest is visible but no stock hand gesture is invented.",
+          "RVM headphone edge can be partly transparent; glyphs and border are separate, accessory alpha residual remains.",
+          "Original stock frame cuts off shoulders at image sides; per-frame torso-only alpha taper softens visible crop seam. Missing hands/uncaptured body cannot be recovered; no invented gesture.",
+          "Next-caption gray forecast uses final private phrase stencil at estimated20%opacity dark-gray fill; original per-character gray opacity under raw body is not recoverable. White revealed characters retain native positions/timing with1–2px contour uncertainty.",
+          "Last native F363 begins next enlarged caption; fixed glyph restored, subsequent full semantic phrase is a separate unrebuilt source variant, not represented by selected circle window.",
+          "F230–232原片明显带方向性冲刷，新片使用估计Gaussian模糊和手测圆窗边界，方向核和初始中心轨迹仍有差异。",
+          "可见网格取源清晰区域；隐藏人物/字后网格用周期平铺估计，局部纹理相位/拼接色缝仍可能不同。",
+          "原男生双手/麦克风与真实stock耳麦、嘴型不同；新素材胸口可见、双手未拍到；重建背景为放大植物清晰条，不是原房间。",
+          "逐字灰色预告以最终固定字形20%opacity估计，F321–348源照片下灰字强度无法精确分离；白字边缘1–2px、源压缩阴影和字体材质有差异。",
+          "个人履历标签改成研究示例品牌信息，文字内容和字体不同；F363后下一语义段未由此主窗口重建。"
+        ]
+      }
+    ],
+    "arbitrary_user_input_passed": false,
+    "original_media_distributed": false,
+    "private_glyphs_distributed": false
+  },
+  "palette": {
+    "background": [
+      81.0,
+      143.0,
+      146.0
+    ],
+    "green_foreground": [
+      148.0,
+      250.0,
+      8.0
+    ]
+  },
+  "font": {
+    "source_family": "unknown from compressed reference; fixed isolated glyph study only",
+    "editable_fallback": "NotoSansSC/available system font, approximate shape must be separately reviewed"
+  },
+  "layout": {
+    "measured_white_ring_width": 7,
+    "branding_region": [
+      75,
+      996,
+      400,
+      215
+    ]
+  },
+  "grammar": {
+    "time_unit": "original native frame numbers,30fps",
+    "enter_hold_exit": {
+      "circle_enter": 230,
+      "particle_title_first": 233,
+      "upper_title_stable": 241,
+      "lower_arc_first": 273,
+      "curved_type_exit": 301,
+      "return_wipe_first": 302,
+      "full_presenter_return": 315,
+      "next_caption_progressive_first": 321,
+      "complete_caption_phrase_hold_end": 363,
+      "next_caption_hard_cut": 363
+    },
+    "event_policy": "real measured source events; cut/pulse/path ordering preserved, new narration must align to accepted word clock",
+    "layer_order": [
+      "native-grid",
+      "opening-real-presenter",
+      "white-circle-border",
+      "independent-circle-background",
+      "calibrated-dynamic-matte-presenter",
+      "upper-green-curved-glyphs",
+      "lower-white-curved-glyphs",
+      "left-strip-return-real-footage",
+      "next-sentence-gray-forecast",
+      "return-sentence-native-glyphs",
+      "generic-identification"
+    ]
+  },
+  "subject_face_to_window_ratio": {
+    "reference_head_width": 0.5615864144453998,
+    "reference_head_height": 0.6341358555460017,
+    "target_head_height": 0.6341358555460017,
+    "replacement_predicted_head_width": 0.5296003597081782
+  },
+  "upper_body_visible": true,
+  "subject_fit_rule": "Calibrate native face/head envelope to reference window before rendering; if source shot too close use real per-frame matte with separately declared rebuilt scenery, never silently enlarge a head",
+  "replacement_limits": {
+    "fixed_source_glyphs": "not editable; new phrase requires approximate font or separately identified licensed original font",
+    "timing": "reuse native enter/hold/exit proportions, map to new word/semantic clock with no claim of exact same phrase animation",
+    "subject": "different footage must be reframed and reviewed rather than copied old face coordinates"
+  },
+  "unresolved": [
+    "Reference face, gestures and photographic room are replaced by licensed real moving stock; silence is technical animation study, no lip-sync claim.",
+    "Source font family and vector extrusion unavailable. Private isolated glyphs preserve only fixed phrases; new wording uses approximate editable font and measured arc geometry.",
+    "Upper type particle entrance is retained as isolated per-native-frame colored/black foreground; no editable original project or arbitrary phrase equivalence.",
+    "Motion-blurred circle entry F230–232 manually bounded; white-ring fit F233..302 measures compressed edges with 1–3px uncertainty.",
+    "Background sampled from clear lower strip and tiled; native grid colors/textural role retained but original hidden texture not recovered.",
+    "Different stock aspect/crop may show headset instead of source microphone; subject content remains independent.",
+    "Initial arrow chart uses green/black foreground only; compressed edge transparency and shadows approximate.",
+    "White ring entry fade/blur F230–234 is visually bounded; exact motion-direction blur unavailable.",
+    "Original creator identification is deliberately replaced by generic demo text in same native region; different branding content/approximate font.",
+    "Caption per-character gray forecast trail under190RGB is not recovered from photographic background; private white foreground preserves actual revealed characters.",
+    "Background actor/type-covered regions estimated from clear periodic grid; known reference background retained, edge seams may remain.",
+    "Subject hair-to-chin scale calibrated to measured native original height ratio0.634, using dynamic RVM matte and separate widened plant background. Original microphone/hands and stock headphones differ.",
+    "Plant background is enlarged/rebuilt clean source strip; not recovered original room. Subject chest is visible but no stock hand gesture is invented.",
+    "RVM headphone edge can be partly transparent; glyphs and border are separate, accessory alpha residual remains.",
+    "Original stock frame cuts off shoulders at image sides; per-frame torso-only alpha taper softens visible crop seam. Missing hands/uncaptured body cannot be recovered; no invented gesture.",
+    "Next-caption gray forecast uses final private phrase stencil at estimated20%opacity dark-gray fill; original per-character gray opacity under raw body is not recoverable. White revealed characters retain native positions/timing with1–2px contour uncertainty.",
+    "Last native F363 begins next enlarged caption; fixed glyph restored, subsequent full semantic phrase is a separate unrebuilt source variant, not represented by selected circle window.",
+    "F230–232原片明显带方向性冲刷，新片使用估计Gaussian模糊和手测圆窗边界，方向核和初始中心轨迹仍有差异。",
+    "可见网格取源清晰区域；隐藏人物/字后网格用周期平铺估计，局部纹理相位/拼接色缝仍可能不同。",
+    "原男生双手/麦克风与真实stock耳麦、嘴型不同；新素材胸口可见、双手未拍到；重建背景为放大植物清晰条，不是原房间。",
+    "逐字灰色预告以最终固定字形20%opacity估计，F321–348源照片下灰字强度无法精确分离；白字边缘1–2px、源压缩阴影和字体材质有差异。",
+    "个人履历标签改成研究示例品牌信息，文字内容和字体不同；F363后下一语义段未由此主窗口重建。"
+  ],
+  "other_source_segments": {
+    "status": "second-pass actual animated subvariants in progress; UI tutorials omitted as instructional material",
+    "full_span_overview": "Private measurement/artwork retained in the local study; use the stated portable parameters and licensed replacement assets.",
+    "native_ledger": "Private measurement/artwork retained in the local study; use the stated portable parameters and licensed replacement assets.",
+    "no_claim": "Selected window is not full tutorial reconstruction"
+  },
+  "calibration_scope": "Native details are working calibrations. Only the windows listed below are accepted for actual-frame review; pending geometry/branches remain work in progress."
+}
