@@ -58,7 +58,7 @@ python3 scripts/produce.py /absolute/project --model small --expected-script scr
 
 ## 按需要增加的能力
 
-- **形成口播母片**：已有自拍直接剪；照片＋音频使用用户指定的数字人服务，不重复配音；只有文案时才补配音与授权形象。公开包包含Fish配音适配器及 [AutoDL H3图音适配器](scripts/autodl_h3_api.py)，支持准备、提交和续查。H3适配器通过22项离线检查及合成媒体解码，2026-10-14已实际续查一个既有任务；公共适配器的真实提交与下载尚未实测。账户配置、费用确认及真实母片审查完成后进入同一主线。[配置与范围](references/autodl-h3.md) · [服务衔接](references/provider-handoff.md)。
+- **形成口播母片**：已有自拍直接剪；照片＋音频使用用户指定的数字人服务，不重复配音；只有文案时才补配音与授权形象。公开包包含Fish配音适配器及 [AutoDL H3图音适配器](scripts/autodl_h3_api.py)，支持准备、提交和续查。H3适配器通过22项离线检查，并于2026-10-14实际验证GET续查、完整原生音画下载及POST新任务提交，覆盖缓存身份与预算链路。这不代表所有人像或30款成片已通过；新项目需完成账户配置、核价与真实母片审查。[配置与范围](references/autodl-h3.md) · [服务衔接](references/provider-handoff.md)。
 - **30款风格对照**：用户需要时，以同一人物、同一完整音轨生成不同剪辑版本，按开场、强调、解释、证据、转场和收尾分类展示；在对话里选款，网页仅预览与下载。[同母片风格对照](references/fixed-style-comparison.md)。
 - **学习新风格**：完整下载参考、遍历原生RGB/PTS，密集测量关键动作，重建独立图层并检查最终编码。通过后增加版本配方；日常套用不重复这项研究。[原生重建](references/native-frame-reconstruction.md)。
 - **艺术插镜**：需要特殊科普、概念或艺术画面时，可选35艺术画风与8通用语法。它们是插镜能力，与30个固定口播风格入口分开管理，不是每条口播都要经历的选择步骤。[可选艺术能力](references/huashu-integration.md)。
