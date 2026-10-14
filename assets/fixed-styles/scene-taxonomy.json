@@ -1,0 +1,534 @@
+{
+  "schema_version": 1,
+  "classification_version": "1.0.0",
+  "purpose": "Editorial scene recommendations for the stable thirty talking-head styles. Categories are multi-use and do not imply that a new rendered video is accepted.",
+  "selection_policy": "Tell the Agent the stable style ID or exact name in conversation; the workbench contains no input, rating, notes, persistence, or submission controls.",
+  "categories": [
+    {
+      "id": "hook",
+      "name": "开场钩子",
+      "description": "先抓住问题、反常识或悬念。",
+      "suggested_position": "前几句"
+    },
+    {
+      "id": "emphasis",
+      "name": "观点强调",
+      "description": "把重要词、立场和语义重音读出来。",
+      "suggested_position": "关键论点"
+    },
+    {
+      "id": "explanation",
+      "name": "解释与步骤",
+      "description": "让概念、步骤和信息层次更清楚。",
+      "suggested_position": "方法说明"
+    },
+    {
+      "id": "evidence",
+      "name": "证据与数据",
+      "description": "让案例、截图和数字支撑口播观点。",
+      "suggested_position": "举例论证"
+    },
+    {
+      "id": "contrast",
+      "name": "转折对比",
+      "description": "表现前后差异、否定和情绪转折。",
+      "suggested_position": "但是／而不是"
+    },
+    {
+      "id": "cta",
+      "name": "收尾行动",
+      "description": "收束要点，并给出一个清楚的下一步。",
+      "suggested_position": "最后一句"
+    }
+  ],
+  "styles": [
+    {
+      "id": "TH-DY-01",
+      "name": "三段式重组",
+      "version": "0.1.0",
+      "primary_category": "explanation",
+      "category_ids": [
+        "explanation",
+        "evidence",
+        "emphasis"
+      ],
+      "use_case": "三段画面同时交代人物、主题和例子。",
+      "motion_summary": "人物与主题分层，证据进入后再回到主讲人。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "1d1274b4b827c8d38fe0bb5adc697eb395cda6b0c260de3b9c3ef67f89ce2bc8",
+      "accent": "#71a9a0"
+    },
+    {
+      "id": "TH-DY-02",
+      "name": "逐字方块落位",
+      "version": "0.1.0",
+      "primary_category": "hook",
+      "category_ids": [
+        "hook",
+        "emphasis",
+        "cta"
+      ],
+      "use_case": "短关键词逐拍出现，适合把开头问题说清。",
+      "motion_summary": "方块与文字错峰落位，保留可读重音。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "0a1b9f295a70f57c962f67590b7cca987d5dbcc62bba8545c55596a6043bdc84",
+      "accent": "#f36a4c"
+    },
+    {
+      "id": "TH-DY-03",
+      "name": "上方证据下方人物",
+      "version": "0.1.0",
+      "primary_category": "evidence",
+      "category_ids": [
+        "evidence",
+        "explanation"
+      ],
+      "use_case": "解释画面放上方，主讲人持续放下方。",
+      "motion_summary": "证据先出现，字幕说明，再回完整人物画面。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "5f4715d0f962008cf1082155b733784550e395e9a427e37f55db54ba4bd83620",
+      "accent": "#84a8ca"
+    },
+    {
+      "id": "TH-DY-04",
+      "name": "青绿网格弧字圆窗",
+      "version": "0.1.0",
+      "primary_category": "explanation",
+      "category_ids": [
+        "explanation",
+        "hook"
+      ],
+      "use_case": "从主讲人切到编号、步骤或章节名称。",
+      "motion_summary": "圆形人物窗与弧形标题同场，网格承托信息。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "5ae66d7aaa6ca4d518c189f78d2975e1c3563405b72fcfcdaa6ab1a7d44144fd",
+      "accent": "#71a9a0"
+    },
+    {
+      "id": "TH-DY-05",
+      "name": "黑底虚焦双层人物小窗",
+      "version": "0.1.0",
+      "primary_category": "explanation",
+      "category_ids": [
+        "explanation",
+        "emphasis"
+      ],
+      "use_case": "给概念留空间，同时保留口播人物。",
+      "motion_summary": "虚焦背景、上下小窗与前景人物形成层次。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "a75df2c9bd1258199db4492c87656e1a10dd71cf0b3c5ab2d232882b55d88000",
+      "accent": "#71a9a0"
+    },
+    {
+      "id": "TH-DY-06",
+      "name": "白色毛玻璃章节卡",
+      "version": "0.1.0",
+      "primary_category": "explanation",
+      "category_ids": [
+        "explanation",
+        "contrast",
+        "cta"
+      ],
+      "use_case": "章节切换、总结或一个简短行动提示。",
+      "motion_summary": "白色毛玻璃面板留出阅读停顿，再回人物。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "90a9f007e58b8cd2ceeeb3e57191018a6ad02ea92072aecb22364ee3ab1dd2f4",
+      "accent": "#71a9a0"
+    },
+    {
+      "id": "TH-DY-07",
+      "name": "黑底缩圈与采访漫画",
+      "version": "0.1.0",
+      "primary_category": "hook",
+      "category_ids": [
+        "hook",
+        "emphasis"
+      ],
+      "use_case": "把注意力从完整画面收束到表情。",
+      "motion_summary": "黑底缩圈与漫画表达，让重点落在脸部。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "66140ed47396cd318003493a31f58c9c0199c8880e78935f2aa7a206bfc8f199",
+      "accent": "#f36a4c"
+    },
+    {
+      "id": "TH-DY-08",
+      "name": "暗玻璃三卡递进与暖闪",
+      "version": "0.1.0",
+      "primary_category": "explanation",
+      "category_ids": [
+        "explanation",
+        "evidence"
+      ],
+      "use_case": "依次说明几个步骤或条件。",
+      "motion_summary": "暗玻璃面板内三卡递进，暖色闪光承接转场。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "bef851231033f60e6e2999c48349758f8db51a87d19d28a299bc56ab73ea6df1",
+      "accent": "#71a9a0"
+    },
+    {
+      "id": "TH-DY-09",
+      "name": "衬线层级大字与聚光开场",
+      "version": "0.1.0",
+      "primary_category": "hook",
+      "category_ids": [
+        "hook",
+        "emphasis"
+      ],
+      "use_case": "开头抛出大观点，再突出真正的重音。",
+      "motion_summary": "衬线大字分前后层，聚光留住人物。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "00611fee59019ced959767992751b76c383f6c3f3cabe7aadb6c7aa9bc7fb37f",
+      "accent": "#f36a4c"
+    },
+    {
+      "id": "TH-DY-10",
+      "name": "错位双色贴纸标签",
+      "version": "0.1.0",
+      "primary_category": "emphasis",
+      "category_ids": [
+        "emphasis",
+        "cta"
+      ],
+      "use_case": "一句短观点，或最后一个行动词。",
+      "motion_summary": "双色词牌错位，短标签避免遮住脸。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "30f56d9b0f73009672c06175370d35ab81a62f9349cac6b7aca4ee1dc1781824",
+      "accent": "#e2b857"
+    },
+    {
+      "id": "TH-DY-11",
+      "name": "推近与关键词重击",
+      "version": "0.1.0",
+      "primary_category": "emphasis",
+      "category_ids": [
+        "emphasis",
+        "hook",
+        "cta"
+      ],
+      "use_case": "重读一个判断或关键行动。",
+      "motion_summary": "人物推近配关键词冲击，不让每个字都抢重音。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "feb3aa7420bb6f0348746d22f410541f3ffad9c2c5d7c3bf2819acaa6238b48c",
+      "accent": "#e2b857"
+    },
+    {
+      "id": "TH-DY-12",
+      "name": "文字墙步骤卡",
+      "version": "0.1.0",
+      "primary_category": "explanation",
+      "category_ids": [
+        "explanation",
+        "cta"
+      ],
+      "use_case": "按顺序讲清几步，收尾可复述步骤。",
+      "motion_summary": "文字墙、编号与步骤框建立阅读主次。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "655fd7a6c485250c71fe2b7d7e70ae5499c69554e1d601d8b978fab762116ff7",
+      "accent": "#71a9a0"
+    },
+    {
+      "id": "TH-DY-13",
+      "name": "虚线抠像·资料卡与弧形问句",
+      "version": "0.1.0",
+      "primary_category": "hook",
+      "category_ids": [
+        "hook",
+        "evidence"
+      ],
+      "use_case": "用人物入场和问句引出主题或账号案例。",
+      "motion_summary": "虚线人物、资料卡和独立弧形字分别入场。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "712d0a5fcaab10286538c29811e7429e18b071078db8480afea0aa306b3277c5",
+      "accent": "#f36a4c"
+    },
+    {
+      "id": "TH-DY-14",
+      "name": "薄荷绿·手写三联卡",
+      "version": "0.1.0",
+      "primary_category": "evidence",
+      "category_ids": [
+        "evidence",
+        "contrast",
+        "explanation"
+      ],
+      "use_case": "并列三个例子，或比较几个选项。",
+      "motion_summary": "薄荷绿底与手写三联卡，光学擦拭承接下一句。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "bc0f52803c2a714af799b64db955170f85295a879b814b1fe10f234b3868e7eb",
+      "accent": "#84a8ca"
+    },
+    {
+      "id": "TH-DY-15",
+      "name": "人物前景·衬线大字与口播字幕组",
+      "version": "0.1.0",
+      "primary_category": "emphasis",
+      "category_ids": [
+        "emphasis",
+        "hook"
+      ],
+      "use_case": "把大关键词与人结合，人物始终是视觉主线。",
+      "motion_summary": "大字放在人后，真实前景遮挡形成层次。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "39aa6fe748867ab6b9f083ac8207ddb49691caf08a65c466ecd62e835998a3eb",
+      "accent": "#e2b857"
+    },
+    {
+      "id": "TH-DY-16",
+      "name": "黑网格·人物窗与群体图标",
+      "version": "0.1.0",
+      "primary_category": "explanation",
+      "category_ids": [
+        "explanation",
+        "evidence"
+      ],
+      "use_case": "说明人群、对象或关系。",
+      "motion_summary": "黑网格人物窗保留说话人，群体图标辅助说明。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "bb9c446b0acfc89e1cf1ab2766f75fea9046f5a2a9dd00e094e657a089346c25",
+      "accent": "#71a9a0"
+    },
+    {
+      "id": "TH-DY-17",
+      "name": "矩形遮罩·素材开合与镜头关键帧",
+      "version": "0.1.0",
+      "primary_category": "contrast",
+      "category_ids": [
+        "contrast",
+        "explanation",
+        "evidence"
+      ],
+      "use_case": "从观点切到一个需要看的说明画面。",
+      "motion_summary": "矩形遮罩逐步开合，B-roll接入后返回人物。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "2229f618998da09ff94db8c4d7c692f6ff2a16fdaa358a780778a55dae4d6bb4",
+      "accent": "#b995d0"
+    },
+    {
+      "id": "TH-DY-18",
+      "name": "放射轨道入场·弧形花字与关键词",
+      "version": "0.1.0",
+      "primary_category": "hook",
+      "category_ids": [
+        "hook",
+        "emphasis"
+      ],
+      "use_case": "开场聚焦主讲人、问题或一个重点。",
+      "motion_summary": "放射轨道、弧形花字与关键词分阶段入场。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "e67459163283cb6da4716c4a8965be789f1c3b7c32645a06b6ccc6d7c85a7344",
+      "accent": "#f36a4c"
+    },
+    {
+      "id": "TH-DY-19",
+      "name": "新青年金字·四角重点词",
+      "version": "0.1.0",
+      "primary_category": "cta",
+      "category_ids": [
+        "cta",
+        "emphasis",
+        "explanation"
+      ],
+      "use_case": "用四个短词收束要点，再给出明确下一步。",
+      "motion_summary": "金色四角重点词围绕人物，适合总结清单。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "e3b3aba78c2c6aa38455c3b4312aacf0b1a5327080b79e772a2c3aeeac180cbe",
+      "accent": "#8aa876"
+    },
+    {
+      "id": "TH-DY-20",
+      "name": "六格接力·分屏副本与情绪字幕",
+      "version": "0.1.0",
+      "primary_category": "contrast",
+      "category_ids": [
+        "contrast",
+        "evidence"
+      ],
+      "use_case": "同一主题多个例子接力，展示区别与反应。",
+      "motion_summary": "六格副本、嵌套素材与情绪字幕形成对照。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "4778e5d49bb67f7fc737604646e855a4f1f7f92e0d6410d5090075aa9541d75d",
+      "accent": "#b995d0"
+    },
+    {
+      "id": "TH-DY-21",
+      "name": "江湖描边·字幕副本碎片爆开",
+      "version": "0.1.0",
+      "primary_category": "contrast",
+      "category_ids": [
+        "contrast",
+        "emphasis"
+      ],
+      "use_case": "否定一个误区，或让结论出现反转。",
+      "motion_summary": "字幕副本碎片爆开，完整可读字层继续保留。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "c915641f7652532c8f0dab48832ae8701f6983d699aed3eca896f5153aead1d8",
+      "accent": "#b995d0"
+    },
+    {
+      "id": "TH-DY-22",
+      "name": "前景趋势图卡与证据人物",
+      "version": "0.1.0",
+      "primary_category": "evidence",
+      "category_ids": [
+        "evidence",
+        "explanation"
+      ],
+      "use_case": "用趋势、变化或一个简短数字支撑观点。",
+      "motion_summary": "前景趋势图卡和两句说明交接，人物连续可见。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "18efd07ac3dd827b38091a67d04467422b575ce2dd69325f478f5518054a0c5a",
+      "accent": "#84a8ca"
+    },
+    {
+      "id": "TH-DY-23",
+      "name": "裂缝转折与口播滤镜配套",
+      "version": "0.1.0",
+      "primary_category": "contrast",
+      "category_ids": [
+        "contrast",
+        "hook"
+      ],
+      "use_case": "一句“但是”或反差点，需要明显视觉切分。",
+      "motion_summary": "裂缝生长后撤出，回到清楚的主讲人画面。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "c1aa16b8569c113e5cca7d17707a2ed0c651d599963a735ed144354eb240f3ba",
+      "accent": "#b995d0"
+    },
+    {
+      "id": "TH-DY-24",
+      "name": "人物描边缩放与概念剪影",
+      "version": "0.1.0",
+      "primary_category": "explanation",
+      "category_ids": [
+        "explanation",
+        "contrast"
+      ],
+      "use_case": "解释抽象角色、对象和主讲人的关系。",
+      "motion_summary": "人物缩小，概念剪影与结论递进，再放大回人物。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "6e80d0cf0a441cfdc683e193a40f9948c7c95394aeaade781c30a4775b278b20",
+      "accent": "#71a9a0"
+    },
+    {
+      "id": "TH-DY-25",
+      "name": "橙金大字置于人物背后与动态白描边",
+      "version": "0.1.0",
+      "primary_category": "emphasis",
+      "category_ids": [
+        "emphasis",
+        "hook"
+      ],
+      "use_case": "用橙金大字强调重要观点，并保持人物前景。",
+      "motion_summary": "背后大字淡入，前景第二句接力，动态白描边。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": "TH-DY-15",
+      "source_recipe_sha256": "c819ee77a7f99d2fd2d62962b4e398944a08b449814167b95d825bfce76d6c94",
+      "accent": "#e2b857"
+    },
+    {
+      "id": "TH-DY-26",
+      "name": "五种关键帧：胶片强调与人物布局",
+      "version": "0.1.0",
+      "primary_category": "emphasis",
+      "category_ids": [
+        "emphasis",
+        "explanation",
+        "cta"
+      ],
+      "use_case": "系列内容的一个关键提醒，或结尾复述重点。",
+      "motion_summary": "胶片边框、竖字与桃色关键词强调后回归人物。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "6d7a41a129f595488fbb84b5d0168b17c1b69624fd820f599324e6d90a3660ce",
+      "accent": "#e2b857"
+    },
+    {
+      "id": "TH-DY-27",
+      "name": "波浪相框与前景人物",
+      "version": "0.1.0",
+      "primary_category": "explanation",
+      "category_ids": [
+        "explanation",
+        "evidence"
+      ],
+      "use_case": "从生活案例转到主讲人的解释。",
+      "motion_summary": "波浪相框承托素材，编号与小人物先后出现。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "c26ebce67f20767ba5b5ceb9b05b8a62ee7e57838234c9f7cf5b086b337832cb",
+      "accent": "#71a9a0"
+    },
+    {
+      "id": "TH-DY-28",
+      "name": "重点词色带划过",
+      "version": "0.1.0",
+      "primary_category": "emphasis",
+      "category_ids": [
+        "emphasis",
+        "cta"
+      ],
+      "use_case": "一句话只突出一个核心词或下一步动作。",
+      "motion_summary": "整句落稳后，色带擦亮重点，指针辅助引导。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "79af417069204010c8df493be17987217c61c3fe3d4d53dc358ba74c3cf3c169",
+      "accent": "#e2b857"
+    },
+    {
+      "id": "TH-DY-29",
+      "name": "描边人物入场·变体",
+      "version": "0.1.0",
+      "primary_category": "hook",
+      "category_ids": [
+        "hook",
+        "evidence"
+      ],
+      "use_case": "与13同类的问句开场，保留独立入场变体。",
+      "motion_summary": "皱纸、资料卡与逐字斜问句；人物描边进出。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": "TH-DY-13",
+      "source_recipe_sha256": "c8bfa9a2b77c9d718f3ef2278c65fcf3bf6997d35f4e99a29ca5bc8b24b40c90",
+      "accent": "#f36a4c"
+    },
+    {
+      "id": "TH-DY-30",
+      "name": "缩略图聚光追踪",
+      "version": "0.1.0",
+      "primary_category": "evidence",
+      "category_ids": [
+        "evidence",
+        "emphasis"
+      ],
+      "use_case": "从多个素材中指出此刻需要看的一个。",
+      "motion_summary": "图库暗底、亮窗收缩与聚光框追踪选中素材。",
+      "classification_basis": "Agent editorial recommendation from fixed semantic_use, measured layout and motion; multi-use, not exclusive source author labels",
+      "shared_with": null,
+      "source_recipe_sha256": "7153550281f90b2f54df63fba8f8dc5014e58c0e0db21f936c3d60848404ab43",
+      "accent": "#84a8ca"
+    }
+  ]
+}
