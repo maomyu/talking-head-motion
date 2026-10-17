@@ -1,5 +1,6 @@
 /* Independently authored, deterministic component choreography. */
-(() => {
+(async () => {
+  if (window.__captionFontsReady) await window.__captionFontsReady;
   const plan = window.motionPlan;
   document.getElementById('stage').style.setProperty('--stage-height', `${plan.canvas.height}px`);
   const tl = gsap.timeline({paused: true});

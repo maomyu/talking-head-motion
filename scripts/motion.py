@@ -13,6 +13,7 @@ import sys
 import unicodedata
 from fractions import Fraction
 from pathlib import Path
+import download_fonts
 
 SKILL = Path(__file__).resolve().parents[1]
 RUNTIME = SKILL / 'assets/runtime'
@@ -205,6 +206,8 @@ def input_fingerprint(project):
     for name in ('composition_template', 'component_code'):
         if config.get(name): h.update(digest(existing(config[name],project)).encode())
     h.update(digest(Path(__file__)).encode())
+    h.update(digest(SKILL/'scripts/download_fonts.py').encode())
+    h.update(digest(SKILL/'assets/fonts/registry.json').encode())
     for value in (config.get('source') or {}).values():
         if value:h.update(digest(existing(value,project)).encode())
     for event in read(project/'shotbook.json').get('events',[]):
@@ -329,6 +332,31 @@ def event_markup(event):
     return f'<section id="{event["id"]}" class="clip graphic {event.get("position","top")}" data-start="{event["start"]}" data-duration="{event["end"]-event["start"]}" data-track-index="2"><div class="graphic-inner {kind}">{inner}</div></section>'
 
 
+def stage_caption_font(project, public):
+    """Stage a verified regular face without inheriting a display-only font."""
+    registry = download_fonts.read_registry(SKILL/'assets/fonts/registry.json')
+    row = next(font for font in registry['fonts'] if font['id'] == 'sans')
+    cache = (project/'assets/fonts/caption').resolve()
+    record = download_fonts.install_font(row, cache, verify_only=False, replace_invalid=False)
+    staged = public/'assets/fonts/caption'
+    for resource in (row['font'], row['license']):
+        source = download_fonts.project_path(cache, resource['path'])
+        target = staged/resource['path']; target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, target)
+    manifest = {key: value for key, value in record.items() if not key.startswith('cached_')}
+    manifest.update({'family': 'THCaptionSans', 'weight': 400,
+                     'registry_sha256': digest(SKILL/'assets/fonts/registry.json')})
+    write(cache/'font-manifest.json', manifest)
+    write(staged/'font-manifest.json', manifest)
+    # Load the actual 400 face before component code measures caption text.
+    return ('<style>@font-face{font-family:THCaptionSans;src:url("assets/fonts/caption/'
+            + row['font']['path'] + '") format("truetype");font-weight:100 900;'
+            'font-style:normal;font-display:block}</style>'
+            '<script>window.__captionFontsReady=document.fonts.load(\'400 48px "THCaptionSans"\',"口播字幕 Aa0123")'
+            '.then(async faces=>{if(!faces.length||faces.some(face=>face.status!=="loaded"))'
+            'throw Error("Regular caption font did not load");await document.fonts.ready;return faces;});</script>')
+
+
 def build(args):
     project=Path(args.project).expanduser().resolve();config=read(project/'project.json');duration=float(config['duration']);canvas=config['canvas']
     words=validate_words(read(project/'words.json'),duration) if (project/'words.json').exists() else []
@@ -375,6 +403,9 @@ def build(args):
     payload={'events':events,'cues':cues,'duration':duration,'canvas':canvas,'has_presenter':bool(config['source'].get('video'))}
     data=json.dumps(payload,ensure_ascii=False).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')
     template=(existing(config['composition_template'],project) if config.get('composition_template') else SKILL/'assets/composition.html').read_text()
+    if cues:
+        if '</head>' not in template: raise ValueError('Caption template needs a head for the regular font')
+        template=template.replace('</head>',stage_caption_font(project,public)+'</head>',1)
     mapping={'ROOT':f'class="{"" if payload["has_presenter"] else "audio-only"}" data-composition-id="talking-head" data-start="0" data-duration="{duration}" data-width="{canvas["width"]}" data-height="{canvas["height"]}" data-fps="{canvas["fps"]}"',
              'MEDIA':media,'EVENTS':''.join(event_markup(e) for e in events),'CAPTIONS':captions,'PAYLOAD':data,
              'BACKGROUND':styles['background'],'FOREGROUND':styles['foreground'],'ACCENT':styles['accent'],

@@ -1,5 +1,6 @@
 /* Independently authored, deterministic component choreography. */
 (async () => {
+  if (window.__captionFontsReady) await window.__captionFontsReady;
   await document.fonts.ready;
   const plan = window.motionPlan;
   document.getElementById('stage').style.setProperty('--stage-height', `${plan.canvas.height}px`);
