@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-15",
+  "scope": "Official OFL font sources only; no style profiles or commercial/non-commercial proprietary font files.",
+  "integrity_policy": "Exact SHA-256 snapshot. If an upstream main URL changes, stop rather than accepting new bytes; review upstream and version this registry.",
+  "fonts": [
+    {
+      "id": "sans",
+      "name": "Noto Sans SC",
+      "category": "sans",
+      "css_family": "THSansVF",
+      "homepage": "https://github.com/notofonts/noto-cjk",
+      "source": {
+        "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/Variable/TTF/Subset/NotoSansSC-VF.ttf",
+        "sha256": "d68bafcb48a2707749396aa12bbbd833cb70401f3a9a689fd2902c7e0d295964",
+        "bytes": 17773132,
+        "format": "font",
+        "git_blob": "5371a543be5fc670c7cdee9760c03554ee3e9b8e"
+      },
+      "font": {
+        "path": "upstream/NotoSansSC-VF.ttf",
+        "sha256": "d68bafcb48a2707749396aa12bbbd833cb70401f3a9a689fd2902c7e0d295964",
+        "bytes": 17773132
+      },
+      "license": {
+        "id": "OFL-1.1",
+        "path": "licenses/sans-OFL.txt",
+        "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/LICENSE",
+        "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+        "bytes": 4301,
+        "copyright": "This Font Software is licensed under the SIL Open Font License,"
+      },
+      "weights": {
+        "axis": "wght",
+        "min": 100.0,
+        "max": 900.0
+      }
+    },
+    {
+      "id": "serif",
+      "name": "Noto Serif SC",
+      "category": "serif",
+      "css_family": "THSerifVF",
+      "homepage": "https://github.com/notofonts/noto-cjk",
+      "source": {
+        "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Serif/Variable/TTF/Subset/NotoSerifSC-VF.ttf",
+        "sha256": "5326cfb097e3ab26fcb39329752b5c0a439bf8d5c4649520e4b492939c352a09",
+        "bytes": 25125232,
+        "format": "font",
+        "git_blob": "914d51db3ef9841a98ccb8f48db9e8bddb0b0d72"
+      },
+      "font": {
+        "path": "upstream/NotoSerifSC-VF.ttf",
+        "sha256": "5326cfb097e3ab26fcb39329752b5c0a439bf8d5c4649520e4b492939c352a09",
+        "bytes": 25125232
+      },
+      "license": {
+        "id": "OFL-1.1",
+        "path": "licenses/serif-OFL.txt",
+        "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Serif/LICENSE",
+        "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+        "bytes": 4301,
+        "copyright": "This Font Software is licensed under the SIL Open Font License,"
+      },
+      "weights": {
+        "axis": "wght",
+        "min": 200.0,
+        "max": 900.0
+      }
+    },
+    {
+      "id": "douyin",
+      "name": "Douyin Sans",
+      "category": "display",
+      "css_family": "THDouyin",
+      "homepage": "https://github.com/bytedance/fonts/tree/main/DouyinSans",
+      "source": {
+        "url": "https://raw.githubusercontent.com/bytedance/fonts/main/DouyinSans/DouyinSansBold.ttf",
+        "sha256": "fbecfacdfac33982774e301073a8d357a09c698cd3134bb6ddec0f5bfc268fa1",
+        "bytes": 1919404,
+        "format": "font",
+        "git_blob": "eb8555c6c21ddf45102f7524f93100172201ef45"
+      },
+      "font": {
+        "path": "upstream/DouyinSansBold.ttf",
+        "sha256": "fbecfacdfac33982774e301073a8d357a09c698cd3134bb6ddec0f5bfc268fa1",
+        "bytes": 1919404
+      },
+      "license": {
+        "id": "OFL-1.1",
+        "path": "licenses/douyin-OFL.txt",
+        "url": "https://raw.githubusercontent.com/bytedance/fonts/main/DouyinSans/OFL.txt",
+        "sha256": "a6d5700a002ea32bcfbe3310253d603997683dac8ac63777e375d06c07c30ea6",
+        "bytes": 4455,
+        "copyright": "Copyright (c) , 2023 Beijing Zitiao Network Technology Co. Ltd. "
+      },
+      "weights": [
+        400
+      ],
+      "note": "The upstream file is named Bold but its real OS/2 weight is400; do not synthesize800/900."
+    },
+    {
+      "id": "smiley",
+      "name": "Smiley Sans Oblique",
+      "category": "slanted",
+      "css_family": "THSmiley",
+      "homepage": "https://github.com/atelier-anchor/smiley-sans/tree/v2.0.1",
+      "source": {
+        "url": "https://github.com/atelier-anchor/smiley-sans/releases/download/v2.0.1/smiley-sans-v2.0.1.zip",
+        "sha256": "299c0be6c960ae37361762eca76f7d0cd516615435bb96c0d4b98a1e70178a07",
+        "bytes": 5781344,
+        "format": "zip",
+        "release": "v2.0.1"
+      },
+      "font": {
+        "path": "upstream/SmileySans-Oblique.ttf.woff2",
+        "sha256": "731f22973349404b15a88a99ef3b5dd4104c0965c23b7e485c1f11e84fea99e2",
+        "bytes": 1150924,
+        "archive_member": "SmileySans-Oblique.ttf.woff2"
+      },
+      "license": {
+        "id": "OFL-1.1",
+        "path": "licenses/smiley-OFL.txt",
+        "url": "https://raw.githubusercontent.com/atelier-anchor/smiley-sans/v2.0.1/LICENSE",
+        "sha256": "9401f4050f1b66c26b6ccdc8b0e14a3c1cc37aac122eda84386f25854a9bec72",
+        "bytes": 4422,
+        "copyright": "Copyright (c) 2022--2024, atelierAnchor <https://atelier-anchor.com>,"
+      },
+      "weights": [
+        400
+      ],
+      "note": "Native slanted/narrow outlines; real weight400. The official release ZIP has no license file, so fetch LICENSE from the matching official tag separately."
+    },
+    {
+      "id": "kuaile",
+      "name": "ZCOOL KuaiLe",
+      "category": "round",
+      "css_family": "THKuaiLe",
+      "homepage": "https://github.com/google/fonts/tree/main/ofl/zcoolkuaile",
+      "source": {
+        "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/zcoolkuaile/ZCOOLKuaiLe-Regular.ttf",
+        "sha256": "812a6fc1fe54b6d73a419245c32dfeba8aa33104d5be90d1cf6af082007cb71d",
+        "bytes": 1514968,
+        "format": "font",
+        "git_blob": "3cf6cd927ee910d46875de173efdaac4330e84ac"
+      },
+      "font": {
+        "path": "upstream/ZCOOLKuaiLe-Regular.ttf",
+        "sha256": "812a6fc1fe54b6d73a419245c32dfeba8aa33104d5be90d1cf6af082007cb71d",
+        "bytes": 1514968
+      },
+      "license": {
+        "id": "OFL-1.1",
+        "path": "licenses/kuaile-OFL.txt",
+        "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/zcoolkuaile/OFL.txt",
+        "sha256": "538078469839b4a2e7ad22bef4ebe41681a4e53749bb2a072144024f1d6d703d",
+        "bytes": 4398,
+        "copyright": "Copyright 2018 The ZCOOL KuaiLe Project Authors (https://github.com/googlefonts/zcool-kuaile)"
+      },
+      "weights": [
+        400
+      ]
+    },
+    {
+      "id": "huangyou",
+      "name": "ZCOOL QingKe HuangYou",
+      "category": "rounded",
+      "css_family": "THHuangYou",
+      "homepage": "https://github.com/google/fonts/tree/main/ofl/zcoolqingkehuangyou",
+      "source": {
+        "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/zcoolqingkehuangyou/ZCOOLQingKeHuangYou-Regular.ttf",
+        "sha256": "54f0c0df4308cd74cd0f2fd3494ae054dbc4a1fd6fa7d71f4807eb4cdd8b4136",
+        "bytes": 8328684,
+        "format": "font",
+        "git_blob": "982a3b80143268592f573feb196791fbc2330e17"
+      },
+      "font": {
+        "path": "upstream/ZCOOLQingKeHuangYou-Regular.ttf",
+        "sha256": "54f0c0df4308cd74cd0f2fd3494ae054dbc4a1fd6fa7d71f4807eb4cdd8b4136",
+        "bytes": 8328684
+      },
+      "license": {
+        "id": "OFL-1.1",
+        "path": "licenses/huangyou-OFL.txt",
+        "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/zcoolqingkehuangyou/OFL.txt",
+        "sha256": "f1bce31b817dee01c1e4ef8bc45d8ecb95f01f4abbf0a985007cb3cd0fd8123d",
+        "bytes": 4419,
+        "copyright": "Copyright 2018 The ZCOOL QingKe HuangYou Project Authors (https://www.github.com/googlefonts/zcool-qingke-huangyou)"
+      },
+      "weights": [
+        400
+      ]
+    },
+    {
+      "id": "longcang",
+      "name": "Long Cang",
+      "category": "hand",
+      "css_family": "THLongCang",
+      "homepage": "https://github.com/google/fonts/tree/main/ofl/longcang",
+      "source": {
+        "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/longcang/LongCang-Regular.ttf",
+        "sha256": "e5bf2c3f24ef2327c6f136d8f73e2f9dfdf44896fdbeb35a9515f44777bb91bc",
+        "bytes": 5162508,
+        "format": "font",
+        "git_blob": "363bb08696fe4d3827bd36d3d2fbc028d1205161"
+      },
+      "font": {
+        "path": "upstream/LongCang-Regular.ttf",
+        "sha256": "e5bf2c3f24ef2327c6f136d8f73e2f9dfdf44896fdbeb35a9515f44777bb91bc",
+        "bytes": 5162508
+      },
+      "license": {
+        "id": "OFL-1.1",
+        "path": "licenses/longcang-OFL.txt",
+        "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/longcang/OFL.txt",
+        "sha256": "603546b7219a94bb59bf8294458194a5010119486354092b66a09a3fd61aeacc",
+        "bytes": 4390,
+        "copyright": "Copyright 2018 The Long Cang Project Authors (https://github.com/googlefonts/longcang)"
+      },
+      "weights": [
+        400
+      ]
+    },
+    {
+      "id": "mashanzheng",
+      "name": "Ma Shan Zheng",
+      "category": "brush",
+      "css_family": "THMaShanZheng",
+      "homepage": "https://github.com/google/fonts/tree/main/ofl/mashanzheng",
+      "source": {
+        "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/mashanzheng/MaShanZheng-Regular.ttf",
+        "sha256": "6d2546bb189c732a8ca29af9e22457b152387d158aa459e4ac2ce1e51788b7fb",
+        "bytes": 5857936,
+        "format": "font",
+        "git_blob": "11bbfb9867d70612158229d037e7a5f622bd0e38"
+      },
+      "font": {
+        "path": "upstream/MaShanZheng-Regular.ttf",
+        "sha256": "6d2546bb189c732a8ca29af9e22457b152387d158aa459e4ac2ce1e51788b7fb",
+        "bytes": 5857936
+      },
+      "license": {
+        "id": "OFL-1.1",
+        "path": "licenses/mashanzheng-OFL.txt",
+        "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/mashanzheng/OFL.txt",
+        "sha256": "d7bdb1cee215b689e23c2f95672a6084c790542170648267a55114103d756a08",
+        "bytes": 4397,
+        "copyright": "Copyright 2018 The Ma Shan Zheng Project Authors (https://github.com/googlefonts/mashanzheng)"
+      },
+      "weights": [
+        400
+      ]
+    }
+  ]
+}
